@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include android:id="@+id/placeholder_popup"
+            layout="@layout/as_needed_info_layout"
+            android:visibility="invisible"/>
+
+        <RelativeLayout
+            android:id="@+id/rel_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/schedule_detail_archive_block_background">
+
+            <RelativeLayout
+                android:id="@+id/headerLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginEnd="@dimen/margin_16dp"
+                android:paddingBottom="@dimen/padding_16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="@dimen/margin_32dp"
+                    android:text="@string/schedule"
+                    android:textAllCaps="true"
+                    android:textColor="@color/pharmacy_info_color"
+                    android:textSize="@dimen/text_size_18sp"
+                    android:typeface="@{robotoMedium}" />
+
+                <TextView
+                    android:id="@+id/editSchedule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="end"
+                    android:onClick="@{()->buttonClickHandler.showEditSchedulePopUp()}"
+                    android:paddingStart="@dimen/padding_20dp"
+                    android:paddingTop="@dimen/padding_32dp"
+                    android:text="@string/edit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/kp_theme_blue"
+                    android:textSize="@dimen/text_size_18sp"
+                    android:typeface="@{robotoMedium}" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/scheduleTimeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headerLayout"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_height_1dp"
+                    android:background="@color/schedule_divider_color" />
+
+                <RelativeLayout
+                    android:id="@+id/rel_switch_dose"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/padding_24dp"
+                    android:paddingTop="@dimen/padding_12dp"
+                    android:paddingEnd="@dimen/padding_16dp">
+
+                    <TextView
+                        android:id="@+id/takeAsNeededLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/margin_24dp"
+                        android:text="@string/take_as_needed"
+                        android:textColor="@color/Black"
+                        android:textSize="@dimen/text_size_18sp"
+                        android:typeface="@{robotoMedium}" />
+
+                    <RelativeLayout
+                        android:id="@+id/infoImage"
+                        android:layout_width="@dimen/layout_width_48dp"
+                        android:layout_height="@dimen/layout_height_48dp"
+                        android:layout_centerInParent="true"
+                        android:layout_toEndOf="@id/takeAsNeededLabel"
+                        android:onClick="@{()-> buttonClickHandler.showAsNeededInfo()}">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="@dimen/margin_16dp"
+                            android:background="@drawable/info"
+                            android:minWidth="@dimen/layout_width_24dp"
+                            android:minHeight="@dimen/layout_height_24dp" />
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/takeAsNeededSwitch"
+                        style="@style/SwitchCompatTheme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="end"
+                        android:minWidth="@dimen/layout_width_40dp"
+                        android:minHeight="@dimen/layout_height_24dp"
+                        android:paddingStart="@dimen/padding_2dp"
+                        android:paddingTop="@dimen/padding_16dp"
+                        android:paddingBottom="@dimen/padding_16dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/scheduleSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/padding_24dp"
+                    android:paddingEnd="@dimen/padding_24dp"
+                    android:visibility="@{isScheduled ? View.VISIBLE : View.GONE}"
+                    tools:visibility="visible">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/layout_height_1dp"
+                        android:background="@color/scheduleDivider" />
+
+                    <LinearLayout
+                        android:id="@+id/scheduleDetailsSection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:paddingTop="@dimen/padding_24dp"
+                            android:paddingEnd="@dimen/padding_16dp">
+
+                            <TextView
+                                android:id="@+id/scheduleLabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/margin_8dp"
+                                android:gravity="center"
+                                android:textColor="@color/create_rem_txt_color"
+                                android:textSize="@dimen/text_size_17sp"
+                                android:typeface="@{robotoRegular}"
+                                tools:text="Every 2 weeks on" />
+
+                            <TextView
+                                android:id="@+id/scheduleDays"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/scheduleLabel"
+                                android:layout_marginBottom="@dimen/margin_8dp"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_17sp"
+                                android:typeface="@{robotoRegular}"
+                                tools:text="Mon,Tues,Fri,Sun" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="@dimen/layout_width_1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/scheduleDivider" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:paddingStart="@dimen/padding_16dp"
+                            android:paddingTop="@dimen/padding_24dp">
+
+                            <TextView
+                                android:id="@+id/remindersLabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/margin_8dp"
+                                android:gravity="center"
+                                android:text="@string/reminders"
+                                android:textColor="@color/create_rem_txt_color"
+                                android:textSize="@dimen/text_size_17sp"
+                                android:typeface="@{robotoRegular}"
+                                tools:text="Reminders" />
+
+                            <LinearLayout
+                                android:id="@+id/reminderTimes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/remindersLabel"
+                                android:layout_marginBottom="@dimen/margin_32dp"
+                                android:gravity="center"
+                                android:orientation="vertical" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/layout_height_1dp"
+                        android:layout_below="@id/scheduleDetailsSection"
+                        android:background="@color/scheduleDivider" />
+
+                    <TextView
+                        android:id="@+id/durationLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/divider"
+                        android:layout_marginTop="@dimen/margin_24dp"
+                        android:gravity="center"
+                        android:text="@string/duration"
+                        android:textColor="@color/create_rem_txt_color"
+                        android:textSize="@dimen/text_size_17sp"
+                        android:typeface="@{robotoRegular}" />
+
+                    <TextView
+                        android:id="@+id/expiryDuration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/durationLabel"
+                        android:layout_marginTop="@dimen/margin_8dp"
+                        android:layout_marginBottom="@dimen/margin_16dp"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_17sp"
+                        android:typeface="@{robotoRegular}" />
+
+                    <TextView
+                        android:id="@+id/expiryDisclaimer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/expiryDuration"
+                        android:layout_marginBottom="@dimen/margin_16dp"
+                        android:gravity="center"
+                        android:text="@string/schedule_expiration_disclaimer"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_17sp"
+                        android:typeface="@{robotoRegular}"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_12dp"
+                    android:visibility="@{isScheduled ? View.GONE : View.VISIBLE}">
+
+                    <LinearLayout
+                        android:id="@+id/setReminderButtonBlock"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="@{takeAsNeededSwitchStatus ? View.GONE : View.VISIBLE}"
+                        tools:visibility="visible">
+
+                        <Button
+                            android:id="@+id/setRemindersButton"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/margin_24dp"
+                            android:background="@drawable/blue_curved_button_drawable"
+                            android:gravity="center"
+                            android:minWidth="@dimen/layout_height_240dp"
+                            android:minHeight="@dimen/layout_height_48dp"
+                            android:onClick="@{() -> buttonClickHandler.onSetRemindersClicked()}"
+                            android:text="@string/setReminders"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_17sp" />
+
+                        <TextView
+                            android:id="@+id/setRemindersCopyText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/margin_32dp"
+                            android:gravity="center"
+                            android:text="@string/set_reminders_copy_text"
+                            android:textColor="@color/create_rem_txt_color"
+                            android:textSize="@dimen/text_size_16sp"
+                            android:typeface="@{robotoRegular}" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/takeAsNeededButtonBlock"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="@{takeAsNeededSwitchStatus ? View.VISIBLE : View.GONE}"
+                        tools:visibility="visible">
+
+                        <Button
+                            android:id="@+id/takeAsNeededButton"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/margin_24dp"
+                            android:background="@drawable/green_curved_button_drawable"
+                            android:gravity="center"
+                            android:minWidth="@dimen/layout_height_240dp"
+                            android:minHeight="@dimen/layout_height_48dp"
+                            android:onClick="@{() -> buttonClickHandler.onRecordDoseClicked()}"
+                            android:contentDescription="@string/content_desciption_record_dose"
+                            android:text="@string/record_dose"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_17sp" />
+
+                        <View
+                            android:id="@+id/dose_divider"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/layout_height_1dp"
+                            android:background="@color/scheduleDivider" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_max_dose"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:minWidth="@dimen/layout_height_56dp">
+
+                            <TextView
+                                android:id="@+id/maxDosesPerDayLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/margin_16dp"
+                                android:layout_marginTop="@dimen/margin_16dp"
+                                android:layout_marginEnd="@dimen/margin_30dp"
+                                android:layout_toStartOf="@id/maxDoseNumber"
+                                android:text="@string/maximum_doses_per_day"
+                                android:textColor="@color/create_rem_txt_color"
+                                android:textSize="@dimen/text_size_16sp"
+                                android:typeface="@{robotoRegular}" />
+
+                            <TextView
+                                android:id="@+id/maxDoseNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="@dimen/margin_24dp"
+                                android:gravity="end"
+                                android:minWidth="@dimen/layout_width_48dp"
+                                android:paddingTop="@dimen/padding_13dp"
+                                android:paddingBottom="@dimen/padding_13dp"
+                                android:text="@string/no_dose_limit"
+                                android:textColor="@color/kp_theme_blue"
+                                android:textSize="@dimen/text_size_18sp"
+                                android:typeface="@{robotoRegular}" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_height_1dp"
+                    android:background="@color/schedule_divider_color" />
+                <TextView
+                    android:id="@+id/tv_popup_display"
+                    android:layout_width="match_parent"
+                    android:background="@color/schedule_detail_archive_block_background"
+                    tools:visibility="gone"
+                    android:visibility="gone"
+                    android:layout_height="match_parent"
+                    android:minHeight="@dimen/layout_width_150dp"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="robotoMedium"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="robotoRegular"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="isScheduled"
+            type="boolean" />
+
+        <variable
+            name="takeAsNeededSwitchStatus"
+            type="boolean" />
+
+        <variable
+            name="buttonClickHandler"
+            type="com.montunosoftware.pillpopper.android.MedicationDetailActivity" />
+
+        <variable
+            name="drug"
+            type="com.montunosoftware.pillpopper.model.Drug" />
+
+        <variable
+            name="showAddLimit"
+            type="boolean" />
+    </data>
+</layout>

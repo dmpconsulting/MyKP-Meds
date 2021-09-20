@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/dialog_date_year_holder_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_Teal"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        
+        <TextView
+            android:id="@+id/dialog_date_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="@string/mar_29"/>
+
+        <TextView
+            android:id="@+id/dialog_year_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:text="@string/_com_2016"/>
+
+
+    </LinearLayout>
+
+    <TimePicker
+        android:id="@+id/dialog_time_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/DialogMaterialTheme_Reminders"
+        android:paddingBottom="5dp"
+        android:timePickerMode="clock"/>
+
+
+
+</LinearLayout>

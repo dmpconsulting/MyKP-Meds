@@ -1,0 +1,9 @@
+<resources>
+
+    <!-- Sign In User ID help -->
+    <string name="register_account">Register for an account</string>
+    <string name="retrieve_lost_user_id">Retrieve lost user ID</string>
+    <string name="terms_and_condt">Terms &amp; Conditions</string>
+    <string name="privacy_stmt">Privacy Statement</string>
+
+</resources>

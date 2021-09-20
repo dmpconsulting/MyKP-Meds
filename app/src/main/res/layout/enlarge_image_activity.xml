@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="org.kp.tpmg.mykpmeds.activation.activity.EnlargeImageActivity">
+
+    <RelativeLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/margin_16dp">
+
+        <TextView
+            android:id="@+id/name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/padding_12dp"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:backgroundTint="@color/black"
+            android:contentDescription="@string/content_description_cancel_button"
+            android:minWidth="@dimen/layout_width_48dp"
+            android:minHeight="@dimen/layout_height_48dp"
+            android:src="@drawable/close_dark" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/imageContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <com.montunosoftware.pillpopper.android.view.TouchImageView
+            android:id="@+id/enlargeImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_24dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/content_description_expand_image"
+            android:src="@drawable/pill_default"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/default_enlargeImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_24dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/content_description_expand_image"
+            android:src="@drawable/pill_default" />
+
+        <Button
+            android:id="@+id/change_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_40dp"
+            android:background="@drawable/change_image_button_background"
+            android:minWidth="@dimen/layout_width_150dp"
+            android:minHeight="@dimen/layout_height_48dp"
+            android:contentDescription="@string/content_description_change_image_button"
+            android:padding="@dimen/padding_16dp"
+            android:text="@string/change_image_txt"
+            android:textAllCaps="false"
+            android:textColor="@color/kp_next_color" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/imageContainer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_24dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/image_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_24dp"
+                android:layout_marginEnd="@dimen/margin_24dp"
+                android:layout_marginBottom="@dimen/margin_24dp"
+                android:gravity="center"
+                android:text="@string/disclaimer_text"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:visibility="visible" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

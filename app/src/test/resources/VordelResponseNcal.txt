@@ -1,0 +1,22 @@
+{
+                "systemError": null,
+                "interruptList": ["BREACH_NOTICE"],
+                "success": true,
+                "businessError": null,
+                "user": {
+                                "region": "MRN",
+                                "termsAndCondAccepted": "1.6#1476821550259",
+                                "lastName": "WPPMRNGEAFJHGAIDFLN",
+                                "activationStatusCode": "ACTIVE",
+                                "preferredFirstName": "WPPMRNDCHCHIFGBAGFN",
+                                "guid": "100029573",
+                                "email": "test@kp.org",
+                                "ebizAccountRoles": ["MBR"],
+                                "disabledReasonCode": null,
+                                "firstName": "WPPMRNDCHCHIFGBAGFN",
+                                "epicEmail": "test@kp.org",
+                                "serviceArea": null,
+                                "age": 66.0
+                },
+                "failureInfo": null
+}

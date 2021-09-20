@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title_remind_me"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/layout_height_50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/kp_theme_blue"
+        android:text="@string/remind_later_text"
+        android:textSize="@dimen/text_size_16sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+
+
+<LinearLayout
+    android:id="@+id/ll_snooze_min"
+    android:layout_below="@+id/title_remind_me"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal"
+    android:weightSum="4"
+    android:gravity="center">
+    <TextView
+        android:id="@+id/txtSnoozetimeOne"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/rem_first"
+        android:textSize="18sp"
+        android:background="@drawable/remind_me_square"
+        android:textColor="@color/Black"
+        />
+    <TextView
+        android:id="@+id/txtSnoozetimeTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/rem_second"
+        android:textSize="18sp"
+        android:background="@drawable/remind_me_square_border"
+        android:textColor="@color/Black"/>
+    <TextView
+        android:id="@+id/txtSnoozetimeThree"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/rem_third"
+        android:textSize="18sp"
+        android:background="@drawable/remind_me_square"
+        android:textColor="@color/Black"/>
+    <TextView
+        android:id="@+id/txtSnoozetimeFour"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/rem_fourth"
+        android:textSize="18sp"
+        android:background="@drawable/remind_me_square_border"
+        android:textColor="@color/Black"/>
+
+
+</LinearLayout>
+
+    <Button
+        android:id="@+id/btn_snooze_cancel"
+        android:layout_below="@+id/ll_snooze_min"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:text="@string/remind_me_again_cancel"
+        android:textColor="@color/remind_btn_txt_color"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        style="@style/mm_common_style"/>
+
+</RelativeLayout>

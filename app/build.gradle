@@ -1,0 +1,182 @@
+project.ext {
+    allowedVariants = [:]
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'org.owasp.dependencycheck'
+apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle plugin
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'com.google.firebase.firebase-perf' // Performance Monitoring plugin
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply from: './variants.gradle'
+
+ext {
+    supportLibraryVersion = '28.0.0'
+    playServiceVersion = '16.0.8'
+}
+
+android {
+
+    defaultConfig {
+        resValue('string', 'app_name', project.property('prod.app.appname'))
+        applicationId 'org.kp.tpmg.android.mykpmeds'
+        minSdkVersion 24
+        targetSdkVersion 30
+        compileSdkVersion 30
+        buildToolsVersion '30.0.3'
+        dataBinding.enabled=true
+        versionName project.version
+        versionCode "${project.versionCode}" as Integer
+        multiDexEnabled true
+        flavorDimensions "default"
+        buildConfigField "java.util.Map<String, String>", "ENVIRONMENT_MAP", "new java.util.TreeMap<String, String>()"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/DEPENDENCIES'
+    }
+    dexOptions {
+        javaMaxHeapSize "2048m"
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+    testOptions{
+        unitTests {
+            includeAndroidResources = true
+        }
+        unitTests.all {
+            setIgnoreFailures(true)
+            maxHeapSize = "4g"
+        }
+    }
+
+    flavorDimensions "endpoint","zone"
+
+    applicationVariants.all { variant ->
+        variant.resValue "string", "jenkins_build_number", variant.versionName
+    }
+
+    signingConfigs {
+        release {
+            try {
+                if (project.property("android.tpmg.mm.keystore") != null) {
+                    storeFile file(project.property("android.tpmg.mm.keystore"))
+                    storePassword project.property("android.tpmg.mm.keystore.password")
+                    keyAlias project.property("android.tpmg.mm.key.alias")
+                    keyPassword project.property("android.tpmg.mm.key.password")
+                }
+            } catch (MissingPropertyException e) {
+                logger.warn('Missing release keystore properties', e)
+            }
+        }
+    }
+
+    buildTypes {
+
+        release {
+            // Enables code shrinking, obfuscation, and optimization for only
+            // your project's release build type.
+            minifyEnabled true
+            // Enables resource shrinking, which is performed by the
+            // Android Gradle plugin.
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'my-kp-meds-proguard-config.txt'
+            signingConfig signingConfigs.release
+        }
+
+        debug {
+            testCoverageEnabled true
+            FirebasePerformance {
+                instrumentationEnabled false
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    //Android X libraries
+    implementation 'net.zetetic:android-database-sqlcipher:4.4.0@aar'
+    implementation "androidx.sqlite:sqlite-ktx:2.1.0"
+    implementation "androidx.work:work-runtime:2.5.0"
+    // Kotlin work-Manager
+    implementation "androidx.work:work-runtime-ktx:2.5.0"
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    // live data
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
+
+    //Android and Google libraries
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.google.android.gms:play-services-maps:17.0.1'
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+    implementation 'com.android.volley:volley:1.2.0'
+    implementation 'com.google.guava:guava:29.0-jre'
+    //Firebase implementation
+    implementation platform('com.google.firebase:firebase-bom:25.12.0')
+    implementation 'com.google.firebase:firebase-core:19.0.0'
+    implementation 'com.google.firebase:firebase-messaging:22.0.0'
+
+    //Third party libraries
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.1'
+    implementation('com.readystatesoftware.sqliteasset:sqliteassethelper:2.0.1')
+    implementation 'me.villani.lorenzo.android:android-cropimage:1.0.0'
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.1.0'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    testImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+
+    //Kaiser Libraries
+    implementation 'org.kp.mcoe:KPSecurity:3.1.6'
+    implementation('org.kp.tpmg:TPMGCommon-Android-Develop:0.0.27')
+    implementation 'org.kp.tpmg:RxRefillNative_5.0:0.0.19'
+//    implementation project(path: ':RxRefillNative')
+
+    //Test libraries
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.assertj:assertj-core:3.16.1'
+    testImplementation 'org.robolectric:robolectric:4.3.1'
+    testImplementation 'org.robolectric:shadows-httpclient:4.3.1'
+    testImplementation 'org.khronos:opengl-api:gl1.1-android-2.1_r1'
+    testImplementation 'androidx.test:core:1.4.0'
+    // Add the Firebase Crashlytics SDK.
+    implementation 'com.google.firebase:firebase-crashlytics:18.2.1'
+    // Recommended: Add the Google Analytics SDK.
+    implementation 'com.google.firebase:firebase-analytics:19.0.0'
+    // dependency for the Performance Monitoring library
+    implementation 'com.google.firebase:firebase-perf:20.0.2'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.21'
+}
+
+tasks.check.dependsOn(tasks.dependencyCheckAnalyze)
+
+def getPropertyStringWithQuotes(propertyValue) {
+    return "\"" + propertyValue + "\""
+}
+
+dependencyCheck {
+    skipTestGroups = true
+    // only evaluate runtime dependencies
+    scanConfigurations = ['prodProductionReleaseMetadataValues', 'prodProductionReleaseRuntimeOnly', 'prodProductionReleaseCompileClasspath', 'prodProductionReleaseImplementation', 'prodProductionReleaseApi']
+    cveValidForHours = 24
+    format = 'ALL'
+}
+

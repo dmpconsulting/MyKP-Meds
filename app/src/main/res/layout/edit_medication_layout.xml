@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="drug"
+            type="com.montunosoftware.pillpopper.model.Drug" />
+
+        <variable
+            name="buttonClickHandler"
+            type="com.montunosoftware.pillpopper.android.AddOrEditMedicationActivity" />
+
+        <variable
+            name="robotoMedium"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="robotoRegular"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="showTextView"
+            type="boolean" />
+
+        <variable
+            name="showDosageTextview"
+            type="boolean" />
+
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/app_bar"
+            layout="@layout/material_toolbar" />
+
+        <ScrollView
+            android:id="@+id/scrollEditDrug"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/app_bar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/userSpinnerCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{()->buttonClickHandler.onSpinnerClick()}"
+                    android:visibility="visible"
+                    card_view:cardBackgroundColor="@android:color/white"
+                    card_view:cardCornerRadius="0dp"
+                    card_view:cardElevation="0dp">
+
+                    <RelativeLayout
+                        android:id="@+id/user_name_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:id="@+id/spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_alignParentTop="true"
+                            android:background="@color/white"
+                            android:dropDownWidth="match_parent"
+                            android:spinnerMode="dropdown"
+                            android:visibility="invisible" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:minHeight="@dimen/layout_height_48dp"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/spinner_member_name"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start|center"
+                                android:layout_marginStart="@dimen/margin_16dp"
+                                android:layout_marginTop="@dimen/margin_12dp"
+                                android:layout_marginBottom="@dimen/margin_12dp"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:gravity="start|center"
+                                android:maxLines="1"
+                                android:textColor="@color/group2_header"
+                                android:textSize="@dimen/text_size_20sp" />
+
+                            <ImageView
+                                android:id="@+id/spinner_arrow"
+                                android:layout_width="@dimen/layout_width_24dp"
+                                android:layout_height="@dimen/layout_height_24dp"
+                                android:layout_gravity="end|center"
+                                android:layout_marginStart="@dimen/margin_32dp"
+                                android:layout_marginTop="@dimen/margin_12dp"
+                                android:layout_marginEnd="@dimen/margin_16dp"
+                                android:layout_marginBottom="@dimen/margin_12dp"
+                                android:gravity="end|center"
+                                android:src="@drawable/expand"
+                                android:visibility="gone" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/scheduleDivider"/>
+
+                <LinearLayout
+                    android:id="@+id/details_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16dp"
+                    android:layout_marginEnd="@dimen/margin_16dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/ll_camera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_16dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:outlineProvider="bounds">
+
+                        <com.montunosoftware.pillpopper.android.view.DrugDetailRoundedImageView
+                            android:id="@+id/drug_detail_dose_image"
+                            style="@style/mm_common_style"
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:layout_alignParentEnd="true"
+                            android:contentDescription="@string/content_description_change_image"
+                            android:onClick="@{() -> buttonClickHandler.onImageClicked()}" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/addImageBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_8dp"
+                        android:gravity="center"
+                        android:onClick="@{() -> buttonClickHandler.onImageClicked()}"
+                        android:text="@string/addimage"
+                        android:textColor="@color/kp_next_color"
+                        android:textSize="@dimen/text_size_17sp" />
+
+
+                    <LinearLayout
+                        android:id="@+id/med_details_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_12dp"
+                            android:text="@string/drugname"
+                            android:textColor="@color/drugname_header_color"
+                            android:textSize="@dimen/text_size_17sp"
+                            android:typeface="@{robotoRegular}" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_12dp">
+
+                            <com.montunosoftware.pillpopper.android.view.ActionEditText
+                                android:id="@+id/med_name"
+                                style="@style/mm_common_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="true"
+                                android:imeOptions="actionDone"
+                                android:paddingBottom="@dimen/padding_10dp"
+                                android:text="@{drug.getName()}"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_17sp"
+                                android:visibility="@{showTextView ? View.GONE : View.VISIBLE}" />
+
+                            <TextView
+                                android:id="@+id/med_name_txt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bottom_border"
+                                android:ellipsize="end"
+                                android:maxLines="2"
+                                android:paddingBottom="@dimen/padding_10dp"
+                                android:text="@{drug.getName()}"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_17sp"
+                                android:visibility="@{showTextView ? View.VISIBLE : View.GONE}" />
+
+                            <ExpandableListView
+                                android:id="@+id/lvExp"
+                                android:layout_width="match_parent"
+                                android:layout_height="220dp"
+                                android:layout_below="@id/med_name"
+                                android:dividerHeight="2dp"
+                                android:elevation="@dimen/padding_2dp"
+                                android:outlineProvider="paddedBounds"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_32dp"
+                            android:text="@string/dosage"
+                            android:textColor="@color/drugname_header_color"
+                            android:textSize="@dimen/text_size_17sp"
+                            android:typeface="@{robotoRegular}" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_12dp">
+
+                            <com.montunosoftware.pillpopper.android.view.ActionEditText
+                                android:id="@+id/dosage_strength"
+                                style="@style/mm_common_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="true"
+                                android:imeOptions="actionDone"
+                                android:paddingBottom="@dimen/padding_10dp"
+                                android:text="@{drug.dose}"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_17sp"
+                                android:visibility="@{showDosageTextview ? View.GONE : View.VISIBLE}" />
+
+                            <TextView
+                                android:id="@+id/dosage_txt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bottom_border"
+                                android:ellipsize="end"
+                                android:maxLines="2"
+                                android:paddingBottom="@dimen/padding_10dp"
+                                android:text="@{drug.dose}"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_17sp"
+                                android:visibility="@{showDosageTextview ? View.VISIBLE : View.GONE}" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/personal_notes_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_16dp"
+                    android:layout_marginTop="@dimen/margin_32dp"
+                    android:layout_marginEnd="@dimen/margin_16dp">
+
+                    <TextView
+                        android:id="@+id/personal_notes_header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/personal_notes_optional"
+                        android:textColor="@color/drugname_header_color"
+                        android:textSize="@dimen/text_size_17sp"
+                        android:typeface="@{robotoRegular}"/>
+
+                    <TextView
+                        android:id="@+id/personal_notes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/personal_notes_header"
+                        android:layout_marginTop="@dimen/margin_12dp"
+                        android:paddingBottom="@dimen/padding_10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/bottom_border"
+                        android:textSize="@dimen/text_size_17sp"
+                        android:typeface="@{robotoRegular}" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"/>
+
+                <TextView
+                    android:id="@+id/disclaimer_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16dp"
+                    android:layout_marginEnd="@dimen/margin_16dp"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    android:text="@string/disclaimer_text_for_otc_med"
+                    android:textColor="@color/create_rem_txt_color"
+                    android:textSize="@dimen/text_size_17sp" />
+
+                <Button
+                    android:id="@+id/btn_save_medications"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/layout_height_78dp"
+                    android:layout_marginTop="@dimen/margin_16dp"
+                    android:layout_marginEnd="@dimen/layout_height_78dp"
+                    android:layout_marginBottom="@dimen/margin_16dp"
+                    android:background="@drawable/blue_round_button_style"
+                    android:gravity="center"
+                    android:minHeight="@dimen/layout_height_48dp"
+                    android:text="@string/save_medication"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_18sp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+</layout>

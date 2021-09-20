@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/picklist_content"
+        style="@style/finger_friendly_height"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@xml/highlight_style"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/picklist_text"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/Text_blue"
+            android:textSize="15sp" >
+        </TextView>
+
+        <ImageView
+            android:id="@+id/picklist_tick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/nxt_arw_unfocus"
+            tools:ignore="ContentDescription">
+        </ImageView>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/line_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/separator"
+        tools:ignore="ContentDescription">
+    </ImageView>
+
+</LinearLayout>

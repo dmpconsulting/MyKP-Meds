@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="context"
+            type="com.montunosoftware.pillpopper.kotlin.lateremider.LateRemindersActivity" />
+
+        <variable
+            name="adapter"
+            type="com.montunosoftware.pillpopper.kotlin.lateremider.LateReminderAdapter" />
+        <variable
+            name="robotoMedium"
+            type="android.graphics.Typeface" />
+        <variable
+            name="robotoRegular"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="robotoBold"
+            type="android.graphics.Typeface" />
+
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/passed_reminder_screen_toolbar"
+            layout="@layout/passed_reminder_list_header"
+            bind:activityContext="@{context}"
+            bind:robotoRegular = "@{robotoRegular}"
+            bind:robotoBold = "@{robotoBold}"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/passed_reminder_screen_toolbar"
+            android:orientation="vertical">
+
+            <ExpandableListView
+                android:id="@+id/expandable_past_reminders"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:childDivider="@color/transparent"
+                android:divider="@color/transparent"
+                android:focusableInTouchMode="false"
+                android:groupIndicator="@null"
+                android:listSelector="@android:color/transparent"
+                android:scrollbars="vertical"
+                bind:adapter="@{adapter}" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="130dp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/button_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_12dp"
+            android:background="@drawable/ic_gradient_short"
+            android:gravity="center"
+            android:minHeight="134dp"
+            android:onClick="@{() -> context.outsideLayoutClicked()}"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/margin_40dp"
+            android:paddingEnd="@dimen/margin_40dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_25dp"
+                android:layout_marginBottom="13dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/btn_skip_all"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/skip_all_background"
+                    android:gravity="center"
+                    android:minWidth="@dimen/layout_160dp"
+                    android:minHeight="@dimen/layout_width_40dp"
+                    android:onClick="@{() -> context.onSkippedAllClicked()}"
+                    android:padding="@dimen/padding_4dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/kp_theme_blue"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:typeface="@{robotoMedium}" />
+
+                <Button
+                    android:id="@+id/btn_taken_all"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/taken_all_background"
+                    android:gravity="center"
+                    android:minWidth="@dimen/layout_160dp"
+                    android:minHeight="@dimen/layout_height_40dp"
+                    android:onClick="@{() -> context.onTakenAllClicked()}"
+                    android:padding="@dimen/padding_4dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:typeface="@{robotoMedium}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lr_proxy_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_24dp"
+                android:gravity="center"
+                android:minHeight="@dimen/layout_height_40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_proxy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="There are "
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/text_size_16sp"
+                    android:typeface="@{robotoRegular}"/>
+
+                <TextView
+                    android:id="@+id/tv_proxy_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 2 "
+                    android:textColor="@color/color_blue"
+                    android:textSize="@dimen/text_size_16sp"
+                    android:typeface="@{robotoBold}" />
+
+                <TextView
+                    android:id="@+id/tv_reminder_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/text_size_16sp"
+                    android:typeface="@{robotoRegular}" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>
+

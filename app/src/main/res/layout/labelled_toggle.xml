@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/labelled_toggle_root"
+    style="@style/finger_friendly_height"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center" >
+
+    <TextView
+        android:id="@+id/labelled_toggle_label"
+        style="@style/finger_friendly_height"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/_temp"
+        android:textColor="@color/Text_black_ada"
+        android:textStyle="bold" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/labelled_toggle_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_off"
+        android:textColor="@color/Black"
+        android:textStyle="bold" >
+    </TextView>
+
+    <ToggleButton
+        android:id="@+id/labelled_toggle_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dip"
+        android:layout_marginRight="4dip"
+        android:background="@xml/on_off_style"
+        android:textOff="@string/__blank"
+        android:textOn="@string/__blank" >
+    </ToggleButton>
+
+    <TextView
+        android:id="@+id/labelled_toggle_on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_on"
+        android:textColor="@color/Black"
+        android:textStyle="bold" >
+    </TextView>
+
+</LinearLayout>

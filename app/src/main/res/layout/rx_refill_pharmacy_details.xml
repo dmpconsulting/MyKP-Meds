@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/material_toolbar" />
+
+    <LinearLayout
+        android:id="@+id/map_layout"
+        android:layout_width="match_parent"
+        android:layout_height="136dp"
+        android:layout_below="@id/app_bar"
+        android:layout_marginBottom="@dimen/margin_8dp">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/facility_mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.google.android.gms.maps.MapView>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/map_layout"
+        android:layout_marginBottom="@dimen/margin_40dp"
+        android:background="@color/white"
+        android:paddingStart="@dimen/padding_16dp"
+        android:paddingEnd="@dimen/padding_16dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/pharmacy_name_distance_layout"
+                    android:layout_width="match_parent"
+                    android:weightSum="1"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_facility_name"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.75"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_16dp"
+                        android:layout_marginEnd="@dimen/margin_8dp"
+                        tools:text="Name"
+                        android:textAllCaps="true"
+                        android:textColor="@color/Black"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_distance_text"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.25"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:layout_marginTop="@dimen/margin_16dp"
+                        tools:text="8668.2 mi"
+                        android:textColor="@color/Black"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_dept_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pharmacy_name_distance_layout"
+                    android:layout_marginEnd="@dimen/margin_8dp"
+                    android:text="@string/pharmacy_text"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/text_size_15sp" />
+
+                <TextView
+                    android:id="@+id/tv_street"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_dept_name"
+                    android:layout_marginEnd="@dimen/margin_8dp"
+                    android:text="@string/street"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/text_size_15sp" />
+
+                <TextView
+                    android:id="@+id/tv_city_state_zip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_street"
+                    android:layout_marginEnd="@dimen/margin_8dp"
+                    android:layout_marginBottom="@dimen/margin_16dp"
+                    android:text="@string/city"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/text_size_15sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_getDirectionsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/layout_height_48dp"
+                android:layout_gravity="end"
+                android:layout_marginBottom="@dimen/margin_8dp"
+                android:gravity="center"
+                android:contentDescription="@string/content_description_pharmacy_direction"
+                android:paddingStart="@dimen/padding_16dp"
+                android:text="@string/directions"
+                android:textAllCaps="true"
+                android:textColor="@color/kp_background_blue_color"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_is_preferred_facility"
+                android:layout_width="match_parent"
+                android:minHeight="@dimen/layout_height_48dp"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_height_1dp"
+                    android:background="@color/divider_color" />
+
+                <CheckBox
+                    android:id="@+id/check_box_preferred_pharmacy"
+                    android:layout_width="match_parent"
+                    android:minHeight="@dimen/layout_height_48dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/your_preferred_pharmacy"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_1dp"
+                android:background="@color/divider_color" />
+
+            <RelativeLayout
+                android:id="@+id/rl_refillable_online"
+                android:layout_width="match_parent"
+                android:minHeight="@dimen/layout_height_48dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/pharmacy_state_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_height_1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/divider_color" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/hours_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_24dp"
+                android:layout_marginBottom="@dimen/margin_4dp"
+                android:text="@string/hours"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <TextView
+                android:id="@+id/working_hours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Monday - Friday"
+                android:textColor="@color/login_bottom_gray"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <TextView
+                android:id="@+id/contact_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_24dp"
+                android:layout_marginBottom="@dimen/margin_4dp"
+                android:text="@string/contact"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <LinearLayout
+                android:id="@+id/contact_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+            <View
+                android:id="@+id/emptyView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40dp"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/btn_pick_up_pharmacy_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height_80dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible">
+
+        <View
+            android:id="@+id/translucent_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.88"
+            android:background="@color/white" />
+
+        <Button
+            android:id="@+id/btn_pick_up_pharmacy"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/kp_background_blue_color"
+            android:text="@string/pick_up_pharmacy"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_17sp" />
+
+    </FrameLayout>
+</RelativeLayout>

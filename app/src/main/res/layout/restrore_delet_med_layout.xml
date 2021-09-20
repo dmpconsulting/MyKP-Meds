@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lr_main"
+    android:layout_marginStart="@dimen/margin_15dp"
+    android:layout_marginEnd="@dimen/margin_15dp"
+    android:visibility="visible"
+    android:paddingTop="@dimen/padding_16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/archive_details_restore_medication_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_80dp"
+        android:layout_marginRight="@dimen/margin_80dp"
+        android:paddingTop="@dimen/margin_24dp"
+        android:paddingBottom="@dimen/margin_24dp"
+        android:background="@drawable/button_restore_med"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_16sp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:textStyle="normal"
+        style="@style/mm_common_style"
+        android:text="@string/archive_details_restore_button_text"/>
+
+    <TextView
+        android:id="@+id/archive_details_restore_medication_hint_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_15dp"
+        android:paddingBottom="@dimen/margin_30dp"
+        android:gravity="center"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:textColor="@color/archive_detail_restore_hint_textcolor"
+        android:textSize="@dimen/text_size_16sp"
+        android:text="@string/archive_details_restore_hint_text"/>
+
+    <Button
+        android:id="@+id/archive_details_delete_medication_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_80dp"
+        android:layout_marginRight="@dimen/margin_80dp"
+        android:paddingTop="@dimen/margin_24dp"
+        android:paddingBottom="@dimen/margin_24dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:background="@drawable/button_delet_med"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_16sp"
+        android:textStyle="normal"
+        style="@style/mm_common_style"
+        android:text="@string/archive_details_delete_button_text"/>
+    <TextView
+        android:id="@+id/tv_delet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_15dp"
+        android:paddingBottom="@dimen/margin_30dp"
+        android:gravity="center"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:textColor="@color/archive_detail_restore_hint_textcolor"
+        android:textSize="@dimen/text_size_16sp"
+        android:text="@string/permanently_delete_subtext"/>
+
+</LinearLayout>
+</layout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_drug_details"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="36dp"
+    android:layout_marginBottom="12dp"
+    android:paddingRight="24dp">
+
+        <TextView
+            android:id="@+id/discontinued_medication_brand_name_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@string/acyclovir"
+            android:textColor="@color/Black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/discontinued_medication_dosage_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/_400_mg_tab"
+            android:textColor="@color/app_info_color"
+            android:textSize="17sp" />
+
+</LinearLayout>

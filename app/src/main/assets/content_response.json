@@ -1,0 +1,160 @@
+{
+    "pharmacyContent": {
+        "prescriptionsStatusTexts": {
+            "PHE:1999": "This medication is not available for refill.",
+            "PHE:8888": "This prescription is not available for refill",
+            "00": {
+                "PHE:1000": "Available to fill."
+            },
+            "001": {
+                "PHE:1001": "This prescription is already being processed. We have sent a request to your physician for approval. For more information, please call the pharmacy number shown on your prescription label."
+            },
+            "002": {
+                "PHE:1000": "Available to fill.",
+                "PHE:1002": "In order to refill {rxName}, we need your physician's authorization. We will contact your physician for you and refill this prescription once we have received the authorization."
+            },
+            "003": {
+                "PHE:1003": "In order to fill {rxName}, we need your physician's authorization. We will contact your physician for you and fill this prescription once we have received the authorization.",
+                "PHE:x1003": "Select this entry to request that your prescriber authorize additional refills."
+            },
+            "005": {
+                "PHE:1005": "This prescription is already being filled. For more information, call the pharmacy number shown on your prescription label."
+            },
+            "008": {
+                "PHE:1008": "This prescription is not available to fill. For more information, call the pharmacy number shown on your prescription label."
+            },
+            "010": {
+                "PHE:1010": "This prescription is not available for refill. For more information, call the pharmacy number shown on your prescription label."
+            },
+            "029": {
+                "PHE:1029": "This prescription is not available to fill. For more information, call the pharmacy number shown on your prescription label."
+            },
+            "030": {
+                "PHE:1030": "According to our records this prescription is not eligible to fill. For more information, call the pharmacy number shown on your prescription label."
+            },
+            "034": {
+                "PHE:1034": "You can pick up this prescription at the pharmacy. For more information, call the pharmacy number shown on your prescription label.",
+                "PHE:1134": "Your prescription is ready for pickup at {pharmacyName}.",
+                "PHE:1234": "You can pick up this prescription at the pharmacy on {rxReadyDate}.",
+                "PHE:1334": "You can pick up this prescription at the pharmacy.",
+                "PHE:1434": "You can pick up this prescription at the pharmacy. For more information, call the pharmacy number shown on your prescription label."
+            },
+            "042": {
+                "PHE:1042": "According to our records it is too soon to fill this prescription.",
+                "PHE:1142": "This prescription was picked up at the pharmacy on {lastSoldDate}. For more information, call the pharmacy number shown on your prescription label.",
+                "PHE:1242": "According to our records it is too soon to fill this prescription. This prescription was picked up on {lastSoldDate}. For more information, call the pharmacy number shown on your prescription label.",
+                "PHE:1342": "According to our records it is too soon to fill this prescription. This prescription was picked up at the pharmacy. For more information, call the pharmacy number shown on your prescription label.",
+                "PHE:1442": "According to our records it is too soon to fill this prescription.",
+                "PHE:1542": "According to our records it is too soon to fill this prescription. This prescription was mailed on {lastSoldDate}. For more information, call the pharmacy number shown on your prescription label.",
+                "PHE:1642": "According to our records it is too soon to fill this prescription. For more information, call the pharmacy number shown on your prescription label.",
+                "PHE:x1031": "You may request to fill this prescription after {rxReadyDate}."
+            },
+            "098": {
+                "PHE:3001": "Thank you for your prescription request."
+            },
+            "099": {
+                "PHE:2001": "You don't have permission to view this prescription list.",
+                "PHE:2002": "For more information, contact Member Services at <tel>1-800-556-7677</tel>."
+            }
+        },
+        "prescriptionsPretext": "This list shows medications we have on file for you or your family member.<nl>To find a pharmacy, visit our Pharmacy Locator.</nl>",
+        "proxyPrescriptionNotEntitledText": {
+            "title": "You do not have permission to view this member's Rx information.",
+            "subtitle": "Find a prescription by Rx number."
+        },
+        "proxyPrescriptionNotEntitledRefill": {
+            "title": "Access Denied",
+            "subtitle": "You don't have permission to use this feature. For more information, contact Member Services at 1-800-556-7677."
+        },
+        "proxyPrescriptionNotEntitledMedication": {
+            "title": "Access Denied",
+            "subtitle": "You don't have permission to view this prescription list.",
+            "buttonLabel": "Find prescription by Rx number",
+            "contentMessage": "For more information, contact Member Services at <tel>1-800-556-7677</tel>."
+        },
+        "proxyPrescriptionNotEntitledRefillMedication": {
+            "title": "Access Denied",
+            "subtitle": "You don't have permission to use this feature at this time. For more information, contact Member Services at <tel>1-800-556-7677</tel>."
+        },
+        "cartPretext": "For quantity changes or other requests, contact the Pharmacy Call Center at <tel>1-888-218-6245</tel>.<nl>Note: If you've already placed a Pharmacy Call Center order for items in your cart, remove them to continue.</nl>",
+        "shoppingCartFullAlert": {
+            "title": "Shopping Cart Full",
+            "message": "You can only order up to [#] prescriptions. Update your order to continue."
+        },
+        "deliveryAddressOutOfStateLimitText": "We can't ship to this state at this time. Update the shipping address to continue your order.",
+        "deliveryAddressDefaultPickup": "This order must be picked up at the pharmacy, as we are unable to ship some kinds of medications. If your order contains items we can ship, and you'd like them sent to you, remove what we are unable to ship and continue to checkout. You will need to go back and create a separate pickup order for the removed items.",
+        "deliveryAddressAltOutOfStateLimitText": "We can't ship to this state at this time. Update the shipping address to continue your order.",
+        "deliveryAddressRegionLimitText": "We're unable to ship orders to certain states at this time.",
+        "deliveryAddressMissing": "Delivery address required",
+        "deliveryAddressAlternate": "We recommend using the alternative address shown below. Please select the address you want to use.",
+        "deliveryAddressAlternateNoMatch": "We're unable to match your address as entered. Cancel to update or use selected address to continue.",
+        "deliveryAddressAlternateError": "We're not able to confirm your address at this time. Cancel to update or use selected address to continue.",
+        "pharmacyNotAvailable": "At this time, prescriptions can't be picked up from this pharmacy. Choose a different pharmacy to continue.",
+        "estimateDisclaimer": "This is an estimate only. Actual price may vary based on plan benefits and other factors. For information about drug costs call <tel>1-888-218-6245</tel>.",
+        "contactInfoPretext": "Changes made here are not saved and are for this transaction only. Visit your profile on kp.org to make permanent changes to your contact information.<nl>Note: You must provide an email and at least one phone number to continue.</nl>",
+        "contactInfoMissingEmail": "Email address required",
+        "contactInfoMissingPhone": "Phone number required",
+        "contactInfoMissingContactInfo": "Contact information required",
+        "submitOrderProgressText": {
+            "title": "Order Processing",
+            "message": "We are securely processing your order. This may take up to a minute to complete."
+        },
+        "submitOrderSuccessText": {
+            "title": "Order Submitted",
+            "message": "Thank you for your prescription request. Your submission has been sent to the pharmacy. Check the Pharmacy landing screen in the KP app to know when your order is ready."
+        },
+        "submitOrderWarningText": {
+            "title": "Order Partially Submitted",
+            "message": "Thank you for your prescription order. One or more of your items may not be processed. Check the prescriptions list for updates and more information on items in this order, or contact the Pharmacy on your prescription label.<nl>Note: Prescription statuses may take 48 hours to update.</nl>"
+        },
+        "submitOrderPartialText": {
+            "title": "Order Partially Submitted",
+            "message": "Thank you for your prescription request. Your submission has been sent to the pharmacy. Check the Pharmacy landing screen in the KP app to know when your order is ready.",
+            "warning": "Note: Below is a list of the prescriptions that were unsuccessfully submitted followed by those that have been submitted to the pharmacy.",
+            "moreInfo": "Call your pharmacy for more information.",
+            "moreInfoIfOrderCorrectable": "Call your pharmacy for more information, or try to submit another order."
+        },
+        "cancelOrderText": {
+            "title": "Cancel Order",
+            "message": "Are you sure you want to cancel your order and clear your Shopping Cart?"
+        },
+        "submitOrderFailureText": {
+            "title": "Order Failed",
+            "message": "Thank you for your prescription request. Due to a problem, your order can’t be completed.",
+            "moreInfo": "Call your pharmacy for more information.",
+            "moreInfoIfOrderCorrectable": "Call your pharmacy for more information, or try to submit another order."
+        },
+        "submitOrderSDPUFailureText": {
+            "title": "Ordering for Same-Day Pickup Unavailable",
+            "message": "To continue, update your order to standard pickup or wait to place your order during the pharmacy's open hours.\nNote: If it's too close to the selected pharmacy's closing time, you may not be able to place your order for same-day pickup."
+        },
+        "submitOrderSDPUDisclaimer": "Don't go to the pharmacy for your prescription until you've been notified that it's ready for pick up.",
+        "findByRxFieldInstText": "The Rx # can be found on the prescription label.",
+        "fieldRequired": "Note: All fields are required.",
+        "trackingLinkStatus": "This prescription shipped on {lastSoldDate}.\n\n<trl>Track by U.S. Postal Service</trl>.",
+        "trackingLinkNoShippedDateStatus": "This prescription has shipped.\n<trl>Track by U.S. Postal Service</trl>.",
+        "legalDisclaimer": "Your medication may look different.*",
+        "disclaimer": "<b>The photos shown are samples only.</b> Not all photos of the drug may be displayed. Your medication may look different. If you have questions, as your pharmacist.",
+        "riskMitDisclaimer": "<b1>*The photos shown are samples only.</b1> Not all photos of the drug may be displayed. Your medication may look different. If you have questions, ask your pharmacist.\n\nSelected from <b2>NATIONAL DRUG DATA FILE (NDDF)</b2> data included with permission and copyrighted by First DataBank, Inc., 2017. This copyrighted material has been downloaded from a licensed data provider.\n\nThe above information is intended to supplement, not substitute for, the expertise and judgment of your health care professional. You should consult your health care professional before taking any drug, changing your diet, or commencing or discontinuing any course of treatment.",
+        "SDPUPretext": "<b>Part of this Order Can Be Picked Up Today</b>\nThe list below shows prescriptions that are available for pick up today, followed by items that don't qualify for this service. Submit a separate order to arrange for standard pickup of the items that aren't available at the pharmacy today.",
+        "SDPUTime": "Same-day pickup may be available at this location between <t1></t1> and <t2></t2>.",
+        "SDPUPharmacies": "Same-day pickup may be available at this location.",
+        "notificationInstruction": "Turn on notifications to receive pharmacy updates.",
+        "prescriptionRejectedErrorCodes": {
+            "100": "Due to a problem, your order can’t be completed. (Error code 100)",
+            "101": "Due to a problem, your order can’t be completed. (Error code 101)",
+            "500": "Prescription is already being filled. (Error code 500)",
+            "502": "Delivery to a PO box isn't permitted. (Error code 502)",
+            "505": "Prescription isn't available for delivery. (Error code 505)",
+            "506": "Prescription has been transferred from the selected pharmacy. (Error code 506)",
+            "507": "Prescription is no longer active. (Error code 507)",
+            "508": "Due to a problem, your order can’t be completed. (Error code 508)",
+            "513": "Prescription can't be found with provided Rx number. (Error code 513)",
+            "514": "Prescription isn't available at the selected pharmacy. (Error code 514)",
+            "515": "Prescription isn't available at the selected pharmacy. (Error code 515)",
+            "599": "Due to a problem, your order can’t be completed. (Error code 599)",
+            "999": "Due to a problem, your order can’t be completed. (Error code 999)"
+        },
+        "prescriptionDefaultErrorCodeMsg": "Due to a problem, your order can’t be completed. (Error code XXX)"
+    }
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dose_linearLay"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/margin_6dp"
+    android:padding="@dimen/margin_6dp">
+
+    <ImageView
+        android:id="@+id/history_calendar_drug_action_image"
+        android:layout_width="@dimen/layout_height_40dp"
+        android:layout_height="@dimen/layout_height_40dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="fitCenter"
+        android:background="@drawable/ic_taken"
+        android:contentDescription="operation Status"
+        android:padding="@dimen/margin_1dp"
+        android:paddingEnd="@dimen/margin_4dp"
+        android:paddingStart="@dimen/margin_4dp"
+        tools:visibility="visible" />
+
+</LinearLayout>

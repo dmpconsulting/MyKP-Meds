@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="historyList"
+            type="com.montunosoftware.pillpopper.database.model.HistoryEvent" />
+    </data>
+<LinearLayout
+    android:id="@+id/lr_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:contentDescription="@string/content_description_for_overlay_screen_image_and_med_name">
+
+        <ImageView
+            android:id="@+id/historyPillOperationStatus"
+            android:layout_width="@dimen/layout_height_40dp"
+            android:layout_height="@dimen/layout_height_40dp"
+            android:layout_marginEnd="@dimen/margin_8dp"
+            android:layout_marginTop="@dimen/margin_4dp"
+            android:layout_marginBottom="@dimen/margin_4dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/ic_taken"
+            android:contentDescription="@null"
+            tools:visibility="visible" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_pill_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_black"
+            tools:text="pill Name"
+            android:textSize="@dimen/text_size_17sp"
+            android:text="@{historyList.pillName}">
+        </TextView>
+            <TextView
+                android:id="@+id/tv_postponed_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color4a4a4a"
+                android:visibility="gone"
+                android:textSize="@dimen/text_size_15sp"
+                tools:visibility="visible"
+                tools:text="PostPoned to 5:30PM">
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
+</layout>

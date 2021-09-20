@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="robotoRegular"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="robotoBold"
+            type="android.graphics.Typeface" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_16dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:baselineAligned="false"
+        android:weightSum="1">
+
+        <RelativeLayout
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:gravity="start">
+
+            <RelativeLayout
+                android:id="@+id/headerLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/backNavigation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="@dimen/margin_20dp"
+                    android:layout_marginEnd="@dimen/margin_8dp"
+                    android:src="@drawable/arrow_back"
+                    android:contentDescription="@string/content_description_previous_screen" />
+
+                <TextView
+                    android:id="@+id/medication_remainder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/backNavigation"
+                    android:text="@string/med_reminder_notification_title"
+                    android:textColor="@color/kp_theme_blue"
+                    android:textSize="@dimen/text_size_16sp"
+                    android:layout_marginTop="@dimen/margin_20dp"
+                    android:typeface="@{robotoRegular}" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/reminderOverDueDateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headerLayout"
+                android:layout_marginTop="@dimen/margin_6dp"
+                android:layout_marginBottom="@dimen/margin_16dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_24sp"
+                tools:text="Oct 18, 12:00 PM" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sign_in"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_weight="0.3"
+            android:minHeight="@dimen/layout_height_48dp">
+
+            <Button
+                android:id="@+id/sign_in_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:clickable="false"
+                android:background="@drawable/sign_in_background_redesign"
+                android:minWidth="@dimen/layout_width_80dp"
+                android:minHeight="@dimen/layout_29dp"
+                android:layout_marginTop="@dimen/margin_20dp"
+                android:text="@string/dialog_touch_outside_sign_in"
+                android:textAllCaps="false"
+                android:textColor="@color/kp_theme_blue"
+                android:contentDescription="@string/content_description_sign_in"
+                android:textSize="@dimen/text_size_16sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</layout>

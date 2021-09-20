@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (c) 2020 Kaiser Permanente. All rights reserved.
+  -->
+
+<paths>
+    <files-path
+        name="capturedImage"
+        path="capturedImages"/>
+</paths>

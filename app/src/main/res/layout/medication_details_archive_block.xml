@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/lr_archive_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/margin_24dp"
+        android:paddingStart="@dimen/margin_24dp"
+        android:background="@color/schedule_detail_archive_block_background"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/archiveButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_24dp"
+            android:minHeight="@dimen/layout_height_48dp"
+            android:text="@string/archive_medication"
+            android:onClick="@{()->buttonClickHandler.archiveMedicationClicked()}"
+            android:contentDescription="@string/content_description_archive_medication"
+            android:textAllCaps="false"
+            android:textColor="@color/kp_theme_blue"
+            android:textSize="@dimen/text_size_18sp"
+            android:typeface="@{robotoMedium}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_32dp"
+            android:gravity="center"
+            android:text="@string/schedule_detail_archive_copy_text"
+            android:textColor="@color/app_info_color"
+            android:textSize="@dimen/text_size_17sp"
+            android:typeface="@{robotoRegular}" />
+    </LinearLayout>
+
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="robotoMedium"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="robotoRegular"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="buttonClickHandler"
+            type="com.montunosoftware.pillpopper.android.MedicationDetailActivity" />
+    </data>
+
+
+</layout>
+

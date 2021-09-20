@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.montunosoftware.pillpopper.android.util.Util" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="robotoMedium"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="robotoRegular"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="robotoBold"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="drug"
+            type="com.montunosoftware.pillpopper.model.Drug" />
+
+        <variable
+            name="isTaken"
+            type="Boolean" />
+
+        <variable
+            name="clickHandler"
+            type="com.montunosoftware.pillpopper.kotlin.history.HistoryDetailActivity" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/app_bar"
+            layout="@layout/material_toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/proxyNameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/history_blue_4191bd"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_16dp">
+
+                    <TextView
+                        android:id="@+id/proxyName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="@string/susan"
+                        android:textColor="@color/white"
+                        android:typeface="@{robotoMedium}"
+                        android:textSize="@dimen/text_size_18sp" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/historyEventDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/schedule_detail_archive_block_background"
+                    android:padding="@dimen/margin_16dp">
+
+                    <TextView
+                        android:id="@+id/historyTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_4dp"
+                        android:textColor="@color/group2_header"
+                        android:textSize="@dimen/text_size_20sp"
+                        android:typeface="@{robotoRegular}"
+                        tools:text="9:00AM" />
+
+                    <TextView
+                        android:id="@+id/historyDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/historyTime"
+                        android:layout_marginBottom="@dimen/margin_4dp"
+                        android:textColor="@color/group2_header"
+                        android:textSize="@dimen/text_size_18sp"
+                        android:typeface="@{robotoMedium}"
+                        tools:text="Friday 9/25/2020" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/drugDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_32dp"
+                    android:background="@color/white">
+
+                    <com.montunosoftware.pillpopper.android.view.DrugDetailRoundedImageView
+                        android:id="@+id/drugImage"
+                        android:layout_width="@dimen/layout_height_60dp"
+                        android:layout_height="@dimen/layout_height_60dp"
+                        android:layout_marginStart="@dimen/margin_12dp"
+                        android:layout_marginTop="17dp"
+                        android:layout_marginEnd="@dimen/margin_16dp"
+                        android:layout_marginBottom="17dp"
+                        android:contentDescription="@string/content_description_change_image"/>
+
+                    <TextView
+                        android:id="@+id/drugName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_16dp"
+                        android:layout_marginEnd="@dimen/margin_12dp"
+                        android:layout_marginBottom="@dimen/margin_2dp"
+                        android:layout_toEndOf="@id/drugImage"
+                        android:textColor="@color/group2_header"
+                        android:textSize="@dimen/text_size_18sp"
+                        android:typeface="@{robotoMedium}"
+                        tools:text="Rx Drug Name" />
+
+                    <TextView
+                        android:id="@+id/genericName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/drugName"
+                        android:layout_marginEnd="@dimen/margin_12dp"
+                        android:layout_toEndOf="@id/drugImage"
+                        android:textColor="@color/next_reminder_txt_color"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:typeface="@{robotoRegular}"
+                        tools:text="Brand Name" />
+
+                    <TextView
+                        android:id="@+id/drugDosage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/genericName"
+                        android:layout_marginEnd="@dimen/margin_12dp"
+                        android:layout_marginBottom="@dimen/margin_16dp"
+                        android:layout_toEndOf="@id/drugImage"
+                        android:textColor="@color/group2_header"
+                        android:textSize="@dimen/text_size_17sp"
+                        android:typeface="@{robotoRegular}"
+                        tools:text="125 mg"/>
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/margin_48dp"
+                    android:minWidth="@dimen/layout_height_240dp"
+                    android:minHeight="@dimen/layout_height_48dp"
+                    app:cardCornerRadius="@dimen/margin_4dp"
+                    app:cardElevation="@dimen/elevation_4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/skippedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:minWidth="@dimen/layout_width_120dp"
+                            android:minHeight="@dimen/layout_height_48dp"
+                            android:onClick="@{()->clickHandler.onSkippedClick()}"
+                            android:text="@string/skipped"
+                            android:textSize="@dimen/text_size_16sp"
+                            android:typeface="@{robotoMedium}" />
+
+                        <View
+                            android:id="@+id/buttonDivider"
+                            android:layout_width="@dimen/layout_width_1dp"
+                            android:layout_height="@dimen/layout_height_48dp"
+                            android:background="@color/divider_color" />
+
+                        <TextView
+                            android:id="@+id/takenButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:minWidth="@dimen/layout_width_120dp"
+                            android:minHeight="@dimen/layout_height_48dp"
+                            android:onClick="@{()->clickHandler.onTakenClick()}"
+                            android:text="@string/taken"
+                            android:textSize="@dimen/text_size_16sp"
+                            android:typeface="@{robotoMedium}" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/actionMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16dp"
+                    android:layout_marginEnd="@dimen/margin_16dp"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_size_17sp"
+                    android:typeface="@{robotoBold}"
+                    android:textColor="@color/black"
+                    tools:text="Skipped at 9:15PM Fri, Sept 25" />
+
+                <TextView
+                    android:id="@+id/recordMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16dp"
+                    android:layout_marginEnd="@dimen/margin_16dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_17sp"
+                    android:typeface="@{robotoRegular}"
+                    tools:text="recorded at 9:15PM" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

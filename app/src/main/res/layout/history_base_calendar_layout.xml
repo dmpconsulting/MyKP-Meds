@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/history_header_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:layout_marginTop="@dimen/margin_25dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:layout_marginBottom="@dimen/margin_20dp"
+        android:gravity="start"
+        android:orientation="vertical"
+        android:padding="6dp">
+
+        <TextView
+            android:id="@+id/Calender_date_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/calendar_date_textview"
+            android:textColor="@color/name_text_color"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+    <com.montunosoftware.pillpopper.kotlin.calendarviewpager.HistoryCalendarViewPager
+        android:id="@+id/history_calendarViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/history_header_date"
+        android:minHeight="@dimen/layout_height_48dp" />
+
+
+    <TextView
+        android:id="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/history_calendarViewPager"
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:layout_marginEnd="@dimen/margin_20dp"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        android:background="@color/card_view_border_color" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/horizontal_history_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_divider"
+        android:layout_marginStart="@dimen/margin_4dp"
+        android:layout_marginEnd="@dimen/margin_4dp"
+        android:paddingBottom="@dimen/margin_16dp"
+        android:nestedScrollingEnabled="false"
+        android:scrollbars="none" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/horizontal_history_recyclerView"
+        android:background="?attr/selectableItemBackground">
+
+        <Button
+            android:id="@+id/see_more_toggle_btn"
+            android:layout_width="@dimen/margin_80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10dp"
+            android:background="@drawable/ripple_button_effect"
+            android:clickable="true"
+            android:focusable="true"
+            android:tag="@string/see_more"
+            android:text="@string/see_more"
+            android:textAllCaps="false"
+            android:textColor="@color/kp_theme_blue"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/no_history_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_divider"
+        android:layout_marginTop="@dimen/margin_72dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/no_history_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="@string/medication_history"
+            android:visibility="gone"
+            android:textColor="@color/group2_header"
+            android:textSize="@dimen/text_size_22sp" />
+
+        <TextView
+            android:id="@+id/no_history_txt"
+            android:layout_width="329dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/margin_36dp"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:visibility="gone"
+            android:layout_marginEnd="@dimen/margin_36dp"
+            android:gravity="center"
+            android:text="@string/history_empty_calendar_message"
+            android:textColor="@color/create_rem_txt_color"
+            android:textSize="@dimen/text_size_17sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/add_reminder_calendar_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/no_history_calendar"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_76dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:gravity="start"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/add_reminder_calendar_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/margin_10dp"
+            android:background="@android:color/transparent"
+            android:text="@string/add_reminder"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_size_17sp"
+            android:textColor="@color/kp_theme_blue"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</RelativeLayout>
+

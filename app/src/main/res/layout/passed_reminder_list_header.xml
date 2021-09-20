@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="activityContext"
+            type="com.montunosoftware.pillpopper.kotlin.lateremider.LateRemindersActivity" />
+        <variable
+            name="robotoRegular"
+            type="android.graphics.Typeface" />
+        <variable
+            name="robotoBold"
+            type="android.graphics.Typeface" />
+    </data>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_16dp"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/headerLayout"
+                android:layout_width="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/sign_in"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/medication_remainder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/late_reminders"
+                    android:typeface="@{robotoRegular}"
+                    android:textColor="@color/kp_theme_blue"
+                    android:textSize="@dimen/text_size_16sp" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/sign_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/sign_in_background_redesign"
+                android:minWidth="@dimen/layout_width_80dp"
+                android:minHeight="@dimen/layout_29dp"
+                android:text="@string/dialog_touch_outside_sign_in"
+                android:onClick="@{() -> activityContext.signInClicked()}"
+                android:textAllCaps="false"
+                android:typeface="@{robotoRegular}"
+                android:textColor="@color/kp_theme_blue"
+                android:textSize="@dimen/text_size_16sp"
+                android:contentDescription="@string/content_description_sign_in" />
+
+            <TextView
+                android:id="@+id/tv_proxy_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headerLayout"
+                android:layout_marginTop="@dimen/margin_6dp"
+                android:layout_marginBottom="@dimen/margin_16dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_24sp"
+                android:typeface="@{robotoBold}"
+                tools:text="Oct 18, 12:00 PM" />
+        </RelativeLayout>
+</layout>

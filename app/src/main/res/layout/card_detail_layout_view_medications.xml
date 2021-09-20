@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="handler"
+            type="com.montunosoftware.pillpopper.android.home.ViewMedicationCard" />
+    </data>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/card_detail_header_welcome"
+            bind:handler="@{handler}" />
+
+        <Button
+            android:id="@+id/card_btn_view_meds"
+            android:layout_width="136dp"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/layout_height_48dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_margin="32dp"
+            android:background="@drawable/button_view_meds_background"
+            android:text="@string/button_view_meds"
+            android:onClick="@{(view)-> handler.onClickShowMedications(view)}"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+</layout>

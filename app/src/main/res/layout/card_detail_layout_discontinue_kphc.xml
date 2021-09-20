@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="handler"
+            type="com.montunosoftware.pillpopper.android.home.KPHCDiscontinueCard" />
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F9F9F9">
+
+        <RelativeLayout
+            android:id="@+id/card_header"
+            android:layout_width="match_parent"
+            android:layout_height="176dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/card_detail_close"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="8dp"
+                android:contentDescription="@string/expand_view_close"
+                android:padding="8dp"
+                android:src="@drawable/close" />
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_detail_close"
+                android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/card_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/discontinued_meds"
+                    android:textColor="@color/kp_theme_blue"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:transitionName="@string/animation_title" />
+
+                <TextView
+                    android:id="@+id/card_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/from_kaiser_permanente_home_card"
+                    android:textColor="@color/kp_theme_blue"
+                    android:transitionName="@string/animation_subtitle"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+            </ScrollView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/kp_card_devider" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_kphc_discontinue_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/card_footer"
+            android:layout_below="@+id/card_header"
+            android:paddingTop="32dp"
+            android:paddingBottom="10dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <RelativeLayout
+            android:id="@+id/card_footer"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white">
+
+            <View
+                android:id="@+id/card_footer_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/kp_card_devider" />
+
+            <RelativeLayout
+                android:id="@+id/card_detail_footer_update_kphc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin_5dp"
+                android:layout_below="@+id/card_footer_divider">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    android:layout_toStartOf="@+id/card_footer_ok_button">
+                <TextView
+                    android:id="@+id/card_footer_hint"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/discontinued_medication_alert_message"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:paddingBottom="9dp"
+                    android:textColor="@color/home_screen_text_color"
+                    android:textSize="17sp" />
+                </ScrollView>
+
+                <Button
+                    android:id="@+id/card_footer_ok_button"
+                    android:layout_width="98dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/button_kphc_schedule"
+                    android:onClick="@{(view)->handler.onOKButtonClick(view)}"
+                    android:text="@string/okay"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

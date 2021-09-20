@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ana_ttl_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/banner" >
+
+        <ImageButton
+            android:id="@+id/up_button"
+            style="@style/up_button"
+            android:contentDescription="@string/txt_imagecontentdesc" >
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/listmenu_title"
+            style="@style/activity_title"
+            android:layout_toRightOf="@+id/up_button"
+            android:text="@string/_temp" >
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/done_button"
+            style="@style/done_button" 
+            android:contentDescription="@string/txt_imagecontentdesc">
+        </ImageButton>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/listmenu_clear_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dip"
+        android:text="@string/_clear" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_marginTop="8dip"
+        android:layout_weight="1"
+        android:scrollbars="none" >
+
+        <com.montunosoftware.pillpopper.android.view.PickListView
+            android:id="@+id/listmenu_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/frame1" >
+        </com.montunosoftware.pillpopper.android.view.PickListView>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/listmenu_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:text="@string/txt_picklist_dialog_listmenu_help"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/Black" />
+
+</LinearLayout>

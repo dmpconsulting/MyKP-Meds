@@ -1,0 +1,171 @@
+android {
+    project.ext.allowedVariants['release'] = [
+            ['variant': ['allLowerEnv', 'dev'], 'developHockeyToken': '', 'releaseHockeyToken': ''],
+            ['variant': ['qa1', 'qa'], 'developHockeyToken': '', 'releaseHockeyToken': ''],
+            ['variant': ['qi1', 'qa'], 'developHockeyToken': '', 'releaseHockeyToken': ''],
+            ['variant': ['pp', 'beta'], 'developHockeyToken': '', 'releaseHockeyToken': ''],
+            ['variant': ['prod', 'production'], 'developHockeyToken': '', 'releaseHockeyToken': '']
+    ]
+    project.ext.allowedVariants['debug'] = [
+            ['variant': ['allLowerEnv', 'dev'], 'developHockeyToken': '', 'releaseHockeyToken': '']
+    ]
+
+    flavorDimensions "endpoint","zone"
+
+    productFlavors {
+        qa1 {
+            dimension 'endpoint'
+            //base url for App Profile
+            buildConfigField "String", "BASE_URL", getPropertyStringWithQuotes(project.property('qa1.wsNonSecureBaseURL'))
+            buildConfigField "String", "CLIENT_ID", getPropertyStringWithQuotes(project.property('qa.clientId'))
+            buildConfigField "String", "CLIENT_SECRET", getPropertyStringWithQuotes(project.property('qa.clientSecret'))
+        }
+
+        qa2 {
+            dimension 'endpoint'
+            //base url for App Profile
+            buildConfigField "String", "BASE_URL", getPropertyStringWithQuotes(project.property('qa2.wsNonSecureBaseURL'))
+            buildConfigField "String", "CLIENT_ID", getPropertyStringWithQuotes(project.property('qa.clientId'))
+            buildConfigField "String", "CLIENT_SECRET", getPropertyStringWithQuotes(project.property('qa.clientSecret'))
+        }
+
+        qi1 {
+            dimension 'endpoint'
+            //base url for App Profile
+            buildConfigField "String", "BASE_URL", getPropertyStringWithQuotes(project.property('qi1.wsNonSecureBaseURL'))
+            buildConfigField "String", "CLIENT_ID", getPropertyStringWithQuotes(project.property('qi.clientId'))
+            buildConfigField "String", "CLIENT_SECRET", getPropertyStringWithQuotes(project.property('qi.clientSecret'))
+        }
+
+        qi2 {
+            dimension 'endpoint'
+            //base url for App Profile
+            buildConfigField "String", "BASE_URL", getPropertyStringWithQuotes(project.property('qi2.wsNonSecureBaseURL'))
+            buildConfigField "String", "CLIENT_ID", getPropertyStringWithQuotes(project.property('qi.clientId'))
+            buildConfigField "String", "CLIENT_SECRET", getPropertyStringWithQuotes(project.property('qi.clientSecret'))
+        }
+
+        d1 {
+            dimension 'endpoint'
+            //base url for App Profile
+            buildConfigField "String", "BASE_URL", getPropertyStringWithQuotes(project.property('dv1.wsNonSecureBaseURL'))
+        }
+
+        d2 {
+            dimension 'endpoint'
+            //base url for App Profile
+            buildConfigField "String", "BASE_URL", getPropertyStringWithQuotes(project.property('dv2.wsNonSecureBaseURL'))
+        }
+
+        pp {
+            dimension 'endpoint'
+            buildConfigField "String", "BASE_URL", getPropertyStringWithQuotes(project.property('pp.wsNonSecureBaseURL'))
+        }
+
+        prod {
+            dimension 'endpoint'
+            buildConfigField "String", "BASE_URL", getPropertyStringWithQuotes(project.property('prod.wsNonSecureBaseURL'))
+        }
+
+        allLowerEnv {
+            dimension 'endpoint'
+            buildConfigField "String", "BASE_URL", getPropertyStringWithQuotes(project.property('qa1.wsNonSecureBaseURL'))
+            buildConfigField "java.util.Map<String, String>", "ENVIRONMENT_MAP",
+                    "new java.util.TreeMap<String, " +
+                            "String>() {{ put(\"DV1\", \"" + project.property('dv1.wsNonSecureBaseURL') + "\"); " +
+                            "put(\"DV2\", \"" + project.property('dv2.wsNonSecureBaseURL') + "\"); " +
+                            "put(\"QA1\", \"" + project.property('qa1.wsNonSecureBaseURL') + "\"); " +
+                            "put(\"QA2\", \"" + project.property('qa2.wsNonSecureBaseURL') + "\"); " +
+                            "put(\"QI1\", \"" + project.property('qi1.wsNonSecureBaseURL') + "\"); " +
+                            "put(\"QI2\", \"" + project.property('qi2.wsNonSecureBaseURL') + "\"); " +
+                            "put(\"GOLD\", \"" + project.property('gold.wsNonSecureBaseURL') + "\"); " +
+                            "put(\"BETA\", \"" + project.property('pp.wsNonSecureBaseURL') + "\"); " +
+                            "}}"
+            buildConfigField "String", "API_KEY", getPropertyStringWithQuotes(project.property('dev.apikey'))
+
+        }
+
+        dev {
+            dimension 'zone'
+            applicationId project.property('dev.app.package')
+            resValue('string', 'app_name', project.property('dev.app.appname'))  //Application name
+            buildConfigField 'String', 'AUTHORITY', '"org.kp.tpmg.ttg.mykpmeds.dev.contentprovider"'
+            manifestPlaceholders = [buildEnv    : "dev",
+                                    secure_flag : project.property('dev.secure.flag'),
+                                    logging_flag: project.property('dev.logging.flag'),
+                                    mapValue: project.property('dev.map.value')
+            ]
+
+            buildConfigField "String", "CLIENT_ID", getPropertyStringWithQuotes(project.property('dev.clientId'))
+            buildConfigField "String", "CLIENT_SECRET", getPropertyStringWithQuotes(project.property('dev.clientSecret'))
+            buildConfigField "String", "API_KEY", getPropertyStringWithQuotes(project.property('dev.apikey'))
+        }
+        qa {
+            dimension 'zone'
+            applicationId project.property('qa.app.package')
+            resValue('string', 'app_name', project.property('qa.app.appname'))
+            buildConfigField 'String', 'AUTHORITY', '"org.kp.tpmg.ttg.mykpmeds.alpha.contentprovider"'
+            manifestPlaceholders = [buildEnv    : "qa",
+                                    secure_flag : project.property('qa.secure.flag'),
+                                    logging_flag: project.property('qa.logging.flag'),
+                                    mapValue: project.property('qa.map.value')
+            ]
+
+            buildConfigField "String", "CLIENT_ID", getPropertyStringWithQuotes(project.property('qa.clientId'))
+            buildConfigField "String", "CLIENT_SECRET", getPropertyStringWithQuotes(project.property('qa.clientSecret'))
+            buildConfigField "String", "API_KEY", getPropertyStringWithQuotes(project.property('qa.apikey'))
+        }
+        beta {
+            dimension 'zone'
+            applicationId project.property('pp.app.package')
+            resValue('string', 'app_name', project.property('pp.app.appname'))
+            buildConfigField 'String', 'AUTHORITY', '"org.kp.tpmg.android.mykpmeds.beta.contentprovider"'
+            manifestPlaceholders = [buildEnv    : "pp",
+                                    secure_flag : project.property('pp.secure.flag'),
+                                    logging_flag: project.property('pp.logging.flag'),
+                                    mapValue: project.property('pp.map.value')
+            ]
+
+            buildConfigField "String", "CLIENT_ID", getPropertyStringWithQuotes(project.property('pp.clientId'))
+            buildConfigField "String", "CLIENT_SECRET", getPropertyStringWithQuotes(project.property('pp.clientSecret'))
+            buildConfigField "String", "API_KEY", getPropertyStringWithQuotes(project.property('pp.apikey'))
+        }
+        production {
+            dimension 'zone'
+            applicationId project.property('prod.app.package')
+            resValue('string', 'app_name', project.property('prod.app.appname'))
+            buildConfigField 'String', 'AUTHORITY', '"org.kp.tpmg.android.mykpmeds.contentprovider"'
+            manifestPlaceholders = [buildEnv    : "pr",
+                                    secure_flag : project.property('prod.secure.flag'),
+                                    logging_flag: project.property('prod.logging.flag'),
+                                    mapValue: project.property('prod.map.value')
+            ]
+            buildConfigField "String", "CLIENT_ID", getPropertyStringWithQuotes(project.property('prod.clientId'))
+            buildConfigField "String", "CLIENT_SECRET", getPropertyStringWithQuotes(project.property('prod.clientSecret'))
+            buildConfigField "String", "API_KEY", getPropertyStringWithQuotes(project.property('prod.apikey'))
+        }
+
+    }
+
+    variantFilter { variant ->
+        //Getting the name of the flavors combined for this build
+        def name = variant.flavors*.name
+        // Getting the build type to check the allowed variant. buildType can be debug or release
+        def buildType = variant.buildType.name
+
+        // All variants are ignored by default
+        variant.ignore = true
+
+        // Get a list of variants allowed for this build type
+        // we get back a list of lists
+        def allowed = project.ext.allowedVariants[buildType]
+
+        allowed.each {
+            // check if building variant is in our allowed list
+            if (name == it['variant']) {
+                variant.ignore = false
+                return
+            }
+        }
+    }
+}

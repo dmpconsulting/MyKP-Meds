@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="32dp"
+    android:orientation="vertical"
+    android:paddingTop="32dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Toll Free"
+        android:textColor="@color/kp_header_blue"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/phn_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="4dp"
+        android:text="(888)123-4444"
+        android:textColor="@color/login_subtitle_color"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/short_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Experiencing a problem with My KP Meds"
+        android:textColor="@color/login_subtitle_color"
+        android:textSize="14sp" />
+
+</LinearLayout>

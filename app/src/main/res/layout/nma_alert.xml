@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="UnusedResources"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/nma_heading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/layout_height_62dp"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/nma_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_20dp"
+            android:gravity="left|center_vertical"
+            android:text="@string/nma_alert"
+            android:textColor="@color/dark_red"
+            android:textSize="@dimen/text_size_23sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/linediv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height_2dp"
+        android:layout_below="@+id/nma_heading_layout"
+        android:background="@color/dark_red" />
+
+    <TextView
+        android:id="@+id/nma_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linediv"
+        android:layout_marginBottom="@dimen/margin_22dp"
+        android:layout_marginLeft="@dimen/margin_20dp"
+        android:layout_marginRight="@dimen/margin_25dp"
+        android:layout_marginTop="@dimen/margin_28dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_18sp" />
+
+</RelativeLayout>

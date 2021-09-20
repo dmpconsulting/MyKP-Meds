@@ -1,0 +1,34 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.montunosoftware.pillpopper.android.calanderView.History_ui">
+
+    <TextView
+        android:id="@+id/no_history_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_history_yet"
+        android:textColor="@color/name_text_color"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.303" />
+
+    <TextView
+        android:layout_width="336dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/card_manage_member_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_gravity="start|center|end"
+        android:gravity="start|center|end"
+        app:layout_constraintTop_toBottomOf="@+id/no_history_id" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

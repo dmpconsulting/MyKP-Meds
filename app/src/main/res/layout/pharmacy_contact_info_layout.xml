@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_2dp"
+    android:layout_marginBottom="@dimen/margin_2dp">
+
+    <TextView
+        android:id="@+id/contact_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        android:layout_toStartOf="@id/separator"
+        android:gravity="start"
+        android:textColor="@color/login_bottom_gray"
+        android:textSize="@dimen/text_size_15sp" />
+
+    <TextView
+        android:id="@+id/separator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/margin_4dp"
+        android:text="@string/colan_separator"
+        android:textColor="@color/login_bottom_gray"
+        android:textSize="@dimen/text_size_15sp" />
+
+    <TextView
+        android:id="@+id/contact_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/margin_4dp"
+        android:layout_toEndOf="@id/separator"
+        android:gravity="start"
+        android:paddingTop="@dimen/padding_14dp"
+        android:paddingBottom="@dimen/padding_14dp"
+        android:textColor="@color/login_bottom_gray"
+        android:textSize="@dimen/text_size_15sp" />
+
+</RelativeLayout>

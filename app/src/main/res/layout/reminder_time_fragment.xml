@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View"/>
+        <variable
+            name="reminderTimeFragment"
+            type="com.montunosoftware.pillpopper.android.ReminderTimeFragment" />
+
+        <variable
+            name="robotoMedium"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="robotoRegular"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="startDateVisibility"
+            type="int" />
+
+        <variable
+            name="endDateVisibility"
+            type="int" />
+
+        <variable
+            name="isMonthly"
+            type="boolean" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/addReminderLayoutContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="@{isMonthly ? View.GONE:View.VISIBLE}">
+
+            <TextView
+                android:id="@+id/reminderLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20dp"
+                android:layout_marginTop="@dimen/margin_40dp"
+                android:layout_marginEnd="@dimen/margin_20dp"
+                android:layout_marginBottom="@dimen/margin_20dp"
+                android:text="@string/times_to_be_reminded"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_17sp"
+                android:typeface="@{robotoMedium}" />
+
+
+            <LinearLayout
+                android:id="@+id/reminders_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_1dp"
+                android:background="@color/archive_list_divider_color" />
+
+
+            <RelativeLayout
+                android:id="@+id/add_reminder_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/layout_height_56dp"
+                android:onClick="@{() -> reminderTimeFragment.addReminderClick()}"
+                android:paddingStart="@dimen/padding_20dp">
+
+                <ImageView
+                    android:id="@+id/ic_add_reminder_plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_add" />
+
+                <TextView
+                    android:id="@+id/addReminderLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/margin_16dp"
+                    android:layout_marginTop="@dimen/margin_16dp"
+                    android:layout_marginBottom="@dimen/margin_16dp"
+                    android:layout_toEndOf="@id/ic_add_reminder_plus"
+                    android:text="@string/add_reminder"
+                    android:textColor="@color/dark_blue_ada"
+                    android:textSize="@dimen/text_size_17sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/archive_list_divider_color" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/scheduleLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20dp"
+            android:layout_marginTop="@dimen/margin_40dp"
+            android:layout_marginEnd="@dimen/margin_20dp"
+            android:layout_marginBottom="@dimen/margin_16dp"
+            android:text="@{isMonthly ? @string/monthly_reminder : @string/how_long_do_need_this_schedule}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_17sp"
+            android:typeface="@{robotoMedium}" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/start_date_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:minHeight="@dimen/margin_56dp"
+                card_view:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:id="@+id/startDateRelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/date_picker_active_border"
+                    android:minHeight="@dimen/layout_height_56dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_48dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/start_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_8dp"
+                            android:layout_marginTop="@dimen/margin_8dp"
+                            android:layout_marginBottom="@dimen/margin_2dp"
+                            android:clickable="false"
+                            android:text="@string/start"
+                            android:textColor="@color/create_rem_txt_color"
+                            android:textSize="@dimen/text_size_16sp"
+                            android:typeface="@{robotoRegular}" />
+
+                        <TextView
+                            android:id="@+id/start_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_8dp"
+                            android:layout_marginBottom="@dimen/margin_8dp"
+                            android:onClick="@{() -> reminderTimeFragment.showDatepicker(1)}"
+                            android:paddingTop="@dimen/padding_13dp"
+                            android:paddingBottom="@dimen/padding_13dp"
+                            android:text="@string/date"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_18sp"
+                            android:typeface="@{robotoRegular}" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/layout_width_48dp"
+                        android:layout_height="@dimen/layout_height_48dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:layout_marginTop="@dimen/margin_20dp">
+
+                        <ImageView
+                            android:id="@+id/clear_startDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="@dimen/margin_6dp"
+                            android:minWidth="@dimen/layout_width_24dp"
+                            android:minHeight="@dimen/layout_height_24dp"
+                            android:onClick="@{() -> reminderTimeFragment.resetStartDate()}"
+                            android:src="@drawable/ic_remove"
+                            android:visibility="@{startDateVisibility}" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/end_date_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8dp"
+                android:layout_weight="0.5"
+                android:minHeight="@dimen/margin_56dp"
+                card_view:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:id="@+id/endDateRelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/date_picker_active_border"
+                    android:minHeight="@dimen/layout_height_56dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_48dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/end_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_8dp"
+                            android:layout_marginTop="@dimen/margin_8dp"
+                            android:layout_marginBottom="@dimen/margin_2dp"
+                            android:clickable="false"
+                            android:text="@string/end"
+                            android:textColor="@color/create_rem_txt_color"
+                            android:textSize="@dimen/text_size_16sp"
+                            android:typeface="@{robotoRegular}" />
+
+                        <TextView
+                            android:id="@+id/end_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_8dp"
+                            android:layout_marginBottom="@dimen/margin_8dp"
+                            android:minWidth="@dimen/layout_width_48dp"
+                            android:onClick="@{() -> reminderTimeFragment.showDatepicker(2)}"
+                            android:paddingTop="@dimen/padding_13dp"
+                            android:paddingBottom="@dimen/padding_13dp"
+                            android:text="@string/never"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_18sp"
+                            android:typeface="@{robotoRegular}" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/layout_width_48dp"
+                        android:layout_height="@dimen/layout_height_48dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:layout_marginTop="@dimen/margin_20dp">
+
+                        <ImageView
+                            android:id="@+id/clear_endDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="@dimen/margin_6dp"
+                            android:minWidth="@dimen/layout_width_24dp"
+                            android:minHeight="@dimen/layout_height_24dp"
+                            android:onClick="@{() -> reminderTimeFragment.resetEndDate()}"
+                            android:src="@drawable/ic_remove"
+                            android:visibility="@{endDateVisibility}" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/addReminderLayoutforMonthly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="@{isMonthly ? View.VISIBLE : View.GONE}">
+
+            <TextView
+                android:id="@+id/reminderLabelMonthly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginTop="@dimen/margin_40dp"
+                android:layout_marginEnd="@dimen/margin_16dp"
+                android:layout_marginBottom="@dimen/margin_20dp"
+                android:text="@string/times_to_be_reminded_for_monthly"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_17sp"
+                android:typeface="@{robotoMedium}" />
+
+
+            <LinearLayout
+                android:id="@+id/reminders_container_monthly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_1dp"
+                android:background="@color/archive_list_divider_color" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/save_schedule_btn"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_40dp"
+            android:layout_marginBottom="@dimen/margin_40dp"
+            android:background="@drawable/button_kphc_schedule"
+            android:minWidth="@dimen/save_schedule_button_width"
+            android:minHeight="@dimen/layout_height_48dp"
+            android:onClick="@{(view) -> reminderTimeFragment.saveSchedule(view)}"
+            android:text="@string/save_schedule_btn"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16sp"
+            android:typeface="@{robotoMedium}" />
+
+    </LinearLayout>
+</layout>

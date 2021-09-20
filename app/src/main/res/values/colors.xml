@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Material Design Colors -->
+    <color name="colorPrimary">#006ba6</color>
+    <color name="colorPrimaryDark">#004D75</color>
+    <color name="colorAccent">#003B71</color>
+
+    <color name="quickview_reminder_status_bar_color">#005C58</color>
+    <color name="dialog_timepicker_title_text_color">@color/white</color>
+    <color name="dialog_date_text_color">@color/white</color>
+    <color name="history_calendar_overlay_color">#14E5661F</color>
+
+    <color name="white">#ffffff</color>
+    <color name="Text_blue">#00385e</color>
+    <color name="Black">#000000</color>
+    <color name="light_grey">#AAA</color>
+    <color name="dark_blue">#1C9CF7</color>
+    <color name="dark_blue_ada">#006ba6</color>
+
+    <drawable name="highlight_color_drawable">#cce8c29d</drawable>
+    <drawable name="white_color_drawable">#ffffffff</drawable>
+    <drawable name="transparent_color_drawable">#00000000</drawable>
+
+    <!-- Drug Name Colors for med list -->
+    <color name="med_list_member_name_header_background_color">#1E7DB1</color>
+    <color name="drug_color_when_new_kp_drug_present">#5A5A5A</color>
+
+    <!--Colors for Med Details screen -->
+    <color name="med_take_occasionally_note_text_color">#006BA6</color>
+
+    <!-- Colors as per UI revamp - 2014 -->
+    <color name="text_content">#333333</color>
+
+    <!-- reminderscreen colors -->
+
+    <!-- Colors for Settings screen -->
+    <color name="settings_special_item_background">#dddddd</color>
+    <color name="kp_theme_blue">#006BA6</color>
+    <color name="app_info_color">#666666</color>
+
+    <!-- colors as per US6461 -->
+    <color name="Text_black_ada">#333333</color>
+    <color name="text_delete_ada">#cc0900</color>
+    <color name="loading_transparent">#00000000</color>
+
+    <!-- colors as Per US9506 -->
+    <color name="kp_header_blue">#006FA8</color>
+    <color name="kp_med_details_gray">#6B6B6B</color>
+    <color name="kp_med_summary_light_blck">#666666</color>
+
+    <color name="new_from_kphc_bar_clr">#008800</color>
+    <color name="kphc_indicator">#A9E03A</color>
+    <color name="archive_hint_text_clr">#535353</color>
+    <!-- colors as Per US9557 -->
+    <color name="reminder_thumb_off_gray">#ececec</color>
+    <color name="text_turn_on_interval_background_color">#FBFBFB</color>
+    <color name="teal">#009688</color>
+    <color name="dark_Teal">#00796B</color>
+    <color name="next_reminder_text_color">#444444</color>
+
+    <color name="calendar_current_date_indicator_invisible">#00054A6F</color>
+    <color name="schedule_calendar_selected_date_border_color">#c1c1c1</color>
+    <color name="remind_txt_bkg_color">#fafafa</color>
+    <color name="remind_btn_txt_color">#757575</color>
+    <color name="btn_as_needed_green">#006965</color>
+    <color name="schedule_main_member_textcolor">#333333</color>
+
+    <!--Schedule screen colors -->
+    <color name="schedule_empty_text_textcolor">#333333</color>
+    <color name="schedule_screen_background_color">#F2F3F4</color>
+
+    <!-- Colors for Archive screen redesign -->
+    <color name="archive_list_otc_header_background">#E5F0F6</color>
+    <color name="archive_list_kphc_header_background">#F3F1F0</color>
+    <color name="archive_list_kphc_message_background">#FFFFFF</color>
+    <color name="archive_list_divider_color">#D0D0D0</color>
+    <color name="archive_list_medication_generic_name_textcolor">#333333</color>
+    <color name="archive_list_medication_name_textcolor">#333333</color>
+    <color name="archive_list_medication_dosage_textcolor">#333333</color>
+    <color name="archive_list_proxy_dropdown_background_color">#1E7DB1</color>
+    <color name="archive_detail_notes_header_background">#F5FAFD</color>
+    <color name="archive_detail_restore_hint_textcolor">#333333</color>
+    <color name="archive_detail_restore_dialog_textcolor">#333333</color>
+    <color name="archive_detail_delete_hint_textcolor">#333333</color>
+    <color name="create_rem_txt_color">#767676</color>
+    <color name="header_background">#F3F2FF</color>
+
+    <!--History screen colors-->
+    <color name="history_black_333333">#333333</color>
+    <color name="history_blue_4191bd">#4191BD</color>
+    <color name="history_blue_f5fafc">#F5FAFC</color>
+    <color name="history_black_909090">#909090</color>
+    <color name="history_empty_bg_f2f3f4">#F2F3F4</color>
+    <color name="history_blue_4191BD">#4191BD</color>
+    <color name="history_proxy_dropdown_background_color">#1E7DB1</color>
+
+    <!-- settings screen colors-->
+    <color name="settings_006BA6">#006BA6</color>
+    <color name="settings_BD0303">#BD0303</color>
+    <color name="settings_divider">#c2c2c2</color>
+
+    <!-- History Edit Screen Colors -->
+    <color name="history_edit_screen_textcolor">#333333</color>
+    <color name="history_edit_action_button_textcolor">#004F7A</color>
+    <color name="history_edit_screen_divider_color">#B6B6B6</color>
+    <color name="history_edit_action_button_active_background">#EBEBEB</color>
+    <color name="pharmacy_info_color">#6D6D6D</color>
+
+    <!-- Single Time Reminders colors -->
+    <color name="single_time_pill_action_text_color">#555555</color>
+    <color name="dialog_fingerprint_error_icon_color">#D00000</color>
+    <color name="dialog_fingerprint_error_text_color">#D00000</color>
+    <color name="dialog_fingerprint_t_and_c_text_color">#333333</color>
+    <color name="reminder_additional_drug_note">#737373</color>
+
+    <color name="card_button_view_meds">#027F9F</color>
+    <color name="card_button_create">#00857C</color>
+    <color name="card_button_refill">#1E0E4E</color>
+    <color name="card_btn_unselected_00625c">#00625c</color>
+    <color name="home_hamburger_color_0569A5">#0569A5</color>
+    <color name="setup_remind_btn_bcg">#00857C</color>
+    <color name="refil_remind_btn_bcg">#027F9F</color>
+    <color name="refil_med_btn_bcg">#472F91</color>
+    <color name="add_med_btn_bcg">#BB1654</color>
+    <color name="home_screen_text_color">#58737F</color>
+
+    <color name="color_late_reminder_title">#0D6D67</color>
+    <color name="color_see_more_text">#1B6FF6</color>
+    <color name="refill_reminder_sub_title">#333333</color>
+    <color name="next_reminder_txt_color">#767676</color>
+    <color name="divider_color">#E8E8E8</color>
+    <color name="medication_schedule_status">#00615D</color>
+    <color name="expanded_card_background">#F9F9F9</color>
+    <color name="refill_reminder_action_text_color">#d5555555</color>
+    <color name="refill_reminder_delete_layout_bg_color">#F2FFFFFF</color>
+    <color name="nav_application_txt_color">#717171</color>
+    <color name="delete_refill_border_color">#D2658E</color>
+
+    <!--Interrupts-->
+    <color name="red_color">#B63125</color>
+    <color name="green_color">#4A7628</color>
+    <color name="amber_color">#FF9E16</color>
+    <color name="interrupts_header">#2a373c</color>
+    <color name="borderline">#666666</color>
+    <color name="interrupts_pwd">#677083</color>
+    <color name="settings_farg_bg">#F4F5F6</color>
+    <color name="group2_header">#2A373C</color>
+    <color name="dark_grey">#4F6974</color>
+    <color name="sign_in_help_black">#0D1C3D</color>
+    <color name="sign_in_background">#F7F7F7</color>
+    <color name="card_view_border_color">#CCCCCC</color>
+    <color name="secret_questions_divider_color">#D8D8D8</color>
+
+    <color name="drug_details_set_reminder_bcg_color">#F5F5F5</color>
+    <color name="linear_gradient_top">#005389</color>
+    <color name="layer_fill">#03325C</color>
+
+    <color name="splash_top_color">#005389</color>
+    <color name="splash_bottom_color">#003871</color>
+    <color name="view_color">#C8C8C8</color>
+    <color name="schedule_divider_color">#E0E7EB</color>
+    <color name="reminder_label">#2A373C</color>
+    <color name="reminder_time">#006BA6</color>
+    <color name="schedule_background">#F4F6F7</color>
+    <color name="schedule_new_background">#FAFDFF</color>
+    <color name="schedule_saved">#8c000000</color>
+    <color name="schedule_past_date_color">#96949d</color>
+    <color name="weekday_stroke">#747474</color>
+    <color name="color_preffective">#023B6F</color>
+    <color name="scheduleDivider">#d2DBE0</color>
+    <color name="schedule_detail_archive_block_background">#F0F3F5</color>
+    <color name="primary_green">#3B8403</color>
+    <color name="drugname_header_color">#454545</color>
+    <color name="drug_strength_action">#767676</color>
+    <color name="light_black">#DE000000</color>
+    <color name="personal_notes_color">#0074C8</color>
+    <color name="alert_message_color">#8A000000</color>
+    <color name="color_blue">#006DAB</color>
+    <color name="name_text_color">#F2000000</color>
+    <color name="dosage_text_color">#99000000</color>
+    <color name="disabled_tick">#ACACAC</color>
+    <color name="reminder_header_color">#EDF4F9</color>
+    <color name="color4a4a4a">#4A4A4A</color>
+    <color name="colorC8C7CC">#C8C7CC</color>
+    <color name="color929292">#929292</color>
+    <color name="color_d2dbe0">#d2dbe0</color>
+    <color name="color_fffafafa">#fffafafa</color>
+    <color name= "history_calendar_future_day_color">#6d819c</color>
+    <color name="border_color_overlay">#f1f1f1</color>
+    <color name="instruction_layout_color_overlay">#f9f9f9</color>
+</resources>

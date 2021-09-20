@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="handler"
+            type="com.montunosoftware.pillpopper.android.home.CurrentReminderCard" />
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/expanded_card_background">
+
+        <RelativeLayout
+            android:id="@+id/card_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height_209dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/card_detail_close"
+                android:layout_width="@dimen/layout_width_48dp"
+                android:layout_height="@dimen/layout_height_48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/margin_8dp"
+                android:contentDescription="@string/content_description_previous_screen"
+                android:padding="@dimen/padding_8dp"
+                android:src="@drawable/close" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_detail_close"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/card_title_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_24dp"
+                        android:text="@{handler.getReminderTime()}"
+                        android:textColor="@color/color_late_reminder_title"
+                        android:textSize="@dimen/text_size_28sp"
+                        android:textStyle="bold"
+                        android:transitionName="@string/animation_reminder_time" />
+
+                    <TextView
+                        android:id="@+id/card_title_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_24dp"
+                        android:layout_marginTop="@dimen/margin_4dp"
+                        android:layout_marginBottom="@dimen/margin_12dp"
+                        android:text="@{handler.getReminderDate()}"
+                        android:textColor="@color/color_late_reminder_title"
+                        android:textSize="@dimen/text_size_17sp"
+                        android:transitionName="@string/animation_reminder_date" />
+
+                    <TextView
+                        android:id="@+id/card_subtitle_reminder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_24dp"
+                        android:text="@string/reminder"
+                        android:textColor="@color/kp_txt_color_gray"
+                        android:textSize="@dimen/text_size_17sp"
+                        android:textStyle="bold"
+                        android:transitionName="@string/animation_reminder_tile" />
+
+                    <TextView
+                        android:id="@+id/card_subtitle_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_24dp"
+                        android:layout_marginEnd="@dimen/margin_24dp"
+                        android:ellipsize="end"
+                        android:maxLines="4"
+                        android:text="@{handler.getUserNames()}"
+                        android:textColor="@color/kp_txt_color_gray"
+                        android:textSize="@dimen/text_size_17sp"
+                        android:transitionName="@string/animation_reminder_sub_title" />
+
+                </LinearLayout>
+            </ScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/kp_card_devider" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_current_reminder_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/card_footer"
+            android:layout_below="@+id/card_header"
+            android:paddingBottom="@dimen/padding_10dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <RelativeLayout
+            android:id="@+id/card_footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height_128dp"
+            android:layout_alignParentBottom="true">
+
+            <View
+                android:id="@+id/card_footer_divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_1dp"
+                android:background="@color/kp_card_devider" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_128dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:overScrollMode="never">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/placeholder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentTop="true"/>
+
+                        <Button
+                            android:id="@+id/card_footer_skip_all"
+                            android:layout_width="@dimen/layout_width_136dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_toStartOf="@id/placeholder"
+                            android:layout_marginStart="@dimen/margin_8dp"
+                            android:layout_marginEnd="@dimen/margin_8dp"
+                            android:layout_marginTop="@dimen/margin_16dp"
+                            android:layout_marginBottom="@dimen/margin_16dp"
+                            android:background="@drawable/button_kphc_dismiss"
+                            android:minHeight="@dimen/layout_height_48dp"
+                            android:onClick="@{(view)->handler.onSkipped(view)}"
+                            android:tag="@string/expanded"
+                            android:text="@{handler.getSkipText()}"
+                            android:textAllCaps="false"
+                            android:textColor="@color/card_btn_unselected_00625c"
+                            android:textSize="@dimen/text_size_18sp"
+                            android:transitionName="@string/animation_skip" />
+
+                        <Button
+                            android:id="@+id/card_footer_taken_all"
+                            android:layout_width="@dimen/layout_width_136dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/margin_8dp"
+                            android:layout_marginEnd="@dimen/margin_8dp"
+                            android:layout_marginTop="@dimen/margin_16dp"
+                            android:layout_marginBottom="@dimen/margin_16dp"
+                            android:layout_toEndOf="@id/placeholder"
+                            android:background="@drawable/button_create_reminder_background"
+                            android:minHeight="@dimen/layout_height_48dp"
+                            android:onClick="@{(view)->handler.onTaken(view)}"
+                            android:tag="@string/expanded"
+                            android:text="@{handler.getTakenText()}"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_18sp"
+                            android:transitionName="@string/animation_taken" />
+
+                        <TextView
+                            android:id="@+id/footer_remind_later_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_below="@id/card_footer_skip_all"
+                            android:layout_centerInParent="true"
+                            android:onClick="@{(view)->handler.onRemindLater(view)}"
+                            android:text="@string/remind_later_footer_text"
+                            android:textColor="@color/color_late_reminder_title"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                        <TextView
+                            android:id="@+id/footer_taken_earlier"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_centerInParent="true"
+                            android:layout_below="@id/card_footer_skip_all"
+                            android:onClick="@{(view)->handler.onTakenEarlier(view)}"
+                            android:text="@string/taken_all_earlier"
+                            android:textColor="@color/color_late_reminder_title"
+                            android:textSize="@dimen/text_size_16sp"
+                            android:visibility="gone" />
+
+                </RelativeLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

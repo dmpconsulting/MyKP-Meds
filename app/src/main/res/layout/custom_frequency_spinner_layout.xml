@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/layout_height_48dp">
+
+    <TextView
+        android:id="@+id/proxy_name_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/padding_20dp"
+        android:layout_centerInParent="true"
+        android:text="@string/content_description_nav_medication_reminders"
+        android:textColor="@color/Black"
+        android:textSize="@dimen/text_size_18sp"
+        android:textStyle="bold" />
+</RelativeLayout>

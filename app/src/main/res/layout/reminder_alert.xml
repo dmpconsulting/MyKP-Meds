@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_106dp"
+            android:background="@drawable/white_circles"
+            android:minWidth="@dimen/layout_width_147dp"
+            android:minHeight="@dimen/layout_height_147dp">
+
+            <ImageView
+                android:id="@+id/actionImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_skipped_50dp"
+                tools:ignore="contentDescription"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/actionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_height_44dp"
+            android:alpha="0.95"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_24sp"
+            android:typeface="@{robotoBold}"
+            tools:text="@string/skipped" />
+
+        <TextView
+            android:id="@+id/actionMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_50dp"
+            android:layout_marginTop="@dimen/margin_12dp"
+            android:layout_marginEnd="@dimen/margin_50dp"
+            android:alpha="0.95"
+            android:gravity="center"
+            android:lineSpacingExtra="5sp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16sp"
+            android:typeface="@{robotoRegular}"
+            tools:text="@string/skipall_alert_message" />
+
+        <Button
+            android:id="@+id/okButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_32dp"
+            android:background="@drawable/rounded_edge_white_background"
+            android:minWidth="@dimen/layout_width_216dp"
+            android:minHeight="@dimen/layout_height_36dp"
+            android:onClick="@{()-> context.okClicked()}"
+            android:text="@string/_ok"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16sp"
+            android:typeface="@{robotoMedium}" />
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_12dp"
+            android:background="@color/transparent"
+            android:minWidth="@dimen/layout_width_216dp"
+            android:minHeight="@dimen/layout_height_36dp"
+            android:onClick="@{()-> context.cancelClicked()}"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16sp"
+            android:typeface="@{robotoMedium}" />
+
+    </LinearLayout>
+
+    <data>
+
+        <variable
+            name="robotoBold"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="robotoRegular"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="robotoMedium"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="context"
+            type="com.montunosoftware.pillpopper.kotlin.quickview.ReminderAlertActivity" />
+
+    </data>
+</layout>

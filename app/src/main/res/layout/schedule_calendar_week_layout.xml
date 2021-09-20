@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:weightSum="7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_4dp"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/schedule_calendar_sunday_holder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:minWidth="@dimen/layout_width_48dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/schedule_calendar_sunday_day_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/Sunday"
+            android:gravity="center"
+            android:minWidth="@dimen/layout_width_36dp"
+            android:minHeight="@dimen/layout_height_36dp"
+            android:text="@string/sun_day"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <TextView
+            android:id="@+id/schedule_calendar_sunday_date_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_4dp"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:gravity="center"
+            android:minWidth="@dimen/layout_width_36dp"
+            android:minHeight="@dimen/layout_height_36dp"
+            android:text="@string/_18"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <View
+            android:id="@+id/current_date_indicator_sunday"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/calendar_current_date_indicator_invisible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/schedule_calendar_monday_holder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/margin_4dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/schedule_calendar_monday_day_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/Monday"
+            android:gravity="center"
+            android:minWidth="@dimen/layout_width_36dp"
+            android:minHeight="@dimen/layout_height_36dp"
+            android:text="@string/mon_day"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <TextView
+            android:id="@+id/schedule_calendar_monday_date_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_4dp"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:gravity="center"
+            android:minWidth="@dimen/layout_width_36dp"
+            android:minHeight="@dimen/layout_height_36dp"
+            android:text="@string/_18"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <View
+            android:id="@+id/current_date_indicator_monday"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/calendar_current_date_indicator_invisible" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/schedule_calendar_tuesday_holder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_4dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:minWidth="@dimen/layout_width_48dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/schedule_calendar_tuesday_day_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/Tuesday"
+            android:gravity="center"
+            android:minWidth="@dimen/layout_width_36dp"
+            android:minHeight="@dimen/layout_height_36dp"
+            android:text="@string/tues_day"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <TextView
+            android:id="@+id/schedule_calendar_tuesday_date_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_4dp"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:gravity="center"
+            android:minWidth="@dimen/layout_width_36dp"
+            android:minHeight="@dimen/layout_height_36dp"
+            android:text="@string/_18"
+            android:textSize="@dimen/text_size_16sp" />
+
+
+        <View
+            android:id="@+id/current_date_indicator_tuesday"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/calendar_current_date_indicator_invisible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/schedule_calendar_wednesday_holder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/margin_4dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:minWidth="@dimen/layout_width_48dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/schedule_calendar_wednesday_day_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/WednessDay"
+            android:gravity="center"
+            android:minWidth="@dimen/layout_width_36dp"
+            android:minHeight="@dimen/layout_height_36dp"
+            android:text="@string/wednes_day"
+            android:textColor="@color/create_rem_txt_color"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <TextView
+            android:id="@+id/schedule_calendar_wednesday_date_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_4dp"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:gravity="center"
+            android:minWidth="@dimen/layout_width_36dp"
+            android:minHeight="@dimen/layout_height_36dp"
+            android:text="@string/_18"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <View
+            android:id="@+id/current_date_indicator_wednesday"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/calendar_current_date_indicator_invisible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/schedule_calendar_thursday_holder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_4dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:minWidth="@dimen/layout_width_48dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/schedule_calendar_thursday_day_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/Thursday"
+            android:gravity="center"
+            android:minWidth="@dimen/layout_width_36dp"
+            android:minHeight="@dimen/layout_height_36dp"
+            android:text="@string/thurs_day"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <TextView
+            android:id="@+id/schedule_calendar_thursday_date_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_4dp"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:gravity="center"
+            android:minWidth="@dimen/layout_width_36dp"
+            android:minHeight="@dimen/layout_height_36dp"
+            android:text="@string/_18"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <View
+            android:id="@+id/current_date_indicator_thursday"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/calendar_current_date_indicator_invisible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/schedule_calendar_friday_holder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_4dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:minWidth="@dimen/layout_width_48dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/schedule_calendar_friday_day_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/Friday"
+            android:gravity="center"
+            android:minWidth="@dimen/layout_width_36dp"
+            android:minHeight="@dimen/layout_height_36dp"
+            android:text="@string/fri_day"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <TextView
+            android:id="@+id/schedule_calendar_friday_date_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_4dp"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:gravity="center"
+            android:minWidth="@dimen/layout_width_36dp"
+            android:minHeight="@dimen/layout_height_36dp"
+            android:text="@string/_18"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <View
+            android:id="@+id/current_date_indicator_friday"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/calendar_current_date_indicator_invisible" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/schedule_calendar_saturday_holder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_4dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/schedule_calendar_saturday_day_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/Saturday"
+            android:gravity="center"
+            android:minWidth="@dimen/layout_width_36dp"
+            android:minHeight="@dimen/layout_height_36dp"
+            android:text="@string/satur_day"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <TextView
+            android:id="@+id/schedule_calendar_saturday_date_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_4dp"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:gravity="center"
+            android:minWidth="@dimen/layout_width_36dp"
+            android:minHeight="@dimen/layout_height_36dp"
+            android:text="@string/_18"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <View
+            android:id="@+id/current_date_indicator_saturday"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/calendar_current_date_indicator_invisible" />
+
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

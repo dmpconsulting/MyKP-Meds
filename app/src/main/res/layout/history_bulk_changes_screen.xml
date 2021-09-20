@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activityContext"
+            type="com.montunosoftware.pillpopper.kotlin.history.HistoryBulkActionChangeActivity" />
+
+        <variable
+            name="adapter"
+            type="com.montunosoftware.pillpopper.kotlin.history.HistoryActionChangeAdapter" />
+
+        <variable
+            name="robotoMedium"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="robotoBold"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="robotoRegular"
+            type="android.graphics.Typeface" />
+
+    </data>
+
+
+    <RelativeLayout
+        android:id="@+id/lr_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/history_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_16dp"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/headerLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20dp"
+                    android:text="@string/reminder_details"
+                    android:textColor="@color/kp_theme_blue"
+                    android:textSize="@dimen/text_size_16sp"
+                    android:typeface="@{robotoRegular}" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headerLayout"
+                android:layout_marginTop="@dimen/margin_6dp"
+                android:layout_marginBottom="@dimen/margin_16dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_24sp"
+                tools:text="Patient Name" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/proxy_name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/history_toolbar"
+            android:background="@color/reminder_header_color">
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginEnd="@dimen/margin_16dp"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/layout_height_40dp"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_16sp"
+                android:typeface="@{robotoBold}"
+                tools:text="Nathan" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/recycler_current_reminder_detail_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/proxy_name_layout"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_med_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:focusableInTouchMode="false"
+                android:footerDividersEnabled="true"
+                android:listSelector="@android:color/transparent"
+                android:scrollbars="none"
+                bind:adapter="@{adapter}"
+                bind:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/ic_gradient_short"
+            android:baselineAligned="false"
+            android:gravity="center|bottom"
+            android:minHeight="85dp"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/margin_40dp"
+            android:paddingEnd="@dimen/margin_40dp"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.5"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/layout_height_48dp"
+                android:onClick="@{() -> activityContext.onCancelClicked()}">
+
+                <Button
+                    android:id="@+id/cancel_btn"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/skip_all_background"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:minWidth="@dimen/layout_160dp"
+                    android:minHeight="@dimen/layout_width_48dp"
+                    android:text="@string/cancel"
+                    android:textAllCaps="false"
+                    android:textColor="@color/kp_theme_blue"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:typeface="@{robotoMedium}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/margin_8dp"
+                android:layout_weight="0.5"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/layout_height_48dp">
+
+                <Button
+                    android:id="@+id/save_btn"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/taken_all_background"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:minWidth="@dimen/layout_160dp"
+                    android:minHeight="@dimen/layout_height_48dp"
+                    android:onClick="@{() -> activityContext.onSaveClicked()}"
+                    android:text="@string/save"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:typeface="@{robotoMedium}"
+                    android:contentDescription="@string/content_description_save_button"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

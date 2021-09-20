@@ -1,0 +1,22 @@
+{
+                "systemError": null,
+                "interruptList": [],
+                "success": true,
+                "businessError": null,
+                "user": {
+                                "region": "MID",
+                                "termsAndCondAccepted": "1.6#1476788522263",
+                                "lastName": "MASBIJBDCGDHEELN",
+                                "activationStatusCode": "ACTIVE",
+                                "preferredFirstName": "SUBSCRIBER",
+                                "guid": "100057209",
+                                "email": "test@kp.org",
+                                "ebizAccountRoles": ["UNM"],
+                                "disabledReasonCode": null,
+                                "firstName": "SUBSCRIBER",
+                                "epicEmail": "test@kp.org",
+                                "serviceArea": null,
+                                "age": 40.0
+                },
+                "failureInfo": null
+}

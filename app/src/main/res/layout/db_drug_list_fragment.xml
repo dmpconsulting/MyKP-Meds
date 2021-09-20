@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+     <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         android:background="@color/schedule_screen_background_color">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <FrameLayout
+            android:id="@+id/banner_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:id="@+id/archive_hint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="@color/archive_hint_text_clr">
+        <TextView
+            android:id="@+id/drug_list_archive_hint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_14dp"
+            android:layout_marginBottom="@dimen/margin_14dp"
+            android:layout_marginLeft="@dimen/margin_16dp"
+            android:layout_marginRight="@dimen/margin_16dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14sp"
+            android:text="@string/archive_hint"/>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/druglist_empty_help"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/schedule_screen_background_color"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_90dp"
+            android:id="@+id/empty_medition_icon"
+            android:src="@drawable/no_medication_img"
+            android:layout_centerHorizontal="true"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/empty_medication_message"
+            android:layout_width="wrap_content"
+            android:minWidth="@dimen/layout_width_200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_18sp"
+            android:textColor="@color/schedule_main_member_textcolor"
+            android:layout_below="@+id/empty_medition_icon"
+            android:text="@string/no_medication_available"/>
+
+        <Button
+            android:id="@+id/fragment_druglist_add_medication"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/empty_medication_message"
+            android:layout_marginLeft="@dimen/margin_80dp"
+            android:layout_marginRight="@dimen/margin_80dp"
+            android:layout_marginTop="@dimen/margin_60dp"
+            android:padding="@dimen/margin_24dp"
+            android:background="@color/colorPrimaryDark"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18sp"
+            android:textStyle="normal"
+            style="@style/mm_common_style"
+            android:text="@string/txt_add_med"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        tools:visibility="gone"
+        android:nestedScrollingEnabled="true"
+        android:layout_height="match_parent"
+        />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

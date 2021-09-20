@@ -1,0 +1,236 @@
+{
+  "announcements": [
+    {
+      "type": "home_card",
+      "retention": "hard",
+      "id": 101,
+      "priority": 1,
+      "regions": [
+        "NCAL",
+        "MAS"
+      ],
+      "title": "Important Information",
+      "subTitle": "from Kaiser Permanente",
+      "message": "This is an important announcement",
+      "buttons": [
+        {
+          "label": "Find your Pharmacy",
+          "order": 1,
+          "button_color": "FFFFFF",
+          "font_color": "006BA6",
+          "action": "tab",
+          "destination": "Find a Pharmacy"
+        },
+        {
+          "label": "OK",
+          "order": 2,
+          "button_color": "006BA6",
+          "font_color": "FFFFFF",
+          "action": "ack"
+        }
+      ]
+    },
+    {
+      "type": "home_card",
+      "retention": "soft",
+      "id": 102,
+      "priority": 2,
+      "regions": [
+        "NCAL",
+        "MAS"
+      ],
+      "title": "More important information",
+      "subTitle": "from Kaiser Permanente",
+      "message": "You don't have permission to use this feature at this time. For more information, contact Member Services at <tel>1-800-556-7677</tel>.",
+      "buttons": [
+        {
+          "label": "Visit kp.org",
+          "order": 1,
+          "button_color": "FFFFFF",
+          "font_color": "006BA6",
+          "action": "link",
+          "url": "https://kp.org"
+        },
+        {
+          "label": "OK",
+          "order": 2,
+          "button_color": "006BA6",
+          "font_color": "FFFFFF",
+          "action": "ack"
+        }
+      ]
+    },
+    {
+      "type": "banner_full",
+      "retention": "hard",
+      "id": 110,
+      "baseScreen": "Medication List",
+      "priority": 1,
+      "color": "FFFFFF",
+      "regions": [
+        "NCAL",
+        "COL"
+      ],
+      "iconName": "banner_alert",
+      "title": "important information",
+      "message": "This is an important announcement",
+      "buttons": [
+        {
+          "label": "Find your Pharmacy",
+          "order": 1,
+          "action": "tab",
+          "destination": "Find a Pharmacy"
+        },
+        {
+          "label": "OK",
+          "order": 2,
+          "action": "ack"
+        }
+      ]
+    },
+    {
+      "type": "banner_full",
+      "retention": "soft",
+      "id": 104,
+      "baseScreen": "Medication List",
+      "priority": 2,
+      "color": "00FFFF",
+      "regions": [
+        "NCAL",
+        "COL"
+      ],
+      "iconName": "banner_info",
+      "title": "More important information",
+      "message": "This is one more important announcement",
+      "buttons": [
+        {
+          "label": "visit Kp.org",
+          "order": 1,
+          "button_color": "FFFFFF",
+          "font_color": "006BA6",
+          "action": "link",
+          "url": "https://kp.org"
+        },
+        {
+          "label": "OK",
+          "order": 2,
+          "button_color": "006BA6",
+          "font_color": "FFFFFF",
+          "action": "ack"
+        }
+      ]
+    },
+    {
+      "type": "banner_full",
+      "retention": "soft",
+      "id": 120,
+      "baseScreen": "Home Screen",
+      "priority": 2,
+      "color": "00FFFF",
+      "regions": [
+        "NCAL",
+        "COL"
+      ],
+      "iconName": "banner_info",
+      "title": "Some more important information",
+      "message": "You don't have permission to use this feature at this time. For more information, contact Member Services at <tel>1-800-556-7677</tel>.",
+      "buttons": [
+        {
+          "label": "Find your Pharmacy",
+          "order": 1,
+          "button_color": "FFFFFF",
+          "font_color": "006BA6",
+          "action": "tab",
+          "destination": "Find a Pharmacy"
+        },
+        {
+          "label": "OK",
+          "order": 2,
+          "button_color": "006BA6",
+          "font_color": "FFFFFF",
+          "action": "ack"
+        }
+      ]
+    },
+    {
+      "type": "banner_short",
+      "retention": "hard",
+      "id": 107,
+      "baseScreen": "Home screen",
+      "priority": 1,
+      "color": "FFFFFF",
+      "regions": [
+        "NCAL",
+        "COL"
+      ],
+      "iconName": "banner_alert",
+      "title": "Generic Card Hard",
+      "buttons": [
+        {
+          "action": "tab",
+          "destination": "Find a Pharmacy"
+        }
+      ]
+    },
+    {
+      "type": "banner_short",
+      "retention": "hard",
+      "id": 109,
+      "baseScreen": "Home screen",
+      "priority": 6,
+      "color": "FFFFFF",
+      "regions": [
+        "NCAL",
+        "COL"
+      ],
+      "iconName": "banner_alert",
+      "title": "Generic Banner Hard",
+      "buttons": [
+        {
+          "action": "tab",
+          "destination": "Find a Pharmacy"
+        }
+      ]
+    },
+    {
+      "type": "banner_short",
+      "retention": "soft",
+      "id": 102,
+      "baseScreen": "Find a Pharmacy",
+      "priority": 2,
+      "color": "FFFFFF",
+      "regions": [
+        "NCAL",
+        "COL"
+      ],
+      "iconName": "banner_alert",
+      "title": "Generic Card Soft Find Pharmacy",
+      "buttons": [
+        {
+          "action": "tab",
+          "destination": "Medication List"
+        }
+      ]
+    },
+    {
+      "type": "banner_short",
+      "retention": "soft",
+      "id": 103,
+      "baseScreen": "Find a Pharmacy",
+      "priority": 3,
+      "color": "FFFFFF",
+      "regions": [
+        "NCAL",
+        "COL"
+      ],
+      "iconName": "banner_alert",
+      "title": "Generic Card Soft Find Pharmacy1",
+      "buttons": [
+        {
+          "action": "tab",
+          "destination": "Find a Pharmacy"
+        }
+      ]
+    }
+  ]
+}

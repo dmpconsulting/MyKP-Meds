@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_36dp"
+    android:layout_marginTop="@dimen/margin_24dp">
+
+    <View
+        android:id="@+id/late_reminder_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height_1dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/kp_card_devider" />
+
+    <LinearLayout
+        android:id="@+id/late_reminder_item_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_24dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/late_reminder_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.85"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_22sp"
+            android:textStyle="bold"
+            tools:text="12:00 PM" />
+
+        <ImageView
+            android:id="@+id/lr_overflow_actions_icon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_12dp"
+            android:layout_weight="0.15"
+            android:paddingStart="@dimen/padding_12dp"
+            android:paddingTop="@dimen/padding_12dp"
+            android:paddingEnd="@dimen/padding_12dp"
+            android:paddingBottom="@dimen/padding_12dp"
+            android:src="@drawable/ic_more_material" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/late_reminder_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/late_reminder_item_header"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/padding_6dp"
+        android:paddingBottom="@dimen/padding_6dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/med_item_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_weight="0.6"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18sp"
+            tools:text="Vancocin" />
+
+        <TextView
+            android:id="@+id/med_item_dose"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="5dp"
+            android:layout_weight="0.4"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18sp"
+            tools:text="125 mg" />
+    </LinearLayout>
+</RelativeLayout>

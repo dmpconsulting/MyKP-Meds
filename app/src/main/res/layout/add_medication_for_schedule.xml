@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/material_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/memberNameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_bar"
+        android:background="@color/dark_grey">
+
+        <TextView
+            android:id="@+id/member_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_20dp"
+            android:textColor="@color/white"
+            tools:text="Silvia's medication"
+            android:textSize="@dimen/text_size_17sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/genericText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/memberNameLayout"
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:layout_marginTop="@dimen/margin_24dp"
+        android:layout_marginEnd="@dimen/margin_20dp"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        android:textColor="@color/black"
+        android:text="@string/what_medications_do_you_take_together"
+        android:textSize="@dimen/text_size_17sp" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height_1dp"
+        android:layout_below="@id/genericText"
+        android:background="@color/schedule_divider_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_save_medications"
+        android:layout_below="@id/divider1"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/drug_list_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:scrollbars="none" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_save_medications"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_40dp"
+        android:layout_marginTop="@dimen/margin_40dp"
+        android:layout_marginEnd="@dimen/margin_40dp"
+        android:layout_marginBottom="@dimen/margin_24dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@drawable/blue_round_button_style"
+        android:gravity="center"
+        android:minHeight="@dimen/layout_height_48dp"
+        android:text="@string/save_medications"
+        android:contentDescription="@string/content_description_save_medications"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_18sp" />
+</RelativeLayout>

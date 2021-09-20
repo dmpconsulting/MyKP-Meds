@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/Theme.MaterialComponents.Light"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/elevation_10dp"
+    android:background="@drawable/background_elevation"
+   >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_5dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="6dp">
+
+        <TextView
+            android:id="@+id/Calender_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Friday, November 27 "
+            android:textColor="@color/interrupts_pwd"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+
+
+    <com.montunosoftware.pillpopper.kotlin.calendar.HorizontalCalendarView
+        android:id="@+id/calender_UI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_height_50dp"
+        android:layout_marginBottom="@dimen/margin_20dp"
+        app:textColorSelected="@color/kp_theme_blue" />
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="AlwaysShowAction">
+
+    <item
+        android:id="@+id/refresh_icon"
+        android:orderInCategory="100"
+        android:icon="@drawable/icon_actionbar_refresh"
+        app:showAsAction="always"
+        android:title="@string/_reload"
+        tools:ignore="AppCompatResource" />
+
+</menu>
+   

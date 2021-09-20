@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!--<include
+        android:id="@+id/refill_app_bar"
+        layout="@layout/material_toolbar" />-->
+
+    <View
+        android:id="@+id/top_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+       />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll"
+        android:layout_width="match_parent"
+        android:layout_below="@id/top_empty_view"
+        android:layout_above="@id/rl_delete_refill_reminder"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_refill_reminders"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+            <Button
+                android:id="@+id/btn_create_refill_reminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rv_refill_reminders"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin_48dp"
+                android:layout_marginTop="@dimen/margin_48dp"
+                android:background="@drawable/button_create_refill_list"
+                android:paddingLeft="@dimen/margin_20dp"
+                android:paddingRight="@dimen/margin_20dp"
+                android:text="@string/button_refill_reminder"
+                android:textAllCaps="false"
+                android:contentDescription="@string/create_refill_reminder"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_delete_refill_reminder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/refill_reminder_delete_layout_bg_color"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/divider_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height_1dp"
+            android:background="@color/divider_color" />
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/layout_height_48dp"
+            android:layout_below="@id/divider_line"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_24dp"
+            android:layout_marginBottom="@dimen/margin_24dp"
+            android:background="@drawable/button_delete_refill_list"
+            android:text="@string/_delete"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_17sp" />
+
+    </RelativeLayout>
+</RelativeLayout>

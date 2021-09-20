@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:id="@+id/archive_detail_restore_dialog_image_container"
+        android:layout_width="match_parent"
+        android:layout_height="268dp"
+        android:paddingBottom="16dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="208dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/refill_alert"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/alert_checkmark"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/archive_restore_text"
+        android:layout_below="@id/archive_detail_restore_dialog_image_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:gravity="center"
+        android:textColor="@color/archive_detail_restore_dialog_textcolor"
+        android:text="@string/archive_details_restore_dialog_message"
+        android:textSize="16sp"/>
+
+
+
+
+</RelativeLayout>

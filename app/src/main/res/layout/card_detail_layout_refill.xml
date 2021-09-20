@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="handler"
+            type="com.montunosoftware.pillpopper.android.home.RefillCard" />
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/card_detail_header_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            bind:handler="@{handler}" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_header"
+            android:layout_margin="16dp"
+            android:text="@string/card_refill_reminder_second_description"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/card_btn_view_meds"
+            android:layout_width="136dp"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/layout_height_48dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_margin="32dp"
+            android:background="@drawable/button_refill_background"
+            android:onClick="@{(view)-> handler.onRefillClick(view)}"
+            android:text="@string/settings_refill"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</layout>

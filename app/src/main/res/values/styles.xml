@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<style name="nav_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">3dip</item>
+        <item name="android:layout_marginRight">3dip</item>
+        <item name="android:background">@xml/nav_button_background</item>
+        <item name="android:ems">4</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:filterTouchesWhenObscured">true</item>
+    </style>-->
+
+    <style name="up_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:paddingLeft">5dip</item>
+        <item name="android:paddingRight">2dip</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">@xml/highlight_style_actionbutton</item>
+        <item name="android:contentDescription">@string/_up</item>
+        <item name="android:src">@drawable/back</item>
+    </style>
+
+    <style name="done_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:paddingLeft">10dip</item>
+        <item name="android:paddingRight">10dip</item>
+        <item name="android:layout_marginLeft">12dip</item>
+        <item name="android:layout_marginRight">7dip</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">@xml/highlight_style_actionbutton</item>
+        <item name="android:contentDescription">@string/_done</item>
+        <item name="android:src">@drawable/action_save</item>
+    </style>
+
+    <style name="activity_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_centerInParent">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="finger_friendly_height">
+        <item name="android:minHeight">40dip</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="loading_theme" parent="android:Theme.Holo.Dialog">
+        <item name="android:alertDialogStyle">@style/CustomAlertDialogStyle</item>
+        <item name="android:windowBackground">@color/loading_transparent</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="CustomAlertDialogStyle">
+        <item name="android:bottomBright">@color/loading_transparent</item>
+        <item name="android:bottomDark">@color/loading_transparent</item>
+        <item name="android:bottomMedium">@color/loading_transparent</item>
+        <item name="android:centerBright">@color/loading_transparent</item>
+        <item name="android:centerDark">@color/loading_transparent</item>
+        <item name="android:centerMedium">@color/loading_transparent</item>
+        <item name="android:fullBright">@color/loading_transparent</item>
+        <item name="android:fullDark">@color/loading_transparent</item>
+        <item name="android:topBright">@color/loading_transparent</item>
+        <item name="android:topDark">@color/loading_transparent</item>
+    </style>
+
+    <!--Alert Dialog style for US9791-->
+    <style name="MyAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:colorAccent">@color/kp_header_blue</item>
+        <item name="android:background">#FAFAFA</item>
+    </style>
+
+    <style name="ArchiveDetailAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:colorAccent">@color/colorPrimaryDark</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="datepicker" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/kp_header_blue</item>
+        <item name="colorPrimaryDark">@android:color/darker_gray</item>
+        <item name="android:textColorSecondaryInverse">@android:color/white</item>
+    </style>
+
+    <style name="users.spinnersytle" parent="@android:style/Widget.Spinner">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:spinnerMode">dropdown</item>
+    </style>
+
+    <style name="settings_heading_style" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:alpha">0.84</item>
+        <item name="android:filterTouchesWhenObscured">true</item>
+    </style>
+
+    <style name="settings_heading_subtext_style" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:alpha">0.54</item>
+        <item name="android:filterTouchesWhenObscured">true</item>
+    </style>
+
+    <style name="settings_divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/settings_divider</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+    </style>
+
+    <style name="myToolbarNavigationButtonStyle" parent="@style/Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="android:minWidth">0dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="myToolbarStyle" parent="@style/Widget.AppCompat.Toolbar">
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingLeft">10dp</item>
+    </style>
+
+    <style name="HistoryEdit_AppTheme" parent="@style/KP_MaterialTheme">
+        <item name="toolbarStyle">@style/myToolbarStyle</item>
+        <item name="toolbarNavigationButtonStyle">@style/myToolbarNavigationButtonStyle</item>
+    </style>
+
+    <style name="myCustomToolbarNavigationButtonStyle" parent="@style/Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="android:minWidth">0dp</item>
+        <item name="android:paddingLeft">8dp</item>
+    </style>
+
+    <style name="myCustomToolbarStyle" parent="@style/Widget.AppCompat.Toolbar">
+        <item name="android:paddingLeft">8dp</item>
+    </style>
+
+    <style name="KPBlueTimeDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:textColorPrimaryInverse">@android:color/white</item>
+        <item name="android:textColorSecondaryInverse">@android:color/white</item>
+        <item name="android:colorAccent">@color/kp_header_blue</item>
+        <item name="colorPrimaryDark">@android:color/darker_gray</item>
+    </style>
+
+
+    <!-- Material Theme -->
+    <style name="KP_MaterialTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="android:actionMenuTextColor">@color/white</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+    </style>
+
+    <style name="LoginTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="HomeScreenToolbarStyle" parent="ThemeOverlay.AppCompat.Light">
+        <item name="drawerArrowStyle">@style/HomeDrawerArrowStyle</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="HomeDrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@color/home_hamburger_color_0569A5</item>
+    </style>
+
+    <style name="DialogMaterialTheme_Reminders" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/teal</item>
+        <item name="colorPrimaryDark">@color/dark_Teal</item>
+        <item name="colorAccent">@color/teal</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+    </style>
+
+    <style name="SwitchCompatTheme">
+        <item name="trackTint">@color/switch_selector</item>
+        <item name="thumbTint">@color/switch_thumb_selector</item>
+    </style>
+
+    <!-- KP Theme -->
+    <style name="Kp_Theme.ActionBar.MenuTextStyle" parent="android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+    </style>
+
+    <style name="Kp_Theme.ActionBar.TabBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar.TabBar">
+        <item name="android:background">@color/tab_inactive</item>
+        <item name="android:tabStripEnabled">true</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="Kp_Theme.ActionBar.TabText" parent="@android:style/Widget.Holo.Light.ActionBar.TabText">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="Kp_Theme.ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/actlib_background_gradient</item>
+        <item name="android:titleTextStyle">@style/Kp_Theme.ActionBar.Text</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+    </style>
+
+    <style name="Kp_Theme.ActionBar.Text" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="Kp_Theme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/Kp_Theme.ActionBar</item>
+        <item name="android:actionMenuTextColor">#ffffff</item>
+        <item name="android:titleTextStyle">@style/Kp_Theme.ActionBar.Text</item>
+        <item name="android:homeAsUpIndicator">@drawable/actlib_ic_navigation_previous_item</item>
+        <item name="actionBarTabTextStyle" type="android:attr">@style/Kp_Theme.ActionBar.TabText
+        </item>
+        <item name="actionBarTabBarStyle" type="android:attr">
+            @style/Kp_Theme.ActionBar.TabBarStyle
+        </item>
+        <item name="android:actionMenuTextAppearance">@style/Kp_Theme.ActionBar.MenuTextStyle</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="android:popupBackground">#ffffff</item>
+    </style>
+
+    <style name="Transparent" parent="@android:style/Theme.Holo.Light">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Activity</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:colorForeground">#fff</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+    </style>
+
+    <style name="loadMedicationBoldTextWidget">
+        <item name="android:textSize">@dimen/load_medication_bold_text_height</item>
+        <!--   <item name="android:textColor">@color/holo_blue_bright</item> -->
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="loadMedicationNormalTextWidget" parent="loadMedicationBoldTextWidget">
+        <item name="android:textSize">@dimen/load_medication_normal_text_height</item>
+        <!-- <item name="android:textColor">@color/holo_blue_light</item> -->
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="mm_common_style">
+        <item name="android:filterTouchesWhenObscured">true</item>
+    </style>
+
+    <!-- Fingerprint Related Styles Start -->
+    <style name="FingerprintOptInContainerActivityTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="android:screenOrientation">portrait</item>
+    </style>
+
+    <style name="Edittext_tint_color">
+            
+        <item name="colorAccent">@color/kp_theme_blue</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/save_schedule_fade_in</item>
+        <item name="android:windowExitAnimation">@anim/save_schedule_fade_out</item>
+    </style>
+
+    <style name="myTheme" parent="@style/KP_MaterialTheme">
+        <item name="android:colorPrimaryDark">@color/quickview_reminder_status_bar_color</item>
+    </style>
+
+    <style name="DateAndTimePickerDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:colorAccent">@color/teal</item>
+    </style>
+
+
+    <style name="CardDetailTheme" parent="KP_MaterialTheme">
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="CalenderUICardStyle" parent="Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_card_custom_corners</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_card_custom_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomRight">16dp</item>
+        <item name="cornerSizeBottomLeft">16dp</item>
+    </style>
+
+    <style name="DialogAnimationConfirmOverlay">
+        <item name="android:windowEnterAnimation">@anim/slide_bottom_to_top</item>
+    </style>
+</resources>

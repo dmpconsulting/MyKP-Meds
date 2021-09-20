@@ -1,0 +1,39 @@
+{
+  "pillpopperResponse": {
+    "statusCode": "0",
+    "message": "Error not specified",
+    "setUpCompleteFl": "Y",
+    "switchDeviceFlag": false,
+    "kpGUID": "100030202",
+    "sessionStatus": "R",
+    "mKporgCookieName": "ObSSOCookie+.kaiserpermanente.org+%252F",
+    "mKporgCookieDomain": "kp3-nat-qa.usdk.net",
+    "mKporgCookiePath": "/",
+    "callCenterPhone": "1-866-454-8855",
+    "pharmacyPhone": "1-866-415-0783",
+    "users": [{
+      "userId": "14fd672712b1c351ffc457c915710eeaa",
+      "userType": "primary",
+      "relId": "",
+      "relationDesc": "",
+      "firstName": "WPPMRNGJJHJGFHAGHFN",
+      "lastName": "",
+      "middleName": "",
+      "displayName": "Wppmrngjjhjgfhaghfn  Wppmrnbhhfjibfifbln",
+      "enabled": "Y"
+    },{
+      "userId": "397bc6438ff4233986f7fb29a195b67d",
+      "userType": "proxy",
+      "relId": "175EZTPOSMX",
+      "relationDesc": "Adult_Adult_1",
+      "firstName": "Subscriber",
+      "lastName": "Masffgggifegegln",
+      "middleName": "",
+      "displayName": "Subscriber Masffgggifegegln",
+      "enabled": "N"
+    }],
+    "pillpopperVersion": 1,
+    "replayId": "",
+    "action": "Register"
+  }
+}

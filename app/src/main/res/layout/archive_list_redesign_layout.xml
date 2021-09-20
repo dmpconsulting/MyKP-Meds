@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/archive_list_base_layout"
+    android:visibility="gone">
+
+    <RelativeLayout
+        android:id="@+id/archive_list_proxy_picker_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/history_blue_4191bd"
+        android:gravity="center_vertical">
+
+        <Spinner
+            android:id="@+id/archive_list_proxy_name_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/history_proxy_dropdown_background_color"
+            android:popupBackground="@color/history_proxy_dropdown_background_color"
+            android:dropDownWidth="match_parent"
+            style="@style/users.spinnersytle"/>
+
+        <ImageView
+            android:id="@+id/archive_list_proxy_dropdown_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:src="@drawable/icon_archive_proxy_drop_down_arrow"
+            android:layout_alignParentRight="true"
+            tools:ignore="ContentDescription" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/archive_list_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/archive_list_no_archived_medications_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_16dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_18sp"
+        android:text="@string/archive_empty_help_text"
+        android:visibility="gone"/>
+    </ScrollView>
+
+</LinearLayout>

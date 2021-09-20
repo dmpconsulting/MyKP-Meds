@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/number_input_layout0"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/banner" >
+
+        <ImageButton
+            android:id="@+id/up_button"
+            style="@style/up_button" 
+            android:contentDescription="@string/txt_imagecontentdesc">
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/number_input_title"
+            style="@style/activity_title"
+            android:layout_toRightOf="@+id/up_button"
+            android:text="@string/_temp" >
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/done_button"
+            style="@style/done_button" 
+            android:contentDescription="@string/txt_imagecontentdesc">
+        </ImageButton>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/number_input_layout1"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/number_input_layout3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:background="@drawable/frame1"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/number_input_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/_temp"
+                android:textColor="@color/Text_blue"
+                android:textSize="15sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/number_input_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dip"
+                android:textColor="#ff666666"
+                android:textStyle="bold" >
+            </TextView>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/number_input_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/Black" >
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/number_input_layout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" >
+
+        <com.montunosoftware.pillpopper.android.view.NumberInputView
+            android:id="@+id/number_input_number_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+        </com.montunosoftware.pillpopper.android.view.NumberInputView>
+    </LinearLayout>
+
+</LinearLayout>

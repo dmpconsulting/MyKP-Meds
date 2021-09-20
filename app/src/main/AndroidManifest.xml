@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.montunosoftware.mymeds"
+    android:versionCode="50600"
+    android:versionName="5.6.0">
+
+    <uses-sdk tools:overrideLibrary="org.kp.kpsecurity.fingerprint" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name=".permission.MAPS_RECEIVE" />
+
+
+    <permission
+        android:name=".permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="org.kp.tpmg.android.mykpmeds.permission.BROADCAST" />
+    <uses-permission android:name="org.kp.tpmg.preventivecare.permission.APP_DATA_ACCESS" />
+
+    <permission
+        android:name="org.kp.tpmg.android.mykpmeds.permission.BROADCAST"
+        android:label="@string/broadcastPermission" />
+
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+
+    <application
+        android:name="com.montunosoftware.pillpopper.android.util.PillpopperApplication"
+        android:allowBackup="false"
+        android:appComponentFactory="android:appComponentFactory"
+        android:icon="@drawable/ic_app_icon"
+        android:label="@string/app_name"
+        android:resizeableActivity="false"
+        android:theme="@style/KP_MaterialTheme"
+        tools:replace="allowBackup, theme,android:appComponentFactory">
+        <meta-data
+            android:name="com.montunosoftware.pillpopper.edition"
+            android:value="KP" />
+
+        <meta-data
+            android:name="buildEnv"
+            android:value="${buildEnv}" />
+        <meta-data
+            android:name="secure_flag"
+            android:value="${secure_flag}" />
+        <meta-data
+            android:name="logging_flag"
+            android:value="${logging_flag}" />
+
+        <!-- Use this spec for ActionBar and Fragment layout -->
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.Splash"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/KP_MaterialTheme">
+            <intent-filter>
+                <action android:name="com.montunosoftware.pillpopper.android.REFRESH" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.HomeContainerActivity"
+            android:configChanges="screenSize|orientation"
+            android:exported="false"
+            android:label="@string/_dosecast"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/KP_MaterialTheme" />
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.DrugDatabaseNameSearchActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.InputNumberActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.InputTextActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.PickListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.android.camera.CropImage"
+            android:exported="false"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.QuickViewOverDueReminderScreen"
+            android:exported="false"
+            android:label="@string/title_activity_over_due_reminder_screen"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.montunosoftware.pillpopper.kotlin.quickview.CurrentReminderActivityNew"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.montunosoftware.pillpopper.kotlin.lateremider.LateRemindersActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.montunosoftware.pillpopper.kotlin.quickview.SingleCurrentReminder"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.montunosoftware.pillpopper.kotlin.quickview.ReminderSingleMedDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.inAppReminders.CurrentReminderDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale" />
+
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.GreatJobAlertForTakenAllActivity"
+            android:exported="false"
+            android:theme="@style/Transparent" />
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.PrivacyAndTC"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.SettingsManageMembersActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.refillreminder.views.RefillRemindersHomeContainerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity android:name="com.montunosoftware.pillpopper.kotlin.HasStatusAlert"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.montunosoftware.pillpopper.kotlin.quickview.ReminderAlertActivity"
+            android:exported="false"
+            android:theme="@style/Transparent"/>
+
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.ExpandedGenericBannerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale"/>
+
+        <receiver
+            android:name="com.montunosoftware.pillpopper.android.DoseAlarmHandler"
+            android:exported="false" />
+        <receiver
+            android:name="com.montunosoftware.pillpopper.android.NotificationBarInternalBroadcastHandler"
+            android:exported="true" />
+        <receiver
+            android:name="com.montunosoftware.pillpopper.android.BootHandler"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.montunosoftware.pillpopper.android.ImageContentProvider"
+            android:authorities="${applicationId}.contentprovider"
+            android:exported="true"
+            android:grantUriPermissions="true"
+            android:readPermission="android.permission.CAMERA"
+            android:writePermission="android.permission.CAMERA" />
+
+        <receiver
+            android:name="com.montunosoftware.pillpopper.android.DeleteHtmlFileBroadcase"
+            android:exported="true" />
+        <receiver
+            android:name="com.montunosoftware.pillpopper.android.DeleteHtmlFileBroadcastOnDeviceReBoot"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.montunosoftware.pillpopper.model.KPAlarmManager"
+            android:exported="false" />
+
+        <service
+            android:name="com.montunosoftware.pillpopper.model.SessionAliveService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver
+            android:name="com.montunosoftware.pillpopper.android.AppUpdateListener"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.montunosoftware.pillpopper.service.getstate.GetStateService"
+            android:exported="false" />
+        <service
+            android:name="com.montunosoftware.pillpopper.service.getstate.StateDownloadIntentService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <activity
+            android:name="org.kp.tpmg.mykpmeds.activation.activity.LoginActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name="org.kp.tpmg.mykpmeds.activation.activity.WebViewActivity"
+            android:exported="false"
+            android:label="@string/title_activity_web_view"
+            android:screenOrientation="portrait"
+            android:theme="@style/KP_MaterialTheme" />
+        <activity
+            android:name="org.kp.tpmg.mykpmeds.activation.activity.LoadingActivity"
+            android:exported="false"
+            android:theme="@style/Transparent" />
+        <activity
+            android:name="org.kp.tpmg.mykpmeds.activation.activity.TransparentLoadingActivity"
+            android:exported="false"
+            android:theme="@style/Transparent" />
+        <activity
+            android:name="org.kp.tpmg.mykpmeds.activation.activity.LoginErrorActivity"
+            android:exported="false"
+            android:label="@string/title_activity_login_error"
+            android:screenOrientation="portrait"
+            android:theme="@style/Kp_Theme" />
+        <activity
+            android:name="org.kp.tpmg.mykpmeds.activation.activity.SigninHelpActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/KP_MaterialTheme" />
+
+        <service
+            android:name="com.montunosoftware.pillpopper.service.images.sync.ImageSynchronizerService"
+            android:exported="false" />
+
+
+        <!-- Fingerprint Related Activities -->
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.fingerprint.FingerprintTermsAndConditionsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/KP_MaterialTheme" />
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.fingerprint.FingerprintOptInContainerActivity"
+            android:exported="false"
+            android:theme="@style/FingerprintOptInContainerActivityTheme" />
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.fingerprint.FingerprintTermsAndConditionsStateListenerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/KP_MaterialTheme" />
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.fingerprint.FingerprintOptInStateListenerContainerActivity"
+            android:exported="false"
+            android:theme="@style/FingerprintOptInContainerActivityTheme" />
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.AutoSignInSplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/KP_MaterialTheme" />
+
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.PreEffectiveMemberActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Transparent" />
+
+        <receiver android:name="com.montunosoftware.pillpopper.android.view.TimeZoneChangeListener">
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.montunosoftware.pillpopper.android.refillreminder.notification.RefillReminderAlarmHandler">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.home.HomeCardDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/CardDetailTheme" />
+        <activity
+            android:name="org.kp.tpmg.mykpmeds.activation.envswitch.EnvironmentSwitchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.interrupts.InterruptsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="org.kp.tpmg.mykpmeds.activation.activity.EnlargeImageActivity"
+            android:exported="false"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.RxRefillHomeContainerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/KP_MaterialTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.AddMedicationsForScheduleActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale"
+            android:theme="@style/KP_MaterialTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.MedicationDetailActivity"
+            android:exported="false"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.inAppReminders.InAppReminderAlertsActivity"
+            android:exported="false"
+            android:configChanges="fontScale"
+            android:launchMode="singleTask"
+            android:theme="@style/Transparent"/>
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.ScheduleLoadingActivity"
+            android:exported="false"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.EditNotesActivity"
+            android:exported="false"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.AddOrEditMedicationActivity"
+            android:exported="false"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.montunosoftware.pillpopper.android.ReminderContainerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name="com.montunosoftware.pillpopper.kotlin.lateremider.LateReminderDetail"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:configChanges="fontScale"/>
+
+        <activity android:name="com.montunosoftware.pillpopper.android.firebaseMessaging.FCMNotificationReceiverActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:launchMode="singleTask"
+            android:theme="@style/Transparent"/>
+
+        <activity
+            android:name="com.montunosoftware.pillpopper.kotlin.history.HistoryDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale" />
+        <activity
+            android:name="com.montunosoftware.pillpopper.android.MedicationOverlayConfirmationScheduleActivity"
+            android:exported="false"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.montunosoftware.pillpopper.kotlin.history.HistoryBulkActionChangeActivity"
+            android:exported="false"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <service
+            android:name="com.montunosoftware.pillpopper.service.TokenService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="com.montunosoftware.pillpopper.android.firebaseMessaging.FCMService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/icon_notification" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/FCM_CHANNEL_ID" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimary" />
+        <!-- This property needs to be added for Maps SDK configuration, if the app is targeting Android P .
+        ref : https://developers.google.com/maps/documentation/android-sdk/config#specify_requirement_for_apache_http_legacy_library-->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="${mapValue}" />
+
+        <provider
+            android:name="com.montunosoftware.pillpopper.android.view.AttachmentFileProvider"
+            android:authorities="${applicationId}.msgs.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/attachment_file_provider" />
+        </provider>
+
+    </application>
+
+</manifest>

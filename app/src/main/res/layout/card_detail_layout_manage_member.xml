@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+        <variable name="handler" type="com.montunosoftware.pillpopper.android.home.ManageMemberCard" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:weightSum="3">
+
+        <include
+            android:id="@+id/card_home_header"
+            layout="@layout/card_detail_header_welcome"
+            bind:handler="@{handler}"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/membersRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.8"
+            android:layout_margin="16dp"
+            android:scrollbars="vertical"
+            android:descendantFocusability="blocksDescendants" />
+
+        <Button
+            android:id="@+id/card_btn_manage_members"
+            android:layout_width="136dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@drawable/button_manage_memebers_background"
+            android:onClick="@{(view)-> handler.onClickSaveMembers()}"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:alpha="@{handler.trackCounter>0? 1F : .5F}"
+            android:enabled="@{handler.trackCounter>0? true : false}"
+            android:clickable="@{handler.trackCounter>0? true : false}" />
+    </LinearLayout>
+</layout>

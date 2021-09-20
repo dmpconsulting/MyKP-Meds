@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="drug"
+            type="com.montunosoftware.pillpopper.model.Drug" />
+
+        <variable
+            name="viewModel"
+            type="com.montunosoftware.pillpopper.kotlin.history.HistoryViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/historyDoseEventTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:textColor="@color/light_black"
+            tools:text="10:00 AM" />
+
+        <RelativeLayout
+            android:id="@+id/drugDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8dp">
+
+            <ImageView
+                android:id="@+id/drugActionImage"
+                android:layout_width="@dimen/layout_height_44dp"
+                android:layout_height="@dimen/layout_height_44dp"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginEnd="@dimen/margin_12dp"
+                android:background="@drawable/blue_circle"
+                android:contentDescription="@null"
+                android:src="@drawable/icon_skipped_24dp"
+                tools:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@id/drugActionImage"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical">
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

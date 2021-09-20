@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/login_rootLayout"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/login_animation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/splash_gradient_bg">
+
+        <RelativeLayout
+            android:id="@+id/translate_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <LinearLayout
+                android:id="@+id/image_text_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:background="@drawable/med_background"
+                android:gravity="center"
+                android:minWidth="@dimen/layout_height_100dp"
+                android:minHeight="@dimen/layout_height_100dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:minWidth="@dimen/layout_height_56dp"
+                    android:minHeight="@dimen/layout_width_38dp"
+                    android:src="@drawable/kpm" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_text_container"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:gravity="center"
+                android:text="@string/my_meds"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_33sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/refill_banner_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20dp"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:layout_marginEnd="@dimen/margin_20dp"
+            android:layout_marginBottom="@dimen/margin_15dp"
+            android:elevation="2dp"
+            android:visibility="gone"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minWidth="@dimen/layout_width_320dp"
+                android:minHeight="@dimen/layout_height_74dp">
+
+                <ImageView
+                    android:id="@+id/rx_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_30dp"
+                    android:contentDescription="@null"
+                    android:minWidth="@dimen/layout_width_38dp"
+                    android:minHeight="@dimen/layout_width_49dp"
+                    android:src="@drawable/rx" />
+
+                <TextView
+                    android:id="@+id/refill_remainder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_30dp"
+                    android:layout_toEndOf="@+id/rx_image"
+                    android:text="@string/refill_reminder_banner_text"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/text_size_20sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_height_1dp" />
+
+                <TextView
+                    android:id="@+id/sign_in_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/refill_remainder"
+                    android:layout_marginStart="@dimen/margin_30dp"
+                    android:layout_toEndOf="@+id/rx_image"
+                    android:text="@string/signin_to_see_refill_text"
+                    android:textColor="@color/app_info_color"
+                    android:textSize="@dimen/text_size_17sp" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <com.montunosoftware.pillpopper.android.view.CustomScrollView
+            android:id="@+id/scrollPage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/backgroundLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/linear_gradient_top"
+                    android:minHeight="@dimen/layout_height_280dp">
+
+
+                    <LinearLayout
+                        android:id="@+id/med_image_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_80dp"
+                        android:background="@drawable/med_background"
+                        android:gravity="center"
+                        android:minWidth="@dimen/layout_height_100dp"
+                        android:minHeight="@dimen/layout_height_100dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@null"
+                            android:minWidth="@dimen/layout_height_56dp"
+                            android:minHeight="@dimen/layout_width_38dp"
+                            android:src="@drawable/kpm" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/kp_meds"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/med_image_container"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_16dp"
+                        android:layout_marginBottom="@dimen/margin_40dp"
+                        android:gravity="center"
+                        android:text="@string/my_meds"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_33sp" />
+
+                    <TextView
+                        android:id="@+id/current_env_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="@dimen/margin_4dp"
+                        android:padding="@dimen/padding_13dp"
+                        android:paddingBottom="10dp"
+                        android:text="Env: QA-1"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_uid_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_22dp"
+                    android:layout_marginTop="@dimen/margin_16dp"
+                    android:layout_marginEnd="@dimen/margin_22dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_24dp">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/input_layout_user_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="@dimen/layout_height_48dp"
+                            android:textColorHint="@color/next_reminder_txt_color">
+
+
+                            <org.kp.tpmg.mykpmeds.activation.activity.AutofillEnabledEditText
+                                android:id="@+id/userid_edittext"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:minHeight="@dimen/layout_height_48dp"
+                                android:autofillHints="Username"
+                                android:hint="@string/user_id"
+                                android:importantForAutofill="yes"
+                                android:inputType="textVisiblePassword"
+                                android:longClickable="true"
+                                android:maxLines="1"
+                                android:paddingEnd="@dimen/padding_40dp"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/Black"
+                                android:textSize="@dimen/text_size_17sp"
+                                android:theme="@style/Edittext_tint_color" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <ImageView
+                            android:id="@+id/user_id_clear_icon"
+                            style="@style/mm_common_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_12dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerInParent="true"
+                            android:contentDescription="@string/content_description_close_image"
+                            android:src="@drawable/ic_remove" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/input_layout_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="@dimen/layout_height_48dp"
+                            android:textColorHint="@color/next_reminder_txt_color">
+
+                            <org.kp.tpmg.mykpmeds.activation.activity.AutofillEnabledEditText
+                                android:id="@+id/password_edittext"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:minHeight="@dimen/layout_height_48dp"
+                                android:layout_marginTop="@dimen/margin_10dp"
+                                android:autofillHints="password"
+                                android:hint="@string/password_hint"
+                                android:imeOptions="actionGo"
+                                android:importantForAutofill="yes"
+                                android:inputType="textPassword"
+                                android:paddingEnd="@dimen/padding_40dp"
+                                android:paddingBottom="@dimen/padding_10dp"
+                                android:textColor="@color/Black"
+                                android:textSize="@dimen/text_size_17sp"
+                                android:theme="@style/Edittext_tint_color" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <ImageView
+                            android:id="@+id/finger_print"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerInParent="true"
+                            android:contentDescription="@string/content_description_fingerprint_reader"
+                            android:padding="@dimen/padding_12dp"
+                            android:src="@drawable/fingerprint_id"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/pwd_clear_icon"
+                            style="@style/mm_common_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerInParent="true"
+                            android:padding="@dimen/padding_12dp"
+                            android:contentDescription="@string/content_description_close_image"
+                            android:src="@drawable/ic_remove"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/remember_switch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/layout_height_48dp"
+                        android:checked="true"
+                        android:layout_marginTop="@dimen/margin_14dp"
+                        android:switchMinWidth="@dimen/margin_5dp"
+                        android:text="@string/remember_user_id_text_caps"
+                        android:textSize="@dimen/text_size_17sp"
+                        android:theme="@style/SwitchCompatTheme" />
+
+                    <Button
+                        android:id="@+id/sign_on_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_34dp"
+                        android:layout_marginBottom="@dimen/margin_26dp"
+                        android:background="@drawable/blue_round_button_style"
+                        android:minWidth="@dimen/layout_width_316dp"
+                        android:minHeight="@dimen/layout_height_50dp"
+                        android:text="@string/signin_myMeds"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_17sp" />
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/help_sign_in_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/signin_view"
+                        android:layout_width="@dimen/layout_width_200dp"
+                        android:layout_height="@dimen/layout_height_48dp"
+                        android:layout_gravity="center|bottom"
+                        android:layout_marginBottom="@dimen/margin_18dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="@string/signin_help_text_underlined"
+                        android:textAllCaps="false"
+                        android:textColor="@color/kp_theme_blue"
+                        android:textSize="@dimen/text_size_17sp"
+                        android:textStyle="bold" />
+
+                </FrameLayout>
+            </LinearLayout>
+        </com.montunosoftware.pillpopper.android.view.CustomScrollView>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/dose_skip"
+        android:title="@string/skipped"
+        app:contentDescription="@string/content_description_skipped"/>
+    <item
+        android:id="@+id/dose_take"
+        android:title="@string/take"
+        app:contentDescription="@string/content_description_taken"/>
+    <item
+        android:id="@+id/take_later"
+        android:title="@string/remind_later_footer_text"
+        app:contentDescription="@string/content_description_remind_later"/>
+    <item
+        android:id="@+id/taken_earlier"
+        android:title="@string/taken_earlier"
+        app:contentDescription="@string/content_description_taken_earlier"/>
+</menu>

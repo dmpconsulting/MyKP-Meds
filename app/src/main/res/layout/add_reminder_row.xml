@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/layout_height_56dp">
+
+    <ImageView
+        android:id="@+id/ic_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingStart="@dimen/padding_20dp"
+        android:paddingTop="@dimen/padding_16dp"
+        android:paddingBottom="@dimen/padding_16dp"
+        android:src="@drawable/ic_remove" />
+
+    <RelativeLayout
+        android:id="@+id/reminder_id_time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_toEndOf="@+id/ic_remove">
+
+        <TextView
+            android:id="@+id/reminder_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_16dp"
+            android:paddingBottom="@dimen/padding_16dp"
+            android:textColor="@color/reminder_label"
+            android:textSize="@dimen/text_size_17sp"
+            tools:text="Reminder 1" />
+
+        <TextView
+            android:id="@+id/reminder_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:layout_marginStart="@dimen/margin_24dp"
+            android:paddingTop="@dimen/padding_16dp"
+            android:paddingEnd="@dimen/padding_20dp"
+            android:paddingBottom="@dimen/padding_16dp"
+            android:textColor="@color/reminder_time"
+            android:textSize="@dimen/text_size_17sp"
+            tools:text="7:00 AM" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/archive_list_divider_color" />
+
+
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="customScheduleWizard"
+            type="com.montunosoftware.pillpopper.android.view.CustomScheduleWizardFragment" />
+
+        <variable
+            name="robotoMedium"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="robotoRegular"
+            type="android.graphics.Typeface" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20dp"
+            android:layout_marginTop="@dimen/margin_40dp"
+            android:layout_marginEnd="@dimen/margin_20dp"
+            android:layout_marginBottom="@dimen/margin_16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/reminderLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/how_often_you_want_reminders"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_17sp"
+                android:typeface="@{robotoMedium}" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20dp"
+            android:layout_marginEnd="@dimen/margin_20dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_8dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/schedule_background_style">
+
+                <ImageView
+                    android:id="@+id/btn_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="end|center"
+                    android:layout_marginEnd="@dimen/margin_8dp"
+                    android:onClick="@{()->customScheduleWizard.clearDaysText()}"
+                    android:src="@drawable/ic_remove"
+                    android:visibility="gone" />
+
+                <com.montunosoftware.pillpopper.android.view.ActionEditText
+                    android:id="@+id/editText_custom_days"
+                    android:layout_width="@dimen/layout_width_300dp"
+                    android:layout_height="@dimen/layout_height_48dp"
+                    android:layout_marginEnd="@dimen/margin_40dp"
+                    android:background="@null"
+                    android:hint="@string/number_hint_text"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/padding_12dp"
+                    android:paddingEnd="@dimen/padding_12dp"
+                    android:privateImeOptions="nm"
+                    android:textColorHint="@color/next_reminder_txt_color"
+                    android:textSize="@dimen/text_size_15sp"
+                    android:typeface="@{robotoRegular}" />
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5">
+
+                <Spinner
+                    android:id="@+id/spinner_custom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/schedule_background_style"
+                    android:dropDownWidth="match_parent"
+                    android:entries="@array/custom_day_option"
+                    android:spinnerMode="dropdown"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/spinner_arrow"
+                    android:layout_width="@dimen/layout_width_24dp"
+                    android:layout_height="@dimen/layout_height_24dp"
+                    android:layout_gravity="end|center"
+                    android:layout_marginStart="@dimen/margin_12dp"
+                    android:layout_marginEnd="@dimen/margin_8dp"
+                    android:gravity="end|center"
+                    android:src="@drawable/expand" />
+            </FrameLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

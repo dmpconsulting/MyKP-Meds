@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_marginTop="@dimen/margin_15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/alert"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/archive_delete_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="18dp"
+        android:textSize="16sp"
+        android:textColor="@color/archive_detail_delete_hint_textcolor"
+        android:text="@string/archive_details_delete_dialog_message"/>
+
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+
+    <RelativeLayout
+        android:id="@+id/drug_database_name_search_title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/banner" >
+
+        <ImageButton
+            android:id="@+id/up_button"
+            style="@style/up_button"
+            android:contentDescription="@string/txt_imagecontentdesc" >
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/activity_title"
+            android:layout_toRightOf="@+id/up_button"
+            android:text="@string/drug_database_name_search_title" >
+        </TextView>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/drug_database_name_search_text_entry_field"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dip"
+        android:background="@drawable/frame1"
+        android:inputType="textMultiLine"
+        style="@style/mm_common_style">
+    </EditText>
+
+    <RadioGroup
+        android:id="@+id/drug_database_name_search_radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/drug_database_name_search_all_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dip"
+            android:layout_marginRight="7dip"
+            android:checked="true"
+            android:text="@string/_all"
+            android:textColor="@color/Black" />
+
+        <RadioButton
+            android:id="@+id/drug_database_name_search_prescription_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dip"
+            android:layout_marginRight="7dip"
+            android:text="@string/_prescription"
+            android:textColor="@color/Black" />
+
+        <RadioButton
+            android:id="@+id/drug_database_name_search_otc_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dip"
+            android:layout_marginRight="7dip"
+            android:text="@string/_otc"
+            android:textColor="@color/Black" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/drug_database_name_search_message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7sp"
+        android:background="@drawable/highlight_color_drawable"
+        android:ems="10"
+        android:gravity="center"
+        android:padding="5sp"
+        android:text="@string/_temp"
+        android:textColor="@color/Black" >
+    </TextView>
+
+    <ListView
+        android:id="@+id/drug_database_name_search_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_marginTop="8dip"
+        android:layout_weight="1"
+        android:background="@drawable/frame1"
+        android:scrollbars="none" >
+    </ListView>
+
+</LinearLayout>

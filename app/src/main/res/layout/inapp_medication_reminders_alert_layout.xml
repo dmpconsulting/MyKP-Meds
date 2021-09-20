@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/alert_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:contentDescription="@string/content_description_medication_reminder">
+
+        <ImageView
+            android:id="@+id/alert_close_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:padding="@dimen/padding_8dp"
+            android:src="@drawable/close"
+            android:contentDescription="@string/content_description_dismiss"/>
+
+        <TextView
+            android:id="@+id/alert_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_40dp"
+            android:layout_marginStart="@dimen/margin_20dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_20sp"
+            android:textStyle="bold"
+            tools:text="Medication Reminder" />
+
+        <TextView
+            android:id="@+id/alert_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/alert_title"
+            android:layout_marginTop="@dimen/margin_12dp"
+            android:layout_marginStart="@dimen/margin_20dp"
+            android:textColor="@color/alert_message_color"
+            android:textSize="@dimen/text_size_16sp"
+            tools:text="It's time to take 9:15PM medication" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/alert_message"
+            android:layout_marginTop="@dimen/margin_40dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/placeholder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true" />
+
+            <Button
+                android:id="@+id/skip_button"
+                android:layout_width="@dimen/layout_width_136dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_8dp"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:layout_marginEnd="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/margin_16dp"
+                android:layout_toStartOf="@id/placeholder"
+                android:background="@drawable/button_kphc_dismiss"
+                android:minHeight="@dimen/layout_height_48dp"
+                android:textAllCaps="false"
+                android:elevation="@dimen/elevation_4dp"
+                android:text="@string/skipped"
+                android:textColor="@color/dark_blue_ada"
+                android:textSize="@dimen/text_size_18sp" />
+
+            <Button
+                android:id="@+id/taken_button"
+                android:layout_width="@dimen/layout_width_136dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_8dp"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:layout_marginEnd="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/margin_16dp"
+                android:layout_toEndOf="@id/placeholder"
+                android:background="@drawable/button_view_reminder_background"
+                android:minHeight="@dimen/layout_height_48dp"
+                android:textAllCaps="false"
+                android:text="@string/taken"
+                android:elevation="@dimen/elevation_4dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_18sp" />
+
+            <TextView
+                android:id="@+id/view_medications"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/skip_button"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:text="@string/view_medication"
+                android:layout_marginTop="@dimen/margin_12dp"
+                android:layout_marginBottom="@dimen/margin_32dp"
+                android:textColor="@color/dark_blue_ada"
+                android:textSize="@dimen/text_size_16sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

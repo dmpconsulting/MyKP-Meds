@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="handler"
+            type="com.montunosoftware.pillpopper.android.home.RefillReminderOverdueCard" />
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            bind:cardCornerRadius="12dp"
+            android:contentDescription="@string/refill_reminder_overdue_card">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="300dp"
+                android:background="@drawable/cardview_border">
+
+                <TextView
+                    android:id="@+id/textView_seemore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/see_more_home_card"
+                    android:focusable="true"
+                    android:contentDescription="@string/see_more_expanded_view"
+                    android:textColor="@color/color_see_more_text"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/card_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="32dp"
+                        android:text="@string/home_card_refill_reminder"
+                        android:textColor="@color/refil_med_btn_bcg"
+                        android:textSize="24sp"
+                        android:transitionName="@string/animation_title"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/refill_overdue_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="4dp"
+                        android:text="@{handler.refillOverdueDate}"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:transitionName="@string/animation_subtitle"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/refill_overdue_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:text="@{handler.refillOverdueTime}"
+                        android:textColor="@color/single_time_pill_action_text_color"
+                        android:textSize="16sp"
+                        android:transitionName="@string/animation_subtitle"
+                         />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+</layout>

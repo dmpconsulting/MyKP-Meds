@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="activity"
+            type="com.montunosoftware.pillpopper.android.EditNotesActivity" />
+
+        <variable
+            name="drugDetails"
+            type="com.montunosoftware.pillpopper.model.Drug" />
+
+        <variable
+            name="robotoRegular"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="buttonClickHandler"
+            type="com.montunosoftware.pillpopper.android.EditNotesActivity" />
+
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/edit_notes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/app_bar"
+            layout="@layout/material_toolbar" />
+
+        <RelativeLayout
+            android:id="@+id/personal_notes_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/app_bar"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:layout_marginBottom="@dimen/margin_16dp">
+
+            <EditText
+                android:id="@+id/personal_notes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:gravity="top"
+                android:focusable="true"
+                android:inputType="textMultiLine"
+                android:onClick="@{() -> buttonClickHandler.onEditTextTouch()}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_17sp"
+                android:typeface="@{robotoRegular}" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

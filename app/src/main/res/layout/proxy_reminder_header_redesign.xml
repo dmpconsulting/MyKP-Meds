@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/reminder_header_color"
+        android:minHeight="@dimen/layout_height_40dp">
+
+        <TextView
+            android:id="@+id/tv_proxy_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_toStartOf="@id/carrot_image"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/text_size_16sp"
+            android:typeface="@{robotoBold}"
+            tools:text="Nathan" />
+
+        <RelativeLayout
+            android:id="@+id/carrot_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:gravity="end"
+            android:minWidth="@dimen/layout_width_24dp"
+            android:minHeight="@dimen/layout_height_24dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:src="@drawable/chevron"
+                app:tint="@color/kp_theme_blue"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <data>
+
+        <variable
+            name="robotoBold"
+            type="android.graphics.Typeface" />
+    </data>
+</layout>

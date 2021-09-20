@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activityContext"
+            type="com.montunosoftware.pillpopper.kotlin.quickview.CurrentReminderActivityNew" />
+
+        <variable
+            name="adapter"
+            type="com.montunosoftware.pillpopper.kotlin.quickview.CurrentReminderAdapter" />
+
+        <variable
+            name="robotoMedium"
+            type="android.graphics.Typeface" />
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/lr_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/reminder_screen_toolbar"
+            layout="@layout/reminder_screen_toolbar_redesign" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/reminder_screen_toolbar"
+            android:orientation="vertical">
+
+            <ExpandableListView
+                android:id="@+id/expandable_proxy_reminders"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:childDivider="@color/transparent"
+                android:divider="@color/transparent"
+                android:focusableInTouchMode="false"
+                android:groupIndicator="@null"
+                android:listSelector="@android:color/transparent"
+                android:scrollbars="vertical"
+                bind:adapter="@{adapter}" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_12dp"
+            android:background="@drawable/ic_gradient_short"
+            android:gravity="center"
+            android:minHeight="134dp"
+            android:onClick="@{() -> activityContext.outsideLayoutClicked()}"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/margin_40dp"
+            android:paddingEnd="@dimen/margin_40dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_25dp"
+                android:layout_marginBottom="13dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:id="@+id/skip_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/layout_height_48dp"
+                    android:layout_weight="0.5"
+                    android:onClick="@{() -> activityContext.onSkippedAllClicked()}">
+
+                    <Button
+                        android:id="@+id/skip_all_btn"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/skip_all_background"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:minWidth="@dimen/layout_160dp"
+                        android:minHeight="@dimen/layout_width_40dp"
+                        android:padding="@dimen/padding_4dp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/kp_theme_blue"
+                        android:textSize="@dimen/text_size_14sp"
+                        android:typeface="@{robotoMedium}"
+                        tools:text="@string/reminder_skip_all" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/taken_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/layout_height_48dp"
+                    android:layout_weight="0.5"
+                    android:onClick="@{() -> activityContext.onTakenAllClicked()}">
+
+                    <Button
+                        android:id="@+id/taken_all_btn"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:background="@drawable/taken_all_background"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:minWidth="@dimen/layout_160dp"
+                        android:minHeight="@dimen/layout_height_40dp"
+                        android:padding="@dimen/padding_4dp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_14sp"
+                        android:typeface="@{robotoMedium}"
+                        tools:text="@string/reminder_taken_all" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/taken_all_earlier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/layout_height_48dp"
+                android:onClick="@{() -> activityContext.onTakenEarlierClicked()}"
+                android:visibility="gone"
+                tools:visibility="gone">
+
+                <TextView
+                    android:id="@+id/taken_all_earlier_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_24dp"
+                    android:clickable="false"
+                    android:gravity="center_horizontal"
+                    android:minWidth="@dimen/layout_160dp"
+                    android:minHeight="@dimen/layout_height_40dp"
+                    android:padding="@dimen/padding_4dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/kp_theme_blue"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:typeface="@{robotoMedium}"
+                    tools:text="@string/reminder_taken_all_earlier" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/take_all_later"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:minHeight="@dimen/layout_height_48dp"
+                android:onClick="@{() -> activityContext.onTakeLaterClicked()}">
+
+                <TextView
+                    android:id="@+id/take_all_later_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_24dp"
+                    android:clickable="false"
+                    android:gravity="center_horizontal"
+                    android:minWidth="@dimen/layout_160dp"
+                    android:minHeight="@dimen/layout_height_40dp"
+                    android:padding="@dimen/padding_4dp"
+                    android:text="@string/remind_later"
+                    android:textColor="@color/kp_theme_blue"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:typeface="@{robotoMedium}"
+                    tools:visibility="visible" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

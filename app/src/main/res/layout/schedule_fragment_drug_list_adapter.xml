@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="drugListData"
+            type="com.montunosoftware.pillpopper.model.ScheduleMainDrug" />
+
+        <variable
+            name="doseListscheduleFragment"
+            type="com.montunosoftware.pillpopper.android.ScheduleFragmentNew" />
+
+        <variable
+            name="robotoItalic"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="robotoMedium"
+            type="android.graphics.Typeface" />
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_2dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginEnd="@dimen/margin_12dp"
+            android:paddingTop="@dimen/padding_14dp"
+            android:paddingBottom="@dimen/padding_12dp"
+            android:typeface="@{robotoMedium}"
+            android:layout_weight=".7"
+            android:ellipsize="end"
+            android:layout_gravity="center"
+            android:maxLines="2"
+            android:onClick="@{() -> doseListscheduleFragment.onDrugClicked(drugListData)}"
+            android:text="@{drugListData.pillName}"
+            android:textColor="@color/kp_theme_blue"
+            android:contentDescription="@string/content_description_medication_name"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <TextView
+            android:id="@+id/drugDose"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:layout_weight=".3"
+            android:paddingTop="@dimen/padding_14dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:paddingEnd="1dp"
+            android:typeface="@{robotoItalic}"
+            android:text="@{drugListData.dose}"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/text_size_16sp"
+            android:textStyle="italic" />
+    </LinearLayout>
+</layout>

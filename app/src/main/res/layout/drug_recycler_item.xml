@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/druglist_item_nameandnext_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/druglist_item_managed_change_bar"
+            android:layout_width="@dimen/margin_8dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:background="@color/kphc_indicator"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/drug_select_img_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/margin_12dp"
+            android:layout_toEndOf="@+id/druglist_item_managed_change_bar"
+            android:button="@drawable/customdrawablecheckbox"
+            android:gravity="start|center"
+            android:scaleType="fitXY"
+            android:tag="unselected"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/empty_view"
+            android:layout_width="@dimen/margin_12dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginEnd="@dimen/margin_80dp"
+            android:layout_toEndOf="@+id/empty_view"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/druglist_item_drugname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16dp"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:paddingEnd="@dimen/margin_24dp"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@color/Text_black_ada"
+                    android:textSize="@dimen/text_size_16sp"
+                    android:text="@string/new_val"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/med_notes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/druglist_item_drugname"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:src="@drawable/med_notes"
+                    android:visibility="invisible"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/druglist_item_drug_generic_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginEnd="@dimen/margin_80dp"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                android:textColor="@color/Text_black_ada"
+                android:textSize="@dimen/text_size_16sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/druglist_item_dosage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginEnd="@dimen/margin_80dp"
+                android:layout_marginBottom="@dimen/margin_3dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/druglist_item_reminder_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginBottom="@dimen/margin_5dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/druglist_item_daily_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_6dp"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:textColor="@color/dark_red"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <com.montunosoftware.pillpopper.android.view.DrugDetailRoundedImageView
+            android:id="@+id/druglist_item_drug_image"
+            android:layout_width="@dimen/layout_height_60dp"
+            android:layout_height="@dimen/layout_height_60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/margin_16dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

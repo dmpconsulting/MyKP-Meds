@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="drug"
+            type="com.montunosoftware.pillpopper.model.Drug" />
+
+        <variable
+            name="activity"
+            type="com.montunosoftware.pillpopper.android.MedicationDetailActivity" />
+
+        <variable
+            name="robotoMedium"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="robotoRegular"
+            type="android.graphics.Typeface" />
+
+
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/notes_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/padding_16dp"
+        android:visibility="@{drug.managed? View.VISIBLE : View.GONE}">
+
+        <RelativeLayout
+            android:id="@+id/header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16dp">
+
+
+            <TextView
+                android:id="@+id/notes_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_24dp"
+                android:layout_marginBottom="@dimen/margin_8dp"
+                android:text="@string/personal_notes_text"
+                android:textAllCaps="true"
+                android:textColor="@color/pharmacy_info_color"
+                android:textSize="@dimen/text_size_18sp"
+                android:typeface="@{robotoMedium}" />
+
+            <TextView
+                android:id="@+id/add_or_edit_notes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_24dp"
+                android:layout_marginBottom="@dimen/margin_14dp"
+                android:gravity="end"
+                android:paddingStart="@dimen/padding_20dp"
+                android:paddingTop="@dimen/padding_24dp"
+                android:paddingBottom="@dimen/padding_2dp"
+                android:text="@{TextUtils.isEmpty(drug.notes) ? @string/add_button :@string/edit}"
+                android:textColor="@color/kp_theme_blue"
+                android:textSize="@dimen/text_size_18sp"
+                android:typeface="@{robotoMedium}" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/personal_notes_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header_layout"
+            android:background="@color/white"
+            android:paddingStart="@dimen/padding_24dp"
+            android:paddingTop="@dimen/padding_32dp"
+            android:paddingEnd="@dimen/padding_24dp"
+            android:paddingBottom="@dimen/padding_32dp"
+            android:text="@{drug.notes}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_17sp"
+            android:typeface="@{robotoRegular}" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height_1dp"
+            android:layout_below="@id/personal_notes_text"
+            android:background="@color/schedule_divider_color" />
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="scheduleList"
+            type="com.montunosoftware.pillpopper.model.ScheduleListItemDataWrapper" />
+        <variable
+            name="drugdapter"
+            type="com.montunosoftware.pillpopper.android.ScheduleFragmentDosesDataAdapterNew" />
+        <variable
+            name="robotoMedium"
+            type="android.graphics.Typeface" />
+        <variable
+            name="robotoRegular"
+            type="android.graphics.Typeface" />
+
+    </data>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:id="@+id/lr_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        tools:visibility="visible"
+        android:background="@color/schedule_new_background"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.33"
+            android:layout_gravity="top"
+            android:background="@color/schedule_background"
+            android:paddingTop="@dimen/margin_24dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lrTittle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingEnd="@dimen/margin_16dp"
+                android:paddingStart="@dimen/margin_16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_8_dp"
+                    android:gravity="end"
+                    android:text="@{scheduleList.scheduleMainTimeHeader.toString()}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_17sp"
+                    android:typeface="@{robotoMedium}"
+                    tools:text="@string/edit" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="end"
+                    android:visibility="@{scheduleList.isProxyAvailable()}"
+                    android:text="@{scheduleList.userFirstName}"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/text_size_15sp"
+                    android:typeface="@{robotoRegular}"
+                    tools:text="@string/edit" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".67"
+            android:background="@color/schedule_new_background"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDoseList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adapter="@{drugdapter}"
+                android:paddingBottom="@dimen/padding_24dp"
+                android:paddingTop="@dimen/padding_8dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lr_child"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        tools:visibility="visible"
+        android:background="@color/schedule_new_background"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:layout_weight="0.33"
+            android:background="@color/schedule_background"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/margin_16dp"
+            android:paddingTop="@dimen/padding_24dp"
+            android:paddingEnd="@dimen/margin_16dp">
+
+            <LinearLayout
+                android:id="@+id/lrTittle1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTime1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_8_dp"
+                    android:gravity="end"
+                    android:text="@{scheduleList.scheduleMainTimeHeader.toString()}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_17sp"
+                    android:typeface="@{robotoMedium}"
+                    tools:text="@string/edit" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="end"
+                    android:paddingBottom="@dimen/margin_18dp"
+                    android:text="@{scheduleList.userFirstName}"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/text_size_15sp"
+                    android:typeface="@{robotoRegular}"
+                    android:visibility="@{scheduleList.isProxyAvailable()}"
+                    tools:text="@string/edit" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".67"
+            android:background="@color/schedule_new_background"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDoseList1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adapter="@{drugdapter}"
+                android:paddingTop="@dimen/padding_8dp"
+                android:paddingBottom="@dimen/margin_24dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/schedule_divider_color"/>
+
+</LinearLayout>
+</layout>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="weeklyScheduleWizard"
+            type="com.montunosoftware.pillpopper.android.view.WeeklyScheduleWizardFragment" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFEDF0F4"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/daysLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20dp"
+                android:layout_marginTop="@dimen/margin_40dp"
+                android:layout_marginEnd="@dimen/margin_20dp"
+                android:layout_marginBottom="@dimen/margin_16dp"
+                android:text="@string/days_of_week"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_18sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height_1dp"
+            android:background="@color/schedule_divider_color" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_24dp"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:minHeight="@dimen/layout_height_48dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:minWidth="48dp"
+                    android:onClick="@{() -> weeklyScheduleWizard.onDaySelected(1)}"
+                    android:contentDescription="@string/content_description_sunday"
+                    android:padding="@dimen/padding_6dp">
+
+                    <TextView
+                        android:id="@+id/sunday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/weekdays_background_circle"
+                        android:gravity="center"
+                        android:text="@string/sunday"
+                        android:textColor="@color/Black"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:minWidth="48dp"
+                    android:onClick="@{() -> weeklyScheduleWizard.onDaySelected(3)}"
+                    android:contentDescription="@string/content_description_tuesday"
+                    android:padding="@dimen/padding_6dp">
+
+                    <TextView
+                        android:id="@+id/tuesday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/weekdays_background_circle"
+                        android:gravity="center"
+                        android:text="@string/tuesday"
+                        android:textColor="@color/Black"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:minWidth="48dp"
+                    android:onClick="@{() -> weeklyScheduleWizard.onDaySelected(5)}"
+                    android:contentDescription="@string/content_description_thursday"
+                    android:padding="@dimen/padding_6dp">
+
+                    <TextView
+                        android:id="@+id/thursday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/weekdays_background_circle"
+                        android:gravity="center"
+                        android:text="@string/thursday"
+                        android:textColor="@color/Black"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:minWidth="48dp"
+                    android:onClick="@{() -> weeklyScheduleWizard.onDaySelected(7)}"
+                    android:contentDescription="@string/content_description_saturday"
+                    android:padding="@dimen/padding_6dp">
+
+                    <TextView
+                        android:id="@+id/saturday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/weekdays_background_circle"
+                        android:gravity="center"
+                        android:text="@string/saturday"
+                        android:textColor="@color/Black"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_48dp"
+                android:layout_marginTop="@dimen/margin_24dp"
+                android:layout_marginEnd="@dimen/margin_48dp"
+                android:layout_marginBottom="@dimen/margin_24dp"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:minHeight="@dimen/layout_height_48dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:minWidth="48dp"
+                    android:onClick="@{() -> weeklyScheduleWizard.onDaySelected(2)}"
+                    android:contentDescription="@string/content_description_monday"
+                    android:padding="@dimen/padding_6dp">
+
+                    <TextView
+                        android:id="@+id/monday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/weekdays_background_circle"
+                        android:gravity="center"
+                        android:text="@string/monday"
+                        android:textColor="@color/Black"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:minWidth="48dp"
+                    android:onClick="@{() -> weeklyScheduleWizard.onDaySelected(4)}"
+                    android:contentDescription="@string/content_description_wednesday"
+                    android:padding="@dimen/padding_6dp">
+
+                    <TextView
+                        android:id="@+id/wednesday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/weekdays_background_circle"
+                        android:gravity="center"
+                        android:text="@string/wednesday"
+                        android:textColor="@color/Black"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:minWidth="48dp"
+                    android:onClick="@{() -> weeklyScheduleWizard.onDaySelected(6)}"
+                    android:contentDescription="@string/content_description_friday"
+                    android:padding="@dimen/padding_6dp">
+
+                    <TextView
+                        android:id="@+id/friday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/weekdays_background_circle"
+                        android:gravity="center"
+                        android:text="@string/friday"
+                        android:textColor="@color/Black"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_1dp"
+                android:background="@color/schedule_divider_color" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

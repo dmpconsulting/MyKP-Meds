@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="handler"
+            type="com.montunosoftware.pillpopper.android.home.CurrentReminderCard" />
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:contentDescription="@string/current_reminders_card"
+            bind:cardCornerRadius="12dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="300dp"
+                android:background="@drawable/cardview_border"
+                android:paddingBottom="24dp">
+
+                <LinearLayout
+                    android:id="@+id/reminder_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/title_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/card_title_time"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="32dp"
+                            android:layout_weight="0.7"
+                            android:ellipsize="end"
+                            android:maxLines="3"
+                            android:text="@{handler.getReminderTime()}"
+                            android:textColor="@color/color_late_reminder_title"
+                            android:textSize="28sp"
+                            android:textStyle="bold"
+                            android:transitionName="@string/animation_reminder_time" />
+
+                        <TextView
+                            android:id="@+id/card_see_more"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginTop="32dp"
+                            android:layout_weight="0.3"
+                            android:contentDescription="@string/see_more_expanded_view"
+                            android:ellipsize="end"
+                            android:focusable="true"
+                            android:gravity="end"
+                            android:maxLines="3"
+                            android:text="@string/see_more_home_card"
+                            android:textColor="@color/color_see_more_text"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/card_title_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginStart="24dp"
+                            android:text="@{handler.getReminderDate()}"
+                            android:textColor="@color/color_late_reminder_title"
+                            android:textSize="17sp"
+                            android:transitionName="@string/animation_reminder_date" />
+
+                        <TextView
+                            android:id="@+id/card_subtitle_reminder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:text="@string/reminder"
+                            android:textColor="@color/kp_txt_color_gray"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:transitionName="@string/animation_reminder_tile" />
+
+                        <TextView
+                            android:id="@+id/card_subtitle_user"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="32dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginStart="24dp"
+                            android:text="@{handler.getUserNames()}"
+                            android:textColor="@color/kp_txt_color_gray"
+                            android:textSize="17sp"
+                            android:transitionName="@string/animation_reminder_sub_title" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/button_container"
+                    android:layout_below="@id/reminder_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/current_reminder_dismiss"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_8dp"
+                        android:layout_marginLeft="@dimen/margin_2dp"
+                        android:layout_marginTop="@dimen/margin_2dp"
+                        android:layout_marginBottom="@dimen/margin_2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_kphc_dismiss"
+                        android:gravity="center"
+                        android:onClick="@{(view)->handler.onSkipped(view)}"
+                        android:padding="10dp"
+                        android:tag="@string/contract"
+                        android:text="@{handler.getSkipText()}"
+                        android:textAllCaps="false"
+                        android:textColor="@color/card_btn_unselected_00625c"
+                        android:textSize="16sp"
+                        android:transitionName="@string/animation_skip" />
+
+                    <Button
+                        android:id="@+id/current_reminder_taken"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_8dp"
+                        android:layout_marginRight="@dimen/margin_2dp"
+                        android:layout_marginTop="@dimen/margin_2dp"
+                        android:layout_marginBottom="@dimen/margin_2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_create_reminder_background"
+                        android:gravity="center"
+                        android:onClick="@{(view)->handler.onTaken(view)}"
+                        android:padding="10dp"
+                        android:tag="@string/contract"
+                        android:text="@{handler.getTakenText()}"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:transitionName="@string/animation_taken" />
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+</layout>

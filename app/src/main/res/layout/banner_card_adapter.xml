@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="cardBanner"
+            type="com.montunosoftware.pillpopper.model.genericCardAndBanner.AnnouncementsItem" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rel_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_1dp"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/banner_view_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/banner_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_12dp"
+            android:layout_marginTop="@dimen/margin_12dp"
+            android:minWidth="@dimen/layout_width_24dp"
+            android:minHeight="@dimen/layout_height_24dp"
+            android:src="@drawable/ic_alertbanner" />
+
+        <TextView
+            android:id="@+id/banner_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/banner_view_divider"
+            android:layout_marginStart="@dimen/margin_8dp"
+            android:layout_marginEnd="@dimen/margin_8dp"
+            android:layout_toEndOf="@id/banner_icon"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/layout_height_48dp"
+            android:text="@{cardBanner.title}"
+            android:textSize="@dimen/text_size_17sp"
+            android:textColor="@color/white"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="medication"
+            type="com.montunosoftware.pillpopper.model.Drug" />
+
+        <variable
+            name="robotoMedium"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="robotoRegular"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="scheduleWizardFragment"
+            type="com.montunosoftware.pillpopper.android.ScheduleWizardFragment" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/medication_details_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/drug_contents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/image_content_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/margin_20dp"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+
+                    <com.montunosoftware.pillpopper.android.view.DrugDetailRoundedImageView
+                        android:id="@+id/drug_detail_image"
+                        style="@style/mm_common_style"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/content_description_change_image"
+                        android:gravity="end"
+                        android:onClick="@{()->scheduleWizardFragment.expandImage(medication, context)}" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/drug_name_details_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_24dp"
+                    android:layout_toStartOf="@id/image_content_layout"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/drug_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_8dp"
+                        android:onClick="@{(view)->scheduleWizardFragment.showDrugDetails(medication, context, view)}"
+                        android:text="@{medication.firstName}"
+                        android:textColor="@color/kp_theme_blue"
+                        android:textSize="@dimen/text_size_18sp"
+                        android:typeface="@{robotoMedium}"
+                        tools:text="test medication" />
+
+                    <TextView
+                        android:id="@+id/drug_dosage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/drug_name"
+                        android:text="@{medication.dose}"
+                        android:textColor="@color/group2_header"
+                        android:textSize="@dimen/text_size_17sp"
+                        android:typeface="@{robotoRegular}"
+                        android:visibility="@{TextUtils.isEmpty(medication.dose)? View.GONE:View.VISIBLE}"
+                        tools:text="10mg"
+                        tools:visibility="visible" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/instructions_or_notes_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/drug_contents"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/instructions_or_notes__header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_22dp"
+                    android:layout_marginBottom="@dimen/margin_8dp"
+                    android:text="@{medication.managed?@string/instructions_txt:@string/personal_notes_text}"
+                    android:textColor="@color/create_rem_txt_color"
+                    android:textSize="@dimen/text_size_17sp"
+                    android:typeface="@{robotoRegular}" />
+
+                <RelativeLayout
+                    android:id="@+id/expand_icon"
+                    android:layout_width="@dimen/layout_width_48dp"
+                    android:layout_height="@dimen/layout_height_48dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:minWidth="@dimen/layout_width_24dp"
+                        android:minHeight="@dimen/layout_height_24dp"
+                        android:src="@drawable/expand" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/collapse_icon"
+                    android:layout_width="@dimen/layout_width_48dp"
+                    android:layout_height="@dimen/layout_height_48dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:minWidth="@dimen/layout_width_24dp"
+                        android:minHeight="@dimen/layout_height_24dp"
+                        android:src="@drawable/collapse" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/instructions_or_notes_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/instructions_or_notes__header"
+                    android:layout_marginBottom="@dimen/margin_20dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@{medication.managed?medication.directions:medication.notes}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_17sp"
+                    android:typeface="@{robotoRegular}"
+                    tools:text="Instructions or notes here" />
+
+                <TextView
+                    android:id="@+id/instructions_or_notes_full_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/instructions_or_notes__header"
+                    android:layout_marginBottom="@dimen/margin_20dp"
+                    android:text="@{medication.managed?medication.directions:medication.notes}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_17sp"
+                    android:typeface="@{robotoRegular}"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_height_1dp"
+                    android:layout_marginStart="@dimen/margin_24dp"
+                    android:layout_marginEnd="@dimen/margin_24dp"
+                    android:background="@color/scheduleDivider"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</layout>

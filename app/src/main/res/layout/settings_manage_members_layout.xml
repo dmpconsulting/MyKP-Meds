@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/material_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollIndicators="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin">
+
+            <TextView
+                android:id="@+id/txt_display_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_display_name"
+                android:textColor="@color/settings_006BA6"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_member_name"
+                style="@style/settings_heading_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:text="@string/susan" />
+
+            <View style="@style/settings_divider" />
+
+            <TextView
+                android:id="@+id/limited_access"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_24dp"
+                android:textSize="@dimen/text_size_16sp"
+                android:textColor="@color/black"
+                android:alpha="0.54"
+                android:text="@string/limited_access"/>
+
+            <LinearLayout
+                android:id="@+id/switchContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/view"
+                    android:textColor="@color/settings_006BA6"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_manage_medications"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_medications"
+                        style="@style/settings_heading_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="4dp"
+                        android:layout_toLeftOf="@id/switch_medications"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:text="@string/medications" />
+
+                    <TextView
+                        android:id="@+id/txt_medications_subtext"
+                        style="@style/settings_heading_subtext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_medications"
+                        android:layout_marginBottom="16dp"
+                        android:text="@string/manage_members_medications_subtext" />
+
+                    <Switch
+                        android:id="@+id/switch_medications"
+                        style="@style/mm_common_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/txt_medications_subtext"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="@dimen/activity_horizontal_margin" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_manage_reminders"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_reminders"
+                        style="@style/settings_heading_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="4dp"
+                        android:layout_toLeftOf="@id/switch_reminders"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:text="@string/reminders" />
+
+                    <TextView
+                        android:id="@+id/txt_reminders_subtext"
+                        style="@style/settings_heading_subtext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_reminders"
+                        android:layout_marginBottom="16dp"
+                        android:text="@string/manage_members_reminders_subtext" />
+
+                    <Switch
+                        android:id="@+id/switch_reminders"
+                        style="@style/mm_common_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/txt_reminders_subtext"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="@dimen/activity_horizontal_margin" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+

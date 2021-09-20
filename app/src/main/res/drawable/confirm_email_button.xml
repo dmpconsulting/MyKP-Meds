@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <solid android:color="@color/kp_theme_blue"/>
+
+    <size android:width="136dp"
+        android:height="48dp" />
+
+    <corners android:radius="100dp" />
+
+</shape>

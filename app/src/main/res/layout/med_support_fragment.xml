@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/layout_height_40dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:text="@string/lbl_support"
+                android:textColor="@color/settings_006BA6"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <LinearLayout
+                android:id="@+id/app_support_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/layout_height_84dp"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/margin_24dp">
+
+                <TextView
+                    android:id="@+id/txt_app_support"
+                    style="@style/settings_heading_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_4dp"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:text="@string/lbl_app_support"
+                    android:textSize="@dimen/text_size_18sp" />
+
+                <TextView
+                    android:id="@+id/txt_app_support_note"
+                    style="@style/settings_heading_subtext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="@string/lbl_app_support_note"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/appointments_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="18dp"
+                android:paddingLeft="24dp">
+
+                <TextView
+                    android:id="@+id/txt_appointments"
+                    style="@style/settings_heading_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:text="@string/lbl_appointments_and_advice"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txt_appointments_note"
+                    style="@style/settings_heading_subtext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="@string/appointment_advice"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/medications_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:orientation="vertical"
+                android:paddingBottom="18dp"
+                android:paddingLeft="24dp">
+
+                <TextView
+                    android:id="@+id/txt_med_questions"
+                    style="@style/settings_heading_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:text="@string/_pharmacy"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txt_med_questions_note"
+                    style="@style/settings_heading_subtext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="@string/medications_ques"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/settings_divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="16dp"
+                android:background="#EFEFEF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:text="@string/lbl_legal_terms"
+                android:textColor="@color/settings_006BA6"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txt_privacy_statement"
+                style="@style/settings_heading_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:paddingLeft="24dp"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:text="@string/lbl_privacy_statement"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/txt_term_condition"
+                style="@style/settings_heading_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:text="@string/lbl_term_and_conditions"
+                android:textSize="17sp" />
+
+            <LinearLayout
+                android:id="@+id/app_version_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/settings_heading_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:text="@string/lbl_version"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_version"
+                    style="@style/settings_heading_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/jenkins_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/settings_heading_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:text="@string/build_number"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_jenkins_build_no"
+                    style="@style/settings_heading_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

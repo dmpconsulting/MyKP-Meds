@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_36dp"
+    android:layout_marginTop="@dimen/margin_12dp">
+
+    <LinearLayout
+        android:id="@+id/late_reminder_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/med_item_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_weight="0.6"
+            android:text="Vancocin"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/med_item_dose"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/margin_5dp"
+            android:layout_weight="0.4"
+            android:text="125 mg"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
+</RelativeLayout>

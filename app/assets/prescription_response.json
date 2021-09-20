@@ -1,0 +1,1434 @@
+{
+    "Prescriptions": {
+        "VisualSecurityInstructions": [{
+                                       "objectPath": "prescription.prescriber.ids.id",
+                                       "instruction": "Show"
+                                       }, {
+                                       "objectPath": "prescription.totalRefills",
+                                       "instruction": "Hide"
+                                       }, {
+                                       "objectPath": "prescription.refillsRemaining",
+                                       "instruction": "Hide"
+                                       }, {
+                                       "objectPath": "prescription.prescriptionNumber",
+                                       "instruction": "Show"
+                                       }],
+        "PrescriptionDetails": [{
+                                "origFillPharmLocCID": "160631",
+                                "startDate": "2018-07-13",
+                                "lastRefillDate": "2018-08-13",
+                                "callBackNumber": "916-688-2106",
+                                "clinicalInstructions": null,
+                                "reasonForDiscontinuation": null,
+                                "orderDesc": null,
+                                "totalRefills": "3",
+                                "prescriptionValidationStatus": "BLANK",
+                                "pharmacyInfo":{
+                                        "detail":{
+                                        "region":"MRN",
+                                        "compound":false,
+                                        "coPayAmount":"1.0",
+                                        "mrn":"BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613A976ABC8FE3282F59E23AAB2B673CF15C9456BF5ACCB3CAA2C48A277B71991479055A0C591664E79310236A65510C5CC5346154F277E5792F33DF4BCF9D17D2FBACC43B9",
+                                        "previousMailOrPickup":null,
+                                        "dispenseLocationCode":"241",
+                                        "canOrderRx":false,
+                                        "rxNumber":"224100549259",
+                                            "statusCodes":{
+                                            "consumerResponseCode1":"PHE:3001",
+                                            "rxDetailResponseCode":"098"
+                                            },
+                                        "nhinId":"900002241",
+                                        "rxTrackingFilterApplied":false,
+                                        "rxTrackingFilterAppliedDays":14,
+                                        "rxShippingDetails":
+                                            {
+                                            "rxTrackingNumber":"TRACK10140625",
+                                            "rxShipCarrier":"USPS",
+                                            "rxTrackingURL":"https://tools.usps.com/go/TrackConfirmAction_input?qtc_tLabels1=TRACK10140625"
+                                            },
+                                        "sendingApplication":"AMR04",
+                                        "deaCode":"8",
+                                        "quantity":"10.0",
+                                        "lastSoldDate": "2018-08-23",
+                                        "mailable":false,
+                                            "memberName":{
+                                            "lastName":"C-NONLINED",
+                                            "firstName":"BVALIDATION"
+                                            },
+                                        "rxName":"REFRESH Med Shipped"
+                                        }
+                                },
+                                "firstFill": true,
+                                "endDate": null,
+                                "origMedOrderQty": "200",
+                                "earliestFillDate": null,
+                                "lastRxQtyDispensed": null,
+                                "refillsRemaining": "3",
+                                "eRefillApprovalRxName": null,
+                                "daysOfSupply": null,
+                                "order": {
+                                "controlledMeds": null,
+                                "orderDateTime": "2018-07-13T16:19:13-07:00",
+                                "frequencyCID": null,
+                                "dispenseAsWritten": null,
+                                "orderID": "676396360",
+                                "medicationComments": null,
+                                "diagnosis": {
+                                "description": null
+                                },
+                                "frequency": null,
+                                "dose": null,
+                                "medicationChangeOrderUCI": null,
+                                "id": {
+                                "id": "312671948376",
+                                "idType": "CID"
+                                },
+                                "unit": null,
+                                "doseUnit": null,
+                                "routeCID": "12024",
+                                "DEACode": null,
+                                "orderUCI": "312164153",
+                                "route": "Oral",
+                                "nonFormularyMeds": null,
+                                "owner": "urn:kp:hcotca2",
+                                "volume": null,
+                                "medicationChangeOrderID": null,
+                                "orderClass": "File",
+                                "medicationChangeOrderCID": null,
+                                "orderMode": "Outpatient"
+                                },
+                                "prescriber": {
+                                "consumerName": "ERIC J CUTLER MD",
+                                "clinicalName": null,
+                                "ids": [{
+                                        "id": "462212186",
+                                        "idType": "CID"
+                                        }, {
+                                        "id": null,
+                                        "idType": "NPI"
+                                        }, {
+                                        "id": "3880510",
+                                        "idType": "PROVIDER ID - CPM"
+                                        }, {
+                                        "id": "101182",
+                                        "idType": "PROVIDER ID - NORTHERN CALIFORNIA"
+                                        }]
+                                },
+                                "prescriptionNumber": null,
+                                "eRefillPharmLocCID": null,
+                                "eRefillDenyReason": null,
+                                "medicine": {
+                                "legendIndicator": "Prescription",
+                                "commonBrandName": "DIAMOX",
+                                "name": "acetaZOLAMIDE (DIAMOX) 250 mg Oral Tab",
+                                "dosage": "250 mg",
+                                "codes": [{
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "First Data Bank Code",
+                                          "code": "193388",
+                                          "type": "FDB"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "National Drug Code",
+                                          "code": "0527-1050-01",
+                                          "type": "NDC"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "Generic Product Identifier",
+                                          "code": "193388",
+                                          "type": "GPI"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "American Hospital Formulary Service Code",
+                                          "code": "52:40.12",
+                                          "type": "AHFS"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "American Hospital Formulary Service Code",
+                                          "code": "24:08.24.04",
+                                          "type": "AHFS"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "American Hospital Formulary Service Code",
+                                          "code": "40:28.04",
+                                          "type": "AHFS"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "PREFERRED NDC",
+                                          "code": "51672402301",
+                                          "type": "NDC"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "ERX-ADS",
+                                          "code": "A00896",
+                                          "type": "ADS"
+                                          }],
+                                "sourceSystemId": {
+                                "id": "1209798",
+                                "idType": "CID"
+                                },
+                                "shortName": "acetaZOLAMIDE"
+                                },
+                                "consumerInstructions": "Take 1 tablet orally 2 times a day",
+                                "lastRefillPharmLocCID": null
+                                },{
+                                "origFillPharmLocCID": "160631",
+                                "startDate": "2018-07-13",
+                                "lastRefillDate": "2018-08-13",
+                                "callBackNumber": "916-688-2106",
+                                "clinicalInstructions": null,
+                                "reasonForDiscontinuation": null,
+                                "orderDesc": null,
+                                "totalRefills": "3",
+                                "prescriptionValidationStatus": "BLANK",
+                                "pharmacyInfo":{
+                                    "detail":{
+                                    "region":"MRN",
+                                    "compound":false,
+                                    "coPayAmount":"1.0",
+                                    "mrn":"BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613A976ABC8FE3282F59E23AAB2B673CF15C9456BF5ACCB3CAA2C48A277B71991479055A0C591664E79310236A65510C5CC5346154F277E5792F33DF4BCF9D17D2FBACC43B9",
+                                    "previousMailOrPickup":null,
+                                    "dispenseLocationCode":"241",
+                                    "canOrderRx":false,
+                                    "rxNumber":"224100549251",
+                                        "statusCodes":{
+                                            "consumerResponseCode1":"PHE:3001",
+                                            "rxDetailResponseCode":"098"
+                                        },
+                                    "nhinId":"900002241",
+                                    "rxTrackingFilterApplied":true,
+                                    "rxTrackingFilterAppliedDays":14,
+                                    "rxShippingDetails":
+                                        {
+                                        "rxTrackingNumber":"TRACK10140625",
+                                        "rxShipCarrier":"USPS",
+                                        "rxTrackingURL":"https://tools.usps.com/go/TrackConfirmAction_input?qtc_tLabels1=TRACK10140625"
+                                        },
+                                    "sendingApplication":"AMR04",
+                                    "deaCode":"8",
+                                    "quantity":"10.0",
+                                    "lastSoldDate": "2018-08-23",
+                                    "mailable":false,
+                                    "memberName":{
+                                    "lastName":"C-NONLINED",
+                                    "firstName":"BVALIDATION"
+                                    },
+                                    "rxName":"REFRESH Med Shipped Filter Applied"
+                                    }
+                                },
+                                "firstFill": true,
+                                "endDate": null,
+                                "origMedOrderQty": "200",
+                                "earliestFillDate": null,
+                                "lastRxQtyDispensed": null,
+                                "refillsRemaining": "3",
+                                "eRefillApprovalRxName": null,
+                                "daysOfSupply": null,
+                                "order": {
+                                "controlledMeds": null,
+                                "orderDateTime": "2018-07-13T16:19:13-07:00",
+                                "frequencyCID": null,
+                                "dispenseAsWritten": null,
+                                "orderID": "676396360",
+                                "medicationComments": null,
+                                "diagnosis": {
+                                "description": null
+                                },
+                                "frequency": null,
+                                "dose": null,
+                                "medicationChangeOrderUCI": null,
+                                "id": {
+                                "id": "312671948376",
+                                "idType": "CID"
+                                },
+                                "unit": null,
+                                "doseUnit": null,
+                                "routeCID": "12024",
+                                "DEACode": null,
+                                "orderUCI": "312164153",
+                                "route": "Oral",
+                                "nonFormularyMeds": null,
+                                "owner": "urn:kp:hcotca2",
+                                "volume": null,
+                                "medicationChangeOrderID": null,
+                                "orderClass": "File",
+                                "medicationChangeOrderCID": null,
+                                "orderMode": "Outpatient"
+                                },
+                                "prescriber": {
+                                "consumerName": "ERIC J CUTLER MD",
+                                "clinicalName": null,
+                                "ids": [{
+                                        "id": "462212186",
+                                        "idType": "CID"
+                                        }, {
+                                        "id": null,
+                                        "idType": "NPI"
+                                        }, {
+                                        "id": "3880510",
+                                        "idType": "PROVIDER ID - CPM"
+                                        }, {
+                                        "id": "101182",
+                                        "idType": "PROVIDER ID - NORTHERN CALIFORNIA"
+                                        }]
+                                },
+                                "prescriptionNumber": null,
+                                "eRefillPharmLocCID": null,
+                                "eRefillDenyReason": null,
+                                "medicine": {
+                                "legendIndicator": "Prescription",
+                                "commonBrandName": "DIAMOX",
+                                "name": "acetaZOLAMIDE (DIAMOX) 250 mg Oral Tab",
+                                "dosage": "250 mg",
+                                "codes": [{
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "First Data Bank Code",
+                                          "code": "193388",
+                                          "type": "FDB"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "National Drug Code",
+                                          "code": "0527-1050-021",
+                                          "type": "NDC"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "Generic Product Identifier",
+                                          "code": "193388",
+                                          "type": "GPI"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "American Hospital Formulary Service Code",
+                                          "code": "52:40.12",
+                                          "type": "AHFS"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "American Hospital Formulary Service Code",
+                                          "code": "24:08.24.04",
+                                          "type": "AHFS"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "American Hospital Formulary Service Code",
+                                          "code": "40:28.04",
+                                          "type": "AHFS"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "PREFERRED NDC",
+                                          "code": "51672402301",
+                                          "type": "NDC"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "ERX-ADS",
+                                          "code": "A00896",
+                                          "type": "ADS"
+                                          }],
+                                "sourceSystemId": {
+                                "id": "1209798",
+                                "idType": "CID"
+                                },
+                                "shortName": "acetaZOLAMIDE"
+                                },
+                                "consumerInstructions": "Take 1 tablet orally 2 times a day",
+                                "lastRefillPharmLocCID": null
+                                }, {
+                                "origFillPharmLocCID": "160631",
+                                "startDate": "2018-07-13",
+                                "lastRefillDate": null,
+                                "callBackNumber": "916-688-2106",
+                                "clinicalInstructions": null,
+                                "reasonForDiscontinuation": null,
+                                "orderDesc": null,
+                                "totalRefills": "2",
+                                "prescriptionValidationStatus": "BLANK",
+                                    "pharmacyInfo":{
+                                        "detail":{
+                                        "region":"MRN",
+                                        "compound":false,
+                                        "coPayAmount":"1.0",
+                                        "mrn":"BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613A976ABC8FE3282F59E23AAB2B673CF15C9456BF5ACCB3CAA2C48A277B71991479055A0C591664E79310236A65510C5CC5346154F277E5792F33DF4BCF9D17D2FBACC43B9",
+                                        "previousMailOrPickup":null,
+                                        "dispenseLocationCode":"241",
+                                        "canOrderRx":false,
+                                        "rxNumber":"224100549223",
+                                            "statusCodes":{
+                                            "consumerResponseCodeType":"AVAILABLE",
+                                            "consumerResponseCode1":"PHE:1001",
+                                            "rxDetailResponseCode":"001"
+                                            },
+                                        "nhinId":"900002241",
+                                        "sendingApplication":"AMR04",
+                                        "deaCode":"8",
+                                        "quantity":"10.0",
+                                        "mailable":false,
+                                        "memberName":{
+                                        "lastName":"C-NONLINED",
+                                        "firstName":"BVALIDATION"
+                                        },
+                                        "rxName":"REFRESH 0.5-1-0.5 % SOL ALLE 2"
+                                        }
+                                    },
+                                "firstFill": true,
+                                "endDate": null,
+                                "origMedOrderQty": "900",
+                                "earliestFillDate": null,
+                                "lastRxQtyDispensed": null,
+                                "refillsRemaining": "2",
+                                "eRefillApprovalRxName": null,
+                                "daysOfSupply": null,
+                                "order": {
+                                "controlledMeds": null,
+                                "orderDateTime": "2018-07-13T16:39:15-07:00",
+                                "frequencyCID": null,
+                                "dispenseAsWritten": null,
+                                "orderID": "676396361",
+                                "medicationComments": null,
+                                "diagnosis": {
+                                "description": null
+                                },
+                                "frequency": null,
+                                "dose": null,
+                                "medicationChangeOrderUCI": null,
+                                "id": {
+                                "id": "312671948378",
+                                "idType": "CID"
+                                },
+                                "unit": null,
+                                "doseUnit": null,
+                                "routeCID": "12024",
+                                "DEACode": null,
+                                "orderUCI": "312164155",
+                                "route": "Oral",
+                                "nonFormularyMeds": null,
+                                "owner": "urn:kp:hcotca2",
+                                "volume": null,
+                                "medicationChangeOrderID": null,
+                                "orderClass": "File",
+                                "medicationChangeOrderCID": null,
+                                "orderMode": "Outpatient"
+                                },
+                                "prescriber": {
+                                "consumerName": "ERIC J CUTLER MD",
+                                "clinicalName": null,
+                                "ids": [{
+                                        "id": "462212186",
+                                        "idType": "CID"
+                                        }, {
+                                        "id": null,
+                                        "idType": "NPI"
+                                        }, {
+                                        "id": "3880510",
+                                        "idType": "PROVIDER ID - CPM"
+                                        }, {
+                                        "id": "101182",
+                                        "idType": "PROVIDER ID - NORTHERN CALIFORNIA"
+                                        }]
+                                },
+                                "prescriptionNumber": null,
+                                "eRefillPharmLocCID": null,
+                                "eRefillDenyReason": null,
+                                "medicine": {
+                                "legendIndicator": "Prescription",
+                                "commonBrandName": "COLAZAL",
+                                "name": "Balsalazide (COLAZAL) 750 mg Oral Cap",
+                                "dosage": "750 mg",
+                                "codes": [{
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "First Data Bank Code",
+                                          "code": "259607",
+                                          "type": "FDB"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "National Drug Code",
+                                          "code": "60505-2575-7",
+                                          "type": "NDC"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "Generic Product Identifier",
+                                          "code": "259607",
+                                          "type": "GPI"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "American Hospital Formulary Service Code",
+                                          "code": "56:36",
+                                          "type": "AHFS"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "PREFERRED NDC",
+                                          "code": "60505257507",
+                                          "type": "NDC"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "ERX-ADS",
+                                          "code": "A03280",
+                                          "type": "ADS"
+                                          }],
+                                "sourceSystemId": {
+                                "id": "12024674",
+                                "idType": "CID"
+                                },
+                                "shortName": "Balsalazide"
+                                },
+                                "consumerInstructions": "Take 3 capsules orally 3 times a day",
+                                "lastRefillPharmLocCID": null
+                                }, {
+                                "origFillPharmLocCID": "160631",
+                                "startDate": "2018-07-04",
+                                "lastRefillDate": null,
+                                "callBackNumber": "916-688-2106",
+                                "clinicalInstructions": null,
+                                "reasonForDiscontinuation": null,
+                                "orderDesc": null,
+                                "totalRefills": "0",
+                                "prescriptionValidationStatus": "BLANK",
+                                "pharmacyInfo":{
+                                    "detail":{
+                                    "region":"MRN",
+                                    "compound":false,
+                                    "coPayAmount":"1.0",
+                                    "mrn":"BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613A976ABC8FE3282F59E23AAB2B673CF15C9456BF5ACCB3CAA2C48A277B71991479055A0C591664E79310236A65510C5CC5346154F277E5792F33DF4BCF9D17D2FBACC43B9",
+                                    "previousMailOrPickup":null,
+                                    "dispenseLocationCode":"241",
+                                    "canOrderRx":true,
+                                    "rxNumber":"224110549259",
+                                        "statusCodes":{
+                                        "consumerResponseCodeType":"AVAILABLE",
+                                        "consumerResponseCode1":"PHE:1000",
+                                        "rxDetailResponseCode":"00"
+                                        },
+                                    "nhinId":"900002241",
+                                    "sendingApplication":"AMR04",
+                                    "deaCode":"8",
+                                    "quantity":"10.0",
+                                    "mailable":false,
+                                    "memberName":{
+                                    "lastName":"C-NONLINED",
+                                    "firstName":"BVALIDATION"
+                                    },
+                                    "rxName":"REFRESH 0.5-1-0.5 % SOL ALLE 3"
+                                    }
+                                },
+                                "firstFill": true,
+                                "endDate": null,
+                                "origMedOrderQty": "100",
+                                "earliestFillDate": null,
+                                "lastRxQtyDispensed": null,
+                                "refillsRemaining": "0",
+                                "eRefillApprovalRxName": null,
+                                "daysOfSupply": null,
+                                "order": {
+                                "controlledMeds": null,
+                                "orderDateTime": "2018-07-04T06:40:55-07:00",
+                                "frequencyCID": null,
+                                "dispenseAsWritten": null,
+                                "orderID": "676396359",
+                                "medicationComments": null,
+                                "diagnosis": {
+                                "description": null
+                                },
+                                "frequency": null,
+                                "dose": null,
+                                "medicationChangeOrderUCI": null,
+                                "id": {
+                                "id": "312671948377",
+                                "idType": "CID"
+                                },
+                                "unit": null,
+                                "doseUnit": null,
+                                "routeCID": "12024",
+                                "DEACode": null,
+                                "orderUCI": "312164154",
+                                "route": "Oral",
+                                "nonFormularyMeds": null,
+                                "owner": "urn:kp:hcotca2",
+                                "volume": null,
+                                "medicationChangeOrderID": null,
+                                "orderClass": "File",
+                                "medicationChangeOrderCID": null,
+                                "orderMode": "Outpatient"
+                                },
+                                "prescriber": {
+                                "consumerName": "C B Canson M.D.",
+                                "clinicalName": null,
+                                "ids": [{
+                                        "id": "462220313",
+                                        "idType": "CID"
+                                        }, {
+                                        "id": null,
+                                        "idType": "NPI"
+                                        }, {
+                                        "id": "9863585",
+                                        "idType": "PROVIDER ID - CPM"
+                                        }]
+                                },
+                                "prescriptionNumber": null,
+                                "eRefillPharmLocCID": null,
+                                "eRefillDenyReason": null,
+                                "medicine": {
+                                "legendIndicator": "Prescription",
+                                "commonBrandName": "MOTRIN",
+                                "name": "Ibuprofen (MOTRIN) 400 mg Oral Tab",
+                                "dosage": "400 mg",
+                                "codes": [{
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "First Data Bank Code",
+                                          "code": "250621",
+                                          "type": "FDB"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "National Drug Code",
+                                          "code": "54569-0285-2",
+                                          "type": "NDC"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "Generic Product Identifier",
+                                          "code": "250621",
+                                          "type": "GPI"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "American Hospital Formulary Service Code",
+                                          "code": "28:08.04.92",
+                                          "type": "AHFS"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "PREFERRED NDC",
+                                          "code": "67877029401",
+                                          "type": "NDC"
+                                          }],
+                                "sourceSystemId": {
+                                "id": "12022661",
+                                "idType": "CID"
+                                },
+                                "shortName": "Ibuprofen"
+                                },
+                                "consumerInstructions": "Take 1 tablet orally 3 times a day with food as needed for pain",
+                                "lastRefillPharmLocCID": null
+                                }, {
+                                "origFillPharmLocCID": "160631",
+                                "startDate": "2018-06-05",
+                                "lastRefillDate": null,
+                                "callBackNumber": "916-688-2106",
+                                "clinicalInstructions": null,
+                                "reasonForDiscontinuation": null,
+                                "orderDesc": null,
+                                "totalRefills": "3",
+                                "prescriptionValidationStatus": "BLANK",
+                                "pharmacyInfo":{
+                                    "detail":{
+                                    "region":"MRN",
+                                    "compound":false,
+                                    "coPayAmount":"1.0",
+                                    "mrn":"BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613A976ABC8FE3282F59E23AAB2B673CF15C9456BF5ACCB3CAA2C48A277B71991479055A0C591664E79310236A65510C5CC5346154F277E5792F33DF4BCF9D17D2FBACC43B9",
+                                    "previousMailOrPickup":null,
+                                    "dispenseLocationCode":"241",
+                                    "canOrderRx":true,
+                                    "rxNumber":"223100549259",
+                                        "statusCodes":{
+                                        "consumerResponseCodeType":"WARNING",
+                                        "consumerResponseCode1":"PHE:x1003",
+                                        "consumerWarningResponseCode":"PHE:1003",
+                                        "rxDetailResponseCode":"003"
+                                        },
+                                    "nhinId":"900002241",
+                                    "sendingApplication":"AMR04",
+                                    "deaCode":"8",
+                                    "quantity":"10.0",
+                                    "mailable":false,
+                                    "memberName":{
+                                    "lastName":"C-NONLINED",
+                                    "firstName":"BVALIDATION"
+                                    },
+                                    "rxName":"REFRESH 0.5-1-0.5 % SOL ALLE 4"
+                                    }
+                                },
+                                "firstFill": true,
+                                "endDate": null,
+                                "origMedOrderQty": "200",
+                                "earliestFillDate": null,
+                                "lastRxQtyDispensed": null,
+                                "refillsRemaining": "3",
+                                "eRefillApprovalRxName": null,
+                                "daysOfSupply": null,
+                                "order": {
+                                "controlledMeds": null,
+                                "orderDateTime": "2018-06-05T05:01:24-07:00",
+                                "frequencyCID": null,
+                                "dispenseAsWritten": "No",
+                                "orderID": "676389137",
+                                "medicationComments": null,
+                                "diagnosis": {
+                                "description": null
+                                },
+                                "frequency": null,
+                                "dose": null,
+                                "medicationChangeOrderUCI": "312156931",
+                                "id": {
+                                "id": "312671941154",
+                                "idType": "CID"
+                                },
+                                "unit": null,
+                                "doseUnit": null,
+                                "routeCID": "12024",
+                                "DEACode": null,
+                                "orderUCI": "312156931",
+                                "route": "Oral",
+                                "nonFormularyMeds": null,
+                                "owner": "urn:kp:hcotca2",
+                                "volume": null,
+                                "medicationChangeOrderID": "676389136",
+                                "orderClass": "File",
+                                "medicationChangeOrderCID": "312671941153",
+                                "orderMode": "Outpatient"
+                                },
+                                "prescriber": {
+                                "consumerName": "RICHARD BARRY RABENS MD",
+                                "clinicalName": null,
+                                "ids": [{
+                                        "id": "12010096030",
+                                        "idType": "CID"
+                                        }, {
+                                        "id": "00G232470",
+                                        "idType": "NPI"
+                                        }]
+                                },
+                                "prescriptionNumber": null,
+                                "eRefillPharmLocCID": null,
+                                "eRefillDenyReason": null,
+                                "medicine": {
+                                "legendIndicator": "Prescription",
+                                "commonBrandName": "TEGretol",
+                                "name": "carBAMazepine (TEGretol) 100 mg Oral Chew Tab",
+                                "dosage": "100 mg",
+                                "codes": [{
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "First Data Bank Code",
+                                          "code": "246373",
+                                          "type": "FDB"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "National Drug Code",
+                                          "code": "54868-2462-1",
+                                          "type": "NDC"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "Generic Product Identifier",
+                                          "code": "246373",
+                                          "type": "GPI"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "American Hospital Formulary Service Code",
+                                          "code": "28:12.92",
+                                          "type": "AHFS"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "PREFERRED NDC",
+                                          "code": "00093077801",
+                                          "type": "NDC"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "ERX-ADS",
+                                          "code": "A00583",
+                                          "type": "ADS"
+                                          }],
+                                "sourceSystemId": {
+                                "id": "12021675",
+                                "idType": "CID"
+                                },
+                                "shortName": "carBAMazepine"
+                                },
+                                "consumerInstructions": "Chew and swallow 1 tablet orally 3 times a day",
+                                "lastRefillPharmLocCID": null
+                                },{
+                                "origFillPharmLocCID": "160631",
+                                "startDate": "2018-07-13",
+                                "lastRefillDate": "2018-09-13",
+                                "callBackNumber": "916-688-2106",
+                                "clinicalInstructions": null,
+                                "reasonForDiscontinuation": null,
+                                "orderDesc": null,
+                                "totalRefills": "3",
+                                "prescriptionValidationStatus": "BLANK",
+                                "pharmacyInfo":{
+                                    "detail":{
+                                    "region":"MRN",
+                                    "compound":false,
+                                    "coPayAmount":"1.0",
+                                    "mrn":"BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613A976ABC8FE3282F59E23AAB2B673CF15C9456BF5ACCB3CAA2C48A277B71991479055A0C591664E79310236A65510C5CC5346154F277E5792F33DF4BCF9D17D2FBACC43B9",
+                                    "previousMailOrPickup":null,
+                                    "dispenseLocationCode":"241",
+                                    "canOrderRx":false,
+                                    "rxNumber":"224100587259",
+                                        "statusCodes":{
+                                        "consumerResponseCodeType":"AVAILABLE",
+                                        "consumerResponseCode1":"PHE:1034",
+                                        "consumerResponseCode2":"PHE:1134",
+                                        "rxDetailResponseCode":"034"
+                                        },
+                                    "nhinId":"900002241",
+                                    "sendingApplication":"AMR04",
+                                    "deaCode":"8",
+                                    "quantity":"10.0",
+                                    "rxReadyDate": "2018-10-13",
+                                    "lastSoldDate": "2018-08-13",
+                                    "mailable":false,
+                                    "memberName":{
+                                    "lastName":"C-NONLINED",
+                                    "firstName":"BVALIDATION"
+                                    },
+                                    "rxName":"REFRESH 0.5-1-0.5 % SOL ALLE 5"
+                                    }
+                                },
+                                "firstFill": true,
+                                "endDate": null,
+                                "origMedOrderQty": "200",
+                                "earliestFillDate": null,
+                                "lastRxQtyDispensed": null,
+                                "refillsRemaining": "3",
+                                "eRefillApprovalRxName": null,
+                                "daysOfSupply": null,
+                                "order": {
+                                "controlledMeds": null,
+                                "orderDateTime": "2018-07-13T16:19:13-07:00",
+                                "frequencyCID": null,
+                                "dispenseAsWritten": null,
+                                "orderID": "676396360",
+                                "medicationComments": null,
+                                "diagnosis": {
+                                "description": null
+                                },
+                                "frequency": null,
+                                "dose": null,
+                                "medicationChangeOrderUCI": null,
+                                "id": {
+                                "id": "312671948376",
+                                "idType": "CID"
+                                },
+                                "unit": null,
+                                "doseUnit": null,
+                                "routeCID": "12024",
+                                "DEACode": null,
+                                "orderUCI": "312164153",
+                                "route": "Oral",
+                                "nonFormularyMeds": null,
+                                "owner": "urn:kp:hcotca2",
+                                "volume": null,
+                                "medicationChangeOrderID": null,
+                                "orderClass": "File",
+                                "medicationChangeOrderCID": null,
+                                "orderMode": "Outpatient"
+                                },
+                                "prescriber": {
+                                "consumerName": "ERIC J CUTLER MD",
+                                "clinicalName": null,
+                                "ids": [{
+                                        "id": "462212186",
+                                        "idType": "CID"
+                                        }, {
+                                        "id": null,
+                                        "idType": "NPI"
+                                        }, {
+                                        "id": "3880510",
+                                        "idType": "PROVIDER ID - CPM"
+                                        }, {
+                                        "id": "101182",
+                                        "idType": "PROVIDER ID - NORTHERN CALIFORNIA"
+                                        }]
+                                },
+                                "prescriptionNumber": null,
+                                "eRefillPharmLocCID": null,
+                                "eRefillDenyReason": null,
+                                "medicine": {
+                                "legendIndicator": "Prescription",
+                                "commonBrandName": "DIAMOX",
+                                "name": "acetaZOLAMIDE (DIAMOX) 250 mg Oral Tab",
+                                "dosage": "250 mg",
+                                "codes": [{
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "First Data Bank Code",
+                                          "code": "193388",
+                                          "type": "FDB"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "National Drug Code",
+                                          "code": "",
+                                          "type": "NDC"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "Generic Product Identifier",
+                                          "code": "193388",
+                                          "type": "GPI"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "American Hospital Formulary Service Code",
+                                          "code": "52:40.12",
+                                          "type": "AHFS"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "American Hospital Formulary Service Code",
+                                          "code": "24:08.24.04",
+                                          "type": "AHFS"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "American Hospital Formulary Service Code",
+                                          "code": "40:28.04",
+                                          "type": "AHFS"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "PREFERRED NDC",
+                                          "code": "51672402301",
+                                          "type": "NDC"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "ERX-ADS",
+                                          "code": "A00896",
+                                          "type": "ADS"
+                                          }],
+                                "sourceSystemId": {
+                                "id": "1209798",
+                                "idType": "CID"
+                                },
+                                "shortName": "acetaZOLAMIDE"
+                                },
+                                "consumerInstructions": "Take 1 tablet orally 2 times a day",
+                                "lastRefillPharmLocCID": null
+                                },{
+                                "origFillPharmLocCID": "160631",
+                                "startDate": "2018-07-13",
+                                "lastRefillDate": "2018-08-13",
+                                "callBackNumber": "916-688-2106",
+                                "clinicalInstructions": null,
+                                "reasonForDiscontinuation": null,
+                                "orderDesc": null,
+                                "totalRefills": "3",
+                                "prescriptionValidationStatus": "BLANK",
+                                "pharmacyInfo":{
+                                "detail":{
+                                "region":"MRN",
+                                "compound":false,
+                                "coPayAmount":"1.0",
+                                "mrn":"BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613A976ABC8FE3282F59E23AAB2B673CF15C9456BF5ACCB3CAA2C48A277B71991479055A0C591664E79310236A65510C5CC5346154F277E5792F33DF4BCF9D17D2FBACC43B9",
+                                "previousMailOrPickup":null,
+                                "dispenseLocationCode":"241",
+                                "canOrderRx":false,
+                                "rxNumber":"224100583259",
+                                    "statusCodes":{
+                                    "consumerResponseCodeType":"AVAILABLE",
+                                    "consumerResponseCode2":"PHE:1542",
+                                    "consumerWarningResponseCode":"PHE:x1031",
+                                    "rxDetailResponseCode":"042"
+                                    },
+                                "nhinId":"900002241",
+                                "sendingApplication":"AMR04",
+                                "deaCode":"8",
+                                "quantity":"10.0",
+                                "rxReadyDate": "2018-09-13",
+                                "lastSoldDate": "2018-08-13",
+                                "mailable":false,
+                                "memberName":{
+                                "lastName":"C-NONLINED",
+                                "firstName":"BVALIDATION"
+                                },
+                                "rxName":"REFRESH 0.5-1-0.5 % SOL ALLE 6"
+                                }
+                                },
+                                "firstFill": true,
+                                "endDate": null,
+                                "origMedOrderQty": "200",
+                                "earliestFillDate": null,
+                                "lastRxQtyDispensed": null,
+                                "refillsRemaining": "3",
+                                "eRefillApprovalRxName": null,
+                                "daysOfSupply": null,
+                                "order": {
+                                "controlledMeds": null,
+                                "orderDateTime": "2018-07-13T16:19:13-07:00",
+                                "frequencyCID": null,
+                                "dispenseAsWritten": null,
+                                "orderID": "676396360",
+                                "medicationComments": null,
+                                "diagnosis": {
+                                "description": null
+                                },
+                                "frequency": null,
+                                "dose": null,
+                                "medicationChangeOrderUCI": null,
+                                "id": {
+                                "id": "312671948376",
+                                "idType": "CID"
+                                },
+                                "unit": null,
+                                "doseUnit": null,
+                                "routeCID": "12024",
+                                "DEACode": null,
+                                "orderUCI": "312164153",
+                                "route": "Oral",
+                                "nonFormularyMeds": null,
+                                "owner": "urn:kp:hcotca2",
+                                "volume": null,
+                                "medicationChangeOrderID": null,
+                                "orderClass": "File",
+                                "medicationChangeOrderCID": null,
+                                "orderMode": "Outpatient"
+                                },
+                                "prescriber": {
+                                "consumerName": "ERIC J CUTLER MD",
+                                "clinicalName": null,
+                                "ids": [{
+                                        "id": "462212186",
+                                        "idType": "CID"
+                                        }, {
+                                        "id": null,
+                                        "idType": "NPI"
+                                        }, {
+                                        "id": "3880510",
+                                        "idType": "PROVIDER ID - CPM"
+                                        }, {
+                                        "id": "101182",
+                                        "idType": "PROVIDER ID - NORTHERN CALIFORNIA"
+                                        }]
+                                },
+                                "prescriptionNumber": null,
+                                "eRefillPharmLocCID": null,
+                                "eRefillDenyReason": null,
+                                "medicine": {
+                                "legendIndicator": "Prescription",
+                                "commonBrandName": "DIAMOX",
+                                "name": "acetaZOLAMIDE (DIAMOX) 250 mg Oral Tab",
+                                "dosage": "250 mg",
+                                "codes": [{
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "First Data Bank Code",
+                                          "code": "193388",
+                                          "type": "FDB"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "National Drug Code",
+                                          "code": "",
+                                          "type": "NDC"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "Generic Product Identifier",
+                                          "code": "193388",
+                                          "type": "GPI"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "American Hospital Formulary Service Code",
+                                          "code": "52:40.12",
+                                          "type": "AHFS"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "American Hospital Formulary Service Code",
+                                          "code": "24:08.24.04",
+                                          "type": "AHFS"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "American Hospital Formulary Service Code",
+                                          "code": "40:28.04",
+                                          "type": "AHFS"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "PREFERRED NDC",
+                                          "code": "51672402301",
+                                          "type": "NDC"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "ERX-ADS",
+                                          "code": "A00896",
+                                          "type": "ADS"
+                                          }],
+                                "sourceSystemId": {
+                                "id": "1209798",
+                                "idType": "CID"
+                                },
+                                "shortName": "acetaZOLAMIDE"
+                                },
+                                "consumerInstructions": "Take 1 tablet orally 2 times a day",
+                                "lastRefillPharmLocCID": null
+                                },{
+                                "origFillPharmLocCID": "160631",
+                                "startDate": "2018-07-13",
+                                "lastRefillDate": null,
+                                "callBackNumber": "916-688-2106",
+                                "clinicalInstructions": null,
+                                "reasonForDiscontinuation": null,
+                                "orderDesc": null,
+                                "totalRefills": "3",
+                                "prescriptionValidationStatus": "BLANK",
+                                "pharmacyInfo":{
+                                    "detail":{
+                                    "region":"MRN",
+                                    "compound":false,
+                                    "coPayAmount":"1.0",
+                                    "mrn":"BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613A976ABC8FE3282F59E23AAB2B673CF15C9456BF5ACCB3CAA2C48A277B71991479055A0C591664E79310236A65510C5CC5346154F277E5792F33DF4BCF9D17D2FBACC43B9",
+                                    "previousMailOrPickup":null,
+                                    "dispenseLocationCode":"241",
+                                    "canOrderRx":false,
+                                    "rxNumber":"224165549259",
+                                        "statusCodes":{
+                                            "consumerResponseCodeType":"WARNING",
+                                            "consumerResponseCode1":"PHE:1030",
+                                            "rxDetailResponseCode":"030"
+                                        },
+                                    "nhinId":"900002241",
+                                    "sendingApplication":"AMR04",
+                                    "deaCode":"8",
+                                    "quantity":"10.0",
+                                    "mailable":false,
+                                    "memberName":{
+                                    "lastName":"C-NONLINED",
+                                    "firstName":"BVALIDATION"
+                                    },
+                                    "rxName":"REFRESH 0.5-1-0.5 % SOL ALLE 7"
+                                    }
+                                },
+                                "firstFill": true,
+                                "endDate": null,
+                                "origMedOrderQty": "200",
+                                "earliestFillDate": null,
+                                "lastRxQtyDispensed": null,
+                                "refillsRemaining": "3",
+                                "eRefillApprovalRxName": null,
+                                "daysOfSupply": null,
+                                "order": {
+                                "controlledMeds": null,
+                                "orderDateTime": "2018-07-13T16:19:13-07:00",
+                                "frequencyCID": null,
+                                "dispenseAsWritten": null,
+                                "orderID": "676396360",
+                                "medicationComments": null,
+                                "diagnosis": {
+                                "description": null
+                                },
+                                "frequency": null,
+                                "dose": null,
+                                "medicationChangeOrderUCI": null,
+                                "id": {
+                                "id": "312671948376",
+                                "idType": "CID"
+                                },
+                                "unit": null,
+                                "doseUnit": null,
+                                "routeCID": "12024",
+                                "DEACode": null,
+                                "orderUCI": "312164153",
+                                "route": "Oral",
+                                "nonFormularyMeds": null,
+                                "owner": "urn:kp:hcotca2",
+                                "volume": null,
+                                "medicationChangeOrderID": null,
+                                "orderClass": "File",
+                                "medicationChangeOrderCID": null,
+                                "orderMode": "Outpatient"
+                                },
+                                "prescriber": {
+                                "consumerName": "ERIC J CUTLER MD",
+                                "clinicalName": null,
+                                "ids": [{
+                                        "id": "462212186",
+                                        "idType": "CID"
+                                        }, {
+                                        "id": null,
+                                        "idType": "NPI"
+                                        }, {
+                                        "id": "3880510",
+                                        "idType": "PROVIDER ID - CPM"
+                                        }, {
+                                        "id": "101182",
+                                        "idType": "PROVIDER ID - NORTHERN CALIFORNIA"
+                                        }]
+                                },
+                                "prescriptionNumber": null,
+                                "eRefillPharmLocCID": null,
+                                "eRefillDenyReason": null,
+                                "medicine": {
+                                "legendIndicator": "Prescription",
+                                "commonBrandName": "DIAMOX",
+                                "name": "acetaZOLAMIDE (DIAMOX) 250 mg Oral Tab",
+                                "dosage": "250 mg",
+                                "codes": [{
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "First Data Bank Code",
+                                          "code": "193388",
+                                          "type": "FDB"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "National Drug Code",
+                                          "code": "",
+                                          "type": "NDC"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "Generic Product Identifier",
+                                          "code": "193388",
+                                          "type": "GPI"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "American Hospital Formulary Service Code",
+                                          "code": "52:40.12",
+                                          "type": "AHFS"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "American Hospital Formulary Service Code",
+                                          "code": "24:08.24.04",
+                                          "type": "AHFS"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "American Hospital Formulary Service Code",
+                                          "code": "40:28.04",
+                                          "type": "AHFS"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "PREFERRED NDC",
+                                          "code": "51672402301",
+                                          "type": "NDC"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "ERX-ADS",
+                                          "code": "A00896",
+                                          "type": "ADS"
+                                          }],
+                                "sourceSystemId": {
+                                "id": "1209798",
+                                "idType": "CID"
+                                },
+                                "shortName": "acetaZOLAMIDE"
+                                },
+                                "consumerInstructions": "Take 1 tablet orally 2 times a day",
+                                "lastRefillPharmLocCID": null
+                                },{
+                                "origFillPharmLocCID": "160631",
+                                "startDate": "2018-07-13",
+                                "lastRefillDate": null,
+                                "callBackNumber": "916-688-2106",
+                                "clinicalInstructions": null,
+                                "reasonForDiscontinuation": null,
+                                "orderDesc": null,
+                                "totalRefills": "3",
+                                "prescriptionValidationStatus": "BLANK",
+                                "pharmacyInfo":{
+                                    "detail":{
+                                    "region":"MRN",
+                                    "compound":false,
+                                    "coPayAmount":"1.0",
+                                    "mrn":"BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613A976ABC8FE3282F59E23AAB2B673CF15C9456BF5ACCB3CAA2C48A277B71991479055A0C591664E79310236A65510C5CC5346154F277E5792F33DF4BCF9D17D2FBACC43B9",
+                                    "previousMailOrPickup":null,
+                                    "dispenseLocationCode":"241",
+                                    "canOrderRx":false,
+                                    "rxNumber":"224108549259",
+                                        "statusCodes":{
+                                        "consumerResponseCodeType":"ACCESS DENIED",
+                                        "consumerResponseCode1":"PHE:2001",
+                                        "consumerResponseCode2":"PHE:2002",
+                                        "rxDetailResponseCode":"099"
+                                        },
+                                    "nhinId":"900002241",
+                                    "sendingApplication":"AMR04",
+                                    "deaCode":"8",
+                                    "quantity":"10.0",
+                                    "mailable":false,
+                                    "memberName":{
+                                    "lastName":"C-NONLINED",
+                                    "firstName":"BVALIDATION"
+                                    },
+                                    "rxName":"REFRESH 0.5-1-0.5 % SOL ALLE 8"
+                                    }
+                                },
+                                "firstFill": true,
+                                "endDate": null,
+                                "origMedOrderQty": "200",
+                                "earliestFillDate": null,
+                                "lastRxQtyDispensed": null,
+                                "refillsRemaining": "3",
+                                "eRefillApprovalRxName": null,
+                                "daysOfSupply": null,
+                                "order": {
+                                "controlledMeds": null,
+                                "orderDateTime": "2018-07-13T16:19:13-07:00",
+                                "frequencyCID": null,
+                                "dispenseAsWritten": null,
+                                "orderID": "676396360",
+                                "medicationComments": null,
+                                "diagnosis": {
+                                "description": null
+                                },
+                                "frequency": null,
+                                "dose": null,
+                                "medicationChangeOrderUCI": null,
+                                "id": {
+                                "id": "312671948376",
+                                "idType": "CID"
+                                },
+                                "unit": null,
+                                "doseUnit": null,
+                                "routeCID": "12024",
+                                "DEACode": null,
+                                "orderUCI": "312164153",
+                                "route": "Oral",
+                                "nonFormularyMeds": null,
+                                "owner": "urn:kp:hcotca2",
+                                "volume": null,
+                                "medicationChangeOrderID": null,
+                                "orderClass": "File",
+                                "medicationChangeOrderCID": null,
+                                "orderMode": "Outpatient"
+                                },
+                                "prescriber": {
+                                "consumerName": "ERIC J CUTLER MD",
+                                "clinicalName": null,
+                                "ids": [{
+                                        "id": "462212186",
+                                        "idType": "CID"
+                                        }, {
+                                        "id": null,
+                                        "idType": "NPI"
+                                        }, {
+                                        "id": "3880510",
+                                        "idType": "PROVIDER ID - CPM"
+                                        }, {
+                                        "id": "101182",
+                                        "idType": "PROVIDER ID - NORTHERN CALIFORNIA"
+                                        }]
+                                },
+                                "prescriptionNumber": null,
+                                "eRefillPharmLocCID": null,
+                                "eRefillDenyReason": null,
+                                "medicine": {
+                                "legendIndicator": "Prescription",
+                                "commonBrandName": "DIAMOX",
+                                "name": "acetaZOLAMIDE (DIAMOX) 250 mg Oral Tab",
+                                "dosage": "250 mg",
+                                "codes": [{
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "First Data Bank Code",
+                                          "code": "193388",
+                                          "type": "FDB"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "National Drug Code",
+                                          "code": "",
+                                          "type": "NDC"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "Generic Product Identifier",
+                                          "code": "193388",
+                                          "type": "GPI"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "American Hospital Formulary Service Code",
+                                          "code": "52:40.12",
+                                          "type": "AHFS"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "American Hospital Formulary Service Code",
+                                          "code": "24:08.24.04",
+                                          "type": "AHFS"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "American Hospital Formulary Service Code",
+                                          "code": "40:28.04",
+                                          "type": "AHFS"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "PREFERRED NDC",
+                                          "code": "51672402301",
+                                          "type": "NDC"
+                                          }, {
+                                          "sourceDescription": null,
+                                          "sourceCode": null,
+                                          "description": "ERX-ADS",
+                                          "code": "A00896",
+                                          "type": "ADS"
+                                          }],
+                                "sourceSystemId": {
+                                "id": "1209798",
+                                "idType": "CID"
+                                },
+                                "shortName": "acetaZOLAMIDE"
+                                },
+                                "consumerInstructions": "Take 1 tablet orally 2 times a day",
+                                "lastRefillPharmLocCID": null
+                                }],
+        "executionContext": {
+            "errors": {
+                "detail": {
+                    "sourceExceptionName": "java.util.concurrent.ExecutionException",
+                    "description": "Connection error",
+                    "severity": "ERROR",
+                    "code": "0003",
+                    "type": "SYSTEM"
+                },
+                "description": "MOS4.0 Could not connect to the EPharmacy Online Service",
+                "severity": "ERROR",
+                "code": "0003",
+                "type": "SYSTEM"
+            },
+            "info": {
+                "description": "Oppr Migration COMPLETED",
+                "severity": "INFO",
+                "code": "IEPHAR200",
+                "type": "BUSINESS"
+            }
+        }
+    }
+}

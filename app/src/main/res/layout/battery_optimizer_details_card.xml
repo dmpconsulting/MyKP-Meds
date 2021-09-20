@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="handler"
+            type="com.montunosoftware.pillpopper.android.home.BatteryOptimizerInfoCard" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/expanded_card_background">
+
+        <RelativeLayout
+            android:id="@+id/card_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/refill_card_top_layout"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/card_detail_close"
+                android:layout_width="@dimen/view_height_48_dp"
+                android:layout_height="@dimen/view_width_48_dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/margin_2_dp"
+                android:layout_marginLeft="@dimen/margin_8_dp"
+                android:layout_marginRight="@dimen/margin_8_dp"
+                android:layout_marginTop="@dimen/margin_8_dp"
+                android:contentDescription="@string/expand_view_close"
+                android:padding="@dimen/margin_8_dp"
+                android:src="@drawable/close" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/card_header_divider"
+                android:layout_below="@id/card_detail_close"
+                android:layout_marginBottom="@dimen/margin_2dp"
+                android:layout_marginLeft="@dimen/margin_24dp"
+                android:layout_marginRight="@dimen/margin_8dp"
+                android:layout_marginTop="@dimen/margin_2dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/layout_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/card_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/battery_optimization_focus_card_title"
+                        android:textColor="@color/kp_theme_blue"
+                        android:textSize="@dimen/text_size_24sp"
+                        android:textStyle="bold"
+                        android:transitionName="@string/animation_title" />
+
+                    <TextView
+                        android:id="@+id/card_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_24dp"
+                        android:layout_marginTop="@dimen/margin_4dp"
+                        android:text="@string/battery_optimization_alert_message"
+                        android:textColor="@color/kp_theme_blue"
+                        android:textSize="@dimen/text_size_16sp" />
+
+                </LinearLayout>
+            </ScrollView>
+
+            <View
+                android:id="@+id/card_header_divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/kp_card_devider" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/battery_card_detail_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:gravity="center"
+            android:minHeight="@dimen/layout_height_96dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/card_footer_btn_dismiss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_8dp"
+                android:background="@drawable/button_kphc_dismiss"
+                android:minHeight="@dimen/margin_48dp"
+                android:minWidth="@dimen/refill_card_bottom_height_136dp"
+                android:onClick="@{(view)->handler.onDismissButtonClick(view)}"
+                android:text="@string/dismiss"
+                android:textAllCaps="false"
+                android:textColor="@color/kp_theme_blue"
+                android:textSize="@dimen/text_size_18sp" />
+
+            <Button
+                android:id="@+id/card_footer_btn_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_8dp"
+                android:layout_toRightOf="@id/card_footer_btn_dismiss"
+                android:background="@drawable/button_kphc_schedule"
+                android:minHeight="@dimen/margin_48dp"
+                android:minWidth="@dimen/refill_card_bottom_height_136dp"
+                android:onClick="@{(view)->handler.onSettingsButtonClick(view)}"
+                android:text="@string/settings"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_18sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@id/battery_card_detail_footer"
+            android:background="@color/divider_color" />
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/battery_card_detail_footer"
+            android:layout_below="@id/card_header">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/layout_notification_text"
+                    android:layout_width="match_parent"
+                    android:visibility="@{(handler.isOtherDevice()) ? View.GONE : View.VISIBLE}"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/settings_notification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_16dp"
+                        android:layout_marginStart="@dimen/margin_16dp"
+                        android:layout_marginTop="@dimen/margin_24dp"
+                        android:fontFamily="Roboto Regular"
+                        android:text="@string/notification_text"
+                        android:textColor="@color/home_screen_text_color"
+                        android:textSize="@dimen/text_size_16sp" />
+
+                    <TextView
+                        android:id="@+id/settings_adjust"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/settings_notification"
+                        android:layout_marginEnd="@dimen/margin_16dp"
+                        android:layout_marginStart="@dimen/margin_16dp"
+                        android:layout_marginTop="@dimen/margin_24dp"
+                        android:text="@string/adjust_settings"
+                        android:textColor="@color/home_screen_text_color"
+                        android:textSize="@dimen/text_size_16sp" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/layout_samsung"
+                    android:visibility="@{(handler.isSamSungDevice()) ? View.VISIBLE : View.GONE}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_notification_text">
+
+                    <LinearLayout
+                        android:id="@+id/line1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/samsung_step11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_36dp"
+                            android:layout_marginTop="@dimen/margin_6dp"
+                            android:text="@string/step1"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                        <TextView
+                            android:id="@+id/samsung_step1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/margin_36dp"
+                            android:layout_marginStart="@dimen/margin_12dp"
+                            android:layout_marginTop="@dimen/margin_6dp"
+                            android:text="@string/samsung_step1"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/line2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/samsung_step22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_36dp"
+                            android:layout_marginTop="@dimen/margin_6dp"
+                            android:text="@string/step2"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                        <TextView
+                            android:id="@+id/samsung_step2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/margin_36dp"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="@dimen/margin_6dp"
+                            android:text="@string/samsung_step2"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/line3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/samsung_step33"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_36dp"
+                            android:layout_marginTop="@dimen/margin_6dp"
+                            android:text="@string/step3"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                        <TextView
+                            android:id="@+id/samsung_step3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/margin_24dp"
+                            android:layout_marginEnd="@dimen/margin_36dp"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="@dimen/margin_6dp"
+                            android:text="@string/samsung_step3"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_google"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="@{(handler.isGoogleDevice()) ? View.VISIBLE : View.GONE}"
+                    android:layout_below="@id/layout_notification_text">
+
+                    <LinearLayout
+                        android:id="@+id/googlesteps1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_36dp"
+                            android:layout_marginTop="@dimen/margin_6dp"
+                            android:text="@string/step1"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                        <TextView
+                            android:id="@+id/google_step1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/margin_36dp"
+                            android:layout_marginStart="@dimen/margin_12dp"
+                            android:layout_marginTop="@dimen/margin_6dp"
+                            android:text="@string/google_and_motorola_step1"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/googlesteps2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/googlesteps1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_36dp"
+                            android:layout_marginTop="@dimen/margin_6dp"
+                            android:text="@string/step2"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                        <TextView
+                            android:id="@+id/google_step2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/margin_36dp"
+                            android:layout_marginStart="@dimen/margin_12dp"
+                            android:layout_marginTop="@dimen/margin_6dp"
+                            android:text="@string/google_and_motorola_step2"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/googlesteps3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/googlesteps2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_36dp"
+                            android:layout_marginTop="@dimen/margin_6dp"
+                            android:text="@string/step3"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                        <TextView
+                            android:id="@+id/google_step3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/margin_24dp"
+                            android:layout_marginEnd="@dimen/margin_36dp"
+                            android:layout_marginStart="@dimen/margin_12dp"
+                            android:layout_marginTop="@dimen/margin_6dp"
+                            android:text="@string/google_and_motorola_step3"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <include android:id="@+id/layout_others"
+                    android:layout_below="@id/layout_notification_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="@{(handler.isOtherDevice()) ? View.VISIBLE : View.GONE}"
+                    layout="@layout/battery_optimization_layout_others"/>
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</layout>

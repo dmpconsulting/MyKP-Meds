@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/layoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/app_bar"
+            layout="@layout/material_toolbar" />
+        <TextView
+            android:id="@+id/member_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_16dp"
+            android:layout_marginEnd="@dimen/margin_20dp"
+            android:layout_marginStart="@dimen/margin_20dp"
+            android:layout_marginTop="@dimen/margin_24dp"
+            android:textColor="@color/Black"
+            android:layout_below="@+id/app_bar"
+            android:textSize="@dimen/text_size_17sp" />
+
+        <ScrollView
+            android:id="@+id/page_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/member_name"
+            android:background="@color/schedule_detail_archive_block_background">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    android:id="@+id/medication_block"
+                    layout="@layout/medication_block_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <include
+                    android:id="@+id/schedule_block"
+                    layout="@layout/medication_details_schedule_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/medication_block" />
+
+                <include
+                    android:id="@+id/personal_notes_block"
+                    layout="@layout/personal_notes_block_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/schedule_block"/>
+
+                <include
+                    android:id="@+id/archive_block"
+                    layout="@layout/medication_details_archive_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/personal_notes_block" />
+                <include
+                    android:id="@+id/restore_delet_block"
+                    layout="@layout/restrore_delet_med_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/archive_block" />
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+    </RelativeLayout>
+
+
+</layout>

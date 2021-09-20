@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="childDrug"
+            type="com.montunosoftware.pillpopper.model.ArchiveDetailDrug" />
+
+        <variable
+            name="robotoMedium"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="robotoRegular"
+            type="android.graphics.Typeface" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_18dp"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:layout_marginBottom="@dimen/margin_20dp">
+
+            <com.montunosoftware.pillpopper.android.view.DrugDetailRoundedImageView
+                android:id="@+id/pill_default"
+                android:layout_width="@dimen/layout_width_40dp"
+                android:layout_height="@dimen/layout_width_40dp"
+                android:layout_marginEnd="@dimen/margin_16dp"
+                android:src="@drawable/pill_default" />
+
+            <TextView
+                android:id="@+id/drug_name_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/pill_default"
+                android:textColor="@color/name_text_color"
+                android:textSize="@dimen/text_size_20sp"
+                android:typeface="@{robotoMedium}"
+                tools:text="GalcaneZumab-x" />
+
+            <TextView
+                android:id="@+id/doseStrengthAndBrandnameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/drug_name_text"
+                android:layout_marginTop="@dimen/margin_6dp"
+                android:layout_toEndOf="@id/pill_default"
+                android:textColor="@color/dosage_text_color"
+                android:textSize="@dimen/text_size_14sp"
+                android:typeface="@{robotoMedium}"
+                tools:text="Emgality Pen 120 mg/ml Pen injector" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/skipped_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/padding_16dp">
+
+                <ImageView
+                    android:id="@+id/iv_icon_skipped_24dp"
+                    android:layout_width="@dimen/layout_width_24dp"
+                    android:layout_height="@dimen/layout_height_24dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/icon_skipped_24dp"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_icon_skipped_24dp_blue"
+                    android:layout_width="@dimen/layout_width_24dp"
+                    android:layout_height="@dimen/layout_height_24dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/icon_skipped_24dp"
+                    android:visibility="gone"
+                    app:tint="#1F72C4" />
+
+                <TextView
+                    android:id="@+id/tv_skipped"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_48dp"
+                    android:text="@string/skipped"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:typeface="@{robotoMedium}" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/reminder_later_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4dp"
+                android:gravity="center"
+                android:padding="@dimen/padding_16dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_ic_icon_remind_me_later"
+                    android:layout_width="@dimen/layout_width_24dp"
+                    android:layout_height="@dimen/layout_height_24dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_icon_remind_me_later" />
+
+                <ImageView
+                    android:id="@+id/iv_ic_icon_remind_me_later_blue"
+                    android:layout_width="@dimen/layout_width_24dp"
+                    android:layout_height="@dimen/layout_height_24dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_icon_remind_me_later"
+                    android:visibility="gone"
+                    app:tint="#1F72C4" />
+
+                <TextView
+                    android:id="@+id/tv_remind_later"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_48dp"
+                    android:text="@string/remind_later"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:typeface="@{robotoMedium}" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/taken_earlier_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4dp"
+                android:gravity="center"
+                android:padding="@dimen/padding_16dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_ic_checkmark"
+                    android:layout_width="@dimen/layout_width_24dp"
+                    android:layout_height="@dimen/layout_height_24dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/accept_ada"
+                    app:tint="#2A373C" />
+
+                <ImageView
+                    android:id="@+id/iv_ic_checkmark_blue"
+                    android:layout_width="@dimen/layout_width_24dp"
+                    android:layout_height="@dimen/layout_height_24dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/accept_ada"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_taken_earlier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_48dp"
+                    android:text="@string/reminder_taken_earlier"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:typeface="@{robotoMedium}" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/cancel_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4dp"
+                android:gravity="center"
+                android:padding="@dimen/padding_16dp">
+
+                <ImageView
+                    android:id="@+id/iv_ic_baseline_remove_circle_outline_24"
+                    android:layout_width="@dimen/layout_width_24dp"
+                    android:layout_height="@dimen/layout_height_24dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_baseline_remove_circle_outline_24"
+                    app:tint="#2A373C" />
+
+                <ImageView
+                    android:id="@+id/iv_ic_baseline_remove_circle_outline_24_blue"
+                    android:layout_width="@dimen/layout_width_24dp"
+                    android:layout_height="@dimen/layout_height_24dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_baseline_remove_circle_outline_24"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_cancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_48dp"
+                    android:text="@string/cancel"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:typeface="@{robotoMedium}" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

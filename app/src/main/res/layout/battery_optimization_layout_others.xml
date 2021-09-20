@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@id/battery_card_detail_footer"
+    android:layout_below="@id/card_header">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/settings_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_24dp"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:fontFamily="Roboto Regular"
+            android:text="@string/notification_text"
+            android:textColor="@color/home_screen_text_color"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <TextView
+            android:id="@+id/settings_adjust"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/settings_notification"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_24dp"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:text="@string/adjust_settings"
+            android:textColor="@color/home_screen_text_color"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <TextView
+            android:id="@+id/samsung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/settings_adjust"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_24dp"
+            android:text="@string/samsung"
+            android:textSize="@dimen/text_size_20sp"
+            android:textStyle="bold"
+            android:alpha="0.87"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/samsung"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/samsung_step11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_36dp"
+                android:layout_marginTop="@dimen/margin_6dp"
+                android:text="@string/step1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <TextView
+                android:id="@+id/samsung_step1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/samsung"
+                android:layout_marginStart="@dimen/margin_12dp"
+                android:layout_marginTop="@dimen/margin_6dp"
+                android:layout_marginEnd="@dimen/margin_36dp"
+                android:text="@string/samsung_step1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/samsung_step22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_36dp"
+                android:layout_marginTop="@dimen/margin_6dp"
+                android:text="@string/step2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <TextView
+                android:id="@+id/samsung_step2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="@dimen/margin_6dp"
+                android:layout_marginEnd="@dimen/margin_36dp"
+                android:text="@string/samsung_step2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/samsung_step33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_36dp"
+                android:layout_marginTop="@dimen/margin_6dp"
+                android:text="@string/step3"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <TextView
+                android:id="@+id/samsung_step3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="@dimen/margin_6dp"
+                android:layout_marginEnd="@dimen/margin_36dp"
+                android:layout_marginBottom="@dimen/margin_24dp"
+                android:text="@string/samsung_step3"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/line3"
+            android:layout_marginStart="@dimen/margin_36dp"
+            android:background="@color/divider_color" />
+
+        <TextView
+            android:id="@+id/google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line3"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_24dp"
+            android:text="@string/google_and_motorola"
+            android:textSize="@dimen/text_size_20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:alpha="0.87"/>
+
+        <LinearLayout
+            android:id="@+id/googlesteps1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/google"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_36dp"
+                android:layout_marginTop="@dimen/margin_6dp"
+                android:text="@string/step1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <TextView
+                android:id="@+id/google_step1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_12dp"
+                android:layout_marginTop="@dimen/margin_6dp"
+                android:layout_marginEnd="@dimen/margin_36dp"
+                android:text="@string/google_and_motorola_step1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/googlesteps2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/googlesteps1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_36dp"
+                android:layout_marginTop="@dimen/margin_6dp"
+                android:text="@string/step2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <TextView
+                android:id="@+id/google_step2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_12dp"
+                android:layout_marginTop="@dimen/margin_6dp"
+                android:layout_marginEnd="@dimen/margin_36dp"
+                android:text="@string/google_and_motorola_step2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/googlesteps3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/googlesteps2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_36dp"
+                android:layout_marginTop="@dimen/margin_6dp"
+                android:text="@string/step3"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <TextView
+                android:id="@+id/google_step3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_12dp"
+                android:layout_marginTop="@dimen/margin_6dp"
+                android:layout_marginEnd="@dimen/margin_36dp"
+                android:layout_marginBottom="@dimen/margin_24dp"
+                android:text="@string/google_and_motorola_step3"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/googlesteps3"
+            android:layout_marginStart="@dimen/margin_36dp"
+            android:background="@color/divider_color" />
+
+
+        <TextView
+            android:id="@+id/others"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider2"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_24dp"
+            android:text="@string/other_manufacturers"
+            android:textColor="@color/black"
+            android:alpha="0.87"
+            android:textSize="@dimen/text_size_20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/otherssteps1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/others"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_36dp"
+                android:layout_marginTop="@dimen/margin_6dp"
+                android:text="@string/step1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <TextView
+                android:id="@+id/others_step1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_12dp"
+                android:layout_marginTop="@dimen/margin_6dp"
+                android:layout_marginEnd="@dimen/margin_36dp"
+                android:text="@string/other_step1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/otherssteps2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/otherssteps1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_36dp"
+                android:layout_marginTop="@dimen/margin_6dp"
+                android:text="@string/step2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <TextView
+                android:id="@+id/others_step2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_12dp"
+                android:layout_marginTop="@dimen/margin_6dp"
+                android:layout_marginEnd="@dimen/margin_36dp"
+                android:layout_marginBottom="@dimen/margin_24dp"
+                android:text="@string/other_step2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

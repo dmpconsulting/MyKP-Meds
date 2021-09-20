@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="handler"
+            type="com.montunosoftware.pillpopper.android.home.KPHCCards" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:contentDescription="@string/update_from_kphc_card"
+        bind:cardCornerRadius="12dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/layout_width_300dp"
+                android:background="@drawable/cardview_border">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/card_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".72"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="32dp"
+                        android:text="@string/updated_medications_card"
+                        android:textColor="@color/kp_theme_blue"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:transitionName="@string/animation_title"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".28"
+                        android:layout_marginEnd="24dp"
+                        android:gravity="right"
+                        android:layout_marginTop="32dp"
+                        android:text="@string/see_more_home_card"
+                        android:focusable="true"
+                        android:contentDescription="@string/see_more_expanded_view"
+                        android:textColor="@color/color_see_more_text"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/card_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/from_kaiser_permanente_home_card"
+                        android:textColor="@color/kp_theme_blue"
+                        android:transitionName="@string/animation_subtitle"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="32dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginTop="4dp"
+                        android:text="@{handler.user.firstName}"
+                        android:transitionName="@string/animation_name"
+                        android:id="@+id/kphc_card_member_name"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </FrameLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>
+</layout>

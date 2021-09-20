@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.montunosoftware.pillpopper.database.model.HistoryEvent" />
+
+        <import type="java.util.ArrayList" />
+
+        <variable
+            name="headerTime"
+            type="String" />
+
+        <variable
+            name="context"
+            type="com.montunosoftware.pillpopper.kotlin.history.horizontalRecyclerHistory.adapter.CalendarRecyclerViewDataAdapterNew" />
+
+        <variable
+            name="position"
+            type="Integer" />
+
+        <variable
+            name="robotoRegular"
+            type="android.graphics.Typeface" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/main_rel_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_12dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="1dp">
+
+            <TextView
+                android:id="@+id/history_calender_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginBottom="@dimen/margin_4dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="@{headerTime}"
+                android:textColor="@color/color4a4a4a"
+                android:textSize="@dimen/text_size_16sp"
+                android:typeface="@{robotoRegular}"
+                tools:text="10:00 AM" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/history_calendar_drug_action_weeks_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <LinearLayout
+                android:id="@+id/history_calendar_drug_action_sunday_holder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/margin_12dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:minWidth="@dimen/layout_width_48dp"
+                android:minHeight="@dimen/layout_height_48dp"
+                android:onClick="@{() -> context.onEventImageClick(0,position)}"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/history_calendar_drug_action_image_sunday"
+                    android:layout_width="@dimen/layout_height_40dp"
+                    android:layout_height="@dimen/layout_height_40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/ic_taken"
+                    android:contentDescription="@string/content_description_history_calendar_drug_action"
+                    android:paddingStart="@dimen/margin_4dp"
+                    android:paddingEnd="@dimen/margin_4dp"
+                    android:scaleType="fitCenter"
+                    tools:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/history_calendar_drug_action_monday_holder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/margin_4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:minWidth="@dimen/layout_width_48dp"
+                android:minHeight="@dimen/layout_height_48dp"
+                android:onClick="@{() -> context.onEventImageClick(1,position)}"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/history_calendar_drug_action_image_monday"
+                    android:layout_width="@dimen/layout_height_40dp"
+                    android:layout_height="@dimen/layout_height_40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/ic_taken"
+                    android:contentDescription="@string/content_description_history_calendar_drug_action"
+                    android:paddingStart="@dimen/margin_4dp"
+                    android:paddingEnd="@dimen/margin_4dp"
+                    android:scaleType="fitCenter"
+                    tools:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/history_calendar_drug_action_tuesday_holder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:minWidth="@dimen/layout_width_48dp"
+                android:minHeight="@dimen/layout_height_48dp"
+                android:onClick="@{() -> context.onEventImageClick(2,position)}"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/history_calendar_drug_action_image_tuesday"
+                    android:layout_width="@dimen/layout_height_40dp"
+                    android:layout_height="@dimen/layout_height_40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/ic_taken"
+                    android:contentDescription="@string/content_description_history_calendar_drug_action"
+                    android:paddingStart="@dimen/margin_4dp"
+                    android:paddingEnd="@dimen/margin_4dp"
+                    android:scaleType="fitCenter"
+                    tools:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/history_calendar_drug_action_wednesday_holder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/margin_4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:minWidth="@dimen/layout_width_48dp"
+                android:minHeight="@dimen/layout_height_48dp"
+                android:onClick="@{() -> context.onEventImageClick(3,position)}"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/history_calendar_drug_action_image_wednesday"
+                    android:layout_width="@dimen/layout_height_40dp"
+                    android:layout_height="@dimen/layout_height_40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/ic_taken"
+                    android:contentDescription="@string/content_description_history_calendar_drug_action"
+                    android:paddingStart="@dimen/margin_4dp"
+                    android:paddingEnd="@dimen/margin_4dp"
+                    android:scaleType="fitCenter"
+                    tools:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/history_calendar_drug_action_thursday_holder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:minWidth="@dimen/layout_width_48dp"
+                android:minHeight="@dimen/layout_height_48dp"
+                android:onClick="@{() -> context.onEventImageClick(4,position)}"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/history_calendar_drug_action_image_thursday"
+                    android:layout_width="@dimen/layout_height_40dp"
+                    android:layout_height="@dimen/layout_height_40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/ic_taken"
+                    android:contentDescription="@string/content_description_history_calendar_drug_action"
+                    android:paddingStart="@dimen/margin_4dp"
+                    android:paddingEnd="@dimen/margin_4dp"
+                    android:scaleType="fitCenter"
+                    tools:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/history_calendar_drug_action_friday_holder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:minWidth="@dimen/layout_width_48dp"
+                android:minHeight="@dimen/layout_height_48dp"
+                android:onClick="@{() -> context.onEventImageClick(5,position)}"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/history_calendar_drug_action_image_friday"
+                    android:layout_width="@dimen/layout_height_40dp"
+                    android:layout_height="@dimen/layout_height_40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/ic_taken"
+                    android:contentDescription="@string/content_description_history_calendar_drug_action"
+                    android:paddingStart="@dimen/margin_4dp"
+                    android:paddingEnd="@dimen/margin_4dp"
+                    android:scaleType="fitCenter"
+                    tools:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/history_calendar_drug_action_saturday_holder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_4dp"
+                android:layout_marginEnd="@dimen/margin_12dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:minWidth="@dimen/layout_width_48dp"
+                android:minHeight="@dimen/layout_height_48dp"
+                android:onClick="@{() -> context.onEventImageClick(6,position)}"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/history_calendar_drug_action_image_saturday"
+                    android:layout_width="@dimen/layout_height_40dp"
+                    android:layout_height="@dimen/layout_height_40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/ic_taken"
+                    android:contentDescription="@string/content_description_history_calendar_drug_action"
+                    android:paddingStart="@dimen/margin_4dp"
+                    android:paddingEnd="@dimen/margin_4dp"
+                    android:scaleType="fitCenter"
+                    tools:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

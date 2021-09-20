@@ -1,0 +1,83 @@
+def  HOCKEY_URL = "https://rink.hockeyapp.net/api/2/apps/upload"
+
+// This function returns the short commit hash from git
+// need to be defined before the android {}
+ext.getLastGitHashShort = { ->
+    // calling git rev-parse --short HEAD
+    def stdout = new ByteArrayOutputStream()
+    exec {
+        commandLine 'git', 'rev-parse', '--short', 'HEAD'
+        standardOutput = stdout
+    }
+    return stdout.toString().trim()
+}
+
+ext.getGitLogShort = { ->
+    //git log --pretty=format:"%h - %an, %ad : %s" -n 10
+    def stdout = new ByteArrayOutputStream()
+    exec {
+        commandLine 'git', 'log', '--pretty=format:\"%h - %an, %ad : %s\"', '-n', '10'
+        standardOutput = stdout
+    }
+    return stdout.toString().trim()
+}
+
+// This is the function that call the the curl script for uploading the apk files to hockeyapp
+ext.pushToHockeyApp = {  namePrefix, hockeyTokens ->
+
+    def hash = getLastGitHashShort()
+    def gitLog = getGitLogShort()
+
+    // Build the release notes based on the git log , hash and timestamp
+    def notes = gitLog.replace(/"/, "*")
+    notes = notes.replace("\"", "")
+    notes = "* Buid Time: " + new Date() + " *" + notes
+    notes = "* Buid Hash: ${hash}"
+
+    // Build the file need to be send based on the name prefix and hash
+    def apkDir = buildDir.toString() + '/outputs/apk/'
+    def files = fileTree(dir: apkDir).matching { include "/**/*${namePrefix}" }
+
+    // If files were found, show warning and return
+    if (files.empty) {
+        println "WARNING: No APK files found with the hash: ${hash} in the dir: ${apkDir}."
+        println "WARNING: Nothing will be pushed to hockey app!."
+        return
+    }
+
+    // if we have more then one file? was our pattern correct
+    if (files.size() > 1)
+        println "WARNING: The number of files for the pattern /**/${namePrefix}*${hash}.apk to be send is > 1. Sending only first file"
+
+    // Just take the first file
+    def fileToSend = files.head()
+
+    def isRelease = Boolean.parseBoolean(isReleaseBranch)
+    String hockeyToken = ""
+    hockeyToken = hockeyTokens['developToken']
+    if(isRelease) {
+        hockeyToken = hockeyTokens['releaseToken']
+    }
+
+    if (hockeyToken != null && !hockeyToken.isEmpty()) {
+        println "Sending to hockey app the file ${fileToSend}"
+
+//        if (isRelease && (!namePrefix.contains('qa1') && !namePrefix.contains('beta'))) {
+//            println "WARNING: We only want qa1 and beta to be pushed to hockeyapp for release."
+//            println "WARNING: Skipping pushing to hockyapp build type release?:${isRelease} file: ${fileToSend}"
+//            println "WARNING: See Madan. S for more info."
+//            return
+//        }
+        exec {
+            // for some reason direct call to curl was not working and I had to wrap it
+            // in sh -c 'curl ....'
+            commandLine 'sh', '-c',"curl -F \'status=2\' -F \'notify=0\' -F \'notes=${notes}\' " +
+                    "-F \'notes_type=1\' -F \'ipa=@${fileToSend}\' " +
+                    "-H \'X-HockeyAppToken: ${hockeyToken}\' ${HOCKEY_URL}"
+
+            println "Publishing with token ${hockeyToken} for file ${fileToSend}."
+        }
+    } else {
+        println "Not publishing to HockeyApp. No token found"
+    }
+}

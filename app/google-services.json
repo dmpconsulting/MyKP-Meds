@@ -1,0 +1,155 @@
+{
+  "project_info": {
+    "project_number": "917080229546",
+    "firebase_url": "https://my-kp-meds-and-mdo-app-dev.firebaseio.com",
+    "project_id": "my-kp-meds-and-mdo-app-dev",
+    "storage_bucket": "my-kp-meds-and-mdo-app-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917080229546:android:251b42317161e14b",
+        "android_client_info": {
+          "package_name": "org.kp.tpmg.android.mykpmeds"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "917080229546-cgfpijce670ptiasoundst06tk118fv1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHsEGnEuvZfqhKi3XPwIhI9_hLODxvESs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "917080229546-cgfpijce670ptiasoundst06tk118fv1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "917080229546-b6ieknn3nrlbmvg4qtntp70tpttt7abb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.kp.tpmg.mymeds.alpha"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917080229546:android:0a95a3b3e96a081b",
+        "android_client_info": {
+          "package_name": "org.kp.tpmg.android.mykpmeds.beta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "917080229546-cgfpijce670ptiasoundst06tk118fv1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHsEGnEuvZfqhKi3XPwIhI9_hLODxvESs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "917080229546-cgfpijce670ptiasoundst06tk118fv1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "917080229546-b6ieknn3nrlbmvg4qtntp70tpttt7abb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.kp.tpmg.mymeds.alpha"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917080229546:android:e8a87ffb77bd58f0",
+        "android_client_info": {
+          "package_name": "org.kp.tpmg.ttg.mykpmeds.alpha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "917080229546-cgfpijce670ptiasoundst06tk118fv1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHsEGnEuvZfqhKi3XPwIhI9_hLODxvESs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "917080229546-cgfpijce670ptiasoundst06tk118fv1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "917080229546-b6ieknn3nrlbmvg4qtntp70tpttt7abb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.kp.tpmg.mymeds.alpha"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917080229546:android:35f0d3e1645537c7",
+        "android_client_info": {
+          "package_name": "org.kp.tpmg.ttg.mykpmeds.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "917080229546-cgfpijce670ptiasoundst06tk118fv1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHsEGnEuvZfqhKi3XPwIhI9_hLODxvESs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "917080229546-cgfpijce670ptiasoundst06tk118fv1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "917080229546-b6ieknn3nrlbmvg4qtntp70tpttt7abb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.kp.tpmg.mymeds.alpha"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

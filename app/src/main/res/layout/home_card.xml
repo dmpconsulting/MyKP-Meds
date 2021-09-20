@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="12dp">
+
+        <LinearLayout
+            android:id="@+id/card_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/layout_width_300dp"
+            android:orientation="vertical"
+            android:background="@drawable/cardview_border">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="210dp">
+
+                <ImageView
+                    android:id="@+id/home_card_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/b"
+                    android:transitionName="@string/animation_banner"/>
+
+                <TextView
+                    android:id="@+id/home_card_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|bottom"
+                    android:layout_margin="16dp"
+                    android:gravity="start"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:transitionName="@string/animation_title"/>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/home_card_description"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="0.3"
+                android:textColor="@color/home_screen_text_color"
+                android:gravity="start|center_vertical"
+                android:text="@string/card_new_kphc_description"
+                android:textSize="16sp"
+                android:transitionName="@string/animation_description"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

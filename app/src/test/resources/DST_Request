@@ -1,0 +1,84 @@
+{
+  "pillpopperMultiRequest": {
+    "requestArray": [{
+      "pillpopperRequest": {
+        "apiVersion": "6.0.4",
+        "action": "EditPill",
+        "replayId": "3AD68ED4-CA38-4FE1-B31A-7B6378D9B4F4",
+        "language": "en_GB",
+        "deviceToken": "",
+        "notify_after": "2017-10-25T20:30:00",
+        "scheduleDate": "2017-10-30T19:45:00",
+        "last_taken": "2017-10-30T19:45:00",
+        "dose": "",
+        "name": "two",
+        "type": "scheduled",
+        "clientVersion": "3.4.0",
+        "partnerId": "KP",
+        "pillId": "B0157012-EDE9-4717-9815-C4BC2D5E2655",
+        "start": "2017-10-23T00:00:00",
+        "end": "-1",
+        "interval": 0,
+        "opId": 0,
+        "eff_last_taken": "-1",
+        "hardwareId": "9cac5e798e35524197bd53f960dc4d10a21eacdfb6d7b74b59baf7c3db7a7f6b",
+        "userId": "1885be6d98a2610107f43b141061127e9c4",
+        "targetUserId": "1885be6d98a2610107f43b141061127e9c4",
+        "schedule": ["20:30:00"],
+        "isScheduleAddedOrUpdated": true,
+        "dayperiod": 1,
+        "preferences": {
+          "customDosageID": "",
+          "refillsRemaining": "-1",
+          "personId": "1885be6d98a2610107f43b141061127e9c4",
+          "dosageType": "custom",
+          "invisible": "0",
+          "archived": "0",
+          "refillAlertDoses": "",
+          "notes": "",
+          "refillQuantity": "",
+          "customDescription": "",
+          "remainingQuantity": "",
+          "lastManagedIdNotified": "",
+          "lastManagedIdNeedingNotify": "",
+          "secondaryReminders": "1",
+          "missedDosesLastChecked": "2017-10-25T11:41:58",
+          "doctorCount": "1",
+          "imageGUID": " ",
+          "pharmacyCount": "0",
+          "prescriptionNum": "",
+          "weekdays": "",
+          "scheduledFrequency": "D",
+          "maxNumDailyDoses": "-1"
+        }
+
+      }
+    }, {
+      "pillpopperRequest": {
+        "hardwareId": "9cac5e798e35524197bd53f960dc4d10a21eacdfb6d7b74b59baf7c3db7a7f6b",
+        "preferences": {
+          "deviceName": "GT-I9500",
+          "osVersion": "5.0.1",
+          "userData": "100029563"
+        },
+        "partnerId": "KP",
+        "clientVersion": "3.4.0",
+        "replayId": "25DA3CF0-C8EA-4CAE-858C-6AD059FD9F04",
+        "deviceId": "9cac5e798e35524197bd53f960dc4d10a21eacdfb6d7b74b59baf7c3db7a7f6b",
+        "proxyUserList": [{
+          "userGUID": "1885be6d98a2610107f43b141061127e9c4",
+          "lastSyncToken": "1508911895531"
+        }, {
+          "userGUID": "9b692be49be5c24af210691077467dc925",
+          "lastSyncToken": "1508911895538"
+        }],
+        "userId": "1885be6d98a2610107f43b141061127e9c4",
+        "action": "GetState",
+        "language": "en_GB",
+        "appVersion": "3.4.0",
+        "apiVersion": "Version 6.0.4"
+      }
+    }],
+    "getAllOutput": 1
+  }
+}

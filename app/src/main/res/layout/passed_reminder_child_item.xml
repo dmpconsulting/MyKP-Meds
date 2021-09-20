@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.montunosoftware.pillpopper.android.util.Util" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="childDrug"
+            type="com.montunosoftware.pillpopper.model.Drug" />
+
+        <variable
+            name="robotoRegular"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="robotoMedium"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="lateReminderViewModel"
+            type="com.montunosoftware.pillpopper.kotlin.lateremider.LateReminderViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/lr_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/layout_height_60dp">
+
+            <com.montunosoftware.pillpopper.android.view.DrugDetailRoundedImageView
+                android:id="@+id/img_drug_img"
+                android:layout_width="@dimen/layout_height_44dp"
+                android:layout_height="@dimen/layout_height_44dp"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginTop="@dimen/margin_14dp"
+                android:layout_marginEnd="@dimen/margin_12dp"
+                android:onClick="@{() -> lateReminderViewModel.onImageClicked(childDrug)}"
+                android:src="@drawable/pill_default" />
+
+            <com.montunosoftware.pillpopper.android.view.DrugDetailRoundedImageView
+                android:id="@+id/actionImage"
+                android:layout_width="@dimen/layout_height_44dp"
+                android:layout_height="@dimen/layout_height_44dp"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginTop="@dimen/margin_14dp"
+                android:layout_marginEnd="@dimen/margin_12dp"
+                android:onClick="@{() -> lateReminderViewModel.onImageClicked(childDrug)}" />
+
+            <TextView
+                android:id="@+id/tv_drug_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_14dp"
+                android:layout_marginEnd="@dimen/margin_16dp"
+                android:layout_marginBottom="@dimen/margin_4dp"
+                android:layout_toEndOf="@id/img_drug_img"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16sp"
+                android:typeface="@{robotoMedium}"
+                tools:text="Galcanezumab-gnim" />
+
+            <TextView
+                android:id="@+id/tv_drug_dose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_drug_name"
+                android:layout_marginEnd="@dimen/margin_16dp"
+                android:layout_marginBottom="@dimen/margin_4dp"
+                android:layout_toEndOf="@id/img_drug_img"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/drug_strength_action"
+                android:textSize="@dimen/text_size_14sp"
+                android:typeface="@{robotoRegular}"
+                tools:text="Emgality pan" />
+
+            <TextView
+                android:id="@+id/personalNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_drug_dose"
+                android:layout_marginStart="@dimen/margin_72dp"
+                android:layout_marginBottom="@dimen/margin_4dp"
+                android:text="@string/personal_notes_text"
+                android:textColor="@color/personal_notes_color"
+                android:textSize="@dimen/text_size_12sp"
+                android:typeface="@{robotoRegular}"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

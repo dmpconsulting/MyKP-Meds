@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start">
+
+    <include layout="@layout/material_toolbar_home" />
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header_main">
+
+        <LinearLayout
+            android:id="@+id/rl_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:minHeight="@dimen/layout_height_56dp"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                >
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center"
+                    android:paddingTop="@dimen/margin_14dp"
+                    android:minWidth="@dimen/layout_191dp"
+                    android:minHeight="@dimen/margin_22dp"
+                    android:paddingBottom="@dimen/margin_20dp"
+                    android:layout_marginEnd="@dimen/margin_16dp"
+                    android:layout_marginStart="@dimen/margin_16dp"
+                    android:src="@drawable/home_logo"
+                    android:layout_weight="7"/>
+
+                <Button
+                    android:id="@+id/sign_out"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:minWidth="@dimen/layout_61dp"
+                    android:minHeight="@dimen/layout_19dp"
+                    android:paddingTop="@dimen/margin_18dp"
+                    android:paddingBottom="19dp"
+                    android:layout_marginStart="@dimen/margin_30dp"
+                    android:layout_marginEnd="@dimen/margin_16dp"
+                    android:contentDescription="@string/content_description_nav_signout"
+                    android:background="@android:color/transparent"
+                    android:text="@string/signout"
+                    android:textAllCaps="false"
+                    android:textColor="@color/Text_black_ada"
+                    android:textSize="@dimen/text_size_16sp"
+                    android:layout_weight="3"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_1dp"
+                android:background="@color/view_color" />
+
+            <ListView
+                android:id="@+id/lstdrawer"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/margin_8_dp"
+                android:layout_marginTop="@dimen/margin_8_dp"
+                android:layout_weight="1"
+                android:choiceMode="singleChoice"
+                android:divider="@android:color/transparent"
+                android:scrollbars="vertical" />
+
+
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

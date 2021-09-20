@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/digit_up"
+        android:layout_width="43dip"
+        android:layout_height="40dip"
+        android:layout_margin="0dip"
+        android:background="@xml/spinner_plus"
+        android:padding="0dip"
+        style="@style/mm_common_style">
+    </Button>
+
+    <TextView
+        android:id="@+id/digit_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/txt_spinner_digit_view"
+        android:textColor="#ff000000"
+        android:textSize="21sp"
+        android:textStyle="bold" >
+    </TextView>
+
+    <Button
+        android:id="@+id/digit_down"
+        android:layout_width="43dip"
+        android:layout_height="40dip"
+        android:layout_margin="0dip"
+        android:background="@xml/spinner_minus"
+        android:padding="0dip" >
+    </Button>
+
+</LinearLayout>

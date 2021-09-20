@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listSize"
+            type="Integer" />
+        <variable
+            name="robotoRegular"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="robotoBold"
+            type="android.graphics.Typeface" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_16dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/sign_in">
+
+            <ImageView
+                android:id="@+id/backNavigation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingTop="@dimen/margin_20dp"
+                android:layout_marginEnd="@dimen/margin_8dp"
+                android:src="@drawable/arrow_back"
+                android:contentDescription="@string/content_description_previous_screen"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/backNavigation"
+                android:textColor="@color/kp_theme_blue"
+                android:text="@string/late_reminders"
+                android:textSize="@dimen/text_size_16sp"
+                android:layout_marginTop="@dimen/margin_20dp"
+                android:typeface="@{robotoRegular}" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/sign_in_background_redesign"
+            android:minWidth="@dimen/layout_width_80dp"
+            android:minHeight="@dimen/layout_29dp"
+            android:text="@string/dialog_touch_outside_sign_in"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:textAllCaps="false"
+            android:contentDescription="@string/content_description_sign_in"
+            android:textColor="@color/kp_theme_blue"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <TextView
+            android:id="@+id/tv_patient_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headerLayout"
+            android:layout_marginTop="@dimen/margin_6dp"
+            android:layout_marginBottom="@dimen/margin_16dp"
+            android:textColor="@color/black"
+            tools:text="Patient Name"
+            android:textSize="@dimen/text_size_24sp" />
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/delete_drug_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/margin_18dp"
+        android:layout_marginTop="@dimen/margin_28dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        android:drawablePadding="@dimen/padding_8dp"
+        android:gravity="start"
+        android:text="@string/delete_drug_title"
+        android:textColor="@color/text_delete_ada"
+        android:textSize="@dimen/text_size_23sp"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/alert_red" />
+
+    <TextView
+        android:id="@+id/linediv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height_2dp"
+        android:layout_below="@+id/delete_drug_title"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:background="@color/text_delete_ada" />
+
+    <TextView
+        android:id="@+id/delete_drug_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linediv"
+        android:layout_marginLeft="@dimen/margin_25dp"
+        android:layout_marginRight="@dimen/margin_25dp"
+        android:layout_marginTop="@dimen/margin_15dp"
+        android:layout_marginBottom="@dimen/margin_15dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_18sp" />
+    
+    
+    <TextView
+        android:id="@+id/delete_drug_hint"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/delete_drug_description"
+        android:layout_marginLeft="@dimen/margin_25dp"
+        android:text="@string/delete_drug_hint"
+        android:layout_marginRight="@dimen/margin_25dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_16sp" />
+
+   	 <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/delete_drug_hint"
+        android:layout_marginTop="@dimen/margin_6dp"
+        android:layout_marginRight="@dimen/margin_6dp"
+        android:layout_marginLeft="@dimen/margin_25dp"
+        android:textSize="@dimen/text_size_16sp" />
+</RelativeLayout>

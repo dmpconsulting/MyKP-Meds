@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog_fingerprint_t_and_c_root_linLyt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEFEFE"
+    android:orientation="vertical"
+    tools:context="com.montunosoftware.pillpopper.android.fingerprint.FingerprintTermsAndConditionsActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/dialog_title_fingerprint_sign_in"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+
+        <Button
+            android:id="@+id/t_and_c_cancel_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/fingerprint_terms_cancel_button_background"
+            android:padding="16dp"
+            android:text="@string/dialog_title_fingerprint_sign_in_t_and_c_cancel_button_text"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <Button
+            android:id="@+id/t_and_c_accept_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@color/colorPrimaryDark"
+            android:padding="16dp"
+            android:text="@string/dialog_title_fingerprint_sign_in_t_and_c_accept_button_text"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/rootlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/footer"
+        android:layout_below="@id/tv_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:id="@+id/main_title_txtView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/dialog_fingerprint_sign_in_t_and_c_title"
+                android:textColor="@color/dialog_fingerprint_t_and_c_text_color"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/t_and_c_message_1_txtView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/dialog_fingerprint_sign_in_t_and_c_message_1"
+                android:textColor="@color/dialog_fingerprint_t_and_c_text_color"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:id="@+id/t_and_c_message_2_txtView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/dialog_fingerprint_sign_in_t_and_c_message_2"
+                android:textColor="@color/dialog_fingerprint_t_and_c_text_color"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/archive_list_item_medication_holder"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/margin_16dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/archive_list_item_medication_generic_name_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/archive_list_medication_generic_name_textcolor"
+                android:textSize="@dimen/text_size_18sp"
+                android:textStyle="bold"
+                android:paddingRight="@dimen/margin_24dp"
+                android:text="@string/flonase"/>
+            <ImageView
+                android:id="@+id/archive_notes_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/archive_list_item_medication_generic_name_textview"
+                android:layout_marginLeft="@dimen/margin_12dp"
+                android:layout_marginTop="@dimen/margin_4dp"
+                android:src="@drawable/med_notes"
+                android:visibility="invisible"
+                tools:ignore="ContentDescription" />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/archive_list_item_medication_name_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/archive_list_medication_name_textcolor"
+                android:textSize="@dimen/text_size_18sp"
+                android:textStyle="normal"
+                android:text="@string/fulticasone_propionate"/>
+
+            <TextView
+                android:id="@+id/archive_list_item_medication_dosage_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/archive_list_medication_dosage_textcolor"
+                android:textSize="@dimen/text_size_18sp"
+                android:textStyle="normal"
+                android:text="@string/_50_mg"/>
+        </LinearLayout>
+
+        <com.montunosoftware.pillpopper.android.view.DrugDetailRoundedImageView
+            android:id="@+id/archive_list_item_medication_image_imageview"
+            android:layout_margin="@dimen/margin_16dp"
+            android:layout_width="@dimen/margin_60dp"
+            android:layout_height="@dimen/margin_60dp"
+            android:src="@drawable/pill_default"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height_1dp"
+        android:background="@color/archive_list_divider_color" />
+</LinearLayout>

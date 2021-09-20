@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/proxy_name_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/margin_20dp"
+        android:paddingTop="@dimen/margin_16dp"
+        android:paddingEnd="@dimen/margin_40dp"
+        android:paddingBottom="@dimen/margin_16dp"
+        android:textColor="@color/Black"
+        android:textSize="@dimen/text_size_18sp"
+        android:textStyle="bold" />
+</LinearLayout>

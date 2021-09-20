@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/refill_app_bar"
+        layout="@layout/material_toolbar" />
+
+    <ScrollView
+        android:id="@+id/sv_reminder_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/refill_app_bar">
+
+        <RelativeLayout
+            android:id="@+id/rl_scroll_container"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:descendantFocusability="beforeDescendants"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_reminder_setup_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/layout_height_64dp"
+                android:background="@color/history_blue_f5fafc"
+                android:gravity="center"
+                android:paddingLeft="@dimen/margin_16dp"
+                android:paddingRight="@dimen/margin_16dp">
+
+                <TextView
+                    android:id="@+id/tv_reminder_setup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reminder_setup_header"
+                    android:textColor="@color/dark_blue_ada"
+                    android:textSize="@dimen/text_size_16sp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/margin1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_1dp"
+                android:layout_below="@id/rl_reminder_setup_header"
+                android:background="@color/settings_special_item_background" />
+
+            <RelativeLayout
+                android:id="@+id/rl_next_reminder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/margin1"
+                android:paddingTop="@dimen/margin_24dp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_next_reminder_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/margin_16dp"
+                    android:paddingRight="@dimen/margin_16dp">
+
+                    <TextView
+                        android:id="@+id/tv_next_reminder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/margin_36dp"
+                        android:text="@string/next_reminder_header"
+                        android:textColor="@color/next_reminder_text_color"
+                        android:textSize="@dimen/text_size_18sp" />
+
+                    <TextView
+                        android:id="@+id/empty_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:paddingLeft="@dimen/margin_96dp"
+                        android:textColor="@color/next_reminder_text_color"
+                        android:textSize="@dimen/text_size_18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_date_and_time_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_next_reminder_header"
+                    android:layout_marginBottom="@dimen/margin_24dp"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/margin_16dp"
+                    android:paddingRight="@dimen/margin_16dp">
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:paddingRight="@dimen/margin_48dp"
+                        android:textColor="@color/next_reminder_txt_color"
+                        android:textSize="@dimen/text_size_16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:paddingLeft="@dimen/margin_48dp"
+                        android:textColor="@color/next_reminder_txt_color"
+                        android:textSize="@dimen/text_size_16sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_repeat_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_date_and_time_layout"
+                    android:layout_marginLeft="@dimen/margin_16dp"
+                    android:layout_marginRight="@dimen/margin_16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_repeat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/repeat_txt"
+                        android:textColor="@color/next_reminder_text_color"
+                        android:textSize="@dimen/text_size_18sp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/repeat_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:contentDescription="@string/repeat_button"/>
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_repeat_frequency_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/rl_repeat_layout"
+                    android:layout_marginLeft="@dimen/margin_16dp"
+                    android:layout_marginRight="@dimen/margin_16dp"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:text="@string/thirty_days"
+                    android:textColor="@color/next_reminder_txt_color"
+                    android:textSize="@dimen/text_size_16sp"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_repeat_frequency_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_repeat_frequency_text"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:background="@color/history_blue_f5fafc"
+                    android:visibility="gone">
+
+                    <View
+                        android:id="@+id/margin3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/layout_height_10dp"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/bottom_shadow" />
+
+                    <LinearLayout
+                        android:id="@+id/rl_repeat_frequency_days"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/margin3"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/margin_16dp"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:id="@+id/thirty"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:minHeight="@dimen/layout_height_60dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/thirty"
+                                android:textColor="@color/kp_next_color"
+                                android:textSize="@dimen/text_size_22sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/days"
+                                android:textColor="@color/kp_next_color"
+                                android:textSize="@dimen/text_size_17sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/sixty"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:minHeight="@dimen/layout_height_60dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/sixty"
+                                android:textColor="@color/kp_next_color"
+                                android:textSize="@dimen/text_size_22sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/days"
+                                android:textColor="@color/kp_next_color"
+                                android:textSize="@dimen/text_size_17sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ninety"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:minHeight="@dimen/layout_height_60dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ninety"
+                                android:textColor="@color/kp_next_color"
+                                android:textSize="@dimen/text_size_22sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/days"
+                                android:textColor="@color/kp_next_color"
+                                android:textSize="@dimen/text_size_17sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/custom_frequency"
+                        android:layout_width="wrap_content"
+                        android:minWidth="@dimen/layout_width_120dp"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/layout_height_48dp"
+                        android:layout_below="@+id/rl_repeat_frequency_days"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/margin_16dp"
+                        android:layout_marginTop="@dimen/margin_16dp"
+                        android:background="@drawable/button_custom_refill_frequency"
+                        android:gravity="center"
+                        android:text="@string/custom"
+                        android:textAllCaps="false"
+                        android:textColor="@color/kp_next_color"
+                        android:textSize="@dimen/text_size_17sp" />
+
+                    <View
+                        android:id="@+id/margin4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/layout_height_1dp"
+                        android:layout_below="@+id/custom_frequency"
+                        android:background="@color/settings_special_item_background" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_end_date_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_repeat_frequency_layout"
+                    android:layout_marginTop="@dimen/margin_24dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/margin_16dp"
+                    android:paddingRight="@dimen/margin_48dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_end_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/end_date_txt"
+                        android:textColor="@color/next_reminder_text_color"
+                        android:textSize="@dimen/text_size_18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_end_date_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/tv_end_date"
+                        android:layout_marginBottom="@dimen/margin_8dp"
+                        android:layout_marginTop="@dimen/margin_8dp"
+                        android:text="@string/_never"
+                        android:contentDescription="@string/never_double_tap_to_edit"
+                        android:textColor="@color/next_reminder_txt_color"
+                        android:textSize="@dimen/text_size_16sp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/margin2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_1dp"
+                android:layout_below="@+id/rl_next_reminder"
+                android:layout_marginTop="@dimen/margin_24dp"
+                android:background="@color/settings_special_item_background" />
+
+            <RelativeLayout
+                android:id="@+id/rl_notes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/margin2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_hint_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_16dp"
+                    android:textSize="@dimen/text_size_17sp"
+                    android:textColor="@color/create_rem_txt_color"
+                    android:text="@string/refill_hint_text"/>
+
+                <EditText
+                    android:id="@+id/et_notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="top|start"
+                    android:paddingTop="@dimen/margin_56dp"
+                    android:contentDescription="@string/refill_reminder_note"
+                    android:inputType="textMultiLine"
+                    android:lines="10"
+                    android:maxLength="1000"
+                    android:paddingBottom="@dimen/margin_8dp"
+                    android:paddingLeft="@dimen/margin_16dp"
+                    android:paddingRight="@dimen/margin_16dp"
+                    android:textColor="@color/app_info_color"
+                    android:textSize="@dimen/text_size_17sp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

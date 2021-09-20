@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="medList"
+            type="com.montunosoftware.pillpopper.model.Drug" />
+
+        <variable
+            name="adapterList"
+            type="com.montunosoftware.pillpopper.android.ScheduleWizardFragment" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <com.montunosoftware.pillpopper.android.view.DrugDetailRoundedImageView
+            android:id="@+id/drug_image"
+            android:contentDescription="@string/content_description_change_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="top"
+            android:onClick="@{()->adapterList.expandImage(medList, context)}" />
+
+        <TextView
+            android:id="@+id/medName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_weight=".7"
+            tools:text="gsfdhdhghgfhgdfgdshfgfghd"
+            android:onClick="@{(view)->adapterList.showDrugDetails(medList, context, view)}"
+            android:text="@{medList.firstName}"
+            android:textColor="@color/settings_006BA6"
+            android:textSize="@dimen/text_size_17sp" />
+
+        <TextView
+            android:id="@+id/dose"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="end"
+            android:layout_weight=".3"
+            android:text="@{medList.dose}"
+            android:textColor="@color/reminder_label"
+            android:textSize="@dimen/text_size_17sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_marginStart="@dimen/margin_24dp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+</layout>

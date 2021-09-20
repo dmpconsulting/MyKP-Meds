@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="handler"
+            type="com.montunosoftware.pillpopper.android.home.LateRemindersHomeCard" />
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F9F9F9">
+
+        <RelativeLayout
+            android:id="@+id/card_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height_200dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/card_detail_close"
+                android:layout_width="@dimen/layout_width_48dp"
+                android:layout_height="@dimen/layout_height_48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/margin_8dp"
+                android:padding="@dimen/padding_8dp"
+                android:contentDescription="@string/content_description_previous_screen"
+                android:src="@drawable/close" />
+
+            <TextView
+                android:id="@+id/card_detail_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/card_detail_username"
+                android:layout_marginStart="@dimen/margin_24dp"
+                android:layout_marginEnd="@dimen/margin_24dp"
+                android:text="Late Reminders"
+                android:transitionName="@string/animation_title"
+                android:textColor="@color/color_late_reminder_title"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/card_detail_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="24dp"
+                android:layout_marginLeft="24dp"
+                android:transitionName="@string/animation_name"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="4dp"
+                android:text="@{handler.userName}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/kp_card_devider" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_late_reminder_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/card_footer"
+            android:layout_below="@+id/card_header"
+            android:paddingBottom="@dimen/padding_10dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <RelativeLayout
+            android:id="@+id/card_footer"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white">
+
+            <View
+                android:id="@+id/card_footer_divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_1dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/kp_card_devider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/card_footer_divider"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/card_footer_skip_all"
+                    android:layout_width="@dimen/layout_width_136dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/layout_height_48dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/margin_8dp"
+                    android:background="@drawable/button_kphc_dismiss"
+                    android:onClick="@{(view)->handler.onSkippedAllInDetailCard(view)}"
+                    android:text="@string/skipped_all"
+                    android:textAllCaps="false"
+                    android:transitionName="@string/animation_skip"
+                    android:textColor="@color/card_btn_unselected_00625c"
+                    android:textSize="@dimen/text_size_18sp" />
+
+                <Button
+                    android:id="@+id/card_footer_taken_all"
+                    android:layout_width="@dimen/layout_width_136dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/layout_height_48dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_8dp"
+                    android:paddingStart="@dimen/padding_8dp"
+                    android:paddingEnd="@dimen/padding_8dp"
+                    android:transitionName="@string/animation_taken"
+                    android:background="@color/card_btn_unselected_00625c"
+                    android:onClick="@{(view)->handler.onTakenAllInDetailCard(view)}"
+                    android:text="@string/taken_all"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_18sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

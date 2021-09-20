@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/material_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/app_bar"
+        android:layout_height="wrap_content"
+        android:background="@color/lightblue">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8dp"
+            android:elevation="@dimen/elevation_4dp"
+            android:background="@drawable/pharmacy_locator_search_bar_background">
+
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:src="@drawable/search"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/btn_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_gravity="end|center"
+                android:layout_marginEnd="@dimen/margin_16dp"
+                android:src="@drawable/close"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/editText_pharmacy_search"
+                android:layout_width="@dimen/layout_width_300dp"
+                android:layout_height="@dimen/layout_height_48dp"
+                android:layout_marginStart="@dimen/margin_32dp"
+                android:layout_marginEnd="@dimen/margin_40dp"
+                android:background="@null"
+                android:elevation="@dimen/elevation_3dp"
+                android:textColorHint="@color/pharmacy_hint_color"
+                android:imeOptions="actionDone"
+                android:padding="@dimen/padding_8dp"
+                android:hint="@string/hint_pharmacy_locator_search"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_15sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <FrameLayout
+            android:id="@+id/banner_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/locator_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:nestedScrollingEnabled="true"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/margin_8dp"
+        android:paddingTop="@dimen/margin_8dp"
+        android:visibility="visible" />
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

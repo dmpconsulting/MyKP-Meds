@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="AlwaysShowAction">
+
+    <item
+        android:id="@+id/close"
+        android:orderInCategory="90"
+        app:showAsAction="always"
+        android:title="@string/_close"
+        tools:ignore="AppCompatResource" />
+
+</menu>

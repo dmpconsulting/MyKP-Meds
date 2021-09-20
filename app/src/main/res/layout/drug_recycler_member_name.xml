@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/drugList_member_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_16dp"
+        android:background="@color/kp_theme_blue"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/member_name_txtView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18sp"
+            android:textStyle="bold"
+            android:layout_toLeftOf="@+id/refill_txtView"
+            android:layout_marginRight="@dimen/padding_2dp"/>
+
+        <ImageView
+            android:id="@+id/share_med_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:scaleType="center"
+            android:layout_centerInParent="true"
+            android:src="@drawable/icon_andr_share"
+            style="@style/mm_common_style"/>
+
+        <TextView
+            android:id="@+id/refill_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_36dp"
+            android:layout_toLeftOf="@+id/share_med_list"
+            android:gravity="right"
+            android:text="@string/settings_refill"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_18sp"
+            style="@style/mm_common_style"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/no_drugs_found"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_25dp"
+        android:gravity="center"
+        android:text="@string/no_medication_available"
+        android:textColor="@color/kp_med_summary_light_blck"
+        android:textSize="@dimen/text_size_16sp"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/has_status_background"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_106dp"
+            android:background="@drawable/white_circles"
+            android:minWidth="@dimen/layout_width_147dp"
+            android:minHeight="@dimen/layout_height_147dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/checkmark" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/alertTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_height_44dp"
+            android:alpha="0.95"
+            android:gravity="center"
+            android:text="@string/update_string"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_24sp"
+            android:typeface="@{robotoBold}" />
+
+        <TextView
+            android:id="@+id/alertMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_50dp"
+            android:layout_marginTop="@dimen/margin_12dp"
+            android:layout_marginEnd="@dimen/margin_50dp"
+            android:alpha="0.95"
+            android:gravity="center"
+            android:lineSpacingExtra="5sp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16sp"
+            android:typeface="@{robotoRegular}"
+            tools:text="Family members or persons you have caregiver access for have been added to MyKpMeds" />
+
+        <Button
+            android:id="@+id/hasStatusOkButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/layout_height_36dp"
+            android:minWidth="@dimen/layout_width_216dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_32dp"
+            android:background="@drawable/rounded_edge_white_background"
+            android:onClick="@{()-> handler.onOkClicked()}"
+            android:text="@string/_ok"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_size_16sp"
+            android:typeface="@{robotoMedium}"
+            android:contentDescription="@string/content_description_dismiss_alert"/>
+
+
+    </LinearLayout>
+
+    <data>
+
+        <variable
+            name="robotoBold"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="robotoRegular"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="robotoMedium"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="handler"
+            type="com.montunosoftware.pillpopper.kotlin.HasStatusAlert" />
+    </data>
+</layout>

@@ -1,0 +1,25 @@
+android {
+
+    def variantName = "Qi1QaRelease"
+
+    sonarqube {
+        properties {
+            property "sonar.login", "bd9342553a4f52"
+            property "sonar.password", "42099ca628a8a551e262ffd21e"
+            property "sonar.host.url", "https://sonarqube-bluemix.kp.org/"
+            property "sonar.projectKey", "org.kp.consumer.dev.MyMedsAndroid"
+            property "sonar.projectName", "My KP Meds Dev Android"
+            property "sonar.projectVersion", android.defaultConfig.versionName
+            property "sonar.sourceEncoding", "UTF-8"
+            property "sonar.sources", "src/main/java,src/main/res,src/main/AndroidManifest.xml"
+            // first defines where the java files are, the second where the xml files are
+            property "sonar.exclusions", "build/**,**/*.png, src/main/**/**/**.xml,src/main/**/**/**.xml,src/main/res/**/**/**"
+            property "sonar.import_unknown_files", true
+            property "sonar.junit.reportPaths", "${project.buildDir}/test-results/test${variantName}DebugUnitTest/"
+            property "sonar.jacoco.reportPaths", "${project.buildDir}/jacoco/test${variantName}DebugUnitTest.exec"
+            property "sonar.tests", "src/test/java" // where the tests are located
+
+        }
+
+    }
+}

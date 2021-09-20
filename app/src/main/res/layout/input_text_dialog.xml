@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/textentry_title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/banner" >
+
+        <ImageButton
+            android:id="@+id/up_button"
+            style="@style/up_button" 
+            android:contentDescription="@string/txt_imagecontentdesc">
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/textentry_title"
+            style="@style/activity_title"
+            android:layout_toRightOf="@+id/up_button"
+            android:text="@string/_temp" >
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/done_button"
+            style="@style/done_button"
+             android:contentDescription="@string/txt_imagecontentdesc" >
+        </ImageButton>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/textentry_field"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="500"
+        android:layout_marginTop="8dip"
+        android:background="@drawable/frame1"
+        android:inputType="textMultiLine"
+        style="@style/mm_common_style">
+    </EditText>
+
+    <Button
+        android:id="@+id/textentry_clear_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dip"
+        android:text="@string/_clear" >
+    </Button>
+
+    <TextView
+        android:id="@+id/textentry_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/Black" >
+    </TextView>
+
+    <com.montunosoftware.pillpopper.android.view.PremiumMaskView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:gravity="top"
+        android:visibility="gone" >
+
+        <com.montunosoftware.pillpopper.android.view.LabelledTextView
+            android:id="@+id/textentry_bottom_menu"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/frame1"
+            android:visibility="gone" >
+        </com.montunosoftware.pillpopper.android.view.LabelledTextView>
+    </com.montunosoftware.pillpopper.android.view.PremiumMaskView>
+
+</LinearLayout>

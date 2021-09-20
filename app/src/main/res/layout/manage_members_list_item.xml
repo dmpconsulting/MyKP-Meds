@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:contentDescription="@string/settings_proxy_name_header">
+
+    <TextView
+        android:id="@+id/txt_member_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/susan"
+        android:layout_marginTop="24dp"
+        style="@style/settings_heading_style"/>
+
+    <TextView
+        android:id="@+id/txt_medication_enabled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_member_name"
+        android:text="@string/medications"
+        style="@style/settings_heading_subtext_style"/>
+
+    <TextView
+        android:id="@+id/txt_notification_enabled"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_member_name"
+        android:layout_marginLeft="3dp"
+        android:layout_toRightOf="@id/txt_medication_enabled"
+        android:text="@string/reminders"
+        style="@style/settings_heading_subtext_style"/>
+
+</RelativeLayout>

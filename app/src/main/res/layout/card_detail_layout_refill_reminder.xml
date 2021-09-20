@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="handler"
+            type="com.montunosoftware.pillpopper.android.home.RefillReminderOverdueCard" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/expanded_card_background">
+
+
+        <RelativeLayout
+            android:id="@+id/card_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/refill_card_top_layout"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/card_detail_close"
+                android:layout_width="@dimen/view_height_48_dp"
+                android:layout_height="@dimen/view_width_48_dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/margin_8_dp"
+                android:layout_marginBottom="@dimen/margin_2_dp"
+                android:layout_marginRight="@dimen/margin_8_dp"
+                android:layout_marginLeft="@dimen/margin_8_dp"
+                android:contentDescription="@string/expand_view_close"
+                android:padding="@dimen/margin_8_dp"
+                android:src="@drawable/close" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/card_detail_close"
+                android:layout_above="@id/card_header_divider"
+                android:scrollbars="none"
+                android:layout_marginTop="@dimen/margin_2dp"
+                android:layout_marginBottom="@dimen/margin_2dp"
+                android:layout_marginLeft="@dimen/margin_24dp"
+                android:layout_marginRight="@dimen/margin_8dp">
+
+                <LinearLayout android:id="@+id/layout_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/card_detail_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_card_refill_reminder"
+                        android:textColor="@color/refil_med_btn_bcg"
+                        android:textSize="@dimen/text_size_24sp"
+                        android:textStyle="bold"
+                        android:transitionName="@string/animation_title" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:transitionName="@string/animation_subtitle" >
+                    <TextView
+                        android:id="@+id/card_detail_sub_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{handler.refillOverdueDate}"
+                        android:textColor="@color/refill_reminder_sub_title"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/refill_overdue_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_1dp"
+                        android:text="@{handler.refillOverdueTime}"
+                        android:textColor="@color/single_time_pill_action_text_color"
+                        android:textSize="@dimen/text_size_16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <View
+                android:id="@+id/card_header_divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/kp_card_devider" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/card_footer"
+            android:layout_marginTop="@dimen/margin_12dp"
+            android:layout_marginBottom="@dimen/margin_12dp"
+            android:layout_marginLeft="@dimen/margin_24dp"
+            android:layout_marginRight="@dimen/margin_24dp"
+            android:layout_below="@+id/card_header">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{handler.getRefillReminder().getReminderNote}"
+                android:textSize="@dimen/text_size_17sp" />
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/card_footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/refill_card_bottom_height_133dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white">
+
+            <View
+                android:id="@+id/card_footer_divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_1dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/kp_card_devider" />
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_below="@+id/card_footer_divider">
+
+
+                <LinearLayout
+                    android:id="@+id/bottom_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/card_footer_hint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_8dp"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:text="@string/refill_reminder_footer_note"
+                        android:textColor="@color/refill_reminder_action_text_color"
+                        android:textSize="@dimen/text_size_17sp" />
+
+                    <LinearLayout
+                        android:id="@+id/card_detail_refill_reminder"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/card_footer_refill_dismiss"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minWidth="@dimen/refill_card_bottom_height_136dp"
+                            android:minHeight="@dimen/margin_48dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/margin_8dp"
+                            android:background="@drawable/button_kphc_dismiss"
+                            android:onClick="@{(view)->handler.onDismissInDetailCard(view)}"
+                            android:text="@string/dismiss"
+                            android:textAllCaps="false"
+                            android:textColor="@color/refil_med_btn_bcg"
+                            android:textSize="@dimen/text_size_18sp" />
+
+                        <Button
+                            android:id="@+id/card_footer_refill_refill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minWidth="@dimen/refill_card_bottom_height_136dp"
+                            android:minHeight="@dimen/margin_48dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/margin_8dp"
+                            android:onClick="@{(view)->handler.onRefillNowInDetailCard(view)}"
+                            android:background="@drawable/button_refill_background"
+                            android:text="@string/refill_now"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_18sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

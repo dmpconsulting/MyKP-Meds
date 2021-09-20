@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="handler"
+            type="com.montunosoftware.pillpopper.android.home.KPHCDiscontinueCard" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:contentDescription="@string/kphc_discontinue_card"
+            bind:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="300dp"
+                android:background="@drawable/cardview_border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/card_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="32dp"
+                        android:layout_weight=".72"
+                        android:text="@string/discontinued_meds"
+                        android:textColor="@color/kp_theme_blue"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:transitionName="@string/animation_title" />
+
+                    <TextView
+                        android:id="@+id/discontinue_kphc_card_see_more"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_weight=".28"
+                        android:contentDescription="@string/see_more_expanded_view"
+                        android:focusable="true"
+                        android:gravity="right"
+                        android:text="@string/see_more_home_card"
+                        android:textColor="@color/color_see_more_text"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/card_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="24dp"
+                    android:text="@string/from_kaiser_permanente_home_card"
+                    android:textColor="@color/kp_theme_blue"
+                    android:textSize="20sp"
+                    android:transitionName="@string/animation_subtitle" />
+
+                <TextView
+                    android:id="@+id/card_subtitle_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="32dp"
+                    android:text="@{handler.getUserNames()}"
+                    android:textColor="@color/kp_txt_color_gray"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </FrameLayout>
+</layout>

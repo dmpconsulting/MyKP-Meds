@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item android:id="@+id/drug_list_email"
+        android:icon="@android:drawable/ic_menu_share"
+        android:title="@string/history_menu_email"
+        android:visible="false"
+        />
+
+    <item android:id="@+id/drug_list_menu_create"
+        android:icon="@drawable/icon_actionbar_add"
+        android:title="@string/new_drug"
+        android:visible="true"
+        app:contentDescription="@string/menu_add_medication"
+        app:showAsAction="ifRoom"
+        tools:ignore="AppCompatResource" />
+    <item android:id="@+id/drug_list_menu_cancel"
+        android:icon="@drawable/icon_actionbar_reminder_cancel"
+        android:title="@string/cancel"
+        android:visible="false"
+        app:showAsAction="always"
+        tools:ignore="AppCompatResource" />
+    <item android:id="@+id/drug_list_edit"
+        android:title="@string/history_menu_edit"
+        android:icon="@drawable/icon_actionbar_edit"
+        app:contentDescription="@string/menu_archive_medication"
+        android:visible="true"
+        app:showAsAction="ifRoom"
+        tools:ignore="AppCompatResource" />
+
+    <item android:id="@+id/drug_list_archive"
+        android:title="@string/archive"
+        android:icon="@drawable/icon_actionbar_archive_action"
+        android:visible="false"
+        app:showAsAction="always"
+        tools:ignore="AppCompatResource" />
+</menu>

@@ -1,0 +1,4555 @@
+{
+  "Prescriptions": {
+    "VisualSecurityInstructions": [{
+      "objectPath": "prescription.prescriber.ids.id",
+      "instruction": "Show"
+    }, {
+      "objectPath": "prescription.totalRefills",
+      "instruction": "Hide"
+    }, {
+      "objectPath": "prescription.refillsRemaining",
+      "instruction": "Hide"
+    }, {
+      "objectPath": "prescription.prescriptionNumber",
+      "instruction": "Show"
+    }],
+    "executionContext": {
+      "warnings": {
+        "severity": "WARN",
+        "code": "8051",
+        "description": "MOS4.0.Warning while calling the EPharmacy Online RxDetails Service",
+        "detail": {
+          "severity": "WARN",
+          "code": "042,005,029,010,002",
+          "description": "List Of Rx Numbers with (042) Too soon to request refill for this prescription: 235110168492@List Of Rx Numbers with (005) Verification Pending \/ In Process: 259210070300@List Of Rx Numbers with (029) Prescription is hard stopped by Pharmacy: 261310190201,235110168493,235110166677@List Of Rx Numbers with (010) Prescription does not belong to MRN: 221201009606,null,null,null,null,243101005748,null,null,null,null,null,null,null,null,null@List Of Rx Numbers with (002) Expiration Date has passed (RAR): 259210070528",
+          "type": "BUSINESS"
+        },
+        "type": "BUSINESS"
+      },
+      "errors": {
+        "severity": "ERROR",
+        "code": "0003",
+        "description": "MOS4.0 Could not connect to the EPharmacy Online Service",
+        "detail": {
+          "severity": "ERROR",
+          "code": "0003",
+          "description": "Parser error",
+          "type": "SYSTEM",
+          "sourceExceptionName": "java.util.concurrent.ExecutionException"
+        },
+        "type": "SYSTEM"
+      },
+      "info": {
+        "severity": "INFO",
+        "code": "IEPHAR200",
+        "description": "Oppr Migration COMPLETED",
+        "type": "BUSINESS"
+      }
+    },
+    "PrescriptionDetails": [{
+      "eRefillPharmLocCID": null,
+      "endDate": null,
+      "lastRefillPharmLocCID": null,
+      "prescriptionNumber": null,
+      "prescriptionValidationStatus": "BLANK",
+      "callBackNumber": "408-362-4791",
+      "lastRefillDate": null,
+      "lastRxQtyDispensed": null,
+      "totalRefills": "3",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-12-05T23:20:00-08:00",
+        "medicationComments": null,
+        "orderID": "773246207",
+        "routeCID": "12024",
+        "diagnosis": {
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "File",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": "Oral",
+        "medicationChangeOrderID": null,
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": null,
+        "medicationChangeOrderUCI": null,
+        "DEACode": null,
+        "dispenseAsWritten": null,
+        "id": {
+          "idType": "CID",
+          "id": "84766494"
+        },
+        "orderUCI": "84771819",
+        "doseUnit": null,
+        "controlledMeds": null
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282815"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "6928241"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "101183"
+        }],
+        "consumerName": "GURPREET KAUR WSSOA MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "545310",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "0378-6324-77",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "545310",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "24:32.08",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "40:28.20",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "24:08.24.20",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "24:08.44.08",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "00591231819",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "A07002",
+          "description": "ERX-ADS",
+          "sourceDescription": null,
+          "type": "ADS"
+        }],
+        "dosage": "320-12.5 mg",
+        "legendIndicator": "Prescription",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "12169634"
+        },
+        "name": "Valsartan-hydroCHLOROthiazide (DIOVAN HCT) 320-12.5 mg Oral Tab",
+        "commonBrandName": "DIOVAN HCT",
+        "shortName": "Valsartan-hydroCHLOROthiazide"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "3",
+      "consumerInstructions": "Take 1 tablet orally every morning",
+      "firstFill": true,
+      "earliestFillDate": null,
+      "origFillPharmLocCID": "160212",
+      "origMedOrderQty": "100",
+      "startDate": "2019-12-05"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": null,
+      "lastRefillPharmLocCID": null,
+      "prescriptionNumber": null,
+      "prescriptionValidationStatus": "BLANK",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": null,
+      "lastRxQtyDispensed": null,
+      "totalRefills": "5",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-10-25T04:18:28-07:00",
+        "medicationComments": null,
+        "orderID": "773246204",
+        "routeCID": "12028",
+        "diagnosis": {
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "Fill Now",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": "Subcutaneous",
+        "medicationChangeOrderID": null,
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": null,
+        "medicationChangeOrderUCI": null,
+        "DEACode": null,
+        "dispenseAsWritten": null,
+        "id": {
+          "idType": "CID",
+          "id": "84766491"
+        },
+        "orderUCI": "84771816",
+        "doseUnit": null,
+        "controlledMeds": null
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282815"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "6928241"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "101183"
+        }],
+        "consumerName": "GURPREET KAUR WSSOA MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "448215",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "0074-3799-02",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "448214",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "92:36",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "56:92",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "92:20",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "84:92",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "00074379902",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }],
+        "dosage": "40 mg\/0.8 mL",
+        "legendIndicator": "Prescription",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "12054395"
+        },
+        "name": "Adalimumab (Humira) 40 mg\/0.8 mL SubQ Syringe Kit",
+        "shortName": "Humira"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "5",
+      "consumerInstructions": "Take 3 pills a day",
+      "firstFill": true,
+      "earliestFillDate": null,
+      "origFillPharmLocCID": "160212",
+      "origMedOrderQty": "3",
+      "startDate": "2019-10-25"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": "2021-10-21",
+      "lastRefillPharmLocCID": "160351",
+      "prescriptionNumber": "235110168491",
+      "prescriptionValidationStatus": "SUCCESS",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": "2019-10-22",
+      "lastRxQtyDispensed": "3",
+      "totalRefills": "5",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-10-22T00:00:00-07:00",
+        "medicationComments": null,
+        "orderID": "773246206",
+        "routeCID": null,
+        "diagnosis": {
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "File",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": null,
+        "medicationChangeOrderID": "773243606",
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": "84763893",
+        "medicationChangeOrderUCI": null,
+        "DEACode": null,
+        "dispenseAsWritten": "No",
+        "id": {
+          "idType": "CID",
+          "id": "84766493"
+        },
+        "orderUCI": "84771818",
+        "doseUnit": null,
+        "controlledMeds": null
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "16150037389"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "9550611"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1606530008"
+        }],
+        "consumerName": "NON-CPM PHARMACY PROVIDER"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "176927",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "63304-905-30",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "176927",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "08:18.32",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "59746032530",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "A02999",
+          "description": "ERX-ADS",
+          "sourceDescription": null,
+          "type": "ADS"
+        }],
+        "dosage": "1 gram",
+        "legendIndicator": "Prescription",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "1206151"
+        },
+        "name": "valACYclovir (VALTREX) 1 gram Oral Tab",
+        "commonBrandName": "VALTREX",
+        "shortName": "valACYclovir"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "5",
+      "consumerInstructions": "Take 3 tablets by mouth daily",
+      "firstFill": false,
+      "earliestFillDate": null,
+      "origFillPharmLocCID": "160351",
+      "origMedOrderQty": "3",
+      "startDate": "2019-10-22"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": "2021-10-07",
+      "lastRefillPharmLocCID": "161431",
+      "prescriptionNumber": "243101005874",
+      "prescriptionValidationStatus": "SUCCESS",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": "2019-10-08",
+      "lastRxQtyDispensed": "28",
+      "totalRefills": "5",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-10-08T00:00:00-07:00",
+        "medicationComments": null,
+        "orderID": "773246205",
+        "routeCID": null,
+        "diagnosis": {
+          "codes": {
+            "sourceCode": null,
+            "code": "N76.0",
+            "description": "Bacterial Vaginosis",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          },
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "File",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": null,
+        "medicationChangeOrderID": "773200855",
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": "84721142",
+        "medicationChangeOrderUCI": null,
+        "DEACode": null,
+        "dispenseAsWritten": "No",
+        "id": {
+          "idType": "CID",
+          "id": "84766492"
+        },
+        "orderUCI": "84771817",
+        "doseUnit": null,
+        "controlledMeds": null
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282261"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "5440437"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "100820"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1437336377"
+        }],
+        "consumerName": "WCRDOCTOR GENERAL MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "177843",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "55289-057-30",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "177843",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "08:12.06.04",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "65862001801",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }],
+        "dosage": "250 mg",
+        "legendIndicator": "Prescription",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "1206359"
+        },
+        "name": "Cephalexin (KEFLEX) 250 mg Oral Cap",
+        "commonBrandName": "KEFLEX",
+        "shortName": "Cephalexin"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "5",
+      "consumerInstructions": "Take 1 capsule by mouth 4 times a day until gone",
+      "firstFill": false,
+      "earliestFillDate": null,
+      "origFillPharmLocCID": "161431",
+      "origMedOrderQty": "28",
+      "startDate": "2019-10-08"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": "2021-09-24",
+      "lastRefillPharmLocCID": "160212",
+      "prescriptionNumber": "221201009607",
+      "prescriptionValidationStatus": "SUCCESS",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": "2019-10-08",
+      "lastRxQtyDispensed": "1",
+      "totalRefills": "5",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-09-25T12:58:00-07:00",
+        "medicationComments": null,
+        "orderID": "773245406",
+        "routeCID": "12024",
+        "diagnosis": {
+          "codes": {
+            "sourceCode": null,
+            "code": "K25.9",
+            "description": "Gastric Ulcer",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          },
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "Fill Now",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": "Oral",
+        "medicationChangeOrderID": "773244732",
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": "84765019",
+        "medicationChangeOrderUCI": "84771018",
+        "DEACode": null,
+        "dispenseAsWritten": "No",
+        "id": {
+          "idType": "CID",
+          "id": "84765693"
+        },
+        "orderUCI": "84771018",
+        "doseUnit": null,
+        "controlledMeds": null
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282261"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "5440437"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "100820"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1437336377"
+        }],
+        "consumerName": "WCRDOCTOR GENERAL MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "177471",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "0270-0445-40",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "176063",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "36:68",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "00270044540",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }],
+        "dosage": "66-10 %",
+        "legendIndicator": "Prescription",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "1206279"
+        },
+        "name": "Diatrizoate Meglumine  &  Sodium (Gastrografin) 66-10 % Oral Soln",
+        "shortName": "Gastrografin"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "4",
+      "consumerInstructions": "Take 1 pill a day",
+      "firstFill": false,
+      "earliestFillDate": null,
+      "origFillPharmLocCID": "161431",
+      "origMedOrderQty": "1",
+      "startDate": "2019-09-25"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": "2021-09-24",
+      "lastRefillPharmLocCID": "160212",
+      "prescriptionNumber": "221201009610",
+      "prescriptionValidationStatus": "SUCCESS",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": "2019-09-25",
+      "lastRxQtyDispensed": "1",
+      "totalRefills": "5",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-09-25T15:34:46-07:00",
+        "medicationComments": null,
+        "orderID": "773246201",
+        "routeCID": "1205",
+        "diagnosis": {
+          "codes": {
+            "sourceCode": null,
+            "code": "M79.672",
+            "description": "Left Foot Pain",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          },
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "Fill Now",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": "Topical",
+        "medicationChangeOrderID": null,
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": null,
+        "medicationChangeOrderUCI": null,
+        "DEACode": null,
+        "dispenseAsWritten": "No",
+        "id": {
+          "idType": "CID",
+          "id": "84766488"
+        },
+        "orderUCI": "84771813",
+        "doseUnit": null,
+        "controlledMeds": null
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282261"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "5440437"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "100820"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1437336377"
+        }],
+        "consumerName": "WCRDOCTOR GENERAL MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "207475",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "52959-096-45",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "207475",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "84:06.08",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "45802006436",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }],
+        "dosage": "0.1 %",
+        "legendIndicator": "Prescription",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "12013004"
+        },
+        "name": "Triamcinolone Acetonide (KENALOG) 0.1 % Top Crea",
+        "commonBrandName": "KENALOG",
+        "shortName": "Triamcinolone Acetonide"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "5",
+      "consumerInstructions": "Apply to affected area(s) 2 times a day",
+      "firstFill": false,
+      "earliestFillDate": null,
+      "origFillPharmLocCID": "160212",
+      "origMedOrderQty": "1",
+      "startDate": "2019-09-25"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": "2021-09-24",
+      "lastRefillPharmLocCID": "160212",
+      "prescriptionNumber": "221201009609",
+      "prescriptionValidationStatus": "SUCCESS",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": "2019-09-25",
+      "lastRxQtyDispensed": "1",
+      "totalRefills": "5",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-09-25T15:34:47-07:00",
+        "medicationComments": null,
+        "orderID": "773246202",
+        "routeCID": "1205",
+        "diagnosis": {
+          "codes": {
+            "sourceCode": null,
+            "code": "D68.9",
+            "description": "Coagulopathy (Clotting Or Bleeding Disorder)",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          },
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "Fill Now",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": "Topical",
+        "medicationChangeOrderID": null,
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": null,
+        "medicationChangeOrderUCI": null,
+        "DEACode": null,
+        "dispenseAsWritten": "No",
+        "id": {
+          "idType": "CID",
+          "id": "84766489"
+        },
+        "orderUCI": "84771814",
+        "doseUnit": null,
+        "controlledMeds": null
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282261"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "5440437"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "100820"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1437336377"
+        }],
+        "consumerName": "WCRDOCTOR GENERAL MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "284840",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "0472-0402-50",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "284840",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "84:06.08",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "60432013325",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }],
+        "dosage": "0.05 %",
+        "legendIndicator": "Prescription",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "12030427"
+        },
+        "name": "Clobetasol (TEMOVATE) 0.05 % sclp Soln",
+        "commonBrandName": "TEMOVATE",
+        "shortName": "Clobetasol"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "5",
+      "consumerInstructions": "Apply to affected area(s) 2 times a day",
+      "firstFill": false,
+      "earliestFillDate": null,
+      "origFillPharmLocCID": "160212",
+      "origMedOrderQty": "1",
+      "startDate": "2019-09-25"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": "2021-09-22",
+      "lastRefillPharmLocCID": "160592",
+      "prescriptionNumber": "259210070629",
+      "prescriptionValidationStatus": "SUCCESS",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": "2019-09-23",
+      "lastRxQtyDispensed": "1",
+      "totalRefills": "5",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-09-23T12:42:32-07:00",
+        "medicationComments": null,
+        "orderID": "773245403",
+        "routeCID": "12024",
+        "diagnosis": {
+          "codes": {
+            "sourceCode": null,
+            "code": "J30.9",
+            "description": "Allergic Rhinitis (Nose Congestion)",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          },
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "Fill Now",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": "Oral",
+        "medicationChangeOrderID": null,
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": null,
+        "medicationChangeOrderUCI": null,
+        "DEACode": null,
+        "dispenseAsWritten": "No",
+        "id": {
+          "idType": "CID",
+          "id": "84765690"
+        },
+        "orderUCI": "84771015",
+        "doseUnit": null,
+        "controlledMeds": null
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282261"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "5440437"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "100820"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1437336377"
+        }],
+        "consumerName": "WCRDOCTOR GENERAL MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "175936",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "0093-0753-01",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "175936",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "24:24",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "24:04.04.16",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "24:08.08",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "12:16.08.08",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "00781150701",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "A01680",
+          "description": "ERX-ADS",
+          "sourceDescription": null,
+          "type": "ADS"
+        }],
+        "dosage": "100 mg",
+        "legendIndicator": "Prescription",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "1205945"
+        },
+        "name": "Atenolol (TENORMIN) 100 mg Oral Tab",
+        "commonBrandName": "TENORMIN",
+        "shortName": "Atenolol"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "5",
+      "consumerInstructions": "Take 1 tablet by mouth daily",
+      "firstFill": false,
+      "earliestFillDate": null,
+      "origFillPharmLocCID": "160592",
+      "origMedOrderQty": "1",
+      "startDate": "2019-09-23"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": "2021-09-22",
+      "lastRefillPharmLocCID": "160592",
+      "prescriptionNumber": "259210070636",
+      "prescriptionValidationStatus": "SUCCESS",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": "2019-09-23",
+      "lastRxQtyDispensed": "1",
+      "totalRefills": "5",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-09-23T13:15:40-07:00",
+        "medicationComments": null,
+        "orderID": "773245404",
+        "routeCID": "12024",
+        "diagnosis": {
+          "codes": {
+            "sourceCode": null,
+            "code": "K25.9",
+            "description": "Gastric Ulcer",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          },
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "Fill Now",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": "Oral",
+        "medicationChangeOrderID": null,
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": null,
+        "medicationChangeOrderUCI": null,
+        "DEACode": null,
+        "dispenseAsWritten": "No",
+        "id": {
+          "idType": "CID",
+          "id": "84765691"
+        },
+        "orderUCI": "84771016",
+        "doseUnit": null,
+        "controlledMeds": null
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282261"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "5440437"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "100820"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1437336377"
+        }],
+        "consumerName": "WCRDOCTOR GENERAL MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "261972",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "64764-151-04",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "154757",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "68:20.28",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }],
+        "dosage": "15 mg",
+        "legendIndicator": "Prescription",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "12025206"
+        },
+        "name": "Pioglitazone (ACTOS) 15 mg Oral Tab",
+        "shortName": "Actos"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "5",
+      "consumerInstructions": "Take 1 tablet by mouth daily",
+      "firstFill": false,
+      "earliestFillDate": null,
+      "origFillPharmLocCID": "160592",
+      "origMedOrderQty": "1",
+      "startDate": "2019-09-23"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": "2021-09-22",
+      "lastRefillPharmLocCID": "160592",
+      "prescriptionNumber": "259210070639",
+      "prescriptionValidationStatus": "SUCCESS",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": "2019-11-25",
+      "lastRxQtyDispensed": "1",
+      "totalRefills": "5",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-09-23T16:54:07-07:00",
+        "medicationComments": null,
+        "orderID": "773245405",
+        "routeCID": "12024",
+        "diagnosis": {
+          "codes": {
+            "sourceCode": null,
+            "code": "N76.0",
+            "description": "Bacterial Vaginosis",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          },
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "Fill Now",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": "Oral",
+        "medicationChangeOrderID": null,
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": null,
+        "medicationChangeOrderUCI": null,
+        "DEACode": null,
+        "dispenseAsWritten": "No",
+        "id": {
+          "idType": "CID",
+          "id": "84765692"
+        },
+        "orderUCI": "84771017",
+        "doseUnit": null,
+        "controlledMeds": null
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282261"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "5440437"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "100820"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1437336377"
+        }],
+        "consumerName": "WCRDOCTOR GENERAL MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "170427",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "63304-827-90",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "170427",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "24:06.08",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "00179021601",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "A01901",
+          "description": "ERX-ADS",
+          "sourceDescription": null,
+          "type": "ADS"
+        }],
+        "dosage": "10 mg",
+        "legendIndicator": "Prescription",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "1204679"
+        },
+        "name": "Atorvastatin (LIPITOR) 10 mg Oral Tab",
+        "commonBrandName": "LIPITOR",
+        "shortName": "Atorvastatin"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "4",
+      "consumerInstructions": "Take 1 tablet by mouth daily to prevent heart attacks and strokes",
+      "firstFill": false,
+      "earliestFillDate": null,
+      "origFillPharmLocCID": "160583",
+      "origMedOrderQty": "1",
+      "startDate": "2019-09-23"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": null,
+      "lastRefillPharmLocCID": null,
+      "prescriptionNumber": "259210070528",
+      "pharmacyInfo": {
+        "detail": {
+          "rxNumber": "259210070528",
+          "statusCodes": {
+            "consumerResponseCode1": "PHE:1002",
+            "consumerWarningResponseCode": "PHE:1002",
+            "consumerResponseCodeType": "WARNING",
+            "rxDetailResponseCode": "002"
+          },
+          "quantity": "3.0",
+          "lastSoldDate": "2019-09-19Z",
+          "previousMailOrPickup": "P",
+          "mrn": "BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613DC0EB76475AC646587DCE20D8CC9FA3CCD5CF548860A4D998615B19830B581930DC405CCB0D0E6D9F7E9D15D1F4441D5D8140135A5BD1B5EDF41F89D1DAB420FB87E6A6AFCC8E8734536ADD7801550992388E302E12748C76745EAACA68105643674F6027EB5847E37A08968E8DF37ECD21C188491F177B45C2638B619B1D47BE1DD22EE31A3DA1ED58C967DD6E1EC5922EF6217B934813984EDB8E7B05C3B284C07268D50E1AB0D08E83EDFC462ADC64B53D99B7B41B073E584788DAD6BBDDFC926E27D55D2AA55A1B050F8959263D0CE0782BBB64B7E903BAF22BFDCE83E89E113747939942698D019095B26888D8C8EC828AF394C5209418FD68D1BD3FF0A132217B86350B3BCB0B87EC89B058298D8370323D8D9A4EDB8C44E9159A43F484CA8BE065E51415C186B87FC6CEC33AB42093BCDC4EDD1E862398F3294BBEA396F736AF8AC5AA5B26A9A68D52D91ED6761658EFA126F99C97533F24DEEE26A8060EDC54C9FE675CFEB40A5153D78261E7895F245455E8E538E84DD4C627F62B93797F9A6CDEF50699B2E9883FDFD25FA61593BE6AD5518CF5B4A522765B3FC38F4026AE07EFBD1F917FEFF5EA18C949E455C3F82966EB863F55B1D932002F05B5B8F5DC3591CB6780B2F5B6EB011AB49F289C7B14FEDC89EE95642C012C4D8C2C7CD29BE645B88A9B44B316126963ECF1EED3CA1982C92C65B7B961B5685FBBD3F108EEF634ABE171935D0072A09C29397F2E27C83B11E331E81370942790B804A2E85FEC66D844DA6F6B5F5A4A9E3A1D508AA1B8CCE0E8C474B55E3EAADB1058F824D532F53E8D0B01F9865B994D7514E6F955021E140608221AB0A97441D9663475FD1207D258C5356758895E4100077BBEF6B4C40232FAF8F7FDC38C17229E834D00C6DD5DE6971CB93D0639427083B262D040E098DAFCADEA1FAA710D51D8CA5D4A5",
+          "memberName": {
+            "firstName": "MARIAN",
+            "lastName": "SMITH",
+            "middleName": "WWW"
+          },
+          "sendingApplication": "AMR02",
+          "compound": false,
+          "deaCode": "6",
+          "rxName": "MEPHYTON 5 MG TABLET",
+          "mailable": true,
+          "nhinId": "900002592",
+          "dispenseLocationCode": "592",
+          "coPayAmount": "20.0",
+          "region": "MRN",
+          "canOrderRx": true
+        }
+      },
+      "prescriptionValidationStatus": "BLANK",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": null,
+      "lastRxQtyDispensed": null,
+      "totalRefills": "5",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-09-18T12:39:35-07:00",
+        "medicationComments": null,
+        "orderID": "773245400",
+        "routeCID": "12024",
+        "diagnosis": {
+          "codes": {
+            "sourceCode": null,
+            "code": "K25.9",
+            "description": "Gastric Ulcer",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          },
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "Fill Now",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": "Oral",
+        "medicationChangeOrderID": "773245399",
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": "84765686",
+        "medicationChangeOrderUCI": "84771012",
+        "DEACode": null,
+        "dispenseAsWritten": "No",
+        "id": {
+          "idType": "CID",
+          "id": "84765687"
+        },
+        "orderUCI": "84771012",
+        "doseUnit": null,
+        "controlledMeds": null
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282261"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "5440437"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "100820"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1437336377"
+        }],
+        "consumerName": "WCRDOCTOR GENERAL MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "298676",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "68682-170-30",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "298676",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "88:24",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "92:12",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "00187170405",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "A00268",
+          "description": "ERX-ADS",
+          "sourceDescription": null,
+          "type": "ADS"
+        }],
+        "dosage": "5 mg",
+        "legendIndicator": "Prescription",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "12033557"
+        },
+        "name": "Phytonadione (MEPHYTON) 5 mg Oral Tab",
+        "commonBrandName": "MEPHYTON",
+        "shortName": "Phytonadione"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "5",
+      "consumerInstructions": "Take 3 pills a day",
+      "firstFill": true,
+      "earliestFillDate": null,
+      "origFillPharmLocCID": "160592",
+      "origMedOrderQty": "3",
+      "startDate": "2019-09-18"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": "2020-02-24",
+      "lastRefillPharmLocCID": "160351",
+      "prescriptionNumber": "235110168492",
+      "pharmacyInfo": {
+        "detail": {
+          "rxNumber": "235110168492",
+          "statusCodes": {
+            "consumerResponseCode1": "PHE:x1031",
+            "consumerResponseCodeType": "ERROR",
+            "rxDetailResponseCode": "042"
+          },
+          "quantity": "3.0",
+          "lastSoldDate": "2019-10-22Z",
+          "previousMailOrPickup": "P",
+          "mrn": "BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613DC0EB76475AC646587DCE20D8CC9FA3CCD5CF548860A4D998615B19830B581930DC405CCB0D0E6D9F7E9D15D1F4441D5D8140135A5BD1B5EDF41F89D1DAB420FB87E6A6AFCC8E8734536ADD7801550992388E302E12748C76745EAACA68105643674F6027EB5847E37A08968E8DF37ECD21C188491F177B45C2638B619B1D47BE1DD22EE31A3DA1ED58C967DD6E1EC5922EF6217B934813984EDB8E7B05C3B284C07268D50E1AB0D08E83EDFC462ADC64B53D99B7B41B073E584788DAD6BBDDFC926E27D55D2AA55A1B050F8959263D0CE0782BBB64B7E903BAF22BFDCE83E89E113747939942698D019095B26888D8C8EC828AF394C5209418FD68D1BD3FF0A132217B86350B3BCB0B87EC89B058298D8370323D8D9A4EDB8C44E9159A43F484CA8BE065E51415C186B87FC6CEC33AB42093BCDC4EDD1E862398F3294BBEA396F736AF8AC5AA5B26A9A68D52D91ED6761658EFA126F99C97533F24DEEE26A8060EDC54C9FE675CFEB40A5153D78261E7895F245455E8E538E84DD4C627F62B93797F9A6CDEF50699B2E9883FDFD25FA61593BE6AD5518CF5B4A522765B3FC38F4026AE07EFBD1F917FEFF5EA18C949E455C3F82966EB863F55B1D932002F05B5B8F5DC3591CB6780B2F5B6EB011AB49F289C7B14FEDC89EE95642C012C4D8C2C7CD29BE645B88A9B44B316126963ECF1EED3CA1982C92C65B7B961B5685FBBD3F108EEF634ABE171935D0072A09C29397F2E27C83B11E331E81370942790B804A2E85FEC66D844DA6F6B5F5A4A9E3A1D508AA1B8CCE0E8C474B55E3EAADB1058F824D532F53E8D0B01F9865B994D7514E6F955021E140608221AB0A97441D9663475FD1207D258C5356758895E4100077BBEF6B4C40232FAF8F7FDC38C17229E834D00C6DD5DE6971CB93D0639427083B262D040E098DAFCADEA1FAA710D51D8CA5D4A5",
+          "memberName": {
+            "firstName": "MARIAN",
+            "lastName": "SMITH",
+            "middleName": "WWW"
+          },
+          "compound": false,
+          "deaCode": "6",
+          "rxName": "CYANOCOBALAMIN 30,000 MCG\/30",
+          "mailable": true,
+          "rxReadyDate": "2019-12-23Z",
+          "nhinId": "900002351",
+          "dispenseLocationCode": "351",
+          "coPayAmount": "30.0",
+          "region": "MRN",
+          "canOrderRx": false
+        }
+      },
+      "prescriptionValidationStatus": "SUCCESS",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": "2019-10-22",
+      "lastRxQtyDispensed": "3",
+      "totalRefills": "3",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-09-17T10:13:16-07:00",
+        "medicationComments": null,
+        "orderID": "773244738",
+        "routeCID": "12011",
+        "diagnosis": {
+          "codes": {
+            "sourceCode": null,
+            "code": "M79.672",
+            "description": "Left Foot Pain",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          },
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "Fill Now",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": "intraMUSCULAR",
+        "medicationChangeOrderID": null,
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": null,
+        "medicationChangeOrderUCI": null,
+        "DEACode": null,
+        "dispenseAsWritten": "No",
+        "id": {
+          "idType": "CID",
+          "id": "84765025"
+        },
+        "orderUCI": "84770350",
+        "doseUnit": null,
+        "controlledMeds": null
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282261"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "5440437"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "100820"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1437336377"
+        }],
+        "consumerName": "WCRDOCTOR GENERAL MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "238818",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "0517-0032-25",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "238818",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "88:08",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "63323004401",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }],
+        "dosage": "1,000 mcg\/mL",
+        "legendIndicator": "Prescription",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "12019981"
+        },
+        "name": "Cyanocobalamin (VITAMIN B-12) 1,000 mcg\/mL Inj Soln",
+        "commonBrandName": "VITAMIN B-12",
+        "shortName": "Cyanocobalamin"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "3",
+      "consumerInstructions": "Inject 1 ml intramuscularly every month",
+      "firstFill": false,
+      "earliestFillDate": null,
+      "origFillPharmLocCID": "160351",
+      "origMedOrderQty": "3",
+      "startDate": "2019-09-17"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": null,
+      "lastRefillPharmLocCID": null,
+      "prescriptionNumber": null,
+      "pharmacyInfo": {
+        "detail": {
+          "rxNumber": null,
+          "statusCodes": {
+            "consumerResponseCode1": "PHE:1010",
+            "consumerResponseCodeType": "ERROR",
+            "rxDetailResponseCode": "010"
+          },
+          "quantity": "0",
+          "previousMailOrPickup": null,
+          "mrn": "BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613DC0EB76475AC646587DCE20D8CC9FA3CCD5CF548860A4D998615B19830B581930DC405CCB0D0E6D9F7E9D15D1F4441D5D8140135A5BD1B5EDF41F89D1DAB420FB87E6A6AFCC8E8734536ADD7801550992388E302E12748C76745EAACA68105643674F6027EB5847E37A08968E8DF37ECD21C188491F177B45C2638B619B1D47BE1DD22EE31A3DA1ED58C967DD6E1EC5922EF6217B934813984EDB8E7B05C3B284C07268D50E1AB0D08E83EDFC462ADC64B53D99B7B41B073E584788DAD6BBDDFC926E27D55D2AA55A1B050F8959263D0CE0782BBB64B7E903BAF22BFDCE83E89E113747939942698D019095B26888D8C8EC828AF394C5209418FD68D1BD3FF0A132217B86350B3BCB0B87EC89B058298D8370323D8D9A4EDB8C44E9159A43F484CA8BE065E51415C186B87FC6CEC33AB42093BCDC4EDD1E862398F3294BBEA396F736AF8AC5AA5B26A9A68D52D91ED6761658EFA126F99C97533F24DEEE26A8060EDC54C9FE675CFEB40A5153D78261E7895F245455E8E538E84DD4C627F62B93797F9A6CDEF50699B2E9883FDFD25FA61593BE6AD5518CF5B4A522765B3FC38F4026AE07EFBD1F917FEFF5EA18C949E455C3F82966EB863F55B1D932002F05B5B8F5DC3591CB6780B2F5B6EB011AB49F289C7B14FEDC89EE95642C012C4D8C2C7CD29BE645B88A9B44B316126963ECF1EED3CA1982C92C65B7B961B5685FBBD3F108EEF634ABE171935D0072A09C29397F2E27C83B11E331E81370942790B804A2E85FEC66D844DA6F6B5F5A4A9E3A1D508AA1B8CCE0E8C474B55E3EAADB1058F824D532F53E8D0B01F9865B994D7514E6F955021E140608221AB0A97441D9663475FD1207D258C5356758895E4100077BBEF6B4C40232FAF8F7FDC38C17229E834D00C6DD5DE6971CB93D0639427083B262D040E098DAFCADEA1FAA710D51D8CA5D4A5",
+          "memberName": {
+            "firstName": "MARIAN",
+            "lastName": "SMITH",
+            "middleName": "WWW"
+          },
+          "nhinId": "0",
+          "coPayAmount": "0.0",
+          "region": "MRN",
+          "sendingApplication": "AMR02",
+          "compound": false,
+          "canOrderRx": false
+        }
+      },
+      "prescriptionValidationStatus": "BLANK",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": null,
+      "lastRxQtyDispensed": null,
+      "totalRefills": "3",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-09-17T11:45:37-07:00",
+        "medicationComments": null,
+        "orderID": "773244739",
+        "routeCID": "12024",
+        "diagnosis": {
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "Mail",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": "Oral",
+        "medicationChangeOrderID": null,
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": null,
+        "medicationChangeOrderUCI": null,
+        "DEACode": null,
+        "dispenseAsWritten": null,
+        "id": {
+          "idType": "CID",
+          "id": "84765026"
+        },
+        "orderUCI": "84770351",
+        "doseUnit": null,
+        "controlledMeds": null
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282261"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "5440437"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "100820"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1437336377"
+        }],
+        "consumerName": "WCRDOCTOR GENERAL MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "556092",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "54629-016-81",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "547991",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "40:12",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "88:16",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "54629001681",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }],
+        "dosage": "600 mg(1,500mg) -400 unit",
+        "legendIndicator": "Over-the-Counter",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "121112842"
+        },
+        "name": "Calcium Carbonate-Vit D3 (CALCIUM WITH VITAMIN D) 600 mg(1,500mg) -400 unit Oral Tab",
+        "shortName": "Calcium with Vitamin D"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "3",
+      "consumerInstructions": "Take 1 tablet orally 2 times a day with food",
+      "firstFill": true,
+      "earliestFillDate": null,
+      "origFillPharmLocCID": "160315",
+      "origMedOrderQty": "200",
+      "startDate": "2019-09-17"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": "2021-09-16",
+      "lastRefillPharmLocCID": "160613",
+      "prescriptionNumber": "259210070300",
+      "pharmacyInfo": {
+        "detail": {
+          "rxNumber": "259210070300",
+          "statusCodes": {
+            "consumerResponseCode1": "PHE:1005",
+            "consumerResponseCodeType": "ERROR",
+            "rxDetailResponseCode": "005"
+          },
+          "quantity": "12.0",
+          "lastSoldDate": "2019-09-17Z",
+          "previousMailOrPickup": "M",
+          "mrn": "BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613DC0EB76475AC646587DCE20D8CC9FA3CCD5CF548860A4D998615B19830B581930DC405CCB0D0E6D9F7E9D15D1F4441D5D8140135A5BD1B5EDF41F89D1DAB420FB87E6A6AFCC8E8734536ADD7801550992388E302E12748C76745EAACA68105643674F6027EB5847E37A08968E8DF37ECD21C188491F177B45C2638B619B1D47BE1DD22EE31A3DA1ED58C967DD6E1EC5922EF6217B934813984EDB8E7B05C3B284C07268D50E1AB0D08E83EDFC462ADC64B53D99B7B41B073E584788DAD6BBDDFC926E27D55D2AA55A1B050F8959263D0CE0782BBB64B7E903BAF22BFDCE83E89E113747939942698D019095B26888D8C8EC828AF394C5209418FD68D1BD3FF0A132217B86350B3BCB0B87EC89B058298D8370323D8D9A4EDB8C44E9159A43F484CA8BE065E51415C186B87FC6CEC33AB42093BCDC4EDD1E862398F3294BBEA396F736AF8AC5AA5B26A9A68D52D91ED6761658EFA126F99C97533F24DEEE26A8060EDC54C9FE675CFEB40A5153D78261E7895F245455E8E538E84DD4C627F62B93797F9A6CDEF50699B2E9883FDFD25FA61593BE6AD5518CF5B4A522765B3FC38F4026AE07EFBD1F917FEFF5EA18C949E455C3F82966EB863F55B1D932002F05B5B8F5DC3591CB6780B2F5B6EB011AB49F289C7B14FEDC89EE95642C012C4D8C2C7CD29BE645B88A9B44B316126963ECF1EED3CA1982C92C65B7B961B5685FBBD3F108EEF634ABE171935D0072A09C29397F2E27C83B11E331E81370942790B804A2E85FEC66D844DA6F6B5F5A4A9E3A1D508AA1B8CCE0E8C474B55E3EAADB1058F824D532F53E8D0B01F9865B994D7514E6F955021E140608221AB0A97441D9663475FD1207D258C5356758895E4100077BBEF6B4C40232FAF8F7FDC38C17229E834D00C6DD5DE6971CB93D0639427083B262D040E098DAFCADEA1FAA710D51D8CA5D4A5",
+          "memberName": {
+            "firstName": "MARIAN",
+            "lastName": "SMITH",
+            "middleName": "WWW"
+          },
+          "rxTrackingFilterApplied": true,
+          "compound": false,
+          "deaCode": "6",
+          "rxTrackingFilterAppliedDays": "14",
+          "rxName": "ALENDRONATE SODIUM 70 MG TAB",
+          "mailable": true,
+          "nhinId": "900002592",
+          "coPayAmount": "30.0",
+          "region": "MRN",
+          "canOrderRx": false
+        }
+      },
+      "prescriptionValidationStatus": "SUCCESS",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": "2019-09-17",
+      "lastRxQtyDispensed": "12",
+      "totalRefills": "3",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-09-17T11:45:38-07:00",
+        "medicationComments": null,
+        "orderID": "773244740",
+        "routeCID": "12024",
+        "diagnosis": {
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "Fill Now",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": "Oral",
+        "medicationChangeOrderID": null,
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": null,
+        "medicationChangeOrderUCI": null,
+        "DEACode": null,
+        "dispenseAsWritten": "No",
+        "id": {
+          "idType": "CID",
+          "id": "84765027"
+        },
+        "orderUCI": "84770352",
+        "doseUnit": null,
+        "controlledMeds": null
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282261"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "5440437"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "100820"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1437336377"
+        }],
+        "consumerName": "WCRDOCTOR GENERAL MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "184359",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "16252-601-02",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "184359",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "92:24",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "16252060144",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "A02668",
+          "description": "ERX-ADS",
+          "sourceDescription": null,
+          "type": "ADS"
+        }],
+        "dosage": "70 mg",
+        "legendIndicator": "Prescription",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "1207799"
+        },
+        "name": "Alendronate (FOSAMAX) 70 mg Oral Tab",
+        "commonBrandName": "FOSAMAX",
+        "shortName": "Alendronate"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "2",
+      "consumerInstructions": "Take 1 tablet by daily",
+      "firstFill": false,
+      "earliestFillDate": null,
+      "origFillPharmLocCID": "160613",
+      "origMedOrderQty": "12",
+      "startDate": "2019-09-17"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": "2019-12-31",
+      "lastRefillPharmLocCID": null,
+      "prescriptionNumber": "261310190201",
+      "pharmacyInfo": {
+        "detail": {
+          "rxNumber": "261310190201",
+          "statusCodes": {
+            "consumerResponseCode1": "PHE:1029",
+            "consumerResponseCodeType": "ERROR",
+            "rxDetailResponseCode": "029"
+          },
+          "quantity": "1.0",
+          "previousMailOrPickup": null,
+          "mrn": "BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613DC0EB76475AC646587DCE20D8CC9FA3CCD5CF548860A4D998615B19830B581930DC405CCB0D0E6D9F7E9D15D1F4441D5D8140135A5BD1B5EDF41F89D1DAB420FB87E6A6AFCC8E8734536ADD7801550992388E302E12748C76745EAACA68105643674F6027EB5847E37A08968E8DF37ECD21C188491F177B45C2638B619B1D47BE1DD22EE31A3DA1ED58C967DD6E1EC5922EF6217B934813984EDB8E7B05C3B284C07268D50E1AB0D08E83EDFC462ADC64B53D99B7B41B073E584788DAD6BBDDFC926E27D55D2AA55A1B050F8959263D0CE0782BBB64B7E903BAF22BFDCE83E89E113747939942698D019095B26888D8C8EC828AF394C5209418FD68D1BD3FF0A132217B86350B3BCB0B87EC89B058298D8370323D8D9A4EDB8C44E9159A43F484CA8BE065E51415C186B87FC6CEC33AB42093BCDC4EDD1E862398F3294BBEA396F736AF8AC5AA5B26A9A68D52D91ED6761658EFA126F99C97533F24DEEE26A8060EDC54C9FE675CFEB40A5153D78261E7895F245455E8E538E84DD4C627F62B93797F9A6CDEF50699B2E9883FDFD25FA61593BE6AD5518CF5B4A522765B3FC38F4026AE07EFBD1F917FEFF5EA18C949E455C3F82966EB863F55B1D932002F05B5B8F5DC3591CB6780B2F5B6EB011AB49F289C7B14FEDC89EE95642C012C4D8C2C7CD29BE645B88A9B44B316126963ECF1EED3CA1982C92C65B7B961B5685FBBD3F108EEF634ABE171935D0072A09C29397F2E27C83B11E331E81370942790B804A2E85FEC66D844DA6F6B5F5A4A9E3A1D508AA1B8CCE0E8C474B55E3EAADB1058F824D532F53E8D0B01F9865B994D7514E6F955021E140608221AB0A97441D9663475FD1207D258C5356758895E4100077BBEF6B4C40232FAF8F7FDC38C17229E834D00C6DD5DE6971CB93D0639427083B262D040E098DAFCADEA1FAA710D51D8CA5D4A5",
+          "memberName": {
+            "firstName": "MARIAN",
+            "lastName": "SMITH",
+            "middleName": "WWW"
+          },
+          "compound": false,
+          "deaCode": "6",
+          "rxName": "AMLODIPINE 5 MG TAB MYLA",
+          "mailable": true,
+          "nhinId": "900002613",
+          "coPayAmount": "1.0",
+          "region": "MRN",
+          "canOrderRx": false
+        }
+      },
+      "prescriptionValidationStatus": "SUCCESS",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": null,
+      "lastRxQtyDispensed": null,
+      "totalRefills": "2",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-09-17T00:00:00-07:00",
+        "medicationComments": null,
+        "orderID": "773244741",
+        "routeCID": null,
+        "diagnosis": {
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "File",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": null,
+        "medicationChangeOrderID": "773243607",
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": "84763894",
+        "medicationChangeOrderUCI": null,
+        "DEACode": null,
+        "dispenseAsWritten": "No",
+        "id": {
+          "idType": "CID",
+          "id": "84765028"
+        },
+        "orderUCI": "84770353",
+        "doseUnit": null,
+        "controlledMeds": null
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282261"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "5440437"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "100820"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1437336377"
+        }],
+        "consumerName": "WCRDOCTOR GENERAL MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "202624",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "0378-5209-77",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "202624",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "24:28.08",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "24:08.12.08",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "24:28",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "24:12.92",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "24:08.92",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "59762153001",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "A01284",
+          "description": "ERX-ADS",
+          "sourceDescription": null,
+          "type": "ADS"
+        }],
+        "dosage": "5 mg",
+        "legendIndicator": "Prescription",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "12011930"
+        },
+        "name": "amLODIPine (NORVASC) 5 mg Oral Tab",
+        "commonBrandName": "NORVASC",
+        "shortName": "amLODIPine"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "2",
+      "consumerInstructions": "Take 1 tablet by mouth daily",
+      "firstFill": false,
+      "earliestFillDate": null,
+      "origFillPharmLocCID": "160613",
+      "origMedOrderQty": "1",
+      "startDate": "2019-09-17"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": null,
+      "lastRefillPharmLocCID": null,
+      "prescriptionNumber": null,
+      "pharmacyInfo": {
+        "detail": {
+          "rxNumber": null,
+          "statusCodes": {
+            "consumerResponseCode1": "PHE:1010",
+            "consumerResponseCodeType": "ERROR",
+            "rxDetailResponseCode": "010"
+          },
+          "quantity": "0",
+          "previousMailOrPickup": null,
+          "mrn": "BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613DC0EB76475AC646587DCE20D8CC9FA3CCD5CF548860A4D998615B19830B581930DC405CCB0D0E6D9F7E9D15D1F4441D5D8140135A5BD1B5EDF41F89D1DAB420FB87E6A6AFCC8E8734536ADD7801550992388E302E12748C76745EAACA68105643674F6027EB5847E37A08968E8DF37ECD21C188491F177B45C2638B619B1D47BE1DD22EE31A3DA1ED58C967DD6E1EC5922EF6217B934813984EDB8E7B05C3B284C07268D50E1AB0D08E83EDFC462ADC64B53D99B7B41B073E584788DAD6BBDDFC926E27D55D2AA55A1B050F8959263D0CE0782BBB64B7E903BAF22BFDCE83E89E113747939942698D019095B26888D8C8EC828AF394C5209418FD68D1BD3FF0A132217B86350B3BCB0B87EC89B058298D8370323D8D9A4EDB8C44E9159A43F484CA8BE065E51415C186B87FC6CEC33AB42093BCDC4EDD1E862398F3294BBEA396F736AF8AC5AA5B26A9A68D52D91ED6761658EFA126F99C97533F24DEEE26A8060EDC54C9FE675CFEB40A5153D78261E7895F245455E8E538E84DD4C627F62B93797F9A6CDEF50699B2E9883FDFD25FA61593BE6AD5518CF5B4A522765B3FC38F4026AE07EFBD1F917FEFF5EA18C949E455C3F82966EB863F55B1D932002F05B5B8F5DC3591CB6780B2F5B6EB011AB49F289C7B14FEDC89EE95642C012C4D8C2C7CD29BE645B88A9B44B316126963ECF1EED3CA1982C92C65B7B961B5685FBBD3F108EEF634ABE171935D0072A09C29397F2E27C83B11E331E81370942790B804A2E85FEC66D844DA6F6B5F5A4A9E3A1D508AA1B8CCE0E8C474B55E3EAADB1058F824D532F53E8D0B01F9865B994D7514E6F955021E140608221AB0A97441D9663475FD1207D258C5356758895E4100077BBEF6B4C40232FAF8F7FDC38C17229E834D00C6DD5DE6971CB93D0639427083B262D040E098DAFCADEA1FAA710D51D8CA5D4A5",
+          "memberName": {
+            "firstName": "MARIAN",
+            "lastName": "SMITH",
+            "middleName": "WWW"
+          },
+          "nhinId": "0",
+          "coPayAmount": "0.0",
+          "region": "MRN",
+          "sendingApplication": "AMR02",
+          "compound": false,
+          "canOrderRx": false
+        }
+      },
+      "prescriptionValidationStatus": "BLANK",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": null,
+      "lastRxQtyDispensed": null,
+      "totalRefills": "3",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-09-16T11:48:54-07:00",
+        "medicationComments": null,
+        "orderID": "773244731",
+        "routeCID": "12024",
+        "diagnosis": {
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "Fill Now",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": "Oral",
+        "medicationChangeOrderID": "773243608",
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": "84763895",
+        "medicationChangeOrderUCI": "84770343",
+        "DEACode": null,
+        "dispenseAsWritten": "No",
+        "id": {
+          "idType": "CID",
+          "id": "84765018"
+        },
+        "orderUCI": "84770343",
+        "doseUnit": null,
+        "controlledMeds": null
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282261"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "5440437"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "100820"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1437336377"
+        }],
+        "consumerName": "WCRDOCTOR GENERAL MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "173420",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "52959-077-18",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "173420",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "28:08.04.92",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "67877029601",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }],
+        "dosage": "800 mg",
+        "legendIndicator": "Prescription",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "1205376"
+        },
+        "name": "Ibuprofen (MOTRIN) 800 mg Oral Tab",
+        "commonBrandName": "MOTRIN",
+        "shortName": "Ibuprofen"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "3",
+      "consumerInstructions": "Take 1 tablet orally every 8 hours with food as needed for menstrual pain",
+      "firstFill": true,
+      "earliestFillDate": null,
+      "origFillPharmLocCID": "160393",
+      "origMedOrderQty": "30",
+      "startDate": "2019-09-16"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": "2021-09-15",
+      "lastRefillPharmLocCID": "160212",
+      "prescriptionNumber": "221201009606",
+      "pharmacyInfo": {
+        "detail": {
+          "rxNumber": "221201009606",
+          "statusCodes": {
+            "consumerResponseCode1": "PHE:1010",
+            "consumerResponseCodeType": "ERROR",
+            "rxDetailResponseCode": "010"
+          },
+          "quantity": "0",
+          "previousMailOrPickup": null,
+          "mrn": "BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613DC0EB76475AC646587DCE20D8CC9FA3CCD5CF548860A4D998615B19830B581930DC405CCB0D0E6D9F7E9D15D1F4441D5D8140135A5BD1B5EDF41F89D1DAB420FB87E6A6AFCC8E8734536ADD7801550992388E302E12748C76745EAACA68105643674F6027EB5847E37A08968E8DF37ECD21C188491F177B45C2638B619B1D47BE1DD22EE31A3DA1ED58C967DD6E1EC5922EF6217B934813984EDB8E7B05C3B284C07268D50E1AB0D08E83EDFC462ADC64B53D99B7B41B073E584788DAD6BBDDFC926E27D55D2AA55A1B050F8959263D0CE0782BBB64B7E903BAF22BFDCE83E89E113747939942698D019095B26888D8C8EC828AF394C5209418FD68D1BD3FF0A132217B86350B3BCB0B87EC89B058298D8370323D8D9A4EDB8C44E9159A43F484CA8BE065E51415C186B87FC6CEC33AB42093BCDC4EDD1E862398F3294BBEA396F736AF8AC5AA5B26A9A68D52D91ED6761658EFA126F99C97533F24DEEE26A8060EDC54C9FE675CFEB40A5153D78261E7895F245455E8E538E84DD4C627F62B93797F9A6CDEF50699B2E9883FDFD25FA61593BE6AD5518CF5B4A522765B3FC38F4026AE07EFBD1F917FEFF5EA18C949E455C3F82966EB863F55B1D932002F05B5B8F5DC3591CB6780B2F5B6EB011AB49F289C7B14FEDC89EE95642C012C4D8C2C7CD29BE645B88A9B44B316126963ECF1EED3CA1982C92C65B7B961B5685FBBD3F108EEF634ABE171935D0072A09C29397F2E27C83B11E331E81370942790B804A2E85FEC66D844DA6F6B5F5A4A9E3A1D508AA1B8CCE0E8C474B55E3EAADB1058F824D532F53E8D0B01F9865B994D7514E6F955021E140608221AB0A97441D9663475FD1207D258C5356758895E4100077BBEF6B4C40232FAF8F7FDC38C17229E834D00C6DD5DE6971CB93D0639427083B262D040E098DAFCADEA1FAA710D51D8CA5D4A5",
+          "memberName": {
+            "firstName": "MARIAN",
+            "lastName": "SMITH",
+            "middleName": "WWW"
+          },
+          "nhinId": "0",
+          "coPayAmount": "0.0",
+          "region": "MRN",
+          "compound": false,
+          "canOrderRx": false
+        }
+      },
+      "prescriptionValidationStatus": "SUCCESS",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": "2019-09-25",
+      "lastRxQtyDispensed": "1",
+      "totalRefills": "5",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-09-16T12:28:16-07:00",
+        "medicationComments": null,
+        "orderID": "773244733",
+        "routeCID": "12024",
+        "diagnosis": {
+          "codes": {
+            "sourceCode": null,
+            "code": "N76.0",
+            "description": "Bacterial Vaginosis",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          },
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "Fill Now",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": "Oral",
+        "medicationChangeOrderID": null,
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": null,
+        "medicationChangeOrderUCI": null,
+        "DEACode": null,
+        "dispenseAsWritten": "No",
+        "id": {
+          "idType": "CID",
+          "id": "84765020"
+        },
+        "orderUCI": "84770345",
+        "doseUnit": null,
+        "controlledMeds": null
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282261"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "5440437"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "100820"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1437336377"
+        }],
+        "consumerName": "WCRDOCTOR GENERAL MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "244899",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "0143-1267-01",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "244899",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "24:32.04",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "24:08.44.04",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "68180098001",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "A00081",
+          "description": "ERX-ADS",
+          "sourceDescription": null,
+          "type": "ADS"
+        }],
+        "dosage": "10 mg",
+        "legendIndicator": "Prescription",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "12021342"
+        },
+        "name": "Lisinopril (PRINIVIL\/ZESTRIL) 10 mg Oral Tab",
+        "commonBrandName": "PRINIVIL\/ZESTRIL",
+        "shortName": "Lisinopril"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "5",
+      "consumerInstructions": "Take 1 tablet by mouth daily",
+      "firstFill": false,
+      "earliestFillDate": null,
+      "origFillPharmLocCID": "160212",
+      "origMedOrderQty": "1",
+      "startDate": "2019-09-16"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": null,
+      "lastRefillPharmLocCID": null,
+      "prescriptionNumber": null,
+      "pharmacyInfo": {
+        "detail": {
+          "rxNumber": null,
+          "statusCodes": {
+            "consumerResponseCode1": "PHE:1010",
+            "consumerResponseCodeType": "ERROR",
+            "rxDetailResponseCode": "010"
+          },
+          "quantity": "0",
+          "previousMailOrPickup": null,
+          "mrn": "BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613DC0EB76475AC646587DCE20D8CC9FA3CCD5CF548860A4D998615B19830B581930DC405CCB0D0E6D9F7E9D15D1F4441D5D8140135A5BD1B5EDF41F89D1DAB420FB87E6A6AFCC8E8734536ADD7801550992388E302E12748C76745EAACA68105643674F6027EB5847E37A08968E8DF37ECD21C188491F177B45C2638B619B1D47BE1DD22EE31A3DA1ED58C967DD6E1EC5922EF6217B934813984EDB8E7B05C3B284C07268D50E1AB0D08E83EDFC462ADC64B53D99B7B41B073E584788DAD6BBDDFC926E27D55D2AA55A1B050F8959263D0CE0782BBB64B7E903BAF22BFDCE83E89E113747939942698D019095B26888D8C8EC828AF394C5209418FD68D1BD3FF0A132217B86350B3BCB0B87EC89B058298D8370323D8D9A4EDB8C44E9159A43F484CA8BE065E51415C186B87FC6CEC33AB42093BCDC4EDD1E862398F3294BBEA396F736AF8AC5AA5B26A9A68D52D91ED6761658EFA126F99C97533F24DEEE26A8060EDC54C9FE675CFEB40A5153D78261E7895F245455E8E538E84DD4C627F62B93797F9A6CDEF50699B2E9883FDFD25FA61593BE6AD5518CF5B4A522765B3FC38F4026AE07EFBD1F917FEFF5EA18C949E455C3F82966EB863F55B1D932002F05B5B8F5DC3591CB6780B2F5B6EB011AB49F289C7B14FEDC89EE95642C012C4D8C2C7CD29BE645B88A9B44B316126963ECF1EED3CA1982C92C65B7B961B5685FBBD3F108EEF634ABE171935D0072A09C29397F2E27C83B11E331E81370942790B804A2E85FEC66D844DA6F6B5F5A4A9E3A1D508AA1B8CCE0E8C474B55E3EAADB1058F824D532F53E8D0B01F9865B994D7514E6F955021E140608221AB0A97441D9663475FD1207D258C5356758895E4100077BBEF6B4C40232FAF8F7FDC38C17229E834D00C6DD5DE6971CB93D0639427083B262D040E098DAFCADEA1FAA710D51D8CA5D4A5",
+          "memberName": {
+            "firstName": "MARIAN",
+            "lastName": "SMITH",
+            "middleName": "WWW"
+          },
+          "nhinId": "0",
+          "coPayAmount": "0.0",
+          "region": "MRN",
+          "sendingApplication": "AMR02",
+          "compound": false,
+          "canOrderRx": false
+        }
+      },
+      "prescriptionValidationStatus": "BLANK",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": null,
+      "lastRxQtyDispensed": null,
+      "totalRefills": "5",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-09-16T12:39:34-07:00",
+        "medicationComments": null,
+        "orderID": "773244736",
+        "routeCID": "12024",
+        "diagnosis": {
+          "codes": {
+            "sourceCode": null,
+            "code": "K25.9",
+            "description": "Gastric Ulcer",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          },
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "Fill Now",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": "Oral",
+        "medicationChangeOrderID": null,
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": null,
+        "medicationChangeOrderUCI": null,
+        "DEACode": null,
+        "dispenseAsWritten": null,
+        "id": {
+          "idType": "CID",
+          "id": "84765023"
+        },
+        "orderUCI": "84770348",
+        "doseUnit": null,
+        "controlledMeds": null
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282261"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "5440437"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "100820"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1437336377"
+        }],
+        "consumerName": "WCRDOCTOR GENERAL MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "202308",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "54868-3782-0",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "164471",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "08:18.08.08",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "00074663330",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }],
+        "dosage": "100 mg",
+        "legendIndicator": "Prescription",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "12011861"
+        },
+        "name": "Ritonavir (NORVIR) 100 mg Oral Cap",
+        "shortName": "Norvir"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "5",
+      "consumerInstructions": "Take 4 pills a day",
+      "firstFill": true,
+      "earliestFillDate": null,
+      "origFillPharmLocCID": "160212",
+      "origMedOrderQty": "2",
+      "startDate": "2019-09-16"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": "2019-12-31",
+      "lastRefillPharmLocCID": "160351",
+      "prescriptionNumber": "235110168493",
+      "pharmacyInfo": {
+        "detail": {
+          "rxNumber": "235110168493",
+          "statusCodes": {
+            "consumerResponseCode1": "PHE:1029",
+            "consumerResponseCodeType": "ERROR",
+            "rxDetailResponseCode": "029"
+          },
+          "quantity": "0",
+          "previousMailOrPickup": null,
+          "mrn": "BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613DC0EB76475AC646587DCE20D8CC9FA3CCD5CF548860A4D998615B19830B581930DC405CCB0D0E6D9F7E9D15D1F4441D5D8140135A5BD1B5EDF41F89D1DAB420FB87E6A6AFCC8E8734536ADD7801550992388E302E12748C76745EAACA68105643674F6027EB5847E37A08968E8DF37ECD21C188491F177B45C2638B619B1D47BE1DD22EE31A3DA1ED58C967DD6E1EC5922EF6217B934813984EDB8E7B05C3B284C07268D50E1AB0D08E83EDFC462ADC64B53D99B7B41B073E584788DAD6BBDDFC926E27D55D2AA55A1B050F8959263D0CE0782BBB64B7E903BAF22BFDCE83E89E113747939942698D019095B26888D8C8EC828AF394C5209418FD68D1BD3FF0A132217B86350B3BCB0B87EC89B058298D8370323D8D9A4EDB8C44E9159A43F484CA8BE065E51415C186B87FC6CEC33AB42093BCDC4EDD1E862398F3294BBEA396F736AF8AC5AA5B26A9A68D52D91ED6761658EFA126F99C97533F24DEEE26A8060EDC54C9FE675CFEB40A5153D78261E7895F245455E8E538E84DD4C627F62B93797F9A6CDEF50699B2E9883FDFD25FA61593BE6AD5518CF5B4A522765B3FC38F4026AE07EFBD1F917FEFF5EA18C949E455C3F82966EB863F55B1D932002F05B5B8F5DC3591CB6780B2F5B6EB011AB49F289C7B14FEDC89EE95642C012C4D8C2C7CD29BE645B88A9B44B316126963ECF1EED3CA1982C92C65B7B961B5685FBBD3F108EEF634ABE171935D0072A09C29397F2E27C83B11E331E81370942790B804A2E85FEC66D844DA6F6B5F5A4A9E3A1D508AA1B8CCE0E8C474B55E3EAADB1058F824D532F53E8D0B01F9865B994D7514E6F955021E140608221AB0A97441D9663475FD1207D258C5356758895E4100077BBEF6B4C40232FAF8F7FDC38C17229E834D00C6DD5DE6971CB93D0639427083B262D040E098DAFCADEA1FAA710D51D8CA5D4A5",
+          "mailable": true,
+          "memberName": {
+            "firstName": "MARIAN",
+            "lastName": "SMITH",
+            "middleName": "WWW"
+          },
+          "nhinId": "900002613",
+          "coPayAmount": "0.0",
+          "region": "MRN",
+          "compound": false,
+          "canOrderRx": false
+        }
+      },
+      "prescriptionValidationStatus": "SUCCESS",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": "2019-10-22",
+      "lastRxQtyDispensed": "6",
+      "totalRefills": "5",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-09-16T15:41:11-07:00",
+        "medicationComments": null,
+        "orderID": "773244737",
+        "routeCID": "12024",
+        "diagnosis": {
+          "codes": {
+            "sourceCode": null,
+            "code": "M79.672",
+            "description": "Left Foot Pain",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          },
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "Fill Now",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": "Oral",
+        "medicationChangeOrderID": null,
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": null,
+        "medicationChangeOrderUCI": null,
+        "DEACode": null,
+        "dispenseAsWritten": "No",
+        "id": {
+          "idType": "CID",
+          "id": "84765024"
+        },
+        "orderUCI": "84770349",
+        "doseUnit": null,
+        "controlledMeds": null
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282261"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "5440437"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "100820"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1437336377"
+        }],
+        "consumerName": "WCRDOCTOR GENERAL MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "280014",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "51991-604-01",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "272021",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "88:16",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "51991060401",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }],
+        "dosage": "1,250 mcg (50,000 unit)",
+        "legendIndicator": "Prescription",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "12029320"
+        },
+        "name": "Ergocalciferol, Vit D2, (Vitamin D2) 50,000 unit Oral Cap",
+        "shortName": "Vitamin D2"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "5",
+      "consumerInstructions": "Take 6 capsules orally",
+      "firstFill": false,
+      "earliestFillDate": null,
+      "origFillPharmLocCID": "160351",
+      "origMedOrderQty": "6",
+      "startDate": "2019-09-16"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": null,
+      "lastRefillPharmLocCID": null,
+      "prescriptionNumber": null,
+      "pharmacyInfo": {
+        "detail": {
+          "rxNumber": null,
+          "statusCodes": {
+            "consumerResponseCode1": "PHE:1010",
+            "consumerResponseCodeType": "ERROR",
+            "rxDetailResponseCode": "010"
+          },
+          "quantity": "0",
+          "previousMailOrPickup": null,
+          "mrn": "BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613DC0EB76475AC646587DCE20D8CC9FA3CCD5CF548860A4D998615B19830B581930DC405CCB0D0E6D9F7E9D15D1F4441D5D8140135A5BD1B5EDF41F89D1DAB420FB87E6A6AFCC8E8734536ADD7801550992388E302E12748C76745EAACA68105643674F6027EB5847E37A08968E8DF37ECD21C188491F177B45C2638B619B1D47BE1DD22EE31A3DA1ED58C967DD6E1EC5922EF6217B934813984EDB8E7B05C3B284C07268D50E1AB0D08E83EDFC462ADC64B53D99B7B41B073E584788DAD6BBDDFC926E27D55D2AA55A1B050F8959263D0CE0782BBB64B7E903BAF22BFDCE83E89E113747939942698D019095B26888D8C8EC828AF394C5209418FD68D1BD3FF0A132217B86350B3BCB0B87EC89B058298D8370323D8D9A4EDB8C44E9159A43F484CA8BE065E51415C186B87FC6CEC33AB42093BCDC4EDD1E862398F3294BBEA396F736AF8AC5AA5B26A9A68D52D91ED6761658EFA126F99C97533F24DEEE26A8060EDC54C9FE675CFEB40A5153D78261E7895F245455E8E538E84DD4C627F62B93797F9A6CDEF50699B2E9883FDFD25FA61593BE6AD5518CF5B4A522765B3FC38F4026AE07EFBD1F917FEFF5EA18C949E455C3F82966EB863F55B1D932002F05B5B8F5DC3591CB6780B2F5B6EB011AB49F289C7B14FEDC89EE95642C012C4D8C2C7CD29BE645B88A9B44B316126963ECF1EED3CA1982C92C65B7B961B5685FBBD3F108EEF634ABE171935D0072A09C29397F2E27C83B11E331E81370942790B804A2E85FEC66D844DA6F6B5F5A4A9E3A1D508AA1B8CCE0E8C474B55E3EAADB1058F824D532F53E8D0B01F9865B994D7514E6F955021E140608221AB0A97441D9663475FD1207D258C5356758895E4100077BBEF6B4C40232FAF8F7FDC38C17229E834D00C6DD5DE6971CB93D0639427083B262D040E098DAFCADEA1FAA710D51D8CA5D4A5",
+          "memberName": {
+            "firstName": "MARIAN",
+            "lastName": "SMITH",
+            "middleName": "WWW"
+          },
+          "nhinId": "0",
+          "coPayAmount": "0.0",
+          "region": "MRN",
+          "sendingApplication": "AMR02",
+          "compound": false,
+          "canOrderRx": false
+        }
+      },
+      "prescriptionValidationStatus": "BLANK",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": null,
+      "lastRxQtyDispensed": null,
+      "totalRefills": "5",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-09-12T13:33:46-07:00",
+        "medicationComments": null,
+        "orderID": "773243609",
+        "routeCID": "12024",
+        "diagnosis": {
+          "codes": {
+            "sourceCode": null,
+            "code": "N76.0",
+            "description": "Bacterial Vaginosis",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          },
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "Fill Now",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": "Oral",
+        "medicationChangeOrderID": null,
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": null,
+        "medicationChangeOrderUCI": null,
+        "DEACode": null,
+        "dispenseAsWritten": null,
+        "id": {
+          "idType": "CID",
+          "id": "84763896"
+        },
+        "orderUCI": "84769221",
+        "doseUnit": null,
+        "controlledMeds": null
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282261"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "5440437"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "100820"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1437336377"
+        }],
+        "consumerName": "WCRDOCTOR GENERAL MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "290337",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "0781-1506-01",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "290337",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "24:24",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "24:04.04.16",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "24:08.08",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "12:16.08.08",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "00093075201",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "A01683",
+          "description": "ERX-ADS",
+          "sourceDescription": null,
+          "type": "ADS"
+        }],
+        "dosage": "50 mg",
+        "legendIndicator": "Prescription",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "12031677"
+        },
+        "name": "Atenolol (TENORMIN) 50 mg Oral Tab",
+        "commonBrandName": "TENORMIN",
+        "shortName": "Atenolol"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "5",
+      "consumerInstructions": "Take 1 tablet orally daily",
+      "firstFill": true,
+      "earliestFillDate": null,
+      "origFillPharmLocCID": "161431",
+      "origMedOrderQty": "1",
+      "startDate": "2019-09-12"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": null,
+      "lastRefillPharmLocCID": null,
+      "prescriptionNumber": null,
+      "pharmacyInfo": {
+        "detail": {
+          "rxNumber": null,
+          "statusCodes": {
+            "consumerResponseCode1": "PHE:1010",
+            "consumerResponseCodeType": "ERROR",
+            "rxDetailResponseCode": "010"
+          },
+          "quantity": "0",
+          "previousMailOrPickup": null,
+          "mrn": "BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613DC0EB76475AC646587DCE20D8CC9FA3CCD5CF548860A4D998615B19830B581930DC405CCB0D0E6D9F7E9D15D1F4441D5D8140135A5BD1B5EDF41F89D1DAB420FB87E6A6AFCC8E8734536ADD7801550992388E302E12748C76745EAACA68105643674F6027EB5847E37A08968E8DF37ECD21C188491F177B45C2638B619B1D47BE1DD22EE31A3DA1ED58C967DD6E1EC5922EF6217B934813984EDB8E7B05C3B284C07268D50E1AB0D08E83EDFC462ADC64B53D99B7B41B073E584788DAD6BBDDFC926E27D55D2AA55A1B050F8959263D0CE0782BBB64B7E903BAF22BFDCE83E89E113747939942698D019095B26888D8C8EC828AF394C5209418FD68D1BD3FF0A132217B86350B3BCB0B87EC89B058298D8370323D8D9A4EDB8C44E9159A43F484CA8BE065E51415C186B87FC6CEC33AB42093BCDC4EDD1E862398F3294BBEA396F736AF8AC5AA5B26A9A68D52D91ED6761658EFA126F99C97533F24DEEE26A8060EDC54C9FE675CFEB40A5153D78261E7895F245455E8E538E84DD4C627F62B93797F9A6CDEF50699B2E9883FDFD25FA61593BE6AD5518CF5B4A522765B3FC38F4026AE07EFBD1F917FEFF5EA18C949E455C3F82966EB863F55B1D932002F05B5B8F5DC3591CB6780B2F5B6EB011AB49F289C7B14FEDC89EE95642C012C4D8C2C7CD29BE645B88A9B44B316126963ECF1EED3CA1982C92C65B7B961B5685FBBD3F108EEF634ABE171935D0072A09C29397F2E27C83B11E331E81370942790B804A2E85FEC66D844DA6F6B5F5A4A9E3A1D508AA1B8CCE0E8C474B55E3EAADB1058F824D532F53E8D0B01F9865B994D7514E6F955021E140608221AB0A97441D9663475FD1207D258C5356758895E4100077BBEF6B4C40232FAF8F7FDC38C17229E834D00C6DD5DE6971CB93D0639427083B262D040E098DAFCADEA1FAA710D51D8CA5D4A5",
+          "memberName": {
+            "firstName": "MARIAN",
+            "lastName": "SMITH",
+            "middleName": "WWW"
+          },
+          "nhinId": "0",
+          "coPayAmount": "0.0",
+          "region": "MRN",
+          "sendingApplication": "AMR02",
+          "compound": false,
+          "canOrderRx": false
+        }
+      },
+      "prescriptionValidationStatus": "BLANK",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": null,
+      "lastRxQtyDispensed": null,
+      "totalRefills": "5",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-09-09T10:42:23-07:00",
+        "medicationComments": null,
+        "orderID": "773243605",
+        "routeCID": "1215",
+        "diagnosis": {
+          "codes": {
+            "sourceCode": null,
+            "code": "J30.9",
+            "description": "Allergic Rhinitis (Nose Congestion)",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          },
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "Fill Now",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": "Each nostril",
+        "medicationChangeOrderID": null,
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": null,
+        "medicationChangeOrderUCI": null,
+        "DEACode": null,
+        "dispenseAsWritten": null,
+        "id": {
+          "idType": "CID",
+          "id": "84763892"
+        },
+        "orderUCI": "84769217",
+        "doseUnit": null,
+        "controlledMeds": null
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282261"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "5440437"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "100820"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1437336377"
+        }],
+        "consumerName": "WCRDOCTOR GENERAL MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "287370",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "0054-3270-99",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "287370",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "52:08.08",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "48:10.08.04",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "60505082901",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }],
+        "dosage": "50 mcg\/actuation",
+        "legendIndicator": "Available in Rx and OTC packages",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "12031012"
+        },
+        "name": "Fluticasone (FLONASE ALLERGY RELIEF) 50 mcg\/actuation Nasl SpSn",
+        "commonBrandName": "FLONASE ALLERGY RELIEF",
+        "shortName": "Fluticasone"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "5",
+      "consumerInstructions": "Use 1 spray in each nostril 2 times a day",
+      "firstFill": true,
+      "earliestFillDate": null,
+      "origFillPharmLocCID": "161431",
+      "origMedOrderQty": "1",
+      "startDate": "2019-09-09"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": null,
+      "lastRefillPharmLocCID": null,
+      "prescriptionNumber": null,
+      "pharmacyInfo": {
+        "detail": {
+          "rxNumber": null,
+          "statusCodes": {
+            "consumerResponseCode1": "PHE:1010",
+            "consumerResponseCodeType": "ERROR",
+            "rxDetailResponseCode": "010"
+          },
+          "quantity": "0",
+          "previousMailOrPickup": null,
+          "mrn": "BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613DC0EB76475AC646587DCE20D8CC9FA3CCD5CF548860A4D998615B19830B581930DC405CCB0D0E6D9F7E9D15D1F4441D5D8140135A5BD1B5EDF41F89D1DAB420FB87E6A6AFCC8E8734536ADD7801550992388E302E12748C76745EAACA68105643674F6027EB5847E37A08968E8DF37ECD21C188491F177B45C2638B619B1D47BE1DD22EE31A3DA1ED58C967DD6E1EC5922EF6217B934813984EDB8E7B05C3B284C07268D50E1AB0D08E83EDFC462ADC64B53D99B7B41B073E584788DAD6BBDDFC926E27D55D2AA55A1B050F8959263D0CE0782BBB64B7E903BAF22BFDCE83E89E113747939942698D019095B26888D8C8EC828AF394C5209418FD68D1BD3FF0A132217B86350B3BCB0B87EC89B058298D8370323D8D9A4EDB8C44E9159A43F484CA8BE065E51415C186B87FC6CEC33AB42093BCDC4EDD1E862398F3294BBEA396F736AF8AC5AA5B26A9A68D52D91ED6761658EFA126F99C97533F24DEEE26A8060EDC54C9FE675CFEB40A5153D78261E7895F245455E8E538E84DD4C627F62B93797F9A6CDEF50699B2E9883FDFD25FA61593BE6AD5518CF5B4A522765B3FC38F4026AE07EFBD1F917FEFF5EA18C949E455C3F82966EB863F55B1D932002F05B5B8F5DC3591CB6780B2F5B6EB011AB49F289C7B14FEDC89EE95642C012C4D8C2C7CD29BE645B88A9B44B316126963ECF1EED3CA1982C92C65B7B961B5685FBBD3F108EEF634ABE171935D0072A09C29397F2E27C83B11E331E81370942790B804A2E85FEC66D844DA6F6B5F5A4A9E3A1D508AA1B8CCE0E8C474B55E3EAADB1058F824D532F53E8D0B01F9865B994D7514E6F955021E140608221AB0A97441D9663475FD1207D258C5356758895E4100077BBEF6B4C40232FAF8F7FDC38C17229E834D00C6DD5DE6971CB93D0639427083B262D040E098DAFCADEA1FAA710D51D8CA5D4A5",
+          "memberName": {
+            "firstName": "MARIAN",
+            "lastName": "SMITH",
+            "middleName": "WWW"
+          },
+          "nhinId": "0",
+          "coPayAmount": "0.0",
+          "region": "MRN",
+          "sendingApplication": "AMR02",
+          "compound": false,
+          "canOrderRx": false
+        }
+      },
+      "prescriptionValidationStatus": "BLANK",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": null,
+      "lastRxQtyDispensed": null,
+      "totalRefills": "5",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-09-05T11:04:05-07:00",
+        "medicationComments": null,
+        "orderID": "773242334",
+        "routeCID": "1205",
+        "diagnosis": {
+          "codes": {
+            "sourceCode": null,
+            "code": "N76.0",
+            "description": "Bacterial Vaginosis",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          },
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "Fill Later",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": "Topical",
+        "medicationChangeOrderID": null,
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": null,
+        "medicationChangeOrderUCI": null,
+        "DEACode": null,
+        "dispenseAsWritten": null,
+        "id": {
+          "idType": "CID",
+          "id": "84762621"
+        },
+        "orderUCI": "84767946",
+        "doseUnit": null,
+        "controlledMeds": null
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282261"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "5440437"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "100820"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1437336377"
+        }],
+        "consumerName": "WCRDOCTOR GENERAL MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "188286",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "11917-01526",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "188286",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "84:24.12",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "00168003501",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }],
+        "dosage": null,
+        "legendIndicator": "Over-the-Counter",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "1208675"
+        },
+        "name": "Vitamin A  &  D Top Oint",
+        "shortName": "Vitamin A  &  D"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "5",
+      "consumerInstructions": "Apply liberally and as often as needed for diaper rash",
+      "firstFill": true,
+      "earliestFillDate": null,
+      "origFillPharmLocCID": "161431",
+      "origMedOrderQty": "10",
+      "startDate": "2019-09-05"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": null,
+      "lastRefillPharmLocCID": null,
+      "prescriptionNumber": null,
+      "pharmacyInfo": {
+        "detail": {
+          "rxNumber": null,
+          "statusCodes": {
+            "consumerResponseCode1": "PHE:1010",
+            "consumerResponseCodeType": "ERROR",
+            "rxDetailResponseCode": "010"
+          },
+          "quantity": "0",
+          "previousMailOrPickup": null,
+          "mrn": "BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613DC0EB76475AC646587DCE20D8CC9FA3CCD5CF548860A4D998615B19830B581930DC405CCB0D0E6D9F7E9D15D1F4441D5D8140135A5BD1B5EDF41F89D1DAB420FB87E6A6AFCC8E8734536ADD7801550992388E302E12748C76745EAACA68105643674F6027EB5847E37A08968E8DF37ECD21C188491F177B45C2638B619B1D47BE1DD22EE31A3DA1ED58C967DD6E1EC5922EF6217B934813984EDB8E7B05C3B284C07268D50E1AB0D08E83EDFC462ADC64B53D99B7B41B073E584788DAD6BBDDFC926E27D55D2AA55A1B050F8959263D0CE0782BBB64B7E903BAF22BFDCE83E89E113747939942698D019095B26888D8C8EC828AF394C5209418FD68D1BD3FF0A132217B86350B3BCB0B87EC89B058298D8370323D8D9A4EDB8C44E9159A43F484CA8BE065E51415C186B87FC6CEC33AB42093BCDC4EDD1E862398F3294BBEA396F736AF8AC5AA5B26A9A68D52D91ED6761658EFA126F99C97533F24DEEE26A8060EDC54C9FE675CFEB40A5153D78261E7895F245455E8E538E84DD4C627F62B93797F9A6CDEF50699B2E9883FDFD25FA61593BE6AD5518CF5B4A522765B3FC38F4026AE07EFBD1F917FEFF5EA18C949E455C3F82966EB863F55B1D932002F05B5B8F5DC3591CB6780B2F5B6EB011AB49F289C7B14FEDC89EE95642C012C4D8C2C7CD29BE645B88A9B44B316126963ECF1EED3CA1982C92C65B7B961B5685FBBD3F108EEF634ABE171935D0072A09C29397F2E27C83B11E331E81370942790B804A2E85FEC66D844DA6F6B5F5A4A9E3A1D508AA1B8CCE0E8C474B55E3EAADB1058F824D532F53E8D0B01F9865B994D7514E6F955021E140608221AB0A97441D9663475FD1207D258C5356758895E4100077BBEF6B4C40232FAF8F7FDC38C17229E834D00C6DD5DE6971CB93D0639427083B262D040E098DAFCADEA1FAA710D51D8CA5D4A5",
+          "memberName": {
+            "firstName": "MARIAN",
+            "lastName": "SMITH",
+            "middleName": "WWW"
+          },
+          "nhinId": "0",
+          "coPayAmount": "0.0",
+          "region": "MRN",
+          "sendingApplication": "AMR02",
+          "compound": false,
+          "canOrderRx": false
+        }
+      },
+      "prescriptionValidationStatus": "BLANK",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": null,
+      "lastRxQtyDispensed": null,
+      "totalRefills": "5",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-09-05T11:04:05-07:00",
+        "medicationComments": null,
+        "orderID": "773242335",
+        "routeCID": "12024",
+        "diagnosis": {
+          "codes": {
+            "sourceCode": null,
+            "code": "N76.0",
+            "description": "Bacterial Vaginosis",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          },
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "Fill Later",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": "Oral",
+        "medicationChangeOrderID": null,
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": null,
+        "medicationChangeOrderUCI": null,
+        "DEACode": null,
+        "dispenseAsWritten": null,
+        "id": {
+          "idType": "CID",
+          "id": "84762622"
+        },
+        "orderUCI": "84767947",
+        "doseUnit": null,
+        "controlledMeds": null
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282261"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "5440437"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "100820"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1437336377"
+        }],
+        "consumerName": "WCRDOCTOR GENERAL MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "279229",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "43292-32128",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "234471",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "88:12",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "79854030020",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }],
+        "dosage": "250 mg",
+        "legendIndicator": "Over-the-Counter",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "12029141"
+        },
+        "name": "Ascorbic Acid (VITAMIN C) 250 mg Oral Tab",
+        "shortName": "Vitamin C"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "5",
+      "consumerInstructions": "Take 1 tablet orally daily",
+      "firstFill": true,
+      "earliestFillDate": null,
+      "origFillPharmLocCID": "161431",
+      "origMedOrderQty": "10",
+      "startDate": "2019-09-05"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": "2021-09-04",
+      "lastRefillPharmLocCID": "161431",
+      "prescriptionNumber": "243101005748",
+      "pharmacyInfo": {
+        "detail": {
+          "rxNumber": "243101005748",
+          "statusCodes": {
+            "consumerResponseCode1": "PHE:1010",
+            "consumerResponseCodeType": "ERROR",
+            "rxDetailResponseCode": "010"
+          },
+          "quantity": "0",
+          "previousMailOrPickup": null,
+          "mrn": "BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613DC0EB76475AC646587DCE20D8CC9FA3CCD5CF548860A4D998615B19830B581930DC405CCB0D0E6D9F7E9D15D1F4441D5D8140135A5BD1B5EDF41F89D1DAB420FB87E6A6AFCC8E8734536ADD7801550992388E302E12748C76745EAACA68105643674F6027EB5847E37A08968E8DF37ECD21C188491F177B45C2638B619B1D47BE1DD22EE31A3DA1ED58C967DD6E1EC5922EF6217B934813984EDB8E7B05C3B284C07268D50E1AB0D08E83EDFC462ADC64B53D99B7B41B073E584788DAD6BBDDFC926E27D55D2AA55A1B050F8959263D0CE0782BBB64B7E903BAF22BFDCE83E89E113747939942698D019095B26888D8C8EC828AF394C5209418FD68D1BD3FF0A132217B86350B3BCB0B87EC89B058298D8370323D8D9A4EDB8C44E9159A43F484CA8BE065E51415C186B87FC6CEC33AB42093BCDC4EDD1E862398F3294BBEA396F736AF8AC5AA5B26A9A68D52D91ED6761658EFA126F99C97533F24DEEE26A8060EDC54C9FE675CFEB40A5153D78261E7895F245455E8E538E84DD4C627F62B93797F9A6CDEF50699B2E9883FDFD25FA61593BE6AD5518CF5B4A522765B3FC38F4026AE07EFBD1F917FEFF5EA18C949E455C3F82966EB863F55B1D932002F05B5B8F5DC3591CB6780B2F5B6EB011AB49F289C7B14FEDC89EE95642C012C4D8C2C7CD29BE645B88A9B44B316126963ECF1EED3CA1982C92C65B7B961B5685FBBD3F108EEF634ABE171935D0072A09C29397F2E27C83B11E331E81370942790B804A2E85FEC66D844DA6F6B5F5A4A9E3A1D508AA1B8CCE0E8C474B55E3EAADB1058F824D532F53E8D0B01F9865B994D7514E6F955021E140608221AB0A97441D9663475FD1207D258C5356758895E4100077BBEF6B4C40232FAF8F7FDC38C17229E834D00C6DD5DE6971CB93D0639427083B262D040E098DAFCADEA1FAA710D51D8CA5D4A5",
+          "memberName": {
+            "firstName": "MARIAN",
+            "lastName": "SMITH",
+            "middleName": "WWW"
+          },
+          "nhinId": "0",
+          "coPayAmount": "0.0",
+          "region": "MRN",
+          "compound": false,
+          "canOrderRx": false
+        }
+      },
+      "prescriptionValidationStatus": "SUCCESS",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": "2019-09-25",
+      "lastRxQtyDispensed": "10",
+      "totalRefills": "5",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-09-05T11:04:05-07:00",
+        "medicationComments": null,
+        "orderID": "773242336",
+        "routeCID": "12024",
+        "diagnosis": {
+          "codes": {
+            "sourceCode": null,
+            "code": "N76.0",
+            "description": "Bacterial Vaginosis",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          },
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "Fill Later",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": "Oral",
+        "medicationChangeOrderID": null,
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": null,
+        "medicationChangeOrderUCI": null,
+        "DEACode": null,
+        "dispenseAsWritten": "No",
+        "id": {
+          "idType": "CID",
+          "id": "84762623"
+        },
+        "orderUCI": "84767948",
+        "doseUnit": null,
+        "controlledMeds": null
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282261"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "5440437"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "100820"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1437336377"
+        }],
+        "consumerName": "WCRDOCTOR GENERAL MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "223228",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "54629-011-62",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "288788",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "88:16",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "54629001162",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }],
+        "dosage": "10 mcg (400 unit)",
+        "legendIndicator": "Over-the-Counter",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "12016543"
+        },
+        "name": "Cholecalciferol, Vitamin D3, (VITAMIN D3) 400 unit Oral Tab",
+        "shortName": "Vitamin D3"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "4",
+      "consumerInstructions": "Take 1 tablet by mouth daily",
+      "firstFill": false,
+      "earliestFillDate": null,
+      "origFillPharmLocCID": "161431",
+      "origMedOrderQty": "10",
+      "startDate": "2019-09-05"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": "2019-12-24",
+      "lastRefillPharmLocCID": null,
+      "prescriptionNumber": null,
+      "pharmacyInfo": {
+        "detail": {
+          "rxNumber": null,
+          "statusCodes": {
+            "consumerResponseCode1": "PHE:1010",
+            "consumerResponseCodeType": "ERROR",
+            "rxDetailResponseCode": "010"
+          },
+          "quantity": "0",
+          "previousMailOrPickup": null,
+          "mrn": "BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613DC0EB76475AC646587DCE20D8CC9FA3CCD5CF548860A4D998615B19830B581930DC405CCB0D0E6D9F7E9D15D1F4441D5D8140135A5BD1B5EDF41F89D1DAB420FB87E6A6AFCC8E8734536ADD7801550992388E302E12748C76745EAACA68105643674F6027EB5847E37A08968E8DF37ECD21C188491F177B45C2638B619B1D47BE1DD22EE31A3DA1ED58C967DD6E1EC5922EF6217B934813984EDB8E7B05C3B284C07268D50E1AB0D08E83EDFC462ADC64B53D99B7B41B073E584788DAD6BBDDFC926E27D55D2AA55A1B050F8959263D0CE0782BBB64B7E903BAF22BFDCE83E89E113747939942698D019095B26888D8C8EC828AF394C5209418FD68D1BD3FF0A132217B86350B3BCB0B87EC89B058298D8370323D8D9A4EDB8C44E9159A43F484CA8BE065E51415C186B87FC6CEC33AB42093BCDC4EDD1E862398F3294BBEA396F736AF8AC5AA5B26A9A68D52D91ED6761658EFA126F99C97533F24DEEE26A8060EDC54C9FE675CFEB40A5153D78261E7895F245455E8E538E84DD4C627F62B93797F9A6CDEF50699B2E9883FDFD25FA61593BE6AD5518CF5B4A522765B3FC38F4026AE07EFBD1F917FEFF5EA18C949E455C3F82966EB863F55B1D932002F05B5B8F5DC3591CB6780B2F5B6EB011AB49F289C7B14FEDC89EE95642C012C4D8C2C7CD29BE645B88A9B44B316126963ECF1EED3CA1982C92C65B7B961B5685FBBD3F108EEF634ABE171935D0072A09C29397F2E27C83B11E331E81370942790B804A2E85FEC66D844DA6F6B5F5A4A9E3A1D508AA1B8CCE0E8C474B55E3EAADB1058F824D532F53E8D0B01F9865B994D7514E6F955021E140608221AB0A97441D9663475FD1207D258C5356758895E4100077BBEF6B4C40232FAF8F7FDC38C17229E834D00C6DD5DE6971CB93D0639427083B262D040E098DAFCADEA1FAA710D51D8CA5D4A5",
+          "memberName": {
+            "firstName": "MARIAN",
+            "lastName": "SMITH",
+            "middleName": "WWW"
+          },
+          "nhinId": "0",
+          "coPayAmount": "0.0",
+          "region": "MRN",
+          "sendingApplication": "AMR02",
+          "compound": false,
+          "canOrderRx": false
+        }
+      },
+      "prescriptionValidationStatus": "BLANK",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": null,
+      "lastRxQtyDispensed": null,
+      "totalRefills": "0",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-09-05T11:19:26-07:00",
+        "medicationComments": null,
+        "orderID": "773242337",
+        "routeCID": "12024",
+        "diagnosis": {
+          "codes": {
+            "sourceCode": null,
+            "code": "M79.672",
+            "description": "Left Foot Pain",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          },
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "Fill Later",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": "Oral",
+        "medicationChangeOrderID": null,
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": null,
+        "medicationChangeOrderUCI": null,
+        "DEACode": "C - II High abuse potential",
+        "dispenseAsWritten": null,
+        "id": {
+          "idType": "CID",
+          "id": "84762624"
+        },
+        "orderUCI": "84767949",
+        "doseUnit": null,
+        "controlledMeds": "Yes"
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282261"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "5440437"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "100820"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1437336377"
+        }],
+        "consumerName": "WCRDOCTOR GENERAL MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "562637",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "17478-450-16",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "562637",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "28:08.08",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "28:08.92",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "17478045016",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }],
+        "dosage": "10-300 mg\/15 mL",
+        "legendIndicator": "Prescription",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "121123268"
+        },
+        "name": "HYDROcodone-acetaminophen (LORTAB ELIXIR) 10-300 mg\/15 mL Oral Soln",
+        "commonBrandName": "LORTAB ELIXIR",
+        "shortName": "HYDROcodone-acetaminophen",
+        "federalDEA": "C-II High Abuse Potential"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "0",
+      "consumerInstructions": "Take 15 ml orally every 6 hours as needed for pain",
+      "firstFill": true,
+      "earliestFillDate": "2019-09-05",
+      "origFillPharmLocCID": "161431",
+      "origMedOrderQty": "100",
+      "startDate": "2019-09-05"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": null,
+      "lastRefillPharmLocCID": null,
+      "prescriptionNumber": null,
+      "pharmacyInfo": {
+        "detail": {
+          "rxNumber": null,
+          "statusCodes": {
+            "consumerResponseCode1": "PHE:1010",
+            "consumerResponseCodeType": "ERROR",
+            "rxDetailResponseCode": "010"
+          },
+          "quantity": "0",
+          "previousMailOrPickup": null,
+          "mrn": "BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613DC0EB76475AC646587DCE20D8CC9FA3CCD5CF548860A4D998615B19830B581930DC405CCB0D0E6D9F7E9D15D1F4441D5D8140135A5BD1B5EDF41F89D1DAB420FB87E6A6AFCC8E8734536ADD7801550992388E302E12748C76745EAACA68105643674F6027EB5847E37A08968E8DF37ECD21C188491F177B45C2638B619B1D47BE1DD22EE31A3DA1ED58C967DD6E1EC5922EF6217B934813984EDB8E7B05C3B284C07268D50E1AB0D08E83EDFC462ADC64B53D99B7B41B073E584788DAD6BBDDFC926E27D55D2AA55A1B050F8959263D0CE0782BBB64B7E903BAF22BFDCE83E89E113747939942698D019095B26888D8C8EC828AF394C5209418FD68D1BD3FF0A132217B86350B3BCB0B87EC89B058298D8370323D8D9A4EDB8C44E9159A43F484CA8BE065E51415C186B87FC6CEC33AB42093BCDC4EDD1E862398F3294BBEA396F736AF8AC5AA5B26A9A68D52D91ED6761658EFA126F99C97533F24DEEE26A8060EDC54C9FE675CFEB40A5153D78261E7895F245455E8E538E84DD4C627F62B93797F9A6CDEF50699B2E9883FDFD25FA61593BE6AD5518CF5B4A522765B3FC38F4026AE07EFBD1F917FEFF5EA18C949E455C3F82966EB863F55B1D932002F05B5B8F5DC3591CB6780B2F5B6EB011AB49F289C7B14FEDC89EE95642C012C4D8C2C7CD29BE645B88A9B44B316126963ECF1EED3CA1982C92C65B7B961B5685FBBD3F108EEF634ABE171935D0072A09C29397F2E27C83B11E331E81370942790B804A2E85FEC66D844DA6F6B5F5A4A9E3A1D508AA1B8CCE0E8C474B55E3EAADB1058F824D532F53E8D0B01F9865B994D7514E6F955021E140608221AB0A97441D9663475FD1207D258C5356758895E4100077BBEF6B4C40232FAF8F7FDC38C17229E834D00C6DD5DE6971CB93D0639427083B262D040E098DAFCADEA1FAA710D51D8CA5D4A5",
+          "memberName": {
+            "firstName": "MARIAN",
+            "lastName": "SMITH",
+            "middleName": "WWW"
+          },
+          "nhinId": "0",
+          "coPayAmount": "0.0",
+          "region": "MRN",
+          "sendingApplication": "AMR02",
+          "compound": false,
+          "canOrderRx": false
+        }
+      },
+      "prescriptionValidationStatus": "BLANK",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": null,
+      "lastRxQtyDispensed": null,
+      "totalRefills": "0",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-09-05T12:04:32-07:00",
+        "medicationComments": null,
+        "orderID": "773242338",
+        "routeCID": "12024",
+        "diagnosis": {
+          "codes": [{
+            "sourceCode": null,
+            "code": "N76.0",
+            "description": "Bacterial Vaginosis",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          }, {
+            "sourceCode": null,
+            "code": "M79.672",
+            "description": "Left Foot Pain",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          }],
+          "description": null
+        },
+        "nonFormularyMeds": "Yes",
+        "orderClass": "Fill Later",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": "Oral",
+        "medicationChangeOrderID": null,
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": null,
+        "medicationChangeOrderUCI": null,
+        "DEACode": "C - II High abuse potential",
+        "dispenseAsWritten": null,
+        "id": {
+          "idType": "CID",
+          "id": "84762625"
+        },
+        "orderUCI": "84767950",
+        "doseUnit": null,
+        "controlledMeds": "Yes"
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282261"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "5440437"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "100820"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1437336377"
+        }],
+        "consumerName": "WCRDOCTOR GENERAL MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "545721",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "64896-695-01",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "545721",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "28:08.08",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "00115123101",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "A06798",
+          "description": "ERX-ADS",
+          "sourceDescription": null,
+          "type": "ADS"
+        }],
+        "dosage": "5 mg",
+        "legendIndicator": "Prescription",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "12195677"
+        },
+        "name": "oxyMORphone 5 mg Oral 12hr SR Tab",
+        "shortName": "oxyMORphone",
+        "federalDEA": "C-II High Abuse Potential"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "0",
+      "consumerInstructions": "Take 2 pill daily",
+      "firstFill": true,
+      "earliestFillDate": "2019-09-05",
+      "origFillPharmLocCID": "161431",
+      "origMedOrderQty": "6",
+      "startDate": "2019-09-05"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": null,
+      "lastRefillPharmLocCID": null,
+      "prescriptionNumber": null,
+      "pharmacyInfo": {
+        "detail": {
+          "rxNumber": null,
+          "statusCodes": {
+            "consumerResponseCode1": "PHE:1010",
+            "consumerResponseCodeType": "ERROR",
+            "rxDetailResponseCode": "010"
+          },
+          "quantity": "0",
+          "previousMailOrPickup": null,
+          "mrn": "BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613DC0EB76475AC646587DCE20D8CC9FA3CCD5CF548860A4D998615B19830B581930DC405CCB0D0E6D9F7E9D15D1F4441D5D8140135A5BD1B5EDF41F89D1DAB420FB87E6A6AFCC8E8734536ADD7801550992388E302E12748C76745EAACA68105643674F6027EB5847E37A08968E8DF37ECD21C188491F177B45C2638B619B1D47BE1DD22EE31A3DA1ED58C967DD6E1EC5922EF6217B934813984EDB8E7B05C3B284C07268D50E1AB0D08E83EDFC462ADC64B53D99B7B41B073E584788DAD6BBDDFC926E27D55D2AA55A1B050F8959263D0CE0782BBB64B7E903BAF22BFDCE83E89E113747939942698D019095B26888D8C8EC828AF394C5209418FD68D1BD3FF0A132217B86350B3BCB0B87EC89B058298D8370323D8D9A4EDB8C44E9159A43F484CA8BE065E51415C186B87FC6CEC33AB42093BCDC4EDD1E862398F3294BBEA396F736AF8AC5AA5B26A9A68D52D91ED6761658EFA126F99C97533F24DEEE26A8060EDC54C9FE675CFEB40A5153D78261E7895F245455E8E538E84DD4C627F62B93797F9A6CDEF50699B2E9883FDFD25FA61593BE6AD5518CF5B4A522765B3FC38F4026AE07EFBD1F917FEFF5EA18C949E455C3F82966EB863F55B1D932002F05B5B8F5DC3591CB6780B2F5B6EB011AB49F289C7B14FEDC89EE95642C012C4D8C2C7CD29BE645B88A9B44B316126963ECF1EED3CA1982C92C65B7B961B5685FBBD3F108EEF634ABE171935D0072A09C29397F2E27C83B11E331E81370942790B804A2E85FEC66D844DA6F6B5F5A4A9E3A1D508AA1B8CCE0E8C474B55E3EAADB1058F824D532F53E8D0B01F9865B994D7514E6F955021E140608221AB0A97441D9663475FD1207D258C5356758895E4100077BBEF6B4C40232FAF8F7FDC38C17229E834D00C6DD5DE6971CB93D0639427083B262D040E098DAFCADEA1FAA710D51D8CA5D4A5",
+          "memberName": {
+            "firstName": "MARIAN",
+            "lastName": "SMITH",
+            "middleName": "WWW"
+          },
+          "nhinId": "0",
+          "coPayAmount": "0.0",
+          "region": "MRN",
+          "sendingApplication": "AMR02",
+          "compound": false,
+          "canOrderRx": false
+        }
+      },
+      "prescriptionValidationStatus": "BLANK",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": null,
+      "lastRxQtyDispensed": null,
+      "totalRefills": "0",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-09-05T12:04:32-07:00",
+        "medicationComments": null,
+        "orderID": "773242339",
+        "routeCID": "12024",
+        "diagnosis": {
+          "codes": [{
+            "sourceCode": null,
+            "code": "N76.0",
+            "description": "Bacterial Vaginosis",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          }, {
+            "sourceCode": null,
+            "code": "M79.672",
+            "description": "Left Foot Pain",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          }],
+          "description": null
+        },
+        "nonFormularyMeds": "Yes",
+        "orderClass": "Fill Later",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": "Oral",
+        "medicationChangeOrderID": null,
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": null,
+        "medicationChangeOrderUCI": null,
+        "DEACode": "C - II High abuse potential",
+        "dispenseAsWritten": null,
+        "id": {
+          "idType": "CID",
+          "id": "84762626"
+        },
+        "orderUCI": "84767951",
+        "doseUnit": null,
+        "controlledMeds": "Yes"
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282261"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "5440437"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "100820"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1437336377"
+        }],
+        "consumerName": "WCRDOCTOR GENERAL MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "570048",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "69344-213-11",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "570048",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "28:08.08",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }],
+        "dosage": "7.5 mg",
+        "legendIndicator": "Prescription",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "121129075"
+        },
+        "name": "oxyCODONE (OXAYDO) 7.5 mg Oral Use Only Tab",
+        "commonBrandName": "OXAYDO",
+        "shortName": "oxyCODONE",
+        "federalDEA": "C-II High Abuse Potential"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "0",
+      "consumerInstructions": "Take 3 pills a day",
+      "firstFill": true,
+      "earliestFillDate": "2019-09-05",
+      "origFillPharmLocCID": "161431",
+      "origMedOrderQty": "9",
+      "startDate": "2019-09-05"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": null,
+      "lastRefillPharmLocCID": null,
+      "prescriptionNumber": null,
+      "pharmacyInfo": {
+        "detail": {
+          "rxNumber": null,
+          "statusCodes": {
+            "consumerResponseCode1": "PHE:1010",
+            "consumerResponseCodeType": "ERROR",
+            "rxDetailResponseCode": "010"
+          },
+          "quantity": "0",
+          "previousMailOrPickup": null,
+          "mrn": "BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613DC0EB76475AC646587DCE20D8CC9FA3CCD5CF548860A4D998615B19830B581930DC405CCB0D0E6D9F7E9D15D1F4441D5D8140135A5BD1B5EDF41F89D1DAB420FB87E6A6AFCC8E8734536ADD7801550992388E302E12748C76745EAACA68105643674F6027EB5847E37A08968E8DF37ECD21C188491F177B45C2638B619B1D47BE1DD22EE31A3DA1ED58C967DD6E1EC5922EF6217B934813984EDB8E7B05C3B284C07268D50E1AB0D08E83EDFC462ADC64B53D99B7B41B073E584788DAD6BBDDFC926E27D55D2AA55A1B050F8959263D0CE0782BBB64B7E903BAF22BFDCE83E89E113747939942698D019095B26888D8C8EC828AF394C5209418FD68D1BD3FF0A132217B86350B3BCB0B87EC89B058298D8370323D8D9A4EDB8C44E9159A43F484CA8BE065E51415C186B87FC6CEC33AB42093BCDC4EDD1E862398F3294BBEA396F736AF8AC5AA5B26A9A68D52D91ED6761658EFA126F99C97533F24DEEE26A8060EDC54C9FE675CFEB40A5153D78261E7895F245455E8E538E84DD4C627F62B93797F9A6CDEF50699B2E9883FDFD25FA61593BE6AD5518CF5B4A522765B3FC38F4026AE07EFBD1F917FEFF5EA18C949E455C3F82966EB863F55B1D932002F05B5B8F5DC3591CB6780B2F5B6EB011AB49F289C7B14FEDC89EE95642C012C4D8C2C7CD29BE645B88A9B44B316126963ECF1EED3CA1982C92C65B7B961B5685FBBD3F108EEF634ABE171935D0072A09C29397F2E27C83B11E331E81370942790B804A2E85FEC66D844DA6F6B5F5A4A9E3A1D508AA1B8CCE0E8C474B55E3EAADB1058F824D532F53E8D0B01F9865B994D7514E6F955021E140608221AB0A97441D9663475FD1207D258C5356758895E4100077BBEF6B4C40232FAF8F7FDC38C17229E834D00C6DD5DE6971CB93D0639427083B262D040E098DAFCADEA1FAA710D51D8CA5D4A5",
+          "memberName": {
+            "firstName": "MARIAN",
+            "lastName": "SMITH",
+            "middleName": "WWW"
+          },
+          "nhinId": "0",
+          "coPayAmount": "0.0",
+          "region": "MRN",
+          "sendingApplication": "AMR02",
+          "compound": false,
+          "canOrderRx": false
+        }
+      },
+      "prescriptionValidationStatus": "BLANK",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": null,
+      "lastRxQtyDispensed": null,
+      "totalRefills": "0",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-09-05T12:04:33-07:00",
+        "medicationComments": null,
+        "orderID": "773242340",
+        "routeCID": "12024",
+        "diagnosis": {
+          "codes": [{
+            "sourceCode": null,
+            "code": "N76.0",
+            "description": "Bacterial Vaginosis",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          }, {
+            "sourceCode": null,
+            "code": "M79.672",
+            "description": "Left Foot Pain",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          }],
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "Fill Later",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": "Oral",
+        "medicationChangeOrderID": null,
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": null,
+        "medicationChangeOrderUCI": null,
+        "DEACode": "C - II High abuse potential",
+        "dispenseAsWritten": null,
+        "id": {
+          "idType": "CID",
+          "id": "84762627"
+        },
+        "orderUCI": "84767952",
+        "doseUnit": null,
+        "controlledMeds": "Yes"
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282261"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "5440437"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "100820"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1437336377"
+        }],
+        "consumerName": "WCRDOCTOR GENERAL MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "265818",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "52959-185-30",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "265818",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "28:08.08",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "42858080101",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "A00511",
+          "description": "ERX-ADS",
+          "sourceDescription": null,
+          "type": "ADS"
+        }],
+        "dosage": "15 mg",
+        "legendIndicator": "Prescription",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "12026128"
+        },
+        "name": "morphine (MS CONTIN\/ORAMORPH SR) 15 mg Oral SR Tab",
+        "commonBrandName": "MS CONTIN\/ORAMORPH SR",
+        "shortName": "morphine",
+        "federalDEA": "C-II High Abuse Potential"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "0",
+      "consumerInstructions": "Take 1 tablet orally every 12 hours for chronic pain",
+      "firstFill": true,
+      "earliestFillDate": "2019-09-05",
+      "origFillPharmLocCID": "161431",
+      "origMedOrderQty": "6",
+      "startDate": "2019-09-05"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": null,
+      "lastRefillPharmLocCID": null,
+      "prescriptionNumber": null,
+      "pharmacyInfo": {
+        "detail": {
+          "rxNumber": null,
+          "statusCodes": {
+            "consumerResponseCode1": "PHE:1010",
+            "consumerResponseCodeType": "ERROR",
+            "rxDetailResponseCode": "010"
+          },
+          "quantity": "0",
+          "previousMailOrPickup": null,
+          "mrn": "BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613DC0EB76475AC646587DCE20D8CC9FA3CCD5CF548860A4D998615B19830B581930DC405CCB0D0E6D9F7E9D15D1F4441D5D8140135A5BD1B5EDF41F89D1DAB420FB87E6A6AFCC8E8734536ADD7801550992388E302E12748C76745EAACA68105643674F6027EB5847E37A08968E8DF37ECD21C188491F177B45C2638B619B1D47BE1DD22EE31A3DA1ED58C967DD6E1EC5922EF6217B934813984EDB8E7B05C3B284C07268D50E1AB0D08E83EDFC462ADC64B53D99B7B41B073E584788DAD6BBDDFC926E27D55D2AA55A1B050F8959263D0CE0782BBB64B7E903BAF22BFDCE83E89E113747939942698D019095B26888D8C8EC828AF394C5209418FD68D1BD3FF0A132217B86350B3BCB0B87EC89B058298D8370323D8D9A4EDB8C44E9159A43F484CA8BE065E51415C186B87FC6CEC33AB42093BCDC4EDD1E862398F3294BBEA396F736AF8AC5AA5B26A9A68D52D91ED6761658EFA126F99C97533F24DEEE26A8060EDC54C9FE675CFEB40A5153D78261E7895F245455E8E538E84DD4C627F62B93797F9A6CDEF50699B2E9883FDFD25FA61593BE6AD5518CF5B4A522765B3FC38F4026AE07EFBD1F917FEFF5EA18C949E455C3F82966EB863F55B1D932002F05B5B8F5DC3591CB6780B2F5B6EB011AB49F289C7B14FEDC89EE95642C012C4D8C2C7CD29BE645B88A9B44B316126963ECF1EED3CA1982C92C65B7B961B5685FBBD3F108EEF634ABE171935D0072A09C29397F2E27C83B11E331E81370942790B804A2E85FEC66D844DA6F6B5F5A4A9E3A1D508AA1B8CCE0E8C474B55E3EAADB1058F824D532F53E8D0B01F9865B994D7514E6F955021E140608221AB0A97441D9663475FD1207D258C5356758895E4100077BBEF6B4C40232FAF8F7FDC38C17229E834D00C6DD5DE6971CB93D0639427083B262D040E098DAFCADEA1FAA710D51D8CA5D4A5",
+          "memberName": {
+            "firstName": "MARIAN",
+            "lastName": "SMITH",
+            "middleName": "WWW"
+          },
+          "nhinId": "0",
+          "coPayAmount": "0.0",
+          "region": "MRN",
+          "sendingApplication": "AMR02",
+          "compound": false,
+          "canOrderRx": false
+        }
+      },
+      "prescriptionValidationStatus": "BLANK",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": null,
+      "lastRxQtyDispensed": null,
+      "totalRefills": "0",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-09-05T12:04:33-07:00",
+        "medicationComments": null,
+        "orderID": "773242342",
+        "routeCID": "12030",
+        "diagnosis": {
+          "codes": [{
+            "sourceCode": null,
+            "code": "N76.0",
+            "description": "Bacterial Vaginosis",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          }, {
+            "sourceCode": null,
+            "code": "M79.672",
+            "description": "Left Foot Pain",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          }],
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "Fill Later",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": "Transdermal",
+        "medicationChangeOrderID": null,
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": null,
+        "medicationChangeOrderUCI": null,
+        "DEACode": "C - II High abuse potential",
+        "dispenseAsWritten": null,
+        "id": {
+          "idType": "CID",
+          "id": "84762629"
+        },
+        "orderUCI": "84767954",
+        "doseUnit": null,
+        "controlledMeds": "Yes"
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282261"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "5440437"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "100820"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1437336377"
+        }],
+        "consumerName": "WCRDOCTOR GENERAL MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "474106",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "0378-9119-98",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "474106",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "28:08.08",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "00378911998",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "A05825",
+          "description": "ERX-ADS",
+          "sourceDescription": null,
+          "type": "ADS"
+        }],
+        "dosage": "12 mcg\/hr",
+        "legendIndicator": "Prescription",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "12167062"
+        },
+        "name": "fentaNYL (DURAGESIC) 12 mcg\/hr TD 72hr Patch",
+        "commonBrandName": "DURAGESIC",
+        "shortName": "fentaNYL",
+        "federalDEA": "C-II High Abuse Potential"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "0",
+      "consumerInstructions": "Apply 1 patch to skin every 3 days",
+      "firstFill": true,
+      "earliestFillDate": "2019-09-05",
+      "origFillPharmLocCID": "161431",
+      "origMedOrderQty": "30",
+      "startDate": "2019-09-05"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": null,
+      "lastRefillPharmLocCID": null,
+      "prescriptionNumber": null,
+      "pharmacyInfo": {
+        "detail": {
+          "rxNumber": null,
+          "statusCodes": {
+            "consumerResponseCode1": "PHE:1010",
+            "consumerResponseCodeType": "ERROR",
+            "rxDetailResponseCode": "010"
+          },
+          "quantity": "0",
+          "previousMailOrPickup": null,
+          "mrn": "BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613DC0EB76475AC646587DCE20D8CC9FA3CCD5CF548860A4D998615B19830B581930DC405CCB0D0E6D9F7E9D15D1F4441D5D8140135A5BD1B5EDF41F89D1DAB420FB87E6A6AFCC8E8734536ADD7801550992388E302E12748C76745EAACA68105643674F6027EB5847E37A08968E8DF37ECD21C188491F177B45C2638B619B1D47BE1DD22EE31A3DA1ED58C967DD6E1EC5922EF6217B934813984EDB8E7B05C3B284C07268D50E1AB0D08E83EDFC462ADC64B53D99B7B41B073E584788DAD6BBDDFC926E27D55D2AA55A1B050F8959263D0CE0782BBB64B7E903BAF22BFDCE83E89E113747939942698D019095B26888D8C8EC828AF394C5209418FD68D1BD3FF0A132217B86350B3BCB0B87EC89B058298D8370323D8D9A4EDB8C44E9159A43F484CA8BE065E51415C186B87FC6CEC33AB42093BCDC4EDD1E862398F3294BBEA396F736AF8AC5AA5B26A9A68D52D91ED6761658EFA126F99C97533F24DEEE26A8060EDC54C9FE675CFEB40A5153D78261E7895F245455E8E538E84DD4C627F62B93797F9A6CDEF50699B2E9883FDFD25FA61593BE6AD5518CF5B4A522765B3FC38F4026AE07EFBD1F917FEFF5EA18C949E455C3F82966EB863F55B1D932002F05B5B8F5DC3591CB6780B2F5B6EB011AB49F289C7B14FEDC89EE95642C012C4D8C2C7CD29BE645B88A9B44B316126963ECF1EED3CA1982C92C65B7B961B5685FBBD3F108EEF634ABE171935D0072A09C29397F2E27C83B11E331E81370942790B804A2E85FEC66D844DA6F6B5F5A4A9E3A1D508AA1B8CCE0E8C474B55E3EAADB1058F824D532F53E8D0B01F9865B994D7514E6F955021E140608221AB0A97441D9663475FD1207D258C5356758895E4100077BBEF6B4C40232FAF8F7FDC38C17229E834D00C6DD5DE6971CB93D0639427083B262D040E098DAFCADEA1FAA710D51D8CA5D4A5",
+          "memberName": {
+            "firstName": "MARIAN",
+            "lastName": "SMITH",
+            "middleName": "WWW"
+          },
+          "nhinId": "0",
+          "coPayAmount": "0.0",
+          "region": "MRN",
+          "sendingApplication": "AMR02",
+          "compound": false,
+          "canOrderRx": false
+        }
+      },
+      "prescriptionValidationStatus": "BLANK",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": null,
+      "lastRxQtyDispensed": null,
+      "totalRefills": "0",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-09-05T14:27:59-07:00",
+        "medicationComments": null,
+        "orderID": "773243600",
+        "routeCID": "12024",
+        "diagnosis": {
+          "codes": [{
+            "sourceCode": null,
+            "code": "N76.0",
+            "description": "Bacterial Vaginosis",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          }, {
+            "sourceCode": null,
+            "code": "M79.672",
+            "description": "Left Foot Pain",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          }],
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "Fill Now",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": "Oral",
+        "medicationChangeOrderID": null,
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": null,
+        "medicationChangeOrderUCI": null,
+        "DEACode": "C - II High abuse potential",
+        "dispenseAsWritten": null,
+        "id": {
+          "idType": "CID",
+          "id": "84763887"
+        },
+        "orderUCI": "84769212",
+        "doseUnit": null,
+        "controlledMeds": "Yes"
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282261"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "5440437"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "100820"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1437336377"
+        }],
+        "consumerName": "WCRDOCTOR GENERAL MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "273536",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "0054-0244-25",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "273536",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "28:08.08",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "48:08",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "00054024425",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "A00538",
+          "description": "ERX-ADS",
+          "sourceDescription": null,
+          "type": "ADS"
+        }],
+        "dosage": "30 mg",
+        "legendIndicator": "Prescription",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "12027867"
+        },
+        "name": "Codeine Sulfate 30 mg Oral Tab",
+        "shortName": "Codeine Sulfate",
+        "federalDEA": "C-II High Abuse Potential"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "0",
+      "consumerInstructions": "Take 1 tablet orally 3 times a day as needed for pain",
+      "firstFill": true,
+      "earliestFillDate": "2019-09-05",
+      "origFillPharmLocCID": "161431",
+      "origMedOrderQty": "3",
+      "startDate": "2019-09-05"
+    }, {
+      "eRefillPharmLocCID": null,
+      "endDate": "2021-09-02",
+      "lastRefillPharmLocCID": "160351",
+      "prescriptionNumber": "235110166677",
+      "pharmacyInfo": {
+        "detail": {
+          "rxNumber": "235110166677",
+          "statusCodes": {
+            "consumerResponseCode1": "PHE:1029",
+            "consumerResponseCodeType": "ERROR",
+            "rxDetailResponseCode": "029"
+          },
+          "quantity": "0",
+          "previousMailOrPickup": null,
+          "mrn": "BA0B11D81C3328850522E92770CC0BF0BBBCE4FA9878E5D6008EBAD9CC2CEFF0B0F0E482EF92AC57262ED37EBA07B94D3E650BBDC85A9E0AACDE404564992DD4624379ED0759A1F1DA0512264DE2B613DC0EB76475AC646587DCE20D8CC9FA3CCD5CF548860A4D998615B19830B581930DC405CCB0D0E6D9F7E9D15D1F4441D5D8140135A5BD1B5EDF41F89D1DAB420FB87E6A6AFCC8E8734536ADD7801550992388E302E12748C76745EAACA68105643674F6027EB5847E37A08968E8DF37ECD21C188491F177B45C2638B619B1D47BE1DD22EE31A3DA1ED58C967DD6E1EC5922EF6217B934813984EDB8E7B05C3B284C07268D50E1AB0D08E83EDFC462ADC64B53D99B7B41B073E584788DAD6BBDDFC926E27D55D2AA55A1B050F8959263D0CE0782BBB64B7E903BAF22BFDCE83E89E113747939942698D019095B26888D8C8EC828AF394C5209418FD68D1BD3FF0A132217B86350B3BCB0B87EC89B058298D8370323D8D9A4EDB8C44E9159A43F484CA8BE065E51415C186B87FC6CEC33AB42093BCDC4EDD1E862398F3294BBEA396F736AF8AC5AA5B26A9A68D52D91ED6761658EFA126F99C97533F24DEEE26A8060EDC54C9FE675CFEB40A5153D78261E7895F245455E8E538E84DD4C627F62B93797F9A6CDEF50699B2E9883FDFD25FA61593BE6AD5518CF5B4A522765B3FC38F4026AE07EFBD1F917FEFF5EA18C949E455C3F82966EB863F55B1D932002F05B5B8F5DC3591CB6780B2F5B6EB011AB49F289C7B14FEDC89EE95642C012C4D8C2C7CD29BE645B88A9B44B316126963ECF1EED3CA1982C92C65B7B961B5685FBBD3F108EEF634ABE171935D0072A09C29397F2E27C83B11E331E81370942790B804A2E85FEC66D844DA6F6B5F5A4A9E3A1D508AA1B8CCE0E8C474B55E3EAADB1058F824D532F53E8D0B01F9865B994D7514E6F955021E140608221AB0A97441D9663475FD1207D258C5356758895E4100077BBEF6B4C40232FAF8F7FDC38C17229E834D00C6DD5DE6971CB93D0639427083B262D040E098DAFCADEA1FAA710D51D8CA5D4A5",
+          "mailable": true,
+          "memberName": {
+            "firstName": "MARIAN",
+            "lastName": "SMITH",
+            "middleName": "WWW"
+          },
+          "nhinId": "900002613",
+          "coPayAmount": "0.0",
+          "region": "MRN",
+          "compound": false,
+          "canOrderRx": false
+        }
+      },
+      "prescriptionValidationStatus": "SUCCESS",
+      "callBackNumber": "408-554-9820",
+      "lastRefillDate": "2019-09-17",
+      "lastRxQtyDispensed": "3",
+      "totalRefills": "5",
+      "eRefillDenyReason": null,
+      "daysOfSupply": null,
+      "orderDesc": null,
+      "order": {
+        "owner": "urn:kp:witssb3",
+        "orderDateTime": "2019-09-03T15:20:05-07:00",
+        "medicationComments": null,
+        "orderID": "773242333",
+        "routeCID": "12024",
+        "diagnosis": {
+          "codes": {
+            "sourceCode": null,
+            "code": "N76.0",
+            "description": "Bacterial Vaginosis",
+            "sourceDescription": null,
+            "type": "ICD-10-CM"
+          },
+          "description": null
+        },
+        "nonFormularyMeds": null,
+        "orderClass": "Fill Now",
+        "frequency": null,
+        "frequencyCID": null,
+        "volume": null,
+        "dose": null,
+        "unit": null,
+        "route": "Oral",
+        "medicationChangeOrderID": null,
+        "orderMode": "Outpatient",
+        "medicationChangeOrderCID": null,
+        "medicationChangeOrderUCI": null,
+        "DEACode": null,
+        "dispenseAsWritten": "No",
+        "id": {
+          "idType": "CID",
+          "id": "84762620"
+        },
+        "orderUCI": "84767945",
+        "doseUnit": null,
+        "controlledMeds": null
+      },
+      "prescriber": {
+        "clinicalName": null,
+        "ids": [{
+          "idType": "CID",
+          "id": "841282261"
+        }, {
+          "idType": "NPI",
+          "id": null
+        }, {
+          "idType": "PROVIDER ID - CPM",
+          "id": "5440437"
+        }, {
+          "idType": "PROVIDER ID - NORTHERN CALIFORNIA",
+          "id": "100820"
+        }, {
+          "idType": "NPI SER ID TYPE",
+          "id": "1437336377"
+        }],
+        "consumerName": "WCRDOCTOR GENERAL MD"
+      },
+      "clinicalInstructions": null,
+      "medicine": {
+        "codes": [{
+          "sourceCode": null,
+          "code": "277834",
+          "description": "First Data Bank Code",
+          "sourceDescription": null,
+          "type": "FDB"
+        }, {
+          "sourceCode": null,
+          "code": "0093-0576-06",
+          "description": "National Drug Code",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "277834",
+          "description": "Generic Product Identifier",
+          "sourceDescription": null,
+          "type": "GPI"
+        }, {
+          "sourceCode": null,
+          "code": "24:06.08",
+          "description": "American Hospital Formulary Service Code",
+          "sourceDescription": null,
+          "type": "AHFS"
+        }, {
+          "sourceCode": null,
+          "code": "61442014201",
+          "description": "PREFERRED NDC",
+          "sourceDescription": null,
+          "type": "NDC"
+        }, {
+          "sourceCode": null,
+          "code": "A00679",
+          "description": "ERX-ADS",
+          "sourceDescription": null,
+          "type": "ADS"
+        }],
+        "dosage": "20 mg",
+        "legendIndicator": "Prescription",
+        "sourceSystemId": {
+          "idType": "CID",
+          "id": "12028828"
+        },
+        "name": "Lovastatin (MEVACOR) 20 mg Oral Tab",
+        "commonBrandName": "MEVACOR",
+        "shortName": "Lovastatin"
+      },
+      "eRefillApprovalRxName": null,
+      "reasonForDiscontinuation": null,
+      "refillsRemaining": "4",
+      "consumerInstructions": "Take 3 tablet orally daily",
+      "firstFill": false,
+      "earliestFillDate": null,
+      "origFillPharmLocCID": "160613",
+      "origMedOrderQty": "3",
+      "startDate": "2019-09-03"
+    }]
+  }
+}

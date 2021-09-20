@@ -1,0 +1,884 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="PluralsCandidate,ButtonCase,StringFormatCount">
+
+    <string name="__blank" />
+    <string name="_temp">TempTemp Temp Tempytemp</string>
+    <string name="_dosecast">My KP Meds</string>
+    <string name="_none">None</string>
+    <string name="_done">Save</string>
+    <string name="_cancel">CANCEL</string>
+    <string name="_ok">OK</string>
+    <string name="_edit">Edit</string>
+    <string name="_on">On</string>
+    <string name="_off">Off</string>
+    <string name="_clear">Clear</string>
+    <string name="_delete">Delete</string>
+    <string name="_schedule">Schedule</string>
+    <string name="_never">Never</string>
+    <string name="_starting">Starting</string>
+    <string name="_ending">Ending</string>
+    <string name="_after_dose">after dose</string>
+    <string name="_reset">Reset</string>
+    <string name="_not_set">Not Set</string>
+    <string name="_notes">Notes</string>
+    <string name="_action">Action</string>
+    <string name="_limit">Limit</string>
+    <string name="_for">For</string>
+    <string name="_me">me</string>
+    <string name="once_or_more_per_day">Daily</string>
+    <string name="_weekly">Weekly</string>
+    <string name="_monthly">Monthly</string>
+    <string name="_week">Week</string>
+    <string name="_weeks">Weeks</string>
+    <string name="_day">Day</string>
+    <string name="_days">Days</string>
+    <string name="days">days</string>
+    <string name="_hour">Hour</string>
+    <string name="_hours">Hours</string>
+    <string name="_minute">Minute</string>
+    <string name="_minutes_small">mins</string>
+    <string name="_minutes">Minutes</string>
+    <string name="_today">Today</string>
+    <string name="_tomorrow">Tomorrow</string>
+    <string name="_yesterday">Yesterday</string>
+    <string name="_all">All</string>
+    <string name="_prescription">Prescription</string>
+    <string name="_otc">OTC</string>
+    <string name="_searching">Searching&#8230;</string>
+    <string name="_up">Up</string>
+    <string name="_every_interval">Every %1$s</string>
+    <string name="cannot_be_postponed_subst">%1$s cannot be postponed past %2$s.</string>
+    <string name="_dose">dose</string>
+    <string name="_doses">doses</string>
+    <string name="at_limit">At Daily Limit!</string>
+    <string name="dosage">Dosage</string>
+
+    <!-- Drug Info and Edit Screens -->
+    <string name="drug_name">Medication Name</string>
+    <string name="drug_database_name_search_title">Select Medication Name</string>
+    <string name="select_variant">Select Variant</string>
+    <string name="select_variant_help">Select the variant of this medication.</string>
+    <string name="enter_more_search_text">To search, enter at least 3 characters.</string>
+    <string name="no_drugs_found">No medications found in database. Revise your search term or tap Cancel to enter a custom medication name.</string>
+    <string name="pick_a_variant">Select one of the medication variants.</string>
+    <string name="drug_name_required">Medication name is required.</string>
+    <string name="drug_type">Medication Type</string>
+    <string name="drug_types_custom">Custom Medication Types</string>
+    <string name="drug_type_custom">Custom Medication Type</string>
+    <string name="drug_type_in_use">%1$s can not be deleted because one or more medications (%2$s) are using it.</string>
+    <string name="drug_directions">Directions</string>
+    <string name="drug_take_drug">Take Medication</string>
+    <string name="_units_in_stock">Units in stock</string>
+    <string name="refills_remaining">Refills Remaining</string>
+    <string name="refill_alert_none">No refill alerts</string>
+    <string name="refill_alert_one_day">1 day before empty</string>
+    <string name="refill_alert_multiple_days">%d days before empty</string>
+    <string name="refill_alert_one_week">1 week before empty</string>
+    <string name="refill_alert_multiple_weeks">%d weeks before empty</string>
+    <string name="refill_alert_one_dose">1 dose before empty</string>
+    <string name="refill_alert_multiple_doses">%d doses before empty</string>
+    <string name="refill_dialog_i_understand">I understand</string>
+    <string name="_doctor">Doctor</string>
+    <string name="_pharmacy">Pharmacy</string>
+    <string name="_prescription_num">Prescription #</string>
+    <string name="no_contacts">Sorry, this device doesn\'t seem to have a contacts application.</string>
+    <string name="on_a_schedule">On a Schedule</string>
+    <string name="as_needed">As needed</string>
+    <string name="end_must_be_after_start">The medication\'s end date must be after its start date (currently %1$s). Choose a later date.</string>
+    <string name="limit_per_day">Per Day</string>
+    <string name="limit_per_24hours">Per 24 Hours</string>
+    <string name="edit_drug">Edit Medication</string>
+    <string name="new_drug">New Medication</string>
+
+    <!-- Settings Page -->
+    <string name="managed_drug_changed_header">New From Kaiser Permanente</string>
+    <string name="managed_drug_updated_header">Updated</string>
+    <string name="early_dose_warning_subst">Your Next dose of %1$s is scheduled to be taken more than one hour from now (%2$s).
+        \n\nChange the settings to disable this alert.</string>
+    <string name="early_dose_warning_subst_more_than_one">These Medications are scheduled to be taken more than one hour from now (%2$s).
+        \n\nChange the settings to disable this alert.</string>
+    <string name="phone_default">Phone Default</string>
+    <string name="setting_reminder_sound_help">Medication reminder sound:</string>
+    <string name="setting_signout_confirm">Sign Out?</string>
+    <string name="edit_history_no_entries">No dose log entries for %1$s for the past %2$d days.</string>
+
+    <!-- History -->
+    <string name="edit_history_entry_event_time">Event Time</string>
+    <string name="history_email_subject">My KP Meds Medication History Log</string>
+    <string name="history_email_description">The My KP Meds medication history log for %1$s for the past %2$s is attached.</string>
+
+    <!-- Registration -->
+
+    <string name="server_progress">Please wait while we update your information</string>
+    <string name="server_failure">Server Error: An internal error has occurred on the My KP Meds server. Please try again in a few minutes, and if the issue persists, please contact us.</string>
+    <string name="send_mail">Send mail&#8230;</string>
+    <string name="email_title">Privacy Alert</string>
+    <string name="email_warning">Are you sure you want to send? Your medication information will no longer be protected by the secure My KP Meds app.</string>
+    <string name="email_drug_summary_subject">My KP Meds Medication List</string>
+    <string name="email_drug_body">The current list of medications tracked in My KP Meds is attached.</string>
+    <string name="email_drug_table_wrapper">
+<![CDATA[
+	    <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\" />
+		<html>
+			<head>
+				<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\" />
+				<title>My KP Meds Log</title>
+			</head>
+			<body style=\"background: none; font-family: Helvetica, sans-serif; font-size: 13px; margin: 0; padding: 0 15px; text-align: left; text-decoration: none;\">
+				<div class=\"container\" style=\"background: none; margin: 0; padding: 0; text-decoration: none; display: block;\">
+					<div class=\"headerTitle bold\" style=\"font-family: Helvetica Neue; font-size: 14px; font-weight: bold; color: #000000; margin: 0; display: block;\">
+					    <div style=\"background:none;margin:0;padding:0;text-decoration:none;display:block\">
+					        <div style=\"margin:0;display:block\">
+					        	<table style=\"border-collapse:collapse;border:1px solid #797979;padding:0;text-decoration:none;vertical-align:bottom\" cellpadding=\"3\">
+					            	<tbody>%1$s</tbody>
+					        	</table>
+					        </div>
+					    </div>
+					</div>
+					<div class=\"footer\" style=\"font-family: Helvetica Neue; font-size: 12px; color: #000000; font-style:italic; margin: 0; width: 80%%; display: block;\">
+					    <p>These are the medications as entered into the My KP Meds App. This list may or may not match your medical record.</p>
+					</div>
+				</div>
+			</body>
+		</html>
+	]]>
+    </string>
+    <string name="email_html_drug_table_header_row">
+<![CDATA[
+        <tr style=\"background:none repeat scroll 0 0 #cccccc;font-size:12px;min-height:25px;width:auto\">%1$s</tr>
+    ]]>
+    </string>
+    <string name="email_html_drug_table_data_row">
+<![CDATA[
+        <tr>%1$s</tr>
+    ]]>
+    </string>
+    <string name="email_html_drug_table_column">
+<![CDATA[
+        <td style=\"font-family:Helvetica Neue;border:1px solid black\">%1$s</td>
+    ]]>
+    </string>
+
+    <string name="person_in_use">%1$s can not be deleted until that person\'s medications (%2$s) are assigned to someone else.</string>
+    <string name="history_menu_email">Email</string>
+    <string name="history_menu_edit">Edit</string>
+
+    <!-- More screen -->
+    <string name="broadcastPermission">Broadcast Permission</string>
+    <string name="network_error_text">A network connection cannot be established. Please try again later.</string>
+
+    <!-- Success screen strings -->
+    <string name="dialog_touch_outside_sign_in">Sign In</string>
+    <string name="delete_drug_title">Delete Medication?</string>
+    <string name="delete_drug_hint">This action cannot be undone.</string>
+    <string name="_archive_med">Archiving medication</string>
+    <string name="_archive_med_description">Hide this medication from your medication list.</string>
+    <string name="archive_otc_medication_list_header_text">Personally added medications</string>
+    <string name="archive_kphc_medication_list_header_text">Kaiser Permanente medications</string>
+    <string name="archive_kphc_medication_list_message_text">To remove these medications off your list,\n please contact your primary care physician</string>
+    <string name="button_reminder_med">Refill Medications</string>
+    <string name="button_refill_reminder">Create Refill Reminder</string>
+    <string name="schedule_screen_empty_text">No medications\nscheduled</string>
+    <string name="archive_empty_help_text"><b>You have no medications in this list.</b>\n\nTo archive a medication, go to the list or detail view of Medications.\n\nArchived medications can be restored later if needed.</string>
+
+    <!-- History screen new UI -->
+    <string name="history_email">Email History</string>
+    <string name="title_activity_over_due_reminder_screen">OverDueReminderScreen</string>
+    <string-array name="reminder_nag_frequency">
+        <item>Never</item>
+        <item>5 minutes</item>
+        <item>10 minutes</item>
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+    </string-array>
+    <string-array name="history_reminder_window">
+        <item>1 day</item>
+        <item>14 days</item>
+        <item>1 month</item>
+        <item>3 months</item>
+        <item>1 year</item>
+        <item>2 years</item>
+    </string-array>
+
+    <string-array name="new_history_reminder_window">
+        <item>14 days</item>
+        <item>1 month</item>
+        <item>3 months</item>
+        <item>1 year</item>
+        <item>2 years</item>
+    </string-array>
+
+    <string-array name="history_period">
+        <item>14 Days</item>
+        <item>1 Month</item>
+        <item>3 Months</item>
+        <item>1 Year</item>
+        <item>2 Years</item>
+    </string-array>
+
+    <!-- time and date pickers -->
+    <string name="_colon">:</string>
+
+    <string name="hoursAlert">hours</string>
+    <string name="minsAlert">mins</string>
+    <string name="cancelAlert">Cancel</string>
+    <string name="setAlert"><b>Set</b></string>
+
+    <!-- nav drawer strings -->
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
+    <string name="nav_icon">nav_icon</string>
+    <string name="medications">Medications</string>
+    <string name="daily_schedule">Daily Schedule</string>
+    <string name="schedule">Schedule</string>
+    <string name="prescription_refills">Prescription Refills</string>
+    <string name="schedule_wizard">Schedule Wizard</string>
+    <string name="history">History</string>
+    <string name="archive_">Archive</string>
+    <string name="settings">Settings</string>
+    <string name="guide">Guide</string>
+    <string name="support">Support</string>
+    <string name="signout">Sign Out</string>
+    <string name="home">Home</string>
+    <string name="empty" />
+
+    <string-array name="daily_allowance_limit">
+        <item>None</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <!-- Drug Details Screen Strings -->
+    <string name="_med_details_add_medication">Add Medication</string>
+    <string name="no_dose_limit">None</string>
+
+    <!-- Settings US6427 -->
+    <string name="session_expiry_title_text">Session Expired</string>
+    <string name="session_expiry_message_text">Your session has expired. Please start again.</string>
+
+    <!-- Internationalisation Fixes -->
+    <string name="data_unavailable">Data Unavailable</string>
+    <string name="network_connection_error">A network connection cannot be established. Please try again later.</string>
+    <string name="_am">am</string>
+    <string name="_pm">pm</string>
+    <string name="call">Call</string>
+    <string name="unable_to_load_webview">Unable to load the webview.</string>
+    <string name="_error">Error</string>
+    <string name="_close">Close</string>
+    <string name="set_dose_limit_title">Set dose limit</string>
+    <string name="_set_caps">SET</string>
+    <string name="taken_text">Taken</string>
+    <string name="Monday">Monday</string>
+    <string name="Tuesday">Tuesday</string>
+    <string name="WednessDay">Wednesday</string>
+    <string name="Thursday">Thursday</string>
+    <string name="Friday">Friday</string>
+    <string name="Saturday">Saturday</string>
+    <string name="Sunday">Sunday</string>
+    <string name="set_reminder">Set Reminder</string>
+    <string name="never">Never</string>
+    <string name="_reload">Reload</string>
+    <string name="txt_decimal_view">.</string>
+    <string name="txt_item_labelled">Label</string>
+    <string name="txt_item_value">Value</string>
+    <string name="txt_remindter_set_time_daily">Daily</string>
+    <string name="txt_remindter_set_time_weekly">Weekly</string>
+    <string name="txt_remindter_set_time_monthly">Monthly</string>
+    <string name="txt_imagecontentdesc">contentDescription</string>
+    <string name="txt_picklist_dialog_listmenu_help">Help text describing what sort of item is being selected.</string>
+    <string name="txt_spinner_digit_view">0</string>
+    <string name="txt_druglist_item_date">Header</string>
+    <string name="txt_refill_content_desc">Refill alert</string>
+
+    <!-- Adding Strings for US9506 -->
+    <string name="archive_hint">Archiving medications will remove medications from your list. You can restore it from navigation drawer.</string>
+    <!--Adding String for US5997 -->
+    <string name="reminder">Reminder</string>
+
+    <!--Adding for US9785-->
+    <string name="taken_all">Taken All</string>
+    <string name="taken_all_earlier">Taken All Earlier</string>
+    <string name="taken_earlier">Taken \nEarlier</string>
+    <string name="skip_all">Skipped \nAll</string>
+    <string name="take">Taken</string>
+    <string name="taken_undo_text">UNDO</string>
+    <string name="action_taken_title">GREAT JOB</string>
+    <string name="action_taken_msg">Your medication history has been updated.</string>
+    <string name="keep_it_up_message">Keep it up! Taking medications as prescribed is key for your health</string>
+    <!--Adding for US9791-->
+    <string name="skipall_alert_message">Are you sure you want to\nskip all your medications?</string>
+    <string name="skip_alert_message">Are you sure you want to\nskip your medication?</string>
+    <string name="skipped">Skipped</string>
+    <string name="reminders">Reminders</string>
+    <string name="every">Every</string>
+    <string name="refill_prescriptions_desc">You will see all your prescribed medications, including archived medications, when refilling. Select the medications you wish to refill.</string>
+    <!-- US10078-->
+    <string name="late_reminder_header_yesterday"><i>yesterday</i></string>
+    <string name="okay">Okay</string>
+    <!--US10694-->
+    <string name="save">Save</string>
+    <string name="remind_me_again_cancel">Cancel</string>
+    <string name="rem_first"><b>15</b>\nmin</string>
+    <string name="rem_second"><b>30</b>\nmin</string>
+    <string name="rem_third"><b>45</b>\nmin</string>
+    <string name="rem_fourth"><b>60</b>\nmin</string>
+    <string name="create_schedule">Create Schedule</string>
+    <string name="archive_details_medication_image_content_description">Medication Image</string>
+    <string name="archive_details_restore_button_text">Restore Medication</string>
+    <string name="archive_details_restore_hint_text">Add medication back to active list.</string>
+    <string name="archive_details_restore_dialog_message">This medication has been\nadded back to your Schedule\nand Medication list.</string>
+    <string name="archive_details_delete_button_text">Delete Medication</string>
+    <string name="no_history_yet">No history yet</string>
+    <string name="archive_details_delete_dialog_message">Permanently deleting medication and history.\nYou will not be able to undo.</string>
+    <string name="history_base_screen_bottom_text">You’re viewing %s of medication history.\nChange timeframe in settings.</string>
+    <string name="not_taken">Not\nTaken</string>
+    <string name="set_today">Set to Today</string>
+    <string name="set_never">Set to Never</string>
+    <string name="weeks_on">weeks</string>
+    <string name="no_additional_notes">No additional Notes</string>
+    <string name="drug_action_taken">Taken</string>
+    <string name="drug_action_skipped">Skipped</string>
+    <string name="drug_action_not_taken">Not Taken</string>
+    <string name="drug_action_postponed">Postponed</string>
+    <string name="email_txt_taken">Taken</string>
+    <string name="email_txt_not_taken">Skipped</string>
+    <string name="lbl_btn_yes">Yes</string>
+    <string name="lbl_no">No</string>
+
+    <!-- settings screen -->
+    <string name="manage_members">Manage Members</string>
+    <string name="security">Security &amp; Privacy</string>
+    <string name="app_info">App Information</string>
+    <string name="notification">Notification Sound</string>
+    <string name="repeat_reminders">Repeat Reminders After</string>
+    <string name="show_history">Show History for</string>
+    <string name="clear_data">Clear All Stored Data</string>
+    <string name="clear_data_subtext">Delete all My KP Meds information stored on this device</string>
+    <string name="clear_data_message">Are you sure you want to clear stored data?</string>
+    <string name="last_sync">Last Synced</string>
+    <string name="settings_version">Version</string>
+    <string name="manage_members_medications_subtext">View and manage a family members\nmedications</string>
+    <string name="manage_members_reminders_subtext">Get reminders for scheduled reminders</string>
+    <string name="settings_display_name">Display Name</string>
+
+    <!--History Edit Screen Strings -->
+    <string name="history_edit_screen_medication_label_text">Medication</string>
+    <string name="history_edit_screen_time_label_text">Time</string>
+    <string name="appointment_advice">For questions about symptoms or medical advice</string>
+    <string name="appointment_advice_mid">For questions about symptoms or medical advice</string>
+    <string name="appointment_advice_phone"><u>1-866-454-8855</u></string>
+    <string name="medications_ques">For questions about your medications</string>
+    <string name="lbl_support">Support</string>
+    <string name="lbl_app_support">App Support</string>
+    <string name="lbl_appointments_and_advice">Appointments and Advice</string>
+    <string name="lbl_app_support_note">Experiencing a problem with My KP Meds?</string>
+    <string name="lbl_privacy_statement">Privacy Statement</string>
+    <string name="lbl_term_and_conditions">Terms and Conditions</string>
+    <string name="lbl_version">Version</string>
+    <string name="lbl_legal_terms">Legal Terms</string>
+    <string name="manage_med_error_alert_title">Manage Medications Alert</string>
+    <string name="manage_med_error_alert_message">My KP Meds requires at least one active member</string>
+    <string name="pharmacy_call_center">Pharmacy Call Center</string>
+    <string name="mid_ph_no">1-866-299-9415</string>
+    <string name="mid_call_center_available_time">Available M-Th: 8 am -7 pm, Fri 8 am - 5 pm.</string>
+    <string name="mid_pharmacy_info">For routine (maintenance) medications, members can phone, fax, or mail in their refill order using our EZ Refill line. Members can request mail delivery anywhere in the U.S. for no additional charge, or pick up their medicine at a Kaiser Permanente medical center pharmacy. Members will usually receive their delivery within 7 to 10 business days. Members can also call to find out when their refills are ready or talk to a pharmacists.</string>
+    <string name="signin_myMeds">Sign In</string>
+    <string name="add_proxy_msg">Members you have caregiver access for have been added. Manage their medications in Settings.</string>
+    <string name="drop_proxy_msg">Members you have caregiver access for have been removed. Sign in to update reminders for you and your family.</string>
+    <string name="add_drop_proxy_msg">Members you have caregiver access for have updated. Sign in to update reminders for you and your family.</string>
+    <string name="proxy_post_signin">We have updated your schedule and medication lists.</string>
+    <string name="generic_message_alert">There have been multiple changes to My KP Meds. Sign in to see updates.</string>
+    <string name="kphc_med_new_remove">There has been a change to your Kaiser Permanente medications. Sign in to view updates.</string>
+    <string name="kphc_med_updated">There has been a change to your Kaiser Permanente medications. Sign in to view updates.</string>
+    <string name="medication_schedule_changed">A member you have caregiver access for has made changes to their medications. Sign in to see updates.</string>
+    <string name="medications_post_signin">Medication lists and scheduled reminders are up to date.</string>
+    <string name="proxy_status_error">Invalid Status code.</string>
+    <string name="discontinued_medication_alert_message">These medications have been discontinued or expired.</string>
+    <string name="discontinued_interval_drugs_message">Interval reminders have been discontinued. Create a new reminder schedule</string>
+    <string name="signed_out_reminder_on_text">The app works best when this feature is enabled.</string>
+    <string name="signed_out_reminder_off_text">Turn on to receive reminders without signing in.</string>
+    <string name="reminders_without_signing_in_label">Reminders Without Signing In</string>
+    <string name="repeat_reminder_dialog_header">Repeat Reminders</string>
+    <string name="no_medication_available">No medications available</string>
+    <string name="no_medication_history">No medication\nhistory</string>
+    <string name="alert_message_for_reschedule">Your previously scheduled medication reminders will be updated.</string>
+    <string name="unable_to_update">Unable to update</string>
+    <string name="no_internet_connection">Check internet connection or try again later.</string>
+    <string name="max_doasage_limit_reached_msg">You have reached your maximum dose limit for today.</string>
+    <string name="max_reached_title">Warning</string>
+    <string name="passed_reminders_keep_it_up_message">Keep it up. Taking medications as prescribed is key for your health.</string>
+    <string name="upgrade_now_alert_btn_text">Upgrade Now</string>
+    <string name="update_now_alert_btn_text">Update Now</string>
+    <string name="remind_later_alert_btn_text">Remind Me Later</string>
+
+    <!-- Activation Library Strings -->
+    <string name="ok_text">OK</string>
+    <string name="password_hint">Password</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
+    <string name="actionbar_title_privacy_practice">Privacy Statement</string>
+    <string name="termsNcon">Terms &amp; Conditions</string>
+    <string name="data_unavailable_title">Data unavailable</string>
+    <string name="alert_network_error">A network connection cannot be established. Please try again later</string>
+    <string name="alert_network_error_for_sign_in">You need to be online to sign in.</string>
+    <string name="alert_error_status_5">User ID or Password is invalid, try again.</string>
+    <string name="title_activity_login_error">LoginErrorActivity</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="alert_error_status_20">We\'re sorry, we\'re unable to connect to retrieve your data at this time. Please try again later.</string>
+    <string name="continue_text">Continue</string>
+    <string name="acti_lib_alert_device_switch_title">You\'re also signed in on another device.</string>
+    <string name="acti_lib_alert_device_switch_msg_multiuser">If you continue, any changes will not appear on previous device until you sign in to that device again.</string>
+    <string name="acti_lib_alert_user_switch_title">Signing in as another user?</string>
+    <string name="acti_lib_alert_user_switch_msg">If you continue, the previous user will stop getting alerts on this device.</string>
+    <string name="act_lib_usethis_device_text">Use this device</string>
+    <string name="signin_question_one_txt">Why do I need to sign in?</string>
+    <string name="signin_answer_one_txt">We ask you to sign in with your kp.org user ID and password to protect the privacy of your health information when using our app.</string>
+    <string name="signin_question_two_txt">How do I get a user ID and password?</string>
+    <string name="signin_answer_two_txt">If you\'re a Kaiser Permanente member, you can register at kp.org for a new user ID and password.</string>
+    <string name="default_app_name">My KP Meds</string>
+    <string name="action_settings">Settings</string>
+    <string name="info">i</string>
+    <string name="warning_title">Medication warning</string>
+    <string name="tap_to_continue">Tap to continue</string>
+    <string name="close">CLOSE</string>
+    <string name="close_btn_txt">Close</string>
+    <string name="acti_lib_lockout_title">Security Alert</string>
+    <string name="acti_lib_online_lockout_msg">We\'ve disabled your account for your protection. Please sign in to kp.org to reactivate it.</string>
+    <string name="warning_load_medication_txt"> Load medications </string>
+    <string name="warning_load_medication_from_medical_record">from my medical record</string>
+    <string name="time_to_upgrade_title">Time to upgrade</string>
+    <string name="time_to_upgrade_msg">To continue using My KP Meds you must get the latest version from the Google Play Store.</string>
+    <string name="upgrade_button_text">Upgrade</string>
+
+    <!-- Iteration 75 -->
+    <string name="remember_user_id_text_caps">Remember me</string>
+    <string name="signin_help_text_underlined">Sign-In Help</string>
+    <string name="register_now_btn_txt_new">Create kp.org Account</string>
+    <string name="forgot_user_btn_txt_new">Forgot User ID</string>
+    <string name="forgot_pwd_btn_txt_new">Forgot Password</string>
+    <string name="nma_alert">Alert</string>
+    <string name="session_expiry_title">Session Expired</string>
+    <string name="session_expiry_message">Your session has expired. Please start again.</string>
+    <string name="txt_warning_img">warning image</string>
+
+    <!-- New Intro Screen Proxy Iteration 101 -->
+    <string name="camera_permission">Camera Permission Denied. </string>
+    <string name="contact_permission">Contact Permission Denied. </string>
+    <string name="storage_permission">Storage Permission Denied. </string>
+    <string name="call_permission">Call Permission Denied. </string>
+    <string name="permission_denied"> Permission denied </string>
+    <string name="permission_denied_settings"> Please go to apps settings and change the permission </string>
+    <string name="version">Version</string>
+
+    <!--quick view re acceptance screen strings-->
+    <string name="txt_sunday">Sun</string>
+    <string name="txt_monday">Mon</string>
+    <string name="txt_tuesday">Tue</string>
+    <string name="txt_wednesday">Wed</string>
+    <string name="txt_thursday">Thu</string>
+    <string name="txt_friday">Fri</string>
+    <string name="txt_saturday">Sat</string>
+    <string name="delete_schedule_title">Deleting Schedule</string>
+    <string name="delete_schedule">Delete Schedule</string>
+    <string name="delete_schedule_message">You will no longer receive reminders for this medication.</string>
+    <string name="progress_msg">Please wait...</string>
+    <string name="cancel">Cancel</string>
+    <string name="archive">Archive</string>
+    <string name="on">" on "</string>
+    <string name="susan">Susan</string>
+    <string name="nathan">Nathan</string>
+    <string name="application">Application</string>
+    <string name="_18">18</string>
+    <string name="acyclovir">Acyclovir</string>
+    <string name="mar_29">MAR 29</string>
+    <string name="flonase">Flonase</string>
+    <string name="_com_2016">, 2016</string>
+    <string name="_400_mg_tab">400 mg Tab</string>
+    <string name="late_reminders">Late Reminders</string>
+    <string name="fulticasone_propionate">Fulticasone Propionate</string>
+    <string name="_50_mg">50 mg</string>
+    <string name="medication_brand_name">Medication Brand Name</string>
+    <string name="new_val">new</string>
+    <string name="default_val">Default</string>
+    <string name="medication_generic_name">Medication Generic Name</string>
+    <string name="medication_dosage">Medication Dosage</string>
+    <string name="march_29">March 29</string>
+    <string name="taken">Taken</string>
+    <string name="today_5_00_pm">Today, 5:00 PM</string>
+    <string name="_3_0">3.0</string>
+    <string name="subject_line">My KP Meds Support:</string>
+    <string name="reminders_notification_message">It\'s time to take your %1$s medications.</string>
+    <string name="reminder_notification_message">It\'s time to take your %1$s medication.</string>
+    <string name="build_number">Build Number</string>
+    <string name="archive_medication">Archive Medication</string>
+
+    <string name="activate_account">Activate</string>
+    <string name="alert_eror_status_12">Your one time password activation is pending. Please go to kp.org to activate.</string>
+    <string name="alert_error_status_9">Our records indicate that you are no longer a Kaiser Permanente member. If you need help at this time, please visit kp.org or call Member Services at 1-800-464-4000</string>
+
+
+    <string name="dialog_title_fingerprint_sign_in">Biometrics Sign-In</string>
+    <string name="dialog_fingerprint_opt_in_title">@string/dialog_title_fingerprint_sign_in</string>
+    <string name="dialog_fingerprint_sign_in_t_and_c_title">Terms and Conditions</string>
+    <string name="dialog_fingerprint_sign_in_t_and_c_message_1">Enabling Biometrics sign-in to My KP Meds means all Biometrics setup on this device will be linked to your My KP Meds application.</string>
+    <string name="dialog_fingerprint_sign_in_t_and_c_message_2">If other people use Biometrics sign-in authentication on this device, they may be able to gain access to your account on My KP Meds and view information you consider to be private.</string>
+    <string name="dialog_title_fingerprint_sign_in_t_and_c_accept_button_text">Agree</string>
+    <string name="dialog_title_fingerprint_sign_in_t_and_c_cancel_button_text">Cancel</string>
+    <string name="dialog_fingerprint_opt_in_message">Confirm Biometrics to continue.</string>
+    <string name="dialog_fingerprint_sign_in_message">Touch fingerprint sensor to sign in to My KP Meds.</string>
+    <string name="dialog_fingerprint_action_message">Touch sensor</string>
+    <string name="dialog_fingerprint_not_recognized_message">Fingerprint not recognized, try again.</string>
+    <string name="dialog_fingerprint_sign_in_turned_off_message"> Biometrics Sign-In has been turned off.</string>
+
+    <string name="dialog_fingerprint_local_threshold_title">Failed</string>
+    <string name="dialog_fingerprint_local_threshold_message">Unable to verify Biometrics. You can setup this anytime in Settings.</string>
+
+    <string name="dialog_fingerprint_global_threshold_title">Biometrics Lockout</string>
+    <string name="dialog_fingerprint_global_threshold_message">Biometrics sign in is temporarily locked due to several failed attempts.</string>
+
+    <string name="dialog_fingerprint_device_fingerprint_unavailable_error_title">Attention</string>
+    <string name="dialog_fingerprint_device_fingerprint_unavailable_error_message">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your device.</string>
+    <string name="dialog_fingerprint_device_fingerprint_unavilable_ok_button_text">OK</string>
+    <string name="txt_add_med">Add medications</string>
+    <string name="txt_create_a_schedule">Create a schedule</string>
+    <string name="txt_no_medications_to_schedule">No medications\nto schedule</string>
+
+    <string name="card_view_medication_description">My KP Meds imports your Kaiser Permanente prescribed medications.</string>
+    <string name="card_new_kphc_description">My KP Meds imports your Kaiser Permanente prescribed medications.</string>
+    <string name="card_refill_description">Order refills for Kaiser Permanente medications from your phone.</string>
+    <string name="card_refill_reminder_second_description">Some refills may require your doctor\'s \nauthorization.</string>
+    <string name="card_manage_member_description">Set up medication reminders, view medication history and order refills for family members.</string>
+    <string name="card_manage_member_second_description"><![CDATA[To add a family member or grant caregiver access visit <a href="%s">kp.org</a>]]></string>
+    <string name="card_setup_reminder_description">Create daily, weekly and monthly reminder schedules to take your medications. </string>
+    <string name="card_view_reminder_description">Save a step? Allow name, medication and dosage to display without signing in.</string>
+    <string name="card_refill_reminder_description"><![CDATA[Order all of my hypertension medications & pick up testing strips.Ask my doctor to approve pain medication prescription.]]></string>
+    <string name="card_title_view_medication">View Your Medications</string>
+    <string name="card_title_refill_from_phone">Refill From Your Phone</string>
+    <string name="card_title_manage_from_phone">Manage Your Family\'s Medications</string>
+    <string name="card_title_setup_reminder">Set Up Reminders</string>
+    <string name="card_title_view_reminder">View\nReminders Details</string>
+    <string name="card_footer_update_kphc_hint">If you have questions about this update, contact your doctor.</string>
+    <string name="button_view_meds">View Meds</string>
+    <string name="button_create">Create</string>
+
+    <string name="new_medications_kphc_card">New\nMedications</string>
+    <string name="from_kaiser_permanente_home_card">from Kaiser Permanente</string>
+    <string name="see_more_home_card">See more</string>
+
+    <string name="home_refill_med_des">Refill Kaiser Permanente prescriptions now.</string>
+    <string name="home_create_refill_remind_des">Create a reminder to refill Kaiser Permanente prescriptions.</string>
+    <string name="home_set_remind_des">Remind me when it\'s time to take\nmedications.</string>
+    <string name="button_setup_reminders">Set Up Reminders</string>
+    <string name="home_add_med_des">Add medications not on your Kaiser\nPermanente list.</string>
+    <string name="locate_a_pharmacy">Locate a Kaiser Permanente Pharmacy.</string>
+    <string name="button_find_pharmacy">Find a Pharmacy</string>
+    <string name="button_add_more_med">Add Medications</string>
+    <string name="settings_refill">Refill</string>
+    <string name="_set">Set</string>
+
+    <string name="dismiss">Dismiss</string>
+
+    <string name="skipped_all">Skipped All</string>
+
+    <!-- Create Refill Reminders Strings-->
+    <string name="refill_reminder">Refill Reminders</string>
+    <string name="repeat_txt">Repeat</string>
+    <string name="repeat_every_txt">Repeat Every</string>
+    <string name="end_date_txt">End Date</string>
+    <string name="set_to_never">SET TO NEVER</string>
+    <string name="reminder_setup_header">Reminder Setup</string>
+    <string name="refill_error_title">Error</string>
+    <string name="refill_error_message_datetime">Select a reminder time that occurs in the future.</string>
+    <string name="textfield_error_message">Special characters and website links are not allowed in the text field.</string>
+    <string name="refill_alert_ok">OK</string>
+    <string name="refill_hint_text">What do you want to be reminded to refill?</string>
+    <string name="next_reminder_header">Next Reminder</string>
+    <string name="refill_notification_title">Refill Reminder</string>
+    <string name="refill_notification_message">It\’s time to refill your medication.</string>
+    <string name="thirty">30</string>
+    <string name="sixty">60</string>
+    <string name="ninety">90</string>
+    <string name="thirty_days">30 days</string>
+    <string name="sixty_days">60 days</string>
+    <string name="ninety_days">90 days</string>
+    <string name="day_space">" day"</string>
+    <string name="days_space">" days"</string>
+    <string name="custom">Custom</string>
+    <string name="set_repeat_frequency">Repeat every</string>
+    <string name="home_card_refill_reminder">Refill \nReminder</string>
+    <string name="refill_now">Refill Now</string>
+    <string name="refill_reminder_footer_note">You will see all your prescribed and archived medications when refilling.</string>
+    <string name="refill_menu_done">Done</string>
+    <string name="remind_later_footer_text">Remind Me Later</string>
+
+    <string name="signin_to_see_refill_text">Sign in to view</string>
+    <string name="refill_reminder_banner_text">Refill Reminder</string>
+
+    <string name="card_taken_earlier">Taken Earlier</string>
+    <string name="expanded">expanded</string>
+    <string name="contract">contract</string>
+    <string name="scheduled">Scheduled</string>
+
+    <string name="discontinued_meds">Discontinued\nMedications</string>
+    <string name="updated_medications_card">Updated\nMedications</string>
+
+
+    <string name="delete_refill_title">Delete Refill Reminder?</string>
+    <string name="delete_refill_message">You will no longer receive reminder to refill this medication.</string>
+
+    <string name="app_profile_generic_error_msg">Our systems are not responding. Please try again later.</string>
+    <string name="app_profile_error_msg_2">We are unable to perform the requested operation. Please try again later.</string>
+    <string name="my_kp_meds_image">Use KP Image</string>
+    <string name="use_camera">Use Camera</string>
+    <string name="photo_gallery">Photo Gallery</string>
+    <string name="delete_image">Delete Image</string>
+    <string name="txt_guide">\t\tGuide</string>
+    <string name="email_address">Email address</string>
+    <string name="confirm_your_contact_email">Confirm your contact email</string>
+    <string name="enter_valid_email_text">Please provide a valid email address.</string>
+    <string name="choose_a_question">Choose a question</string>
+    <string name="select_secret_questions">Select secret questions</string>
+    <string name="str_secret_questions_msg">These questions will be used to verify your identity when you call Kaiser Permanente.\n\n All fields are required. Don\'t use special characters.</string>
+    <string name="str_question1">Question 1</string>
+    <string name="str_answer1">Answer 1</string>
+    <string name="str_question2">Question 2</string>
+    <string name="str_answer2">Answer 2</string>
+    <string name="str_question3">Question 3</string>
+    <string name="str_answer3">Answer 3</string>
+    <string name="btn_save">Save</string>
+    <string name="str_errors_found_secret_question">Error(s) found. Review your answers and confirm the following.</string>
+    <string name="str_errorsMessageFields">\t•\t\tComplete all fields\n\t•\t\tMax 50 characters\n\t•\t\tNo special characters</string>
+    <string name="terms_and_conditions_interrupt_text"><![CDATA[View updated Terms & Conditions.]]></string>
+    <string name="strong_text">strong</string>
+    <string name="moderate_text">moderate</string>
+    <string name="weak_text">weak</string>
+    <string name="btn_confirm">Confirm</string>
+
+    <!-- Interrupt Password reset Failure messages -->
+    <string name="password_easytoguess">password.easytoguess</string>
+    <string name="password_lengthfailure">password.lengthfailure</string>
+    <string name="password_contain_repeatedchars">password.contain.repeatedchars</string>
+    <string name="password_contain_sequence">password.contain.sequence</string>
+    <string name="password_invalidchars">password.invalidchars</string>
+    <string name="password_reset_error_alert_message">Use at least 8 characters, 1 number or special characters.</string>
+    <string name="email_invalid_chars">emailaddress.invalidchars</string>
+
+    <string name="text_create_new_pwd">Create a new password</string>
+    <string name="text_pwd_suggestion">At least 8 characters, 1 number or special characters.</string>
+    <string name="text_new_pwd">New password</string>
+    <string name="text_confirm_pwd">Confirm password</string>
+    <string name="contact_email">Contact email</string>
+    <string name="contact_email_desc">Do we have your current address? If not, please update.</string>
+    <string name="submit">Submit</string>
+
+    <string name="disclaimer_text">The image shown is an example only. Your medication may look different. If you have questions, ask your pharmacist.</string>
+    <string name="sign_in_help_regions_header">My KP Meds is available to Kaiser Permanente members in the following areas:</string>
+    <string name="member_services">Member Services</string>
+    <string name="region_error_alert_message">We\'re unable to connect to retrieve your data at this time. Please try again later.</string>
+    <string name="retry_btn_text">Retry</string>
+
+    <string name="battery_optimization_alert_title">Possible Notifications Issue</string>
+    <string name="battery_optimization_alert_message">Your notifications could become disabled. Check your settings.</string>
+    <string name="battery_optimization_focus_card_title">Possible\nNotifications Issue</string>
+
+    <string name="notification_text">The newer Android operating systems include battery-saving settings that could disable My KP Meds notifications.</string>
+    <string name="FCM_CHANNEL_ID">FCM_CHANNEL_ID</string>
+    <string name="adjust_settings">To prevent this, adjust your settings.</string>
+
+    <string name="step1"><b>1</b></string>
+    <string name="step2"><b>2</b></string>
+    <string name="step3"><b>3</b></string>
+
+    <!-- Samsung-->
+    <string name="samsung">Samsung</string>
+    <string name="samsung_step1">Tap <b>Settings.</b></string>
+    <string name="samsung_step2">Tap <b>Apps not optimized </b>and select <b>All.</b></string>
+    <string name="samsung_step3">Set toggle to <b>Off</b> for My KP Meds.</string>
+
+    <string name="google">Google</string>
+    <!-- Google and Motorola-->
+    <string name="google_and_motorola">Google and Motorola</string>
+    <string name="google_and_motorola_step1">Tap <b>Settings.</b></string>
+    <string name="google_and_motorola_step2">Tap <b>Not optimized</b> and select <b>All apps.</b></string>
+    <string name="google_and_motorola_step3">Tap on <b>My KP Meds,</b> select <b>Don\'t Optimize,</b> and tap <b>Done.</b></string>
+
+    <!-- Other manufacturers -->
+    <string name="other_manufacturers"><b>Other Manufacturers</b></string>
+    <string name="other_step1">Tap <b>Settings.</b></string>
+    <string name="other_step2">Make sure <b>My KP Meds</b> is not battery optimized.</string>
+    <string name="my_meds"><b>My KP Meds</b></string>
+    <string name="user_id">User ID</string>
+
+    <string name="create_new_schedule_for">Create a new schedule for</string>
+    <string name="add_medications_to_the_new_schedule">Add medications to the new schedule.</string>
+    <string name="add_medications_btn">Add Medications</string>
+    <string name="what_medications_do_you_take_together">Which medications are taken at the same time?</string>
+    <string name="medications_added">Medications added</string>
+    <string name="edit_btn">Edit</string>
+    <string name="medication_reminders">Medication Reminders</string>
+    <string name="add_medication_title">Add Medications</string>
+    <string name="save_medications">Save Medications</string>
+
+    <string name="how_often_do_you_take_meds">How often are these medications taken?</string>
+    <string name="daily_btn">Daily</string>
+    <string name="weekly_btn">Weekly</string>
+    <string name="custom_btn">Custom</string>
+    <string name="times_to_be_reminded">When do you want to be reminded?</string>
+    <string name="add_reminder">Add Reminder</string>
+    <string name="how_long_do_need_this_schedule">How long is this schedule needed?</string>
+    <string name="start">Start</string>
+    <string name="date">Jan 1,2019</string>
+    <string name="end">End</string>
+    <string name="save_schedule_btn">Save Schedule</string>
+    <string name="sunday">Su</string>
+    <string name="monday">M</string>
+    <string name="tuesday">Tu</string>
+    <string name="wednesday">W</string>
+    <string name="thursday">Th</string>
+    <string name="friday">F</string>
+    <string name="saturday">Sa</string>
+    <string name="days_of_week">Which day(s) do you want to be reminded?</string>
+    <string name="how_often_you_want_reminders">How often do you want to be reminded?</string>
+    <string name="discard_schedule_title">Discarding Changes</string>
+    <string name="discard_schedule_message">Switching between family members will discard any changes you’ve made.</string>
+    <string name="discard_schedule_on_exit_message">Switching screen will discard any changes you’ve made.</string>
+    <string name="number_hint_text">Number</string>
+    <string name="sun_day">Su</string>
+    <string name="mon_day">Mo</string>
+    <string name="tues_day">Tu</string>
+    <string name="wednes_day">We</string>
+    <string name="thurs_day">Th</string>
+    <string name="fri_day">Fr</string>
+    <string name="satur_day">Sa</string>
+    <string name="no_medications_to_schedule">There are no medications \nto schedule.</string>
+    <string name="schedule_saved">Schedule saved!</string>
+
+    <string-array name="custom_day_option">
+        <item>Days</item>
+        <item>Weeks</item>
+    </string-array>
+    <string name="weekly_on">Weekly on</string>
+    <string name="unable_to_schedule_title">Unable to Schedule</string>
+    <string name="unable_to_schedule_message">You can’t create duplicate reminders for the same time.</string>
+    <string name="discard_text">Discard</string>
+    <string name="med_reminder_notification_title">Medication Reminder</string>
+    <string name="force_sign_in_notification_title">Action Needed</string>
+    <string name="force_sign_in_notification_message">There are updates to your medications or schedule. Sign in to view changes.</string>
+    <string name="welcome_to_my_kp_meds">Welcome to \nMy KP Meds</string>
+    <string name="preffective_string">You\'ll be able to access the app features as soon as your Kaiser Permanente coverage starts. \n\n  Go to kp.org to view your health plan benefits and more.</string>
+    <string name="visit_kp_org">Visit kp.org</string>
+    <string name="change_image_txt">Change Image</string>
+    <string name="take_as_needed">Take as Needed</string>
+    <string name="schedule_expiration_disclaimer">This schedule has ended, if you want to continue getting alerts, change the end date.</string>
+    <string name="duration">Duration</string>
+    <string name="setReminders">Set Reminders</string>
+    <string name="record_dose">Record Dose</string>
+    <string name="schedule_detail_archive_copy_text">Archiving removes a medication from your medication display.</string>
+    <string name="maximum_doses_per_day">Maximum Doses per Day:</string>
+    <string name="medication_txt">MEDICATION</string>
+    <string name="instructions_txt">Instructions</string>
+    <string name="personal_notes_text">Personal Notes</string>
+    <string name="medication_details_title_text">Details</string>
+    <string name="rx_number">Rx#: </string>
+    <string name="dose_recorded">Dose Recorded</string>
+    <string name="set_reminders_copy_text">Receive notifications to take your medication.</string>
+    <string name="edit_notes">Edit Personal Notes</string>
+    <string name="forever">Forever</string>
+    <string name="permanently_delete_subtext">Permanently delete medication from archive.</string>
+    <string name="dose_action_taken_msg">Your dose has been added to history.</string>
+    <string name="edit_schedule">Edit Schedule</string>
+    <string name="toggle_on_msg">Turning on “Take as Needed” will remove any scheduled reminders for this medication.</string>
+    <string name="take_as_needed_info_message">Record doses that are taken \nwithout a regular schedule.</string>
+    <string name="disclaimer_text_for_otc_med">The medication isn\'t added to your medical record or shared with your doctor or pharmacist.</string>
+    <string name="add_notes">Add Personal Notes</string>
+    <string name="teen_proxy_card">Update to Teen Medical Information Access</string>
+    <string name="limited_access">Due to federal and state privacy laws, parent or caregiver access to medical information for teen members is limited.</string>
+    <string name="txt_otc_name">OTC Name</string>
+    <string name="monthly_disclaimer">Reminders set for the last day of every month</string>
+    <string name="times_to_be_reminded_for_monthly">What time do you want to be reminded?</string>
+    <string name="monthly_reminder">When do you want to start a monthly reminder</string>
+    <string name="app_restricted_title">App Use Restricted</string>
+    <string name="cafh_alert_message">App unavailable to members receiving care outside their home service area. To view or refill your prescriptions, visit kp.org.</string>
+    <string name="existing_schedule_title">Existing Schedule</string>
+    <string name="unable_to_postpone_title">Unable to Postpone</string>
+    <string name="postpone_error_alert_message">The postponed time exceeds the next scheduled reminder.</string>
+    <string name="discard_updates">Discard Updates</string>
+    <string name="notes_alert_message">Recent changes will not be saved.</string>
+    <string name="personal_notes_optional">Personal Notes (Optional)</string>
+    <string name="addimage">Add image</string>
+    <string name="drugname">Drug Name</string>
+    <string name="save_medication">Save Medication</string>
+    <string name="unable_to_retrieve_data_title">Unable to retrieve data</string>
+    <string name="unable_to_retrieve_data_message">We are unable to retrieve your data at this time.  Please try again later.</string>
+    <string name="update_string">Update</string>
+    <string name="my_kp_meds_update">My KP Meds Updates</string>
+    <string name="remind_later">Remind Me Later</string>
+    <string name="caregiver_access">Caregiver Access</string>
+    <string name="medication_updates">Medication Updates</string>
+    <string name="reminder_taken_all">Taken All</string>
+    <string name="reminder_taken_all_earlier">Taken All Earlier</string>
+    <string name="reminder_taken_earlier">Taken Earlier</string>
+    <string name="reminder_skip_all">Skipped All</string>
+    <string name="view_medication">View Medication</string>
+    <string name="inapp_reminder_title">Medication Reminder</string>
+    <string name="remind_later_text">When would you like to be reminded?</string>
+    <string name="taken_earlier_picker_text">What time did you take it?</string>
+    <string name="great_job_title">Great Job!</string>
+    <string name="late_reminder">Late Reminder</string>
+    <string name="animation_banner">banner</string>
+    <string name="animation_title">title</string>
+    <string name="animation_subtitle">subtitle</string>
+    <string name="animation_description">description</string>
+    <string name="animation_name">name</string>
+    <string name="animation_taken">taken</string>
+    <string name="animation_skip">skip</string>
+    <string name="animation_reminder_time">reminderTime</string>
+    <string name="animation_reminder_date">reminderDate</string>
+    <string name="animation_reminder_tile">reminderTitle</string>
+    <string name="animation_reminder_sub_title">reminderSubTitle</string>
+    <string name="patient_name">Patient name</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nmp_message">You don\'t have a Kaiser Permanente plan. Visit kp.org to view your medical record</string>
+    <string name="history_empty_message">Your detailed medication history will display here.</string>
+    <string name="history_one_week_empty_message">You don\'t have any scheduled reminders this week.</string>
+    <string name="history_empty_calendar_message">Set up a medication reminder schedule. Your weekly medication history will then display here.</string>
+    <string name="see_more">See More</string>
+    <string name="postponed_to">"Postponed to "</string>
+
+    <string name="see_less">See Less</string>
+    <string name="calendar_date_textview">January 2021</string>
+    <string name="force_signin_required_title">Sign In Required</string>
+    <string name="force_signin_required_message">This lets us check for medication and schedule updates.</string>
+    <string name="medication_history">Medication History</string>
+    
+    <string name="save_updates">Save Updates</string>
+    <string name="save_changes_on_exit_message">Do you want to save your changes?</string>
+    <string name="save_text">Save</string>
+    <string name="skip_the_rest_btn">Skip the Rest</string>
+    <string name="take_the_rest_btn">Take the Rest</string>
+    <string name="taken_the_rest_earlier_btn">Taken the Rest Earlier</string>
+     <string name="confirm_schedule">Confirm Schedule</string>
+    <string name="instructions_text">INSTRUCTIONS</string>
+    <string name="schedule_text">SCHEDULE</string>
+    <string name="confirmation_page_title_with_sig">Does this schedule match the instructions?</string>
+    <string name="confirmation_page_title_without_sig">Do you want to create the following schedule?</string>
+    <string name="overlay_text_last_day_of_the_month">Last day of every month</string>
+    <string name="review_schedule">Review Schedule</string>
+    <string name="btn_schedule">Schedule</string>
+    <string name="confirmation_page_title">Verify this schedule matches your doctor\'s instructions.</string>
+    <string name="save_title">Saved</string>
+    <string name="save_alert_msg">Your responses have been recorded!</string>
+    <string name="taken_action">taken</string>
+    <string name="postpone_action">postponed</string>
+    <string name="mixed_action">mixed</string>
+    <string name="reminder_details">Reminder Details</string>
+    <string name="edit_all_btn">Edit All</string>
+</resources>

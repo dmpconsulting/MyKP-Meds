@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="robotoMedium"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="robotoBold"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="robotoRegular"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="medication"
+            type="com.montunosoftware.pillpopper.model.Drug" />
+
+        <variable
+            name="isManagedSIG"
+            type="Boolean" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ScrollView
+            android:id="@+id/scroll_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottom_divider">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_24dp"
+                    android:layout_marginTop="@dimen/margin_28dp"
+                    android:layout_marginEnd="@dimen/margin_24dp">
+
+                    <ImageView
+                        android:id="@+id/iv_schedule_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="@dimen/margin_16dp"
+                        android:minWidth="@dimen/layout_height_44dp"
+                        android:minHeight="@dimen/layout_height_44dp"
+                        android:src="@drawable/icon_calendar" />
+
+                    <TextView
+                        android:id="@+id/tv_review_schedule_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/iv_schedule_icon"
+                        android:text="@string/review_schedule"
+                        android:textColor="@color/dark_blue_ada"
+                        android:textSize="@dimen/text_size_24sp"
+                        android:typeface="@{robotoBold}" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_confirm_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_24dp"
+                        android:layout_marginEnd="@dimen/margin_24dp"
+                        android:text="@string/confirmation_page_title"
+                        android:textColor="@color/dark_blue_ada"
+                        android:textSize="@dimen/text_size_20sp"
+                        android:typeface="@{robotoRegular}" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/layout_height_1dp"
+                        android:layout_marginTop="@dimen/margin_12dp"
+                        android:background="@color/schedule_divider_color" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/header_divider_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_height_1dp"
+                    android:layout_marginTop="@dimen/margin_24dp"
+                    android:background="@color/schedule_divider_color"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/ll_medication"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <include
+                        android:id="@+id/med_details_layout"
+                        layout="@layout/layout_medication_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_24dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/layout_height_1dp"
+                        android:background="@color/schedule_divider_color" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_instructions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="@{isManagedSIG ? View.VISIBLE : View.GONE}">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_24dp"
+                        android:layout_marginTop="@dimen/margin_24dp"
+                        android:text="@string/instructions_text"
+                        android:textColor="@color/drugname_header_color"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:typeface="@{robotoMedium}" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_40dp"
+                        android:layout_marginTop="@dimen/margin_8dp"
+                        android:layout_marginEnd="@dimen/margin_40dp"
+                        android:layout_marginBottom="@dimen/margin_24dp"
+                        android:text="@{medication.directions}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_17sp"
+                        android:typeface="@{robotoRegular}"
+                        tools:text="Take this medicine" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/layout_height_1dp"
+                        android:background="@color/schedule_divider_color" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_schedule"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_24dp"
+                        android:layout_marginTop="@dimen/margin_24dp"
+                        android:text="@string/schedule_text"
+                        android:textColor="@color/drugname_header_color"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:typeface="@{robotoMedium}" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_40dp"
+                        android:layout_marginEnd="@dimen/margin_40dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_frequency"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_8dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_17sp"
+                            android:typeface="@{robotoMedium}"
+                            tools:text="Weekly" />
+
+                        <TextView
+                            android:id="@+id/tv_days"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_8dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_17sp"
+                            android:typeface="@{robotoMedium}"
+                            android:visibility="visible"
+                            tools:text="Su, T, Th" />
+
+                        <TextView
+                            android:id="@+id/tv_last_date_of_month"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_4dp"
+                            android:text="@string/overlay_text_last_day_of_the_month"
+                            android:textColor="@color/drug_strength_action"
+                            android:textSize="@dimen/text_size_15sp"
+                            android:typeface="@{robotoRegular}"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_8dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_17sp"
+                            android:typeface="@{robotoMedium}"
+                            tools:text="8:00 AM, 8:00 PM" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_start_date"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_17sp"
+                                android:typeface="@{robotoMedium}"
+                                tools:text="January 23, 2020" />
+
+                            <ImageView
+                                android:id="@+id/iv_right_arrow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/margin_24dp"
+                                android:layout_marginEnd="@dimen/margin_24dp"
+                                android:minWidth="@dimen/margin_16dp"
+                                android:minHeight="@dimen/margin_16dp"
+                                android:src="@drawable/ic_arr_right" />
+
+
+                            <TextView
+                                android:id="@+id/tv_end_date"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_17sp"
+                                android:typeface="@{robotoMedium}"
+                                tools:text="January 30, 2020" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <View
+            android:id="@+id/bottom_divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height_1dp"
+            android:layout_above="@id/ll_button_container"
+            android:background="@color/schedule_divider_color" />
+
+        <LinearLayout
+            android:id="@+id/ll_button_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:baselineAligned="false"
+            android:gravity="center|bottom"
+            android:minHeight="@dimen/margin_96dp"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/margin_42dp"
+            android:paddingEnd="@dimen/margin_42dp"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/margin_8dp"
+                android:layout_weight="0.5"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/bt_overlay_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/skip_all_background"
+                    android:minWidth="@dimen/layout_width_130dp"
+                    android:minHeight="@dimen/view_height_48_dp"
+                    android:text="@string/cancel_text"
+                    android:textAllCaps="false"
+                    android:textColor="@color/kp_theme_blue"
+                    android:textSize="@dimen/text_size_18sp"
+                    android:typeface="@{robotoRegular}" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/margin_8dp"
+                android:layout_weight="0.5"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/bt_overlay_schedule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/taken_all_background"
+                    android:minWidth="@dimen/layout_width_130dp"
+                    android:minHeight="@dimen/view_height_48_dp"
+                    android:text="@string/btn_confirm"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_18sp"
+                    android:typeface="@{robotoBold}" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>
